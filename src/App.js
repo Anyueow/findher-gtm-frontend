@@ -24,7 +24,7 @@ import { NavbarProvider } from './components/NavbarContext';
 import SectionThree from "./components/SectionThree/SectionThree";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Login from "./components/Reviews/login";
-import B2B_First from "./components/Businesses/b2b_first";
+import BizReg from "./components/Businesses/b2b_first";
 import EmailSignIn from "./components/Businesses/EmailSignIn";
 import PhoneSignIn from "./components/Businesses/PhoneSignIn";
 import DetailsOneB2B from "./components/Businesses/DetailsOneB2B";
@@ -79,7 +79,7 @@ function App() {
               <Route path="/reviews_three" element={<FourthPage />}/>
               <Route path="/reviews_four" element={<FifthPage />}/>
               <Route path="/successUser" element={<SixthPage />}/>
-              <Route path="/business_register" element={<B2B_First />} />
+              <Route path="/business_register" element={<BizReg />} />
               <Route path="/email_signin" element={<EmailSignIn />} />
               <Route path="/signin-phone" element={<PhoneSignIn />} />
             <Route path="/update_details" element={<DetailsOneB2B />} />
