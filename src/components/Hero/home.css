@@ -1,0 +1,145 @@
+/* Base styles */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+
+}
+
+.content {
+    margin-top: 5%;
+    padding: 15%;
+
+    align-items: center;
+}
+
+.text-content {
+    flex: 2;
+    text-align: left;
+}
+
+.main-name {
+    font-size: 2.8rem;
+    font-family: "League Spartan-SemiBold";
+    text-align: left;
+    margin-bottom: 4%;
+    width:80%
+}
+
+.text-deco {
+    position: relative;
+    background-image: linear-gradient(#ee2c5b, #ee2c5b);
+    background-repeat: no-repeat;
+    background-size: 100% 0.5rem; /* This sets the thickness of the underline */
+    background-position: 0 100%; /* This positions the underline at the bottom of the text */
+    padding-bottom: 5px; /* Adjust this to control the space between the text and the underline */
+}
+
+.highlight {
+    color: black;
+}
+
+.highlight-alt {
+    color: #e20b3c;
+}
+
+.description {
+    font-size: 1.2rem;
+
+    width:70%;
+    font-family: Montserrat;
+    font-weight: 400;
+    text-align: left;
+
+
+}
+
+
+.signup-btn {
+    padding: 2% 5%;
+    border: none;
+    border-radius: 40px;
+    background-color: #ee2c5b;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "League Spartan-SemiBold";
+    font-size: 1rem;
+}
+
+.hero-text {
+    align-items: center;
+
+    padding-left: 15%;
+
+
+
+
+}
+
+.signup-btn:hover {
+    background-color: #DFE077;
+}
+
+
+
+.base-image {
+    width: 70%;
+    display: block;
+    z-index: 0;
+    margin-top: 3%;
+
+    margin-left: -15%;
+    overflow: hidden;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero-text {
+
+        padding-top: 25%;
+        align-items: flex-end;
+
+
+    }
+
+    .main-name {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .signup-btn {
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .base-image {
+        width: 89%;
+
+        overflow: clip;
+    }
+}

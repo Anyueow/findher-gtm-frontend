@@ -1,0 +1,84 @@
+.outer-container {
+    width: 100vw;
+    height: 115vh;
+    background-color: rgba(223, 224, 119, 0.29);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.73);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.73); /* This will add a black inner shadow */
+
+}
+
+.inner-container {
+    text-align: left;
+    width: 80%;
+
+    /* If you want to set a max-width for larger screens */
+    /* max-width: 1200px; */
+}
+.ques-img {
+    width: 100%;
+
+
+}
+.main-name-sect {
+    color: rgb(0, 0, 0);
+    font-family: "League Spartan-SemiBold", "Montserrat-SemiBold";
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 4%;
+}
+
+.text-wrapper {
+    font-weight: 700;
+    color: rgba(226, 11, 60, 0.83);
+}
+
+.main-sub {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat-SemiBold";
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: left;
+    width:90%;
+    text-decoration: blink;
+
+
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .inner-container {
+        width: 90%; /* Increasing width on mobile for a smaller padding effect */
+    }
+
+    .main-name-sect {
+        font-size: 2rem; /* Decreasing font size for mobile */
+        margin-bottom: 5%; /* Adjusting margin */
+        margin-top: 0;
+    }
+
+    .main-sub {
+        font-size: 1rem; /* Decreasing font size for mobile */
+    }
+    .ques-img {
+        margin-bottom: 5%;
+    }
+
+    /* Mobile styles */
+
+
+
+
+    /* Additional mobile adjustments can be added here */
+}

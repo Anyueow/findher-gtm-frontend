@@ -1,0 +1,70 @@
+.section-container {
+    height: 100vh;
+    background-color: #fff; /* Adjust if needed */
+}
+
+.section-content {
+    height: 100%;
+    width:60%;
+
+}
+
+.full-height {
+    height: 100%;
+    padding:10%
+}
+
+.text-content {
+margin-top: -5%;    padding: 0 20px;
+}
+
+.title {
+    font-size: 2.6rem;
+    margin-bottom: 10%;
+    width:80%
+}
+
+.highlight-text {
+    text-decoration: underline;
+    text-decoration-color: #ee2c5b;
+    text-decoration-thickness: 0.5rem;
+}
+
+.description {
+    font-family: Montserrat;
+    font-size: 1.3rem;
+}
+
+.emphasis {
+    font-weight: bold;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+/* For mobile views, you might want to hide the desktop image and show the mobile image */
+@media (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}

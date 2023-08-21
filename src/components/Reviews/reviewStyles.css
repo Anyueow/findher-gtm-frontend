@@ -1,0 +1,491 @@
+/* Adding a reset for consistency. Consider using normalize.css or a similar reset for a more extensive reset. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Add other styles as needed */
+}
+.sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    text-align: left;
+    height: 105vh;
+}
+.formCont{
+    display:flex;
+    align-items: center;
+}
+
+.reviews-box{
+
+    max-width: 80vw;
+    height: fit-content;
+
+}
+
+.reviews-box2{
+    margin-top: 23%;
+    min-width: 80vw;
+    height: fit-content;
+
+}
+
+.reviews-box3{
+    margin-top: 15%;
+    min-width: 80vw;
+    height: fit-content;
+
+}
+
+.design {
+    background-color: #DFE077;
+    border-radius: 40px;
+    padding: 20% 30% 10% 15%;
+    margin: 8% 4%;
+
+
+
+}
+
+/* Ensuring use of defined fonts, and falling back to generic families if specific fonts aren't available */
+@font-face {
+    font-family: 'League Spartan-SemiBold';
+    src: url("/src/Assets/Fonts/LeagueSpartan-SemiBold.ttf");
+
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url("/src/Assets/Fonts/Montserrat-SemiBold.ttf");
+
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url("/src/Assets/Fonts/LeagueSpartan-Regular.ttf");
+
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("/src/Assets/Fonts/Montserrat-Medium.ttf");
+}
+
+body, button, input, select, textarea {
+    font-family: Montserrat-Regular, sans-serif; /* Consider using a generic font family as a fallback */
+}
+
+/* Remaining styles stay largely unchanged. However, be sure to: */
+
+/* 1. Always specify units where needed. */
+/* 2. Always specify fallback fonts. */
+
+/* ... Your other styles ... */
+
+/* Adding prefixes for broader compatibility. Consider using tools like Autoprefixer to automate this. */
+.custom-input,
+.custom-input2,
+.custom-input3 {
+    -webkit-box-shadow: none; /* For Safari and Chrome */
+    -moz-box-shadow: none;    /* For Firefox */
+    box-shadow: none;
+    width: 100%;
+
+}
+
+.ROw {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 100vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    margin-bottom: 15vh;
+
+}
+
+@media (max-width: 800px) {
+    .ROw{
+        margin-top: 5%;
+    }
+
+    .nav-link2{
+        font-size: 0.3rem;
+    }
+
+}
+
+
+.head-name {
+    color: black;
+    font-family: "League Spartan-SemiBold";
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 1%;
+    text-align: left;
+
+}
+
+.head-name-2 {
+    color: black;
+    font-family: "League Spartan-SemiBold";
+    font-size: 2.8rem;
+    font-weight: 700;
+    padding-bottom: 5%;
+    text-align: left;
+
+}
+
+heading-name3{
+    font-size: 500%;
+    font-weight: 500;
+}
+.sub-name {
+    color: black;
+    font-family: "Montserrat-SemiBold";
+    font-size: 1rem;
+    font-weight: 200;
+    padding-bottom: 1%;
+    text-align: left;
+
+}
+
+.formDes {
+
+    height:auto;
+    vertical-align: middle;
+}
+
+
+.button-sub {
+
+    padding: 1rem 2rem;
+    font-family: "Montserrat-SemiBold";
+    font-size: 1rem;
+    border-radius: 2rem;
+    background-color: #ee2c5b;
+    border: none  ;
+
+}
+.button-sub:disabled {
+    background-color: #c78c9a;  /* Example gray color for disabled state */
+    cursor: not-allowed;       /* Display a not allowed cursor */
+}
+
+
+.button-sub2{
+    margin: 2rem 0px;
+    padding: 1rem 5rem;
+
+
+    align-content: center;
+    width: 30%;
+    font-family: "Montserrat-SemiBold";
+    font-size: 2rem;
+    border-radius: 2rem;
+    background-color: rgba(226, 11, 60, 0.83);
+    border: none  ;
+}
+/* Optional hover effect */
+.button-sub:hover {
+    background-color: rgb(218, 224, 29);
+    color: black;
+    border: none;
+
+
+}
+
+.button-sub2:hover {
+    background-color: rgb(218, 224, 29);
+    color: black;
+    border: none;
+
+
+}
+
+.form-grp{
+    margin-bottom: 2%;
+    width:80%;
+}
+
+.full-width {
+    min-width: 100vw;
+    padding: 0 40%;
+}
+
+.social-icon{
+    font-size:5rem;
+    margin-top: 3rem;
+    margin-right: 4rem;
+    color: #ee2c5b;
+}
+
+.star-icon {
+    font-size: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 2vw;
+
+
+}
+
+.star-radio {
+    display: none;
+}
+
+.review-heads {
+    font-size: 2rem;
+    background-color: #DFE077;
+    padding: 5px 35px;
+    margin-bottom: 3%;
+
+
+}
+
+.review-subs {
+    font-size: 1.6rem;
+    margin-bottom: 3%;
+
+}
+
+/* Fifth Page */
+
+.question-grp {
+
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.question-grp-q{
+    font-family: "League Spartan";
+    font-size: 1.2rem;
+
+}
+
+.custom-input {
+    width: 100%;      /* Adjust the width as per your need */
+    height: 40%;      /* Adjust the height as per your need */
+    border: 2px solid #000;  /* Border styling. Adjust as per your need */
+    background-color: rgba(223, 224, 119, 0.11);
+    border-radius: 15px;     /* Rounded corners. Adjust to make it more or less rounded */
+    padding: 10px;     /* Inner spacing */
+    font-size: 26px;   /* Adjust font size if needed */
+    outline: none;
+    font-size: 1rem; /* Remove default focus outline if desired */
+    transition: border-color 0.3s ease;
+    justify-content: flex-start;/* Smooth transition for border color changes, e.g., on focus */
+}
+
+.custom-input:focus {
+    border-color: #007bff;  /* Change border color on focus. Adjust as per your need */
+}
+
+.custom-input2 {
+    width: 100%;      /* Adjust the width as per your need */
+    height: 40%;     /* Adjust the height as per your need */
+    border: 2px solid #000;  /* Border styling. Adjust as per your need */
+    background-color: rgba(223, 224, 119, 0.1);
+    border-radius: 15px;     /* Rounded corners. Adjust to make it more or less rounded */
+    padding: 10px;     /* Inner spacing */
+    font-size: 26px;   /* Adjust font size if needed */
+    outline: none;     /* Remove default focus outline if desired */
+    transition: border-color 0.3s ease;
+    justify-content: flex-start;/* Smooth transition for border color changes, e.g., on focus */
+}
+
+.custom-input2:focus {
+    border-color: #007bff;  /* Change border color on focus. Adjust as per your need */
+}
+
+.chk-bttn {
+    border-radius: 0px;
+    width: 65%;
+    text-align: left;
+    background-color: rgb(186, 211, 67);
+    border: none;
+    font-size: 3rem;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    color: black;
+    font-family: "League Spartan";
+
+}
+
+
+.chk-bttn:Hover {
+    background-color: rgba(226, 11, 60, 0.38);
+    color: black;
+
+}
+
+.head-name4 {
+    font-size: 5rem;
+    font-family: "League Spartan-SemiBold";
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+.para {
+    margin-bottom: 3%;
+
+    width: 85%;
+
+    font-size: 2.5rem;
+    font-family: "Montserrat-SemiBold";
+
+}
+
+
+.custom-input3 {
+    width: 100%;
+    height: 12%;      /* Adjust the height as per your need */
+    border: 1px solid rgba(0, 0, 0, 0.6);  /* Border styling. Adjust as per your need */
+    background-color: rgba(223, 224, 119, 0.1);
+    border-radius: 10px;     /* Rounded corners. Adjust to make it more or less rounded */
+    padding: 10px;     /* Inner spacing */
+    font-size: 1rem;   /* Adjust font size if needed */
+    outline: none;     /* Remove default focus outline if desired */
+    transition: border-color 0.3s ease;
+    justify-content: flex-start;/* Smooth transition for border color changes, e.g., on focus */
+}
+
+.custom-input3:focus {
+    border-color: #007bff;  /* Change border color on focus. Adjust as per your need */
+}
+
+.nav-link2 {
+    margin-top: 5%;
+    color: #000000;
+    font-size: 1.5rem;
+    text-align: left;
+
+    font-family: Montserrat-Regular;
+}
+
+
+
+/* Second Page Reviews */
+
+.container-second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+    min-height: 105vh;
+
+}
+
+.form-grp-one {
+    align-content: center;
+    padding: 8%
+}
+
+.link-nav {
+
+    font-family: Montserrat-SemiBold;
+    text-decoration-color: rgba(226, 11, 60, 0.83);
+    text-decoration: underline;
+    line-height: 2rem;
+}
+
+.ratings {
+
+    min-width: 100vw;
+
+
+}
+
+.rating-box{
+
+    text-align: left;
+}
+
+.pink { color: #ee2c5b}
+
+.error-message{
+    font-family: Montserrat-SemiBold;
+    margin-top: 1%;
+    font-size: 0.7rem;
+    color: #ee2c5b;
+}
+
+.datepicker-full-width {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .ROw{
+        margin-top: 5%;
+    }
+
+    .button-sub{
+        width: 90%;
+        align-content: center;
+    }
+    .nav-link2{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .first-div{
+        margin-top: 0%;
+    }
+    .head-name {
+        font-family: "League Spartan-SemiBold";
+        font-size: 1.3rem;
+        font-weight: 300;
+        padding-bottom: 1%;
+        text-align: left;
+    }
+    .Waitlist{
+        text-align: center;
+    }
+    .formCont{
+        display: flex;
+        flex-direction: column;
+    }
+    .design{
+        margin-top: 0% !important;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+    .reviewbtn{
+        font-size: 0.8rem;
+        font-weight: 300;
+        margin-top: 3%;
+        margin-left: 22%
+    }
+    .clmn1{
+        align-items: center;
+    }
+
+    /* .gg{
+        margin-left: 10px !important;
+    } */
+    /* .custom-input, .custom-input2{
+        width: 100%;
+    } */
+    .button-sub{
+
+        margin-left: 25px;
+    }
+}

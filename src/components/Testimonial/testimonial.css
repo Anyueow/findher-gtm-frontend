@@ -1,0 +1,210 @@
+
+/* Testimonial */
+/* --------- */
+
+
+.header {
+    font-size: 1.5rem;
+    font-family: "Montserrat-Regular", Helvetica;
+
+    margin-bottom: 10%;
+    text-align: center;
+    margin-top: 3%;
+    font-weight: 500;
+}
+
+.main-name3 {
+    font-size: 3rem;
+    font-family: "League Spartan-SemiBold";
+    color: #000000;
+    text-align: left;
+    margin-bottom: 5%;
+
+}
+.jus {
+    margin-top: 10%;
+    margin-bottom: -10%;
+    padding:0 12%;
+    text-align: left;
+}
+.test-head  {
+    font-family: "League Spartan-SemiBold";
+    text-align: left;
+    font-size: 3rem;
+
+
+}
+
+.headspan {
+
+
+    text-decoration-thickness: 0.5rem;
+    text-decoration: underline;
+    text-decoration-color: #ee2c5b;
+
+}
+
+.mar {
+    padding: 8%;
+    margin-top: 5%;
+    width: 100vw;
+    height: fit-content;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.testi-img {
+    width: 60%;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+.testimonial {
+    min-width: 30%;
+    background-color: rgba(223, 224, 119, 0.13);
+    padding: 5%;
+    border-radius: 70px;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+
+    margin: 1%;
+}
+/* Add this CSS to your stylesheet */
+.opalescent-arrow {
+    /* Customize the color, size, and other styles of the arrows */
+    color: rgba(238, 44, 91, 0.7);
+    font-size: 24px;
+}
+
+.arrow-button {
+    /* Remove default button styles */
+    background: rgba(223, 224, 119, 0.47);
+    border-radius: 40px;
+    padding: 10px;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /* Add any additional styles you want for the arrow buttons */
+
+}
+
+.Quotes {
+    font-family: "American Typewriter";
+    font-weight: bold;
+    color: #ee2c5b;
+}
+
+.cardSub {
+    text-align: center;
+    font-family: Montserrat-SemiBold;
+}
+
+/* ...Your existing CSS... */
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .testi-img {
+        display: none; /* Hide the image */
+    }
+
+    .header {
+        margin-top: 25%;
+        font-size: 2rem;
+    }
+
+    .subhead {
+        font-size: 1rem;
+        margin-top: 1%; /* Adjust negative margin */
+
+    }
+
+    .cardSub{
+        margin-bottom: 25%;
+    }
+
+    .main-name3 {
+        font-size: 2rem;
+        margin-bottom: 10%;
+        margin-top: 15%;
+    }
+
+
+
+    /* Opalescent circles for progress */
+    .testimonial::after {
+        display: block;
+        height:200px;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 3rem;
+        padding: 5%;
+        justify-content: center;
+    }
+
+    /* Generate circles based on number of testimonials */
+    .testimonial::after {
+        letter-spacing: 1rem; /* Space between circles */
+        color: rgba(238, 44, 91, 0.5); /* Opalescent color, adjust if necessary */
+        font-size: 1.5rem;
+    }
+
+    .arrow-button {
+        justify-content: flex-end;
+        background-color: rgba(223, 224, 119, 0.6);
+        border-radius: 30px;
+        width: 70%
+    }
+    /* Highlight the current circle based on currentIndex */
+    /* This needs JavaScript logic to work */
+}
+
+/* ... Your existing CSS ... */
+
+/* Mobile styles */
+@media (max-width: 767px) {
+
+
+    .header {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    .test-head{
+        width:80%;
+        margin-left: -10%;
+        text-align: center;
+        font-size:2rem;
+
+    }
+    .arrow-button {
+        margin: 5%
+    }
+
+
+    .cardSub {
+        font-size: 0.6rem; /* Reduce font size for mobile */
+    }
+
+    .main-name3, .test-head {
+
+        font-size: 1rem; /* Reduce font size for mobile */
+    }
+
+    .testimonial {
+        width: 100%; /* Ensure the testimonial takes the full width on mobile */
+        min-width: unset;
+        align-content: center;
+        padding: 15%;
+        height: 500px/* Adjust padding for mobile */
+    }
+
+    .jus {
+        margin-top: 10%;
+        margin-bottom: -10%;
+        margin-left: 15%;
+        text-align: left;
+    }
+
+    /* ... Other mobile adjustments ... */
+}
