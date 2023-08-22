@@ -29,7 +29,7 @@ function NavBar() {
                     <img src={logo} alt="brand" className="logo"/>
                 </Link>
 
-                <button className="navbar-toggler" onClick={() => setShowMenu(!showMenu)} style={{ fontSize: '30px' }}>
+                <button className="navbar-toggler" onClick={() => setShowMenu(!showMenu)} style={{ fontSize: '30px',color:'gainsboro'}}>
                     ☰
                 </button>
                 <ul className={`navbar-menu ${showMenu ? 'show' : ''}`}>

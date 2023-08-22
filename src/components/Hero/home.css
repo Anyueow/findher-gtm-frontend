@@ -143,3 +143,27 @@
         overflow: clip;
     }
 }
+
+@media (max-width: 576px) {
+    .hero-text {
+        padding-top: 0%;
+        padding-left: 5%;
+    }
+    .main-name {
+        font-size: 1.8rem;
+        margin-bottom: 4%;
+        width:90%
+    }
+    .signup-btn{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .mobile{
+        margin: 0%;
+    }
+}
