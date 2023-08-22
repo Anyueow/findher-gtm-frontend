@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import base from "./Images/hero base.png";
-import mobbase from "./Images/phoneBase.png";
+import mobbase from "./Images/phone hero.png";
 
 
 
@@ -36,13 +36,13 @@ function Home() {
                     style={{marginTop:"5%"}}>
                         Sign up today!
                     </button>
+                    
                 </div>
                 </Col>
                     <Col md={5} xs={12}>
                 <div>
                     <img src={base} className="base-image desktop" alt="Findher Demo"/>
                     <img src={mobbase} className="base-image mobile" alt="Findher Demo"/>
-
                 </div>
 
                     </Col>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 import {Col, Container, Row} from "react-bootstrap";
@@ -51,7 +51,22 @@ function TestimonialSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Adjust items per page based on window width
-    const itemsPerPage = window.innerWidth <= 780 ? 1 : 3;
+    const [itemsPerPage, setItemsPerPage] = useState(3);
+    useEffect(()=>{
+        const calculateItemsPerPage = () => {
+            return window.innerWidth <= 780 ? 1 : 3;
+        };
+        
+        // Set the initial value of itemsPerPage
+        setItemsPerPage(calculateItemsPerPage());
+
+        // Update itemsPerPage when the window width changes
+        const handleResize = () => {
+            setItemsPerPage(calculateItemsPerPage());
+        };
+       
+        window.addEventListener('resize', handleResize);
+    },[])
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => Math.min(prevIndex + itemsPerPage, testimonials.length - itemsPerPage));
