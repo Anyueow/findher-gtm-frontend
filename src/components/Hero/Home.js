@@ -31,6 +31,11 @@ function Home() {
                     <h3 className="description">
                         Learn what it’s like to work at a company from the women who have been there.
                     </h3>
+                    <button className="signup-btn"
+                            onClick={() => navigate('/reviews_login')}
+                    style={{marginTop:"5%"}}>
+                        Sign up today!
+                    </button>
                     
                 </div>
                 </Col>
@@ -38,11 +43,6 @@ function Home() {
                 <div>
                     <img src={base} className="base-image desktop" alt="Findher Demo"/>
                     <img src={mobbase} className="base-image mobile" alt="Findher Demo"/>
-                    <button className="signup-btn"
-                            onClick={() => navigate('/reviews_login')}
-                    style={{marginTop:"5%"}}>
-                        Sign up today!
-                    </button>
                 </div>
 
                     </Col>
