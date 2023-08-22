@@ -164,3 +164,11 @@ justify-content: space-evenly;
         margin: 0 auto;
     }
 }
+
+@media (max-width: 576px) {
+
+.icon-features{
+    width: 100%;
+}
+
+}
