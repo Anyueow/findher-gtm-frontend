@@ -63,7 +63,6 @@ function TestimonialSection() {
         // Update itemsPerPage when the window width changes
         const handleResize = () => {
             setItemsPerPage(calculateItemsPerPage());
-            console.log(itemsPerPage)
         };
        
         window.addEventListener('resize', handleResize);
