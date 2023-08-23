@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 
 import base from "./Images/hero base.png";
@@ -12,7 +12,7 @@ import {Col, Container, Row} from "react-bootstrap";
 
 function Home() {
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     return (
         <section className="hero center-contents">
@@ -31,13 +31,16 @@ function Home() {
                     <h3 className="description">
                         Learn what it’s like to work at a company from the women who have been there.
                     </h3>
-                    <button className="signup-btn"
-                            onClick={() => navigate('/reviews_login')}
-                    style={{marginTop:"5%"}}>
-                        Sign up today!
-                    </button>
-                    
-                </div>
+                            <a href="https://www.surveymonkey.com/r/NMD3GRV"
+                               className="signup-btn"
+                               style={{marginTop:"5%", display: 'inline-block', textDecoration: 'none'}}
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Sign up today!
+                            </a>
+
+
+                        </div>
                 </Col>
                     <Col md={5} xs={12}>
                 <div>
