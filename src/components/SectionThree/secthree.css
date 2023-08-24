@@ -165,7 +165,7 @@ justify-content: space-evenly;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 
 .icon-features{
     width: 100%;
