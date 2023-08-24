@@ -4,17 +4,9 @@ import { Button, Container, Row } from "react-bootstrap";
 import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
-import { useEffect } from "react";
 
 export const ThirdPage = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    // Find all arrow elements and disable them
-    const arrowElements = document.querySelectorAll(".react-tooltip-arrow");
-    arrowElements.forEach((arrow) => {
-      arrow.style.display = "none";
-    });
-  }, []);
   return (
     <Container className="sub">
       <Row className="reviews-box">

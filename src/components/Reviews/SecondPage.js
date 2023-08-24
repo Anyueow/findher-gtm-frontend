@@ -38,7 +38,7 @@ export const SecondPage = () => {
             };
 
             try {
-                const response = await fetch("http://localhost:3000/protectedRoute/createReview", {
+                const response = await fetch("https://findher-deploy-c232276eae44.herokuapp.com/protectedRoute/createReview", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
