@@ -24,10 +24,7 @@ function SectionThree() {
         <section className="grid-section shade">
             <Container className="container-md">
                 <Row className="row-features">
-                    <h1 className="header-font"> On <span
-                        style={{textDecoration:"underline",
-                        textDecorationThickness:"0.5rem",
-                    textDecorationColor:"#EE2C5BFF"}}> FindHer
+                    <h1 className="header-font"> On <span className="text-deco-three"> FindHer
                         </span> you will get:</h1>
 
                     <Col xs={12} md={3} lg={4} className="icon-features">
@@ -59,10 +56,8 @@ function SectionThree() {
                 </Row>
 
                 <Row className="btn-section1">
-                    <h1 className="header-font"> On <span
-                        style={{textDecoration:"underline",
-                            textDecorationThickness:"0.5rem",
-                            textDecorationColor:"#c1c50a"}}> FindHer
+                    <h1 className="header-font"> On <span className="text-deco-three"
+                        style={{textDecorationColor:"#c1c50a"}}> FindHer
                         </span> you will get:</h1>
                     {cardTitles.map((title, index) => (
                         <Col key={index} xs={12} md={4} className="align-content-center">

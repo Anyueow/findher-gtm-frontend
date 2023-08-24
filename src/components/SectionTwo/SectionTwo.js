@@ -14,8 +14,8 @@ function SectTwo() {
                     <Col md={5} xs={12} className="text-content">
                         <h1 className="title">
                             <strong>
-                                That's why we're building
-                                <span className="highlight-text"> FindHer</span>
+                                That's why we're building {' '}
+                                <span className="highlight-text">FindHer</span>
                             </strong>
                         </h1>
                         <h3 className="description">
@@ -28,7 +28,7 @@ function SectTwo() {
                         </h3>
                     </Col>
 
-                    <Col md={7} xs={12} className="image-content">
+                    <Col md={7} xs={12} className="image-content section-two-image">
                         <img src={base} className="display-image desktop" alt="Findher Demo"/>
                         <img src={mobbase} className="display-image mobile" alt="Findher Demo"/>
                     </Col>

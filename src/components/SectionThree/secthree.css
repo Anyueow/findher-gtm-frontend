@@ -116,6 +116,15 @@ justify-content: space-evenly;
     background-color: #c1c50a;  /* This is just a sample color. Adjust as needed. */
 }
 
+.text-deco-three {
+    position: relative;
+    background-image: linear-gradient(#ee2c5b, #ee2c5b) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 0.5rem; /* This sets the thickness of the underline */
+    background-position: 0 100%; /* This positions the underline at the bottom of the text */
+    padding-bottom: 5px; /* Adjust this to control the space between the text and the underline */
+}
+
 /* All your current styles here... */
 
 /* By default, hide the btn-section1, making row-features visible */
@@ -169,6 +178,11 @@ justify-content: space-evenly;
 
 .icon-features{
     width: 100%;
+}
+
+.text-deco-three {
+    background-size: 100% 0.3rem;
+    background-image: linear-gradient(#C1C50A, #C1C50A) !important;
 }
 
 }

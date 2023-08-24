@@ -156,7 +156,7 @@
     }
     .signup-btn{
         position: absolute;
-        top: 190%;
+        top: 350%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -165,5 +165,24 @@
     }
     .mobile{
         margin: 0%;
+    }
+    .text-deco {
+        background-size: 100% 0.3rem;
+    }
+
+    .main-name {
+        font-size: 1.5rem;
+        width:90%
+    }
+
+    .description {
+        font-size: 1rem !important;
+        width:90%;
+        font-weight: 300;
+    
+    }
+
+    .hero {
+        height: 85vh;
     }
 }
