@@ -166,4 +166,7 @@
     .mobile{
         margin: 0%;
     }
+    .text-deco {
+        background-size: 100% 0.3rem;
+    }
 }

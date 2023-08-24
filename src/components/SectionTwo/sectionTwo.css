@@ -25,9 +25,12 @@
 }
 
 .highlight-text {
-  text-decoration: underline;
-  text-decoration-color: #ee2c5b;
-  text-decoration-thickness: 0.5rem;
+  position: relative;
+  background-image: linear-gradient(#ee2c5b, #ee2c5b);
+  background-repeat: no-repeat;
+  background-size: 100% 0.5rem; /* This sets the thickness of the underline */
+  background-position: 0 100%; /* This positions the underline at the bottom of the text */
+  padding-bottom: 5px; /* Adjust this to control the space between the text and the underline */
 }
 
 .description {
@@ -90,5 +93,12 @@
   .title{
     font-size: 1.8rem;
     width: 100%;
+  }
+
+  .highlight-text {
+    background-size: 100% 0.3rem;
+  }
+  .section-two-image{
+    margin-top: -60% !important;
   }
 }
