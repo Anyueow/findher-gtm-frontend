@@ -178,11 +178,11 @@
     .description {
         font-size: 1rem !important;
         width:90%;
-        font-family: Montserrat;
         font-weight: 300;
-        text-align: left;
-    
     
     }
 
+    .hero {
+        height: 65vh;
+    }
 }
