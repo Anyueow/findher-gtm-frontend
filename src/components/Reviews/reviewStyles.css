@@ -534,3 +534,24 @@ heading-name3{
 .tool-tip::before {
     border-right: none !important;
   }
+
+  /* first Page */
+
+.first-more-info{
+    width: 200% !important;
+    height: fit-content !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  @media (max-width: 600px) {
+    .first-more-info{
+       margin-left: 0% !important;
+      }
+      .sub{
+        margin-top: 100px !important;
+      }
+      .sub .form-grp{
+        margin-left: 10% !important;
+      }
+  }

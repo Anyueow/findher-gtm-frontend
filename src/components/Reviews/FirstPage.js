@@ -108,8 +108,8 @@ export const FirstPage = () => {
 
                             </Row>
                             <Row>
-                                <Col md={6} xs={41}>
-                                    <Button className="button-sub" onClick={handleClick}> More info </Button>
+                                <Col md={7} xs={7}>
+                                    <Button className="button-sub first-more-info" onClick={handleClick}> More info </Button>
 
                                 </Col>
                             </Row>
@@ -121,6 +121,7 @@ export const FirstPage = () => {
                         <Row>
                             <h2 className="head-name Waitlist" >
                                 Join the Waitlist!</h2>
+                                <p>to be the first to access ratings, reviews, and how 10,000+ different workplaces in India support the women working for them</p>
                         </Row><Row>
 
                         <Form onSubmit={handleSubmit} className="form-wrapper">
