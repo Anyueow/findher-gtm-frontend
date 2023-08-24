@@ -71,7 +71,12 @@ function TestimonialSection() {
     
       const handleTouchEnd = () => {
         setIsDragging(false);
+        handleNext()
       };
+
+      useEffect(() => {
+        containerRef.current.scrollLeft = currentIndex * 300;
+      }, [currentIndex]);
 
     useEffect(()=>{
         const calculateItemsPerPage = () => {
