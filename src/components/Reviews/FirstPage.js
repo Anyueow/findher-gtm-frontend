@@ -121,7 +121,7 @@ export const FirstPage = () => {
                         <Row>
                             <h2 className="head-name Waitlist" >
                                 Join the Waitlist!</h2>
-                                <p>to be the first to access ratings, reviews, and how 10,000+ different workplaces in India support the women working for them</p>
+                                <p className="px-5 small">to be the first to access ratings, reviews, and how 10,000+ different workplaces in India support the women working for them</p>
                         </Row><Row>
 
                         <Form onSubmit={handleSubmit} className="form-wrapper">

@@ -28,7 +28,7 @@ function SectTwo() {
                         </h3>
                     </Col>
 
-                    <Col md={7} xs={12} className="image-content">
+                    <Col md={7} xs={12} className="image-content" style={{marginTop: '-60%'}}>
                         <img src={base} className="display-image desktop" alt="Findher Demo"/>
                         <img src={mobbase} className="display-image mobile" alt="Findher Demo"/>
                     </Col>
