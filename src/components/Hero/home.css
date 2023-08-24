@@ -144,7 +144,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .hero-text {
         padding-top: 0%;
         padding-left: 5%;

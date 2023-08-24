@@ -11,7 +11,9 @@ export const SecondPage = () => {
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
     const [companies, setCompany] = useState("");
+    const [showToast, setShowToast] = useState(true); // Add this state
 
+    
     const [Loc, setLoc] = useState("");
 
     const [title, setTitle] = useState("");
@@ -184,6 +186,7 @@ export const SecondPage = () => {
             </Row>
           </Form>
         </Row>
+        {showToast && (
         <Toast className="SecondPageToast">
           <Toast.Body className="px-5">
             <div className="d-flex justify-content-between align-items-center">
@@ -191,7 +194,7 @@ export const SecondPage = () => {
               <button
                 type="button"
                 className="btn-close"
-                data-bs-dismiss="toast"
+                onClick={()=>setShowToast(false)}
               ></button>
             </div>
             <p>
@@ -208,13 +211,14 @@ export const SecondPage = () => {
               <Button
                 type="button"
                 className="btn btn-dark"
-                data-bs-dismiss="toast"
+                onClick={()=>setShowToast(false)}
               >
                 Sounds good
               </Button>
             </div>
           </Toast.Body>
         </Toast>
+        )}
       </Container>
     );
 };

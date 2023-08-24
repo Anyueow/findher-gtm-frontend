@@ -518,6 +518,15 @@ heading-name3{
 
         margin-left: 25px;
     }
+    .SecondPageToast{
+        width: 90% !important;
+        font-size: small;
+       font-weight: 300;
+       top: 45%;
+    }
+    .SecondPageToast .toast-body{
+        padding: 10px !important;
+    } 
 }
 
 /* sixfth Page */
