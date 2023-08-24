@@ -64,14 +64,32 @@ function TestimonialSection() {
     
       const handleTouchMove = (e) => {
         if (!isDragging) return;
-    
+      
         const dragDistance = e.touches[0].clientX - dragStartX;
-        containerRef.current.scrollLeft = currentIndex * 300 - dragDistance;
+        const threshold = 30; // Adjust this threshold as needed
+      
+        if (dragDistance > threshold) {
+          // Swipe from left to right (swipe right)
+          handlePrev();
+        } else if (dragDistance < -threshold) {
+          // Swipe from right to left (swipe left)
+          handleNext();
+        }
       };
     
       const handleTouchEnd = () => {
         setIsDragging(false);
-        handleNext()
+
+        const dragDistance = dragStartX - containerRef.current.scrollLeft;
+        const threshold = 30; // Adjust this threshold as needed
+      
+        if (dragDistance > threshold) {
+          // Swipe from left to right (swipe right)
+          handlePrev();
+        } else if (dragDistance < -threshold) {
+          // Swipe from right to left (swipe left)
+          handleNext();
+        }
       };
 
       useEffect(() => {
