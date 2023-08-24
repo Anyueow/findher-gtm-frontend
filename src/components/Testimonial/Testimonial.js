@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from "react";
+import React, { useState , useEffect, useRef} from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 import {Col, Container, Row} from "react-bootstrap";
@@ -52,6 +52,27 @@ function TestimonialSection() {
 
     // Adjust items per page based on window width
     const [itemsPerPage, setItemsPerPage] = useState(3);
+
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStartX, setDragStartX] = useState(0);
+    const containerRef = useRef(null);
+
+    const handleTouchStart = (e) => {
+        setIsDragging(true);
+        setDragStartX(e.touches[0].clientX);
+      };
+    
+      const handleTouchMove = (e) => {
+        if (!isDragging) return;
+    
+        const dragDistance = e.touches[0].clientX - dragStartX;
+        containerRef.current.scrollLeft = currentIndex * 300 - dragDistance;
+      };
+    
+      const handleTouchEnd = () => {
+        setIsDragging(false);
+      };
+
     useEffect(()=>{
         const calculateItemsPerPage = () => {
             return window.innerWidth <= 780 ? 1 : 3;
@@ -79,47 +100,52 @@ function TestimonialSection() {
     const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + itemsPerPage);
 
     return (
-        <section>
-            <Container className=" jus center-contents">
-                <div>
-                    <h1 className="test-head"> What these
-                        women have to say about  <span className="headspan"> FindHer</span> :</h1>
-                </div>
-            </Container>
+      <section>
+        <Container className=" jus center-contents">
+          <div>
+            <h1 className="test-head">
+              {" "}
+              What these women have to say about{" "}
+              <span className="headspan"> FindHer</span> :
+            </h1>
+          </div>
+        </Container>
 
-            <Container className="mar">
+        <Container className="mar">
+          <button className="arrow-button desktop" onClick={handlePrev}>
+            <AiOutlineLeft className="opalescent-arrow" />
+          </button>
 
-                <button className="arrow-button " onClick={handlePrev}>
-                    <AiOutlineLeft className="opalescent-arrow" />
-                </button>
+          <Row
+            className="center-contents"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            ref={containerRef}
+          >
+            {visibleTestimonials.map((testimonial) => (
+              <Col md={3} className="testimonial center-contents">
+                <Row>
+                  <img
+                    className="card-img"
+                    src={testimonial.image}
+                    alt="profile"
+                  />
+                  <h1 className="header">{testimonial.name}</h1>
 
-                <Row className="center-contents">
-
-
-                    {visibleTestimonials.map(testimonial => (
-                        <Col md={3}  className="testimonial center-contents">
-                            <Row>
-                                <img className="card-img" src={testimonial.image}
-                                     alt="profile"/>
-                                <h1 className="header">{testimonial.name}</h1>
-
-                                <h1 className="Quotes">“</h1>
-                            <p className="cardSub">{testimonial.message}</p>
-                                <h1 className="Quotes"> ”</h1>
-
-                            </Row>
-                        </Col>
-                    ))}
-
-
-
+                  <h1 className="Quotes">“</h1>
+                  <p className="cardSub">{testimonial.message}</p>
+                  <h1 className="Quotes"> ”</h1>
                 </Row>
-                <button className="arrow-button" onClick={handleNext}>
-                    <AiOutlineRight className="opalescent-arrow" />
-                </button>
-            </Container>
-            {/* ... other components or sections ... */}
-        </section>
+              </Col>
+            ))}
+          </Row>
+          <button className="arrow-button desktop" onClick={handleNext}>
+            <AiOutlineRight className="opalescent-arrow" />
+          </button>
+        </Container>
+        {/* ... other components or sections ... */}
+      </section>
     );
 }
 
