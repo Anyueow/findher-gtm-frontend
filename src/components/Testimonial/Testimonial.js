@@ -38,7 +38,7 @@ const testimonials = [
         image: image4,
     },
     {
-        name: "Pooja K.",
+        name: "Pooja KA.",
 
         message: "I was searching for a platform that truly understood the challenges women like me "
                  + "face in their careers. Their focus on my specific goals made all the difference",
@@ -56,6 +56,7 @@ function TestimonialSection() {
     const [isDragging, setIsDragging] = useState(false);
     const [dragStartX, setDragStartX] = useState(0);
     const containerRef = useRef(null);
+    const [touchEndX, setTouchEndX] = useState(0);
 
     const handleTouchStart = (e) => {
         setIsDragging(true);
@@ -64,36 +65,39 @@ function TestimonialSection() {
     
       const handleTouchMove = (e) => {
         if (!isDragging) return;
-      
+
         const dragDistance = e.touches[0].clientX - dragStartX;
         const threshold = 30; // Adjust this threshold as needed
       
         if (dragDistance > threshold) {
           // Swipe from left to right (swipe right)
-          handlePrev();
+          setTouchEndX(e.touches[0].clientX); // Set the touch end position
         } else if (dragDistance < -threshold) {
           // Swipe from right to left (swipe left)
-          handleNext();
+          setTouchEndX(e.touches[0].clientX); // Set the touch end position
         }
       };
     
-      const handleTouchEnd = () => {
+      const handleTouchEnd = (e) => {
         setIsDragging(false);
 
-        const dragDistance = dragStartX - containerRef.current.scrollLeft;
+        const dragDistance = dragStartX - touchEndX; // Calculate the total drag distance
         const threshold = 30; // Adjust this threshold as needed
       
         if (dragDistance > threshold) {
-          // Swipe from left to right (swipe right)
-          handlePrev();
-        } else if (dragDistance < -threshold) {
           // Swipe from right to left (swipe left)
           handleNext();
+        } else if (dragDistance < -threshold) {
+          // Swipe from left to right (swipe right)
+          handlePrev();
         }
+      
+        // Clear touch end position
+        setTouchEndX(0);
       };
 
       useEffect(() => {
-        containerRef.current.scrollLeft = currentIndex * 300;
+        containerRef.current.scrollLeft = currentIndex * 100;
       }, [currentIndex]);
 
     useEffect(()=>{
