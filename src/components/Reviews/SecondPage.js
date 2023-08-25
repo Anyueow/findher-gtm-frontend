@@ -40,7 +40,7 @@ export const SecondPage = () => {
             };
 
             try {
-                const response = await fetch("https://findher-deploy-c232276eae44.herokuapp.com/protectedRoute/createReview", {
+                const response = await fetch("https://findher-backend.onrender.com/protectedRoute/createReview", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
