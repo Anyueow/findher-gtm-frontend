@@ -53,7 +53,6 @@ const testimonials = [
 
 function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastIndex, setLastIndex] = useState(testimonials.length-1);
   
   // Adjust items per page based on window width
   const [itemsPerPage, setItemsPerPage] = useState(3);
@@ -191,8 +190,8 @@ function TestimonialSection() {
                 <p className="cardSub mt-3">{testimonial.message}</p>
                 <div className="mobile dot-testimonial-div">
                   <div className={`dot-testimonial mx-2 ${currentIndex ===0? "active":""}`}></div>
-                  <div className={`dot-testimonial mx-2 ${currentIndex >= 1? (currentIndex < lastIndex? "active":""):""}`}></div>
-                  <div className={`dot-testimonial mx-2 ${currentIndex ===lastIndex? "active":""}`}></div>
+                  <div className={`dot-testimonial mx-2 ${currentIndex >= 1? (currentIndex < testimonials.length-1? "active":""):""}`}></div>
+                  <div className={`dot-testimonial mx-2 ${currentIndex ===testimonials.length-1? "active":""}`}></div>
                 </div>
               </Row>
             </Col>
