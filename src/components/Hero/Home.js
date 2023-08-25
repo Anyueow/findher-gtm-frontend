@@ -46,13 +46,15 @@ function Home() {
                 <div>
                     <img src={base} className="base-image desktop" alt="Findher Demo"/>
                     <img src={mobbase} className="base-image mobile" alt="Findher Demo"/>
+                    <div className="d-flex justify-content-center">
                     <a href="https://www.surveymonkey.com/r/NMD3GRV"
                                className="signup-btn mobile"
-                               style={{marginTop:"5%", display: 'inline-block', textDecoration: 'none'}}
+                               style={{marginTop:"5%", textDecoration: 'none'}}
                                target="_blank"
                                rel="noopener noreferrer">
                                 Sign up today!
                             </a>
+                    </div>
                 </div>
                     </Col>
                 </Row>
