@@ -486,8 +486,9 @@ heading-name3{
         padding-bottom: 1%;
         text-align: left;
     }
-    .Waitlist{
+    .Waitlist {
         text-align: center;
+        font-size: 1.2rem;
     }
     .formCont{
         display: flex;
@@ -529,6 +530,10 @@ heading-name3{
     } 
 }
 
+.Waitlistpara{
+  text-align: center;
+    font-size: 0.8rem;
+}
 /* sixfth Page */
 
 .tool-tip::before {
@@ -557,5 +562,6 @@ heading-name3{
       .Waitlistpara{
         padding-left: 10% !important;
         padding-right: 10% !important;
+
       }
   }
