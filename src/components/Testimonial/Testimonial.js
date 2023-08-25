@@ -67,7 +67,7 @@ function TestimonialSection() {
         if (!isDragging) return;
 
         const dragDistance = e.touches[0].clientX - dragStartX;
-        const threshold = 30; // Adjust this threshold as needed
+        const threshold = 60; // Adjust this threshold as needed
       
         if (dragDistance > threshold) {
           // Swipe from left to right (swipe right)
@@ -82,7 +82,7 @@ function TestimonialSection() {
         setIsDragging(false);
 
         const dragDistance = dragStartX - touchEndX; // Calculate the total drag distance
-        const threshold = 160; // Adjust this threshold as needed
+        const threshold = 240; // Adjust this threshold as needed
       
         if (dragDistance > threshold) {
           // Swipe from right to left (swipe left)
