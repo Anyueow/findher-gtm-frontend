@@ -21,14 +21,14 @@ function Home() {
 
                     <Col md={7} xs={12} className="hero-text">
                         <div className="text-content">
-                    <h1 className="main-name text-center">
+                    <h1 className="main-name">
                         Insights on workplaces in <span className="text-deco">India</span>,
                         <span className="connector"> for </span>
                         <span className="highlight">women </span>
                         <span className="connector">by</span>
                         <span className="highlight-alt"> women.</span>
                     </h1>
-                    <h3 className="description text-center">
+                    <h3 className="description">
                         Learn what it’s like to work at a company from the women who have been there.
                     </h3>
                             <a href="https://www.surveymonkey.com/r/NMD3GRV"
