@@ -55,19 +55,21 @@ function TestimonialSection() {
 
     const [isDragging, setIsDragging] = useState(false);
     const [dragStartX, setDragStartX] = useState(0);
+    const [dragStartY, setDragStartY] = useState(0);
     const containerRef = useRef(null);
     const [touchEndX, setTouchEndX] = useState(0);
 
     const handleTouchStart = (e) => {
         setIsDragging(true);
         setDragStartX(e.touches[0].clientX);
+        setDragStartY(e.touches[0].clientY);
       };
     
       const handleTouchMove = (e) => {
         if (!isDragging) return;
 
         // Ignore touch move if there are multiple touches
-        if (e.touches.length !== 1) {
+        if (e.touches.length !== 1 || Math.abs(e.touches[0].clientY - dragStartY) > 50) {
           setIsDragging(false);
           return;
         }
@@ -102,10 +104,6 @@ function TestimonialSection() {
         // Clear touch end position
         setTouchEndX(0);
       };
-
-      useEffect(() => {
-        containerRef.current.scrollLeft = currentIndex * 300;
-      }, [currentIndex]);
 
     useEffect(()=>{
         const calculateItemsPerPage = () => {
