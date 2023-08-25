@@ -66,9 +66,14 @@ function TestimonialSection() {
       const handleTouchMove = (e) => {
         if (!isDragging) return;
 
+        // Ignore touch move if there are multiple touches
+        if (e.touches.length !== 1) {
+          return;
+        }
+
         const dragDistance = e.touches[0].clientX - dragStartX;
         const threshold = 200; // Adjust this threshold as needed
-      
+
         if (dragDistance > threshold) {
           // Swipe from left to right (swipe right)
           setTouchEndX(e.touches[0].clientX); // Set the touch end position
