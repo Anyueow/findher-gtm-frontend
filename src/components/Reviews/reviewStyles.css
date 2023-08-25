@@ -487,7 +487,6 @@ heading-name3{
         text-align: left;
     }
     .Waitlist {
-        text-align: center;
         font-size: 1.2rem;
     }
     .formCont{
@@ -531,8 +530,11 @@ heading-name3{
 }
 
 .Waitlistpara{
-  text-align: center;
-    font-size: 0.8rem;
+
+    font-size: 1.1rem;
+    width:80%;
+    font-family: Montserrat;
+    margin-bottom: 15px;
 }
 /* sixfth Page */
 
@@ -562,6 +564,10 @@ heading-name3{
       .Waitlistpara{
         padding-left: 10% !important;
         padding-right: 10% !important;
+          text-align: center;
+          font-size: 0.8rem;
+          width:100%;
+          font-family: Montserrat;
 
       }
   }
