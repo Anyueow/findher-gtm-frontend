@@ -28,7 +28,7 @@ function Home() {
                         <span className="connector">by</span>
                         <span className="highlight-alt"> women.</span>
                     </h1>
-                    <h3 className="description">
+                    <h3 className="description hero-description">
                         Learn what it’s like to work at a company from the women who have been there.
                     </h3>
                             <a href="https://www.surveymonkey.com/r/NMD3GRV"

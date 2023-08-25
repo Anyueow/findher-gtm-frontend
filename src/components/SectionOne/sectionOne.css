@@ -82,3 +82,22 @@
 
     /* Additional mobile adjustments can be added here */
 }
+
+@media (max-width: 600px) {
+
+    .main-name-sect{
+        word-spacing: 8px; 
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .main-sub{
+        padding-left: 5%;
+        font-size: 0.8rem;
+    }
+
+    .ques-img-container {
+       padding-left: 0% !important;
+       padding-right: 0% !important;
+      }
+      
+}
