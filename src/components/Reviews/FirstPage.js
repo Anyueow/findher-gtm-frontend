@@ -37,7 +37,7 @@ export const FirstPage = () => {
         const { email, phoneNumber, password } = user;
 
         if (email && phoneNumber && password) {
-            const response = await fetch("https://findher-deploy-c232276eae44.herokuapp.com/register", {
+            const response = await fetch("https://findher-backend.onrender.com/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -56,6 +56,7 @@ export const FirstPage = () => {
 
         if (response.ok) {
                 const data = await response.json();
+                localStorage.setItem("token", data.token);
                 console.log(data); // Print the response data to the console for debugging purposes
                 navigate("/reviews_one"); // Assuming you have a success page to navigate to
             } else {
