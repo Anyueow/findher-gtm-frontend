@@ -235,6 +235,8 @@
     .test-head-testimonial{
         font-size: 1.5rem;
         width: 100% !important;
+        text-align: left;
+        margin-right: 30% !important;
     }
 
     .headspan{
