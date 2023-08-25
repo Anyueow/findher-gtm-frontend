@@ -53,7 +53,7 @@ const testimonials = [
 
 function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastIndex, setLastIndex] = useState(testimonials.length-1);
+  const lastIndex = testimonials.length-1;
 
   // Adjust items per page based on window width
   const [itemsPerPage, setItemsPerPage] = useState(3);
