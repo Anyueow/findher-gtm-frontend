@@ -131,7 +131,7 @@
     }
 
     .desktop {
-        display: none;
+        display: none !important;
     }
 
     .mobile {
@@ -155,15 +155,7 @@
         margin-bottom: 4%;
         width:90%
     }
-    .signup-btn{
-        position: absolute;
-        top: 350%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+
     .mobile{
         margin: 0%;
     }
@@ -185,6 +177,10 @@
     }
 
     .hero {
-        height: 95vh;
+        height: 74vh;
+    }
+    
+    .signup-btn {
+        width: 75% !important;
     }
 }
