@@ -69,7 +69,7 @@ function TestimonialSection() {
         if (!isDragging) return;
 
         // Ignore touch move if there are multiple touches
-        if (e.touches.length !== 1 || Math.abs(e.touches[0].clientY - dragStartY) > 25) {
+        if (e.touches.length !== 1 || Math.abs(e.touches[0].clientY - dragStartY) > 50) {
           setIsDragging(false);
           return;
         }
