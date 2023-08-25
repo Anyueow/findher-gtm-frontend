@@ -146,10 +146,10 @@ function TestimonialSection() {
     <section>
       <Container className=" jus center-contents">
         <div>
-          <h1 className="test-head">
+          <h1 className="test-head test-head-testimonial">
             {" "}
             What these women have to say about{" "}
-            <span className="headspan"> FindHer</span> :
+            <span className="headspan text-deco"> FindHer</span> :
           </h1>
         </div>
       </Container>
