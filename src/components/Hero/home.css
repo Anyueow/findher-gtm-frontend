@@ -27,7 +27,8 @@
     font-family: "League Spartan-SemiBold";
     text-align: left;
     margin-bottom: 4%;
-    width:80%
+    width:90%;
+    
 }
 
 .text-deco {
@@ -172,17 +173,18 @@
 
     .main-name {
         font-size: 1.5rem;
-        width:90%
+        width:90%;
+        text-align: center;
     }
 
     .description {
         font-size: 1rem !important;
         width:90%;
         font-weight: 300;
-    
+        text-align: center;
     }
 
     .hero {
-        height: 85vh;
+        height: 95vh;
     }
 }

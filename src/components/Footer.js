@@ -19,7 +19,7 @@ function Footer() {
           <Col md="4" >
             <h2 className="Footerhed"> <strong>
               Contact Us </strong></h2>
-            <h4> info@findher.work</h4>
+            <h4 className="desktop"> info@findher.work</h4>
 
             <Row className="footer-icons">
               <Col md={2} xs="auto">
@@ -42,6 +42,7 @@ function Footer() {
               </Col>
               {/* Add more social icons here if needed */}
             </Row>
+            <h4 className="mobile pt-2"> info@findher.work</h4>
           </Col>
         </Row>
       </Container>
