@@ -119,9 +119,6 @@ body, button, input, select, textarea {
         margin-top: 5%;
     }
 
-    .nav-link2{
-        font-size: 0.3rem;
-    }
 
 }
 
@@ -486,8 +483,8 @@ heading-name3{
         padding-bottom: 1%;
         text-align: left;
     }
-    .Waitlist{
-        text-align: center;
+    .Waitlist {
+        font-size: 1.2rem;
     }
     .formCont{
         display: flex;
@@ -529,6 +526,13 @@ heading-name3{
     } 
 }
 
+.Waitlistpara{
+
+    font-size: 1.1rem;
+    width:80%;
+    font-family: Montserrat;
+    margin-bottom: 15px;
+}
 /* sixfth Page */
 
 .tool-tip::before {
@@ -557,5 +561,10 @@ heading-name3{
       .Waitlistpara{
         padding-left: 10% !important;
         padding-right: 10% !important;
+          text-align: center;
+          font-size: 0.8rem;
+          width:100%;
+          font-family: Montserrat;
+
       }
   }

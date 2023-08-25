@@ -81,7 +81,8 @@ export const SecondPage = () => {
     return (
       <Container
         className="container-second"
-        style={{ paddingTop: navbarHeight }}
+        style={{ paddingTop: navbarHeight,
+       }}
       >
         <Row className="ROw">
           <Form onSubmit={handleSubmit} className="form-grp-one">
