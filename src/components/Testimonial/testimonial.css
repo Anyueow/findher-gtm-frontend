@@ -97,8 +97,10 @@
 }
 
 .cardSub {
-    text-align: center;
     font-family: Montserrat-SemiBold;
+    font-size:15px;
+     font-weight:400;
+     text-align: left;
 }
 
 /* ...Your existing CSS... */
@@ -207,4 +209,25 @@
     }
 
     /* ... Other mobile adjustments ... */
+}
+
+@media (max-width: 600px) {
+    .testimonial {
+        padding: 5% !important;
+    }
+    .cardSub {
+        font-size:18px !important;
+    }
+    .dot-testimonial  {
+        display: inline-flex;
+        width: 10px !important;
+        height: 10px !important;
+        background-color: rgba(238, 44, 91, 0.7);
+        border-radius: 100% !important;
+        margin: 0 auto;
+        transition: background-color 0.3s;
+      }
+    .dot-testimonial-div .active{
+        background-color: #ee2c5b !important;
+    }
 }
