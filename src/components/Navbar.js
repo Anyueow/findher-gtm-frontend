@@ -42,7 +42,7 @@ function NavBar() {
                                 For Women </strong></Link>
                     </li>
                     <li>
-                        <Link to="/update_details">For Businesses</Link>
+                        <Link to="/business_register">For Businesses</Link>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
