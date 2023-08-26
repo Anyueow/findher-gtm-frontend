@@ -1,3 +1,6 @@
+*{
+  overflow-x: hidden;
+}
 html {
   --section-background-color: linear-gradient(
           to bottom left,
@@ -169,8 +172,8 @@ body {
     display: none;
     flex-direction: column;
     gap: 0;
-    position: absolute;
-    top: 80px;
+    position: fixed;
+    top: 70px;
     right: 20px;
     background-color: #fff;
     border-radius: 4px;
