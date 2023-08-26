@@ -28,11 +28,11 @@ function Home() {
                         <span className="connector">by</span>
                         <span className="highlight-alt"> women.</span>
                     </h1>
-                    <h3 className="description">
+                    <h3 className="description hero-description">
                         Learn what it’s like to work at a company from the women who have been there.
                     </h3>
                             <a href="https://www.surveymonkey.com/r/NMD3GRV"
-                               className="signup-btn"
+                               className="signup-btn desktop"
                                style={{marginTop:"5%", display: 'inline-block', textDecoration: 'none'}}
                                target="_blank"
                                rel="noopener noreferrer">
@@ -46,8 +46,16 @@ function Home() {
                 <div>
                     <img src={base} className="base-image desktop" alt="Findher Demo"/>
                     <img src={mobbase} className="base-image mobile" alt="Findher Demo"/>
+                    <div className="d-flex justify-content-center">
+                    <a href="https://www.surveymonkey.com/r/NMD3GRV"
+                               className="signup-btn mobile"
+                               style={{marginTop:"5%", textDecoration: 'none'}}
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Sign up today!
+                            </a>
+                    </div>
                 </div>
-
                     </Col>
                 </Row>
             </Container>

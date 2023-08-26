@@ -103,7 +103,7 @@
 }
 
 .mobile {
-    display: none;
+    display: none ;
 }
 
 
@@ -131,11 +131,11 @@
     }
 
     .desktop {
-        display: none;
+        display: none !important;
     }
 
     .mobile {
-        display: block;
+        display: block !important;
     }
 
     .base-image {
@@ -155,15 +155,7 @@
         margin-bottom: 4%;
         width:90%
     }
-    .signup-btn{
-        position: absolute;
-        top: 350%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+
     .mobile{
         margin: 0%;
     }
@@ -177,14 +169,14 @@
         text-align: center;
     }
 
-    .description {
+    .hero-description {
         font-size: 1rem !important;
         width:90%;
         font-weight: 300;
         text-align: center;
     }
 
-    .hero {
-        height: 95vh;
+    .signup-btn {
+        width: 80% !important;
     }
 }

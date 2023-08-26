@@ -37,10 +37,12 @@
 
 .headspan {
 
-
-    text-decoration-thickness: 0.5rem;
-    text-decoration: underline;
-    text-decoration-color: #ee2c5b;
+    position: relative;
+    background-image: linear-gradient(#ee2c5b, #ee2c5b);
+    background-repeat: no-repeat;
+    background-size: 100% 0.5rem; /* This sets the thickness of the underline */
+    background-position: 0 100%; /* This positions the underline at the bottom of the text */
+    padding-bottom: 5px; /* Adjust this to control the space between the text and the underline */
 
 }
 
@@ -229,5 +231,15 @@
       }
     .dot-testimonial-div .active{
         background-color: #ee2c5b !important;
+    }
+    .test-head-testimonial{
+        font-size: 1.5rem;
+        width: 100% !important;
+        text-align: left;
+        margin-right: 30% !important;
+    }
+
+    .headspan{
+        background-size: 100% 0.3rem;
     }
 }
