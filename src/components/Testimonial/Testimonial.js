@@ -46,23 +46,7 @@ const testimonials = [
     image: image4,
   },
   {
-    name: "Pooja KA.",
-
-    message:
-      "I was searching for a platform that truly understood the challenges women like me " +
-      "face in their careers. Their focus on my specific goals made all the difference",
-    image: image5,
-  },
-  {
-    name: "Pooja c.",
-
-    message:
-      "I was searching for a platform that truly understood the challenges women like me " +
-      "face in their careers. Their focus on my specific goals made all the difference",
-    image: image5,
-  },
-  {
-    name: "Pooja cA.",
+    name: "Pooja K.",
 
     message:
       "I was searching for a platform that truly understood the challenges women like me " +
