@@ -93,9 +93,8 @@
     display: block;
     z-index: 0;
     margin-top: 3%;
-
-    margin-left: -15%;
-    overflow: hidden;
+    /* margin-left: 0%; */
+    margin-left: -6%;
 }
 
 .desktop {
@@ -153,7 +152,8 @@
     .main-name {
         font-size: 1.8rem;
         margin-bottom: 4%;
-        width:90%
+        width:90%;
+        overflow: hidden;
     }
 
     .mobile{

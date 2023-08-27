@@ -144,9 +144,9 @@ function TestimonialSection() {
   );
   return (
     <section>
-      <Container className=" jus center-contents">
-        <div>
-          <h1 className="test-head test-head-testimonial">
+      <Container className=" jus center-contents"style={{overflow:"hidden",padding:"1px 9px", width:"100%",alignItems:"center",justifyContent:"center"}}>
+        <div styles={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <h1 className="test-head test-head-testimonial" style={{overflow:"hidden",padding:"2px 43px"}}>
             {" "}
             What these women have to say about{" "}
             <span className="headspan text-deco"> FindHer</span> :

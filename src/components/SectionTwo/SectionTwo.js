@@ -8,8 +8,8 @@ import "./sectionTwo.css";
 function SectTwo() {
     return (
         <section className="section-container">
-            <Container fluid className="section-content">
-                <Row className="align-items-center full-height">
+            <Container fluid className="section-content" style={{overflow: 'hidden'}}>
+                <Row className="align-items-center full-height" style={{overflow: 'hidden'}}>
 
                     <Col md={5} xs={12} className="text-content">
                         <h1 className="title">
