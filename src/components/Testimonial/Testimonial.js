@@ -58,21 +58,6 @@ const testimonials = [
 
 function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
-
-  useEffect(() => {
-    const calculateItemsPerPage = () => {
-      return window.innerWidth <= 780 ? 1 : 3;
-    };
-
-    setItemsPerPage(calculateItemsPerPage());
-
-    const handleResize = () => {
-      setItemsPerPage(calculateItemsPerPage());
-    };
-
-    window.addEventListener("resize", handleResize);
-  }, [currentIndex, itemsPerPage]);
 
   return (
     <section className="testimonial-section">
@@ -95,10 +80,9 @@ function TestimonialSection() {
               setCurrentIndex(swiper.activeIndex);
             }}
             effect={"coverflow"}
-            grabCursor={true}
+            grabCursor={false}
             centeredSlides={false}
             loop={false}
-            slidesPerView={itemsPerPage}
             spaceBetween={50}
             coverflowEffect={{
               rotate: 0,
@@ -109,8 +93,17 @@ function TestimonialSection() {
             navigation={{
               nextEl: ".swiper-button-next-testimonials",
               prevEl: ".swiper-button-prev-testimonials",
-              clickable: false,
+              clickable: true,
             }}
+            breakpoints={{
+              780: {
+                slidesPerView: 1, // Number of slides per view for screens <= 780px width
+              },
+              781: {
+                slidesPerView: 3, // Number of slides per view for screens > 780px width
+              },
+            }}
+          
             modules={[Navigation]}
             className="swiper_container"
           >
