@@ -30,20 +30,22 @@
 
 .highlight-text {
   position: relative;
-  background-image: linear-gradient(#ee2c5b, #ee2c5b);
-  background-repeat: no-repeat;
-  background-size: 100% 0.5rem; /* This sets the thickness of the underline */
-  background-position: 0 100%; /* This positions the underline at the bottom of the text */
-  padding-bottom: 5px; /* Adjust this to control the space between the text and the underline */
+  background-size: 100% 0.3rem;
+  background-color: rgba(226, 11, 60, 0.83);
+  line-height: 75px;
+  color:white;
 }
 
 .description {
   font-family: Montserrat;
   font-size: 1.3rem;
+  width: 100%;
 }
 
 .emphasis {
   font-weight: bold;
+
+
 }
 
 .image-content {
@@ -102,9 +104,13 @@
   }
 
   .highlight-text {
+    text-decoration: none;
     background-size: 100% 0.3rem;
+    background-color: rgba(226, 11, 60, 0.83);
+    line-height: 60px;
   }
   .section-two-image{
-    margin-top: -60% !important;
+    margin-top: -40% !important;
   }
+
 }

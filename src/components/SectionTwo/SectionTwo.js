@@ -20,15 +20,19 @@ function SectTwo() {
                         </h1>
                         <h3 className="description">
                            <span className="emphasis"> So you can be
-                               in the know,</span> not in the dark. On our platform
-                            you can access exclusive information
-                            about workplaces to ensure you're always making the
+                               in the know,</span> not in the dark.
+                        </h3>
+                            <h3 className="description">
+                      On our platform
+                            you can access <strong> exclusive information
+                            about workplaces </strong> to ensure you're always making the
                              best career decisions.
 
                         </h3>
                     </Col>
 
-                    <Col md={7} xs={12} className="image-content section-two-image">
+                    <Col md={7} xs={12} className="image-content section-two-image"
+ >
                         <img src={base} className="display-image desktop" alt="Findher Demo"/>
                         <img src={mobbase} className="display-image mobile" alt="Findher Demo"/>
                     </Col>
