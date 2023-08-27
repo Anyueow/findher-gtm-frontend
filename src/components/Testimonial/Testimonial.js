@@ -95,7 +95,7 @@ function TestimonialSection() {
             navigation={{
               nextEl: ".swiper-button-next-testimonials",
               prevEl: ".swiper-button-prev-testimonials",
-              clickable: true,
+              clickable: false,
             }}
             breakpoints={{
               780: {

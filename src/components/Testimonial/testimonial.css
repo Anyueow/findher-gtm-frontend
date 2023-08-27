@@ -232,6 +232,12 @@
         margin-left: 15%;
         text-align: left;
     }
+    .testimonial{
+        overflow-x: visible !important;
+    }
+    .swiper-slide{
+        overflow-x: visible !important;
+    }
 
     /* ... Other mobile adjustments ... */
 }
@@ -267,4 +273,5 @@
         background-image: linear-gradient(#ee2c5b, #ee2c5b) !important;
         background-size: 100% 0.3rem;
     }
+   
 }

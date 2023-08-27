@@ -1,6 +1,6 @@
-*{
+/* *{
   overflow-x: hidden;
-}
+} */
 html {
   --section-background-color: linear-gradient(
           to bottom left,
