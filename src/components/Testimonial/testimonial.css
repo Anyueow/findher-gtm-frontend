@@ -33,7 +33,6 @@
     font-size: 3rem;
 
 
-
 }
 
 .headspan {
@@ -62,6 +61,14 @@
     margin-left: 15%;
 }
 
+.test-head-testimonial
+{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+.testimonial-section{
+    margin-bottom: 10%;
+}
 .testimonial {
     min-width: 30%;
     background-color: rgba(223, 224, 119, 0.13);
@@ -105,7 +112,22 @@
      font-weight:400;
      text-align: left;
 }
+.testimonials-Swiper-container{
+    width: 80% !important;
+}
 
+.swiper-wrapper{
+    overflow-x: visible !important;
+}
+
+.text-deco-testimonial{
+    position: relative;
+    background-image: linear-gradient(#ee2c5b, #ee2c5b) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 0.5rem; /* This sets the thickness of the underline */
+    background-position: 0 100%; /* This positions the underline at the bottom of the text */
+    padding-bottom: 5px; /* Adjust this to control the space between the text and the underline */
+}
 /* ...Your existing CSS... */
 
 /* Mobile styles */
@@ -207,7 +229,7 @@
     .jus {
         margin-top: 10%;
         margin-bottom: -10%;
-
+        margin-left: 15%;
         text-align: left;
     }
 
@@ -216,6 +238,7 @@
 
 @media (max-width: 600px) {
     .testimonial {
+        padding: 5% !important;
     }
     .cardSub {
         font-size:18px !important;
@@ -233,17 +256,15 @@
         background-color: #ee2c5b !important;
     }
     .test-head-testimonial{
-
-        margin-left: 0.5%;
         font-size: 1.5rem;
         width: 100% !important;
-        text-align: center;
-        z-index: 5;
-        margin-bottom: 10%;
-        padding-bottom: 5%;
-    }
+        margin-left: 15%;
+        margin-right: 10%;
+        text-align: left;
 
-    .headspan{
+    }
+    .text-deco-testimonial{
+        background-image: linear-gradient(#ee2c5b, #ee2c5b) !important;
         background-size: 100% 0.3rem;
     }
 }

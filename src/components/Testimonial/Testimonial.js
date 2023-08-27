@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 import { Col, Container, Row } from "react-bootstrap";
@@ -8,6 +8,12 @@ import image3 from "./images/19.png";
 import image4 from "./images/20.png";
 import image5 from "./images/21.png";
 import "./testimonial.css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import { Navigation } from "swiper";
 
 const testimonials = [
   {
@@ -41,173 +47,124 @@ const testimonials = [
     image: image4,
   },
   {
-    name: "Pooja KA.",
+    name: "Pooja K.",
 
     message:
       "I was searching for a platform that truly understood the challenges women like me " +
       "face in their careers. Their focus on my specific goals made all the difference",
     image: image5,
   },
+
   // Add more testimonials as needed
 ];
 
 function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // Adjust items per page based on window width
-  const [itemsPerPage, setItemsPerPage] = useState(3);
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStartX, setDragStartX] = useState(0);
-  const [dragStartY, setDragStartY] = useState(0);
-  const containerRef = useRef(null);
-  const [touchEndX, setTouchEndX] = useState(0);
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setDragStartX(e.touches[0].clientX);
-    setDragStartY(e.touches[0].clientY);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-
-    // Ignore touch move if there are multiple touches
-    if (
-      e.touches.length !== 1 ||
-      Math.abs(e.touches[0].clientY - dragStartY) > 50
-    ) {
-      setIsDragging(false);
-      return;
-    }
-
-    const dragDistance = e.touches[0].clientX - dragStartX;
-    const threshold = 150; // Adjust this threshold as needed
-
-    if (dragDistance > threshold) {
-      // Swipe from left to right (swipe right)
-      setTouchEndX(e.touches[0].clientX); // Set the touch end position
-    } else if (dragDistance < -threshold) {
-      // Swipe from right to left (swipe left)
-      setTouchEndX(e.touches[0].clientX); // Set the touch end position
-    }
-  };
-
-  const handleTouchEnd = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-
-    const dragDistance = dragStartX - touchEndX; // Calculate the total drag distance
-    const threshold = 150; // Adjust this threshold as needed
-
-    if (dragDistance > threshold) {
-      // Swipe from right to left (swipe left)
-      handleNext();
-    } else if (dragDistance < -threshold) {
-      // Swipe from left to right (swipe right)
-      handlePrev();
-    }
-
-    // Clear touch end position
-    setTouchEndX(0);
-  };
-
-  useEffect(() => {
-    const calculateItemsPerPage = () => {
-      return window.innerWidth <= 780 ? 1 : 3;
-    };
-
-    // Set the initial value of itemsPerPage
-    setItemsPerPage(calculateItemsPerPage());
-
-    // Update itemsPerPage when the window width changes
-    const handleResize = () => {
-      setItemsPerPage(calculateItemsPerPage());
-    };
-
-    window.addEventListener("resize", handleResize);
-  }, []);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      Math.min(prevIndex + itemsPerPage, testimonials.length - itemsPerPage)
-    );
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - itemsPerPage, 0));
-  };
-
-  const visibleTestimonials = testimonials.slice(
-    currentIndex,
-    currentIndex + itemsPerPage
-  );
   return (
-    <section
-        style={{ minHeight:"100vh",
-        paddingTop:"5%"}}>
+    <section className="testimonial-section">
+      <div className="center-contents">
+        <h1 className="test-head test-head-testimonial my-5">
+          What these women have to say about{" "}
+          <span className=" text-deco-testimonial">FindHer</span>:
+        </h1>
+      </div>
 
-      <Container className="jus center-contents" style={{padding:"1px 9px",
-        width:"100%",alignItems:"center",
-        justifyContent:"center",
-     }}>
-        <div>
-          <h1 className="test-head test-head-testimonial" style={{padding:"2px 43px"}}>
-            {" "}
-            What these women have to say about{" "}
-            <span className="headspan text-deco"> FindHer</span> :
-          </h1>
-        </div>
-      </Container>
-
-      <Container className="mar">
-        <button className="arrow-button desktop" onClick={handlePrev}>
-          <AiOutlineLeft className="opalescent-arrow" />
-        </button>
-        <Row
-          className="center-contents"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          ref={containerRef}
-        >
-          {visibleTestimonials.map((testimonial) => (
-            <Col md={3} className="testimonial center-contents">
-              <Row>
-                <Col
-                  md={7}
-                  xs={7}
-                  className="d-flex align-items-center justify-content-center"
-                >
-                  <h1
-                    className="header"
-                    style={{ fontSize: "20px", fontWeight: "550" }}
-                  >
-                    {testimonial.name}
-                  </h1>
-                </Col>
-                <Col md={5} xs={5}>
-                  <img
-                    className="card-img"
-                    src={testimonial.image}
-                    alt="profile"
-                  />
-                </Col>
-                <p className="cardSub mt-3">{testimonial.message}</p>
-                <div className="mobile dot-testimonial-div">
-                  <div className={`dot-testimonial mx-2 ${currentIndex ===0? "active":""}`}></div>
-                  <div className={`dot-testimonial mx-2 ${currentIndex >= 1? (currentIndex < testimonials.length-1? "active":""):""}`}></div>
-                  <div className={`dot-testimonial mx-2 ${currentIndex ===testimonials.length-1? "active":""}`}></div>
-                </div>
-              </Row>
-            </Col>
-          ))}
+      <Container className="">
+        <Row className="ms-5 swiper-button-prev-testimonials">
+          <button className="arrow-button desktop">
+            <AiOutlineLeft className="opalescent-arrow" />
+          </button>
         </Row>
-        <button className="arrow-button desktop" onClick={handleNext}>
-          <AiOutlineRight className="opalescent-arrow" />
-        </button>
+        <div className="testimonials-Swiper-container">
+          <Swiper
+            onSlideChange={(swiper) => {
+              setCurrentIndex(swiper.activeIndex);
+            }}
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={false}
+            loop={false}
+            spaceBetween={20} 
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next-testimonials",
+              prevEl: ".swiper-button-prev-testimonials",
+              clickable: true,
+            }}
+            breakpoints={{
+              780: {
+                slidesPerView: 1, // Number of slides per view for screens <= 780px width
+              },
+              781: {
+                slidesPerView: 3, // Number of slides per view for screens > 780px width
+              },
+            }}
+            modules={[Navigation]}
+            className="swiper_container"
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className="testimonial">
+                  <Row>
+                    <Col
+                      md={7}
+                      xs={7}
+                      className="d-flex align-items-center justify-content-center"
+                    >
+                      <h1
+                        className="header"
+                        style={{ fontSize: "20px", fontWeight: "550" }}
+                      >
+                        {testimonial.name}
+                      </h1>
+                    </Col>
+                    <Col md={5} xs={5}>
+                      <img
+                        className="card-img"
+                        src={testimonial.image}
+                        alt="profile"
+                      />
+                    </Col>
+                  </Row>
+                  <p className="cardSub my-5 mx-4">{testimonial.message}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <Row className="me-5 swiper-button-next-testimonials">
+          <button className="arrow-button desktop">
+            <AiOutlineRight className="opalescent-arrow" />
+          </button>
+        </Row>
       </Container>
-
+      <div className="mobile dot-testimonial-div mt-2 mb-5 pb-5">
+        <div
+          className={`dot-testimonial mx-2 ${
+            currentIndex === 0 ? "active" : ""
+          }`}
+        ></div>
+        <div
+          className={`dot-testimonial mx-2 ${
+            currentIndex >= 1
+              ? currentIndex < testimonials.length - 1
+                ? "active"
+                : ""
+              : ""
+          }`}
+        ></div>
+        <div
+          className={`dot-testimonial mx-2 ${
+            currentIndex === testimonials.length - 1 ? "active" : "" 
+          }`}
+        ></div>
+      </div>
     </section>
   );
 }
