@@ -33,6 +33,7 @@
     font-size: 3rem;
 
 
+
 }
 
 .headspan {
@@ -206,7 +207,7 @@
     .jus {
         margin-top: 10%;
         margin-bottom: -10%;
-        margin-left: 15%;
+
         text-align: left;
     }
 
@@ -215,7 +216,6 @@
 
 @media (max-width: 600px) {
     .testimonial {
-        padding: 5% !important;
     }
     .cardSub {
         font-size:18px !important;
@@ -233,10 +233,14 @@
         background-color: #ee2c5b !important;
     }
     .test-head-testimonial{
+
+        margin-left: 0.5%;
         font-size: 1.5rem;
         width: 100% !important;
-        text-align: left;
-        margin-right: 30% !important;
+        text-align: center;
+        z-index: 5;
+        margin-bottom: 10%;
+        padding-bottom: 5%;
     }
 
     .headspan{

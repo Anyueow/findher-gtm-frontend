@@ -93,7 +93,7 @@ function TestimonialSection() {
     }
   };
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = () => {
     if (!isDragging) return;
     setIsDragging(false);
 
@@ -143,10 +143,16 @@ function TestimonialSection() {
     currentIndex + itemsPerPage
   );
   return (
-    <section>
-      <Container className=" jus center-contents"style={{overflow:"hidden",padding:"1px 9px", width:"100%",alignItems:"center",justifyContent:"center"}}>
-        <div styles={{display:"flex",alignItems:"center",justifyContent:"center"}}>
-          <h1 className="test-head test-head-testimonial" style={{overflow:"hidden",padding:"2px 43px"}}>
+    <section
+        style={{ minHeight:"100vh",
+        paddingTop:"5%"}}>
+
+      <Container className="jus center-contents" style={{padding:"1px 9px",
+        width:"100%",alignItems:"center",
+        justifyContent:"center",
+     }}>
+        <div>
+          <h1 className="test-head test-head-testimonial" style={{padding:"2px 43px"}}>
             {" "}
             What these women have to say about{" "}
             <span className="headspan text-deco"> FindHer</span> :
@@ -201,7 +207,7 @@ function TestimonialSection() {
           <AiOutlineRight className="opalescent-arrow" />
         </button>
       </Container>
-      {/* ... other components or sections ... */}
+
     </section>
   );
 }
