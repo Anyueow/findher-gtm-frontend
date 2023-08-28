@@ -116,10 +116,6 @@
     width: 80% !important;
 }
 
-.swiper-wrapper{
-    overflow-x: visible !important;
-}
-
 .text-deco-testimonial{
     position: relative;
     background-image: linear-gradient(#ee2c5b, #ee2c5b) !important;
@@ -231,12 +227,6 @@
         margin-bottom: -10%;
         margin-left: 15%;
         text-align: left;
-    }
-    .testimonial{
-        overflow-x: visible !important;
-    }
-    .swiper-slide{
-        overflow-x: visible !important;
     }
 
     /* ... Other mobile adjustments ... */
