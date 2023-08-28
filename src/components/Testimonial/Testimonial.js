@@ -99,10 +99,10 @@ function TestimonialSection() {
             }}
             breakpoints={{
               780: {
-                slidesPerView: 1, // Number of slides per view for screens <= 780px width
+                slidesPerView: 1, 
               },
               781: {
-                slidesPerView: 3, // Number of slides per view for screens > 780px width
+                slidesPerView: 3, 
               },
             }}
             modules={[Navigation]}
