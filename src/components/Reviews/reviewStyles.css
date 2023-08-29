@@ -568,3 +568,23 @@ heading-name3{
 
       }
   }
+
+    /* first Page */
+    
+  @media (max-width: 600px) {
+    .review-four-head{
+        margin-top: 15% !important;
+    }
+  .review-heads{
+    font-size: larger;
+  }
+  .review-subs{
+    font-size: medium;
+  }
+  .review-four-star-icon{
+    width: 40% !important;
+  }
+  .input-group-four label{
+    width: 20%;
+  }
+}
