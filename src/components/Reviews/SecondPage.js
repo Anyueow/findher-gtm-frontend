@@ -142,7 +142,7 @@ export const SecondPage = () => {
             </Row>
 
             <Row
-              style={{ marginBottom: "2%" }}
+              style={{ marginBottom: "2%",alignItems:"center" }}
               className="justify-content-lg-start"
             >
               <Col md={6} xs={6}>
@@ -160,7 +160,7 @@ export const SecondPage = () => {
               </Col>
               <Col md={6} xs={6} style={{ marginTop: "-1%" }}>
                 <Form.Group>
-                  <Form.Label className="mt-3">End Date</Form.Label>
+                  <Form.Label>End Date</Form.Label>
                   <br />
                   <DatePicker
                     selected={endDate}

@@ -45,12 +45,10 @@
 .design {
     background-color: #DFE077;
     border-radius: 40px;
-    padding: 20% 30% 10% 15%;
-    margin: 8% 4%;
-
-
-
+    padding: 8% 20% 0% 14%;
+    margin: 4% 4%;
 }
+
 
 /* Ensuring use of defined fonts, and falling back to generic families if specific fonts aren't available */
 @font-face {
@@ -453,6 +451,7 @@ heading-name3{
     .button-sub{
         width: 90%;
         align-content: center;
+        margin-bottom: 11vh;
     }
     .nav-link2{
         font-size: 1rem;
