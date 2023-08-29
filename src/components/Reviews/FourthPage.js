@@ -3,6 +3,7 @@ import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
+// import ReviewProgressBar from "./ReviewProgressBar"
 
 import NavbarContext from "../NavbarContext";
 
@@ -21,7 +22,7 @@ const FourthPage = () => {
 
     const createRatingInputGroup = (name, setter) => {
         return (
-            <InputGroup>
+            <InputGroup className='input-group-four'>
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
                     return (
@@ -34,7 +35,7 @@ const FourthPage = () => {
                                 className="star-radio"
                             />
                             <FaStar
-                                className="star-icon"
+                                className="star-icon review-four-star-icon"
                                 color={ratingValue <= (name === 'flexibility' ? flexibilityRating :
                                                        name === 'management' ? managementRating :
                                                        name === 'coWorkers' ? coWorkersRating :
@@ -116,13 +117,14 @@ const FourthPage = () => {
     };
 
     return (
+        <div>
+             {/* <ReviewProgressBar/> */}
         <Container className="ratings"
                    style={{ paddingTop: navbarHeight }}>
-
             <Form>
                 <Row >
-                    <h1 className="head-name" style={{marginBottom:"3%", marginTop:"5%"}}>Tell us your experience at <b>{companyName}</b></h1>
-                    <Col md={6}  xs="auto">
+                    <h1 className="head-name review-four-head" style={{marginBottom:"3%", marginTop:"5%"}}>Tell us your experience at <b>{companyName}</b></h1>
+                    <Col md={6}  xs="12">
                         <Form.Group className="rating-box">
                             <Form.Label className="review-heads">1. Flexibility </Form.Label>
                             <h3 className="review-subs"> I am able to schedule my work as per my requirements </h3>
@@ -157,10 +159,10 @@ const FourthPage = () => {
                         </Form.Group>
                     </Col>
                 </Row>
-                <Row className="justify-content-between">
+                <Row className="d-flex justify-content-center">
 
                         <Button type="submit"
-                                className="button-sub2"
+                                className="button-sub2 review-four-sub"
                                 style={{ marginBottom: '50px' }}
                                 onClick={handleSubmit}>
                             Next </Button>
@@ -168,6 +170,7 @@ const FourthPage = () => {
                 </Row>
             </Form>
         </Container>
+        </div>
     );
 };
 
