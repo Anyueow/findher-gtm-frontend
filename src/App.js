@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
   Route,
-  Routes, useLocation,
+  Routes,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -50,17 +50,17 @@ function MainContent() {
 }
 
 function App() {
-  const location = useLocation();
+  //const location = useLocation();
 
   const [load, updateLoad] = useState(true);
 
-  useEffect(() => {
-    if (typeof window.gtag === 'function') {
-      window.gtag('config', 'G-7BB5S2LQC2', {
-        'page_path': location.pathname + location.search
-      });
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (typeof window.gtag === 'function') {
+  //     window.gtag('config', 'G-7BB5S2LQC2', {
+  //       'page_path': location.pathname + location.search
+  //     });
+  //   }
+  // }, [location]);
 
   // Second useEffect for the timer
   useEffect(() => {
