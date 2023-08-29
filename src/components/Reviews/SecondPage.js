@@ -204,7 +204,7 @@ export const SecondPage = () => {
               remain confidential unless it is combined with a significant
               number of other responses.
             </p>
-            <p className="underline-text">
+            <p className="underline-text underline-text-review-second">
               Protecting your identity and authenticity is our top priority.
             </p>
             <div className="d-flex justify-content-center">

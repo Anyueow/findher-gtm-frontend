@@ -462,7 +462,7 @@ heading-name3{
 @media (max-width: 600px) {
 
     .ROw{
-        margin-top: 5%;
+        margin-top: 20% !important;
     }
 
     .button-sub{
@@ -524,6 +524,9 @@ heading-name3{
     .SecondPageToast .toast-body{
         padding: 10px !important;
     } 
+    .underline-text-review-second{
+        font-size: 90% !important;
+    }
 }
 
 .Waitlistpara{
@@ -572,19 +575,29 @@ heading-name3{
     /* first Page */
     
   @media (max-width: 600px) {
+    .ratings{
+        margin-left: 2%;
+    }
     .review-four-head{
-        margin-top: 15% !important;
+        margin-top: 23% !important;
     }
   .review-heads{
     font-size: larger;
   }
   .review-subs{
     font-size: medium;
+    margin-bottom: 0px;
   }
   .review-four-star-icon{
     width: 40% !important;
   }
   .input-group-four label{
     width: 20%;
+  }
+  .review-four-sub{
+    width: 70% !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    font-size: x-large !important;
   }
 }
