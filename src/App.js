@@ -50,11 +50,19 @@ function MainContent() {
 }
 
 function App() {
-
-
+  //const location = useLocation();
 
   const [load, updateLoad] = useState(true);
 
+  // useEffect(() => {
+  //   if (typeof window.gtag === 'function') {
+  //     window.gtag('config', 'G-7BB5S2LQC2', {
+  //       'page_path': location.pathname + location.search
+  //     });
+  //   }
+  // }, [location]);
+
+  // Second useEffect for the timer
   useEffect(() => {
     const timer = setTimeout(() => {
       updateLoad(false);
@@ -62,7 +70,6 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
   return (
       <NavbarProvider value="5%">
 
