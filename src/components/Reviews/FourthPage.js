@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
-import ReviewProgressBar from "./ReviewProgressBar"
+// import ReviewProgressBar from "./ReviewProgressBar"
 
 import NavbarContext from "../NavbarContext";
 
