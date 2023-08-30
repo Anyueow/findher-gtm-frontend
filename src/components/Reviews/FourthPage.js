@@ -5,11 +5,9 @@ import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
 import ReviewProgressBar from "./ReviewProgressBar";
 
-import NavbarContext from "../NavbarContext";
 
 const FourthPage = () => {
     // within your component
-    const navbarHeight = React.useContext(NavbarContext);
 
 
     const companyName = "placeholder"; // Placeholder for company name
@@ -19,7 +17,6 @@ const FourthPage = () => {
     const [diversityRating, setDiversityRating] = useState(0);
     const [safetyRating, setSafetyRating] = useState(0);
     const [compensationRating, setCompensationRating] = useState(0);
-    const [progressPercentage,setprogressPercentage]=useState(50);
 
     const createRatingInputGroup = (name, setter) => {
         return (
@@ -119,9 +116,9 @@ const FourthPage = () => {
 
     return (
         <div>
-                   <ReviewProgressBar percent={35}/>
+                   <ReviewProgressBar percent={65}/>
         <Container className="ratings"
-                   style={{ marginTop:"20px" }}>
+                   style={{marginTop:"20px" }}>
                      
             <Form>
                 <Row >

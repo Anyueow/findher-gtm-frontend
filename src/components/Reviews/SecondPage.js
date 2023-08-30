@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { Button, Container, Form, Row, Col, Toast } from "react-bootstrap";
 import "./reviewStyles.css";
-import NavbarContext from '../NavbarContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ReviewProgressBar from "./ReviewProgressBar";
@@ -18,7 +17,6 @@ export const SecondPage = () => {
 
     const [title, setTitle] = useState("");
 
-    const navbarHeight = React.useContext(NavbarContext);
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -80,7 +78,7 @@ export const SecondPage = () => {
 
     return (
       <div>
-      <ReviewProgressBar percent={0}/>
+      <ReviewProgressBar percent={1}/>
       <Container
         className="container-second"
         style={{ marginTop:"20px" }}
