@@ -30,6 +30,7 @@ import PhoneSignIn from "./components/Businesses/PhoneSignIn";
 import DetailsOneB2B from "./components/Businesses/DetailsOneB2B";
 import DetailsTwoB2B from "./components/Businesses/DetailsTwoB2B";
 import EndPage from "./components/Businesses/endPage";
+import SecTwo2mob from "./components/SectionTwo/SecTwo2mob";
 
 function MainContent() {
 
@@ -41,6 +42,7 @@ function MainContent() {
         <Hero />
         <SectionOne />
           <SectionTwo/>
+          {/* <SecTwo2mob/> */}
         <SectionThree />
         <Testimonial />
 
