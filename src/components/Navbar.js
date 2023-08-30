@@ -37,13 +37,13 @@ function NavBar() {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/reviews_login">
+                        <Link to="https://www.surveymonkey.com/r/NMD3GRV">
                             <strong style={{color:"#E20B3CD4"}}>
-                                For Women </strong></Link>
+                               Join Now </strong></Link>
                     </li>
-                    <li>
-                        <Link to="/business_register">For Businesses</Link>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <Link to="/business_register">For Businesses</Link>*/}
+                    {/*</li>*/}
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
