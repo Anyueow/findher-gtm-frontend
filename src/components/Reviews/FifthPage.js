@@ -4,6 +4,7 @@ import "./reviewStyles.css";
 import {useNavigate} from "react-router-dom";
 import NavbarContext from "../NavbarContext";
 import ReactTooltip from "react-tooltip";
+import ReviewProgressBar from "./ReviewProgressBar";
 
 const isSafariOrMac = () => {
     const ua = window.navigator.userAgent;
@@ -78,6 +79,8 @@ const FifthPage = () => {
 
 
     return (
+      <div>
+      <ReviewProgressBar percent={35}/>
       <Container className="sub" style={containerStyle}>
         <Row className="reviews-box">
           <h1 className="head-name" style={{ marginBottom: "3%" }}>
@@ -159,6 +162,7 @@ const FifthPage = () => {
           <ReactTooltip id="FifthSubmit" place="right" effect="solid" />
         </Row>
       </Container>
+      </div>
     );
 };
 

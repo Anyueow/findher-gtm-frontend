@@ -462,7 +462,7 @@ heading-name3{
 @media (max-width: 600px) {
 
     .ROw{
-        margin-top: 20% !important;
+        margin-top: 0% !important;
     }
 
     .button-sub{
@@ -531,7 +531,7 @@ heading-name3{
 
 .Waitlistpara{
 
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     width:80%;
     font-family: Montserrat;
     margin-bottom: 15px;
@@ -541,6 +541,15 @@ heading-name3{
 .tool-tip::before {
     border-right: none !important;
   }
+.sixpage-review-container{
+    margin-top: 8%;
+}
+
+@media (max-width: 600px) {
+    .sixpage-review-container .reviews-box{
+        margin-top: 100%;
+    }
+}
 
   /* first Page */
 
@@ -601,3 +610,4 @@ heading-name3{
     font-size: x-large !important;
   }
 }
+
