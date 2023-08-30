@@ -31,15 +31,17 @@
 .main-name-sect {
     color: rgb(0, 0, 0);
     font-family: "League Spartan-SemiBold", "Montserrat-SemiBold";
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width:90%;
     font-weight: 400;
     letter-spacing: 0;
     text-align: left;
     margin-bottom: 4%;
+    margin-top: 4%;
 }
 
 .text-wrapper {
-    font-weight: 700;
+    font-weight: 300;
     color: rgba(226, 11, 60, 0.83);
 }
 
@@ -56,22 +58,28 @@
 
 }
 
+.poof{
+    width: 95%
+}
 /* Mobile styles */
 @media (max-width: 768px) {
-    .inner-container {
-        width: 90%; /* Increasing width on mobile for a smaller padding effect */
+
+    .poof{
+        width: 90%
     }
 
     .main-name-sect {
-        font-size: 2rem; /* Decreasing font size for mobile */
+        font-size: 1.8rem; /* Decreasing font size for mobile */
         margin-bottom: 5%; /* Adjusting margin */
         margin-top: 0;
+        text-align: left;
     }
 
-    .main-sub {
-        font-size: 1rem; /* Decreasing font size for mobile */
-    }
     .ques-img {
+        margin-top: -50vh;
+
+
+
         margin-bottom: 5%;
     }
 
@@ -85,14 +93,18 @@
 
 @media (max-width: 600px) {
 
+    .poof {
+        margin-top: -50%;
+    }
     .main-name-sect{
         word-spacing: 8px; 
         padding-left: 5%;
         padding-right: 5%;
     }
     .main-sub{
+        width: 96%;
         padding-left: 5%;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 
     .ques-img-container {
@@ -100,7 +112,9 @@
        padding-right: 0% !important;
       }
       .ques-img{
-        margin-bottom: 0% !important;
+          margin-top: -50vh;
+
+          margin-bottom: 0% !important;
       }
       
 }

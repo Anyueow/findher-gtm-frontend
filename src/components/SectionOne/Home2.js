@@ -6,8 +6,7 @@ import imageMobile from "./question women.png";
 function Home2() {
     return (
         <div className="outer-container">
-            <div className="inner-container">
-                <Row className="center-contents">
+                <Row className="poof">
                     <Col md={6} xs="auto" className="ques-img-container">
                         <img src={image} className="ques-img desktop"
                         alt = "confused"/>
@@ -30,7 +29,7 @@ function Home2() {
                     </Col>
 
                 </Row>
-            </div>
+
         </div>
     );
 }
