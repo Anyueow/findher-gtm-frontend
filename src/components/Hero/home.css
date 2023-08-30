@@ -14,10 +14,11 @@
     margin-top: 5%;
     padding: 15%;
 
-    align-items: center;
+    align-items: flex-start;
 }
 
 .text-content {
+    align-items: flex-start;
     flex: 2;
 }
 
@@ -50,7 +51,7 @@
 .description {
     font-size: 1.2rem;
 
-    width:70%;
+    width:52%;
     font-family: Montserrat;
     font-weight: 400;
     text-align: left;
@@ -69,10 +70,12 @@
     transition: background-color 0.3s;
     font-family: "League Spartan-SemiBold";
     font-size: 1rem;
+    align-items: flex-start;
+    justify-content: left;
 }
 
 .hero-text {
-    align-items: center;
+    align-items: flex-start;
 
     padding-left: 15%;
 
@@ -109,8 +112,8 @@
 @media (max-width: 768px) {
     .hero-text {
 
+        align-items: center;
         padding-top: 25%;
-        align-items: flex-end;
 
 
     }

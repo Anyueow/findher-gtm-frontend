@@ -15,7 +15,7 @@ function Home() {
     //const navigate = useNavigate();
 
     return (
-        <section className="hero center-contents">
+        <section className="hero">
             <Container className="content">
                 <Row className="hero-text no-gutters center-contents">
 
@@ -49,7 +49,7 @@ function Home() {
                     <img src={mobbase} className="mob-img mobile" alt="Findher Demo"/>
                     <div className="d-flex justify-content-center">
                     <a href="https://www.surveymonkey.com/r/NMD3GRV"
-                               className="signup-btn mobile"
+                               className="signup-btn mobile desktop"
                                style={{marginTop:"5%", textDecoration: 'none'}}
                                target="_blank"
                                rel="noopener noreferrer">

@@ -59,6 +59,7 @@ function SectionThree() {
                     <h1 className="header-font"> On <span className="text-deco-three"
                         style={{textDecorationColor:"#c1c50a"}}> FindHer
                         </span> you will get:</h1>
+                    <h5 className="desc"> <i> Click on each to expand </i></h5>
                     {cardTitles.map((title, index) => (
                         <Col key={index} xs={12} md={4} className="align-content-center">
                             <button className="card-btn" onClick={() => handleClick(index)}>
