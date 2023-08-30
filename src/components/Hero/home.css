@@ -19,7 +19,6 @@
 
 .text-content {
     flex: 2;
-    text-align: left;
 }
 
 .main-name {
@@ -116,12 +115,20 @@
 
     }
 
+    .hero-text{
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
     .main-name {
         font-size: 2.5rem;
+        text-align: center;
+
     }
 
     .description {
         font-size: 1.2rem;
+        width: 70%;
     }
 
     .signup-btn {
@@ -129,6 +136,10 @@
         font-size: 1rem;
     }
 
+    .text-content{
+        justify-content: center;
+        align-content: center;
+    }
     .desktop {
         display: none !important;
     }
@@ -139,7 +150,6 @@
 
     .base-image {
         width: 95%;
-
         overflow: clip;
     }
 }
@@ -148,11 +158,13 @@
     .hero-text {
         padding-top: 0%;
         padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+        align-content: center;
     }
     .main-name {
         font-size: 1.8rem;
-        margin-bottom: 4%;
-        width:90%;
+        width:100%;
         overflow: hidden;
     }
 
@@ -165,18 +177,30 @@
 
     .main-name {
         font-size: 1.5rem;
-        width:90%;
+
         text-align: center;
     }
 
     .hero-description {
-        font-size: 1rem !important;
-        width:90%;
-        font-weight: 300;
+        font-size: 0.9rem !important;
+
         text-align: center;
+        margin-bottom: -5%;
+    }
+    .description{
+        width:60%;
     }
 
     .signup-btn {
-        width: 80% !important;
+        width: 70% !important;
     }
+}
+
+
+.mob-img {
+
+    margin-top: 0px;
+    align-items: center;
+    max-width: 70%;
+    margin-left: 15%;
 }
