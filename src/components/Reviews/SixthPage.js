@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
-
+import ReviewProgressBar from "./ReviewProgressBar";
 import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
@@ -8,7 +8,9 @@ import ReactTooltip from "react-tooltip";
 export const ThirdPage = () => {
   const navigate = useNavigate();
   return (
-    <Container className="sub">
+    <div>
+    <ReviewProgressBar percent={100}/>
+    <Container className="sub sixpage-review-container">
       <Row className="reviews-box">
         <h1 className="head-name4">
           Thank you for <span className="pink"> sharing! </span>
@@ -75,6 +77,7 @@ export const ThirdPage = () => {
       <ReactTooltip id="tooltip1" place="right" effect="solid"/>
       <ReactTooltip id="tooltip2" place="right" effect="solid"/>
     </Container>
+    </div>
   );
 };
 
