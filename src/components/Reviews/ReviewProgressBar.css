@@ -1,0 +1,72 @@
+.progress-container {
+    width: 100% ;
+    padding-left: 16%;
+    padding-right: 10% ;
+    padding-top: 2%;
+
+  }
+  .progress-container .row{
+    background-color: white;
+  }
+  .progress-container img{
+    height: 50px;
+  }
+
+  .progress-btn{
+    border: 0px;
+    background-color: white;
+  }
+  .RSPBprogressBar {
+    margin-top: 7%;
+    margin-left: 0%;
+    width:80% ;
+    height: 5px; 
+    background-color: white
+  }
+
+  .step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -10px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .step-number.active {
+    background-color: #ee2c5b;
+  }
+  
+  .step-number.inactive {
+    background-color:#f2b1aa;
+  }
+  
+  .step-label {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #f2b1aa;
+  }
+  .step-label-active{
+    color: #ee2c5b;
+  }
+
+  @media (max-width: 600px) {
+    .RSPBprogressBar {
+      margin-top: 35%;
+      margin-left: 0%;
+      width:90% ;
+    }
+    .step-label {
+      margin-top: 20px;
+      font-size: 8px;
+    }
+  }

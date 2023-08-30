@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
-// import ReviewProgressBar from "./ReviewProgressBar"
+import ReviewProgressBar from "./ReviewProgressBar";
 
 import NavbarContext from "../NavbarContext";
 
@@ -19,6 +19,7 @@ const FourthPage = () => {
     const [diversityRating, setDiversityRating] = useState(0);
     const [safetyRating, setSafetyRating] = useState(0);
     const [compensationRating, setCompensationRating] = useState(0);
+    const [progressPercentage,setprogressPercentage]=useState(50);
 
     const createRatingInputGroup = (name, setter) => {
         return (
@@ -52,7 +53,7 @@ const FourthPage = () => {
     };
 
     const navigate = useNavigate();  // Import useHistory for navigation
-
+   
 
     const handleSubmit = async (e) => {
 
@@ -118,9 +119,10 @@ const FourthPage = () => {
 
     return (
         <div>
-             {/* <ReviewProgressBar/> */}
+                   <ReviewProgressBar percent={35}/>
         <Container className="ratings"
-                   style={{ paddingTop: navbarHeight }}>
+                   style={{ marginTop:"20px" }}>
+                     
             <Form>
                 <Row >
                     <h1 className="head-name review-four-head" style={{marginBottom:"3%", marginTop:"5%"}}>Tell us your experience at <b>{companyName}</b></h1>

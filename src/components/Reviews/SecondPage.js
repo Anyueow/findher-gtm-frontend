@@ -5,7 +5,7 @@ import "./reviewStyles.css";
 import NavbarContext from '../NavbarContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import ReviewProgressBar from "./ReviewProgressBar";
 
 export const SecondPage = () => {
     const [startDate, setStartDate] = useState("");
@@ -79,9 +79,11 @@ export const SecondPage = () => {
     const isFormValid = companies && title && startDate && endDate;
 
     return (
+      <div>
+      <ReviewProgressBar percent={0}/>
       <Container
         className="container-second"
-        style={{ paddingTop: navbarHeight}}
+        style={{ marginTop:"20px" }}
       >
         <Row className="ROw">
           <Form onSubmit={handleSubmit} className="form-grp-one">
@@ -220,6 +222,7 @@ export const SecondPage = () => {
         </Toast>
         )}
       </Container>
+      </div>
     );
 };
 
