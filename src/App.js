@@ -42,7 +42,7 @@ function MainContent() {
         <Hero />
         <SectionOne />
           <SectionTwo/>
-          {/* <SecTwo2mob/> */}
+          <SecTwo2mob/>
         <SectionThree />
         <Testimonial />
 

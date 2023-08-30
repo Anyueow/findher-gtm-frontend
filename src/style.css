@@ -303,8 +303,14 @@ body {
   font-family: Montserrat;
   text-align: left  ;
   text-decoration-color: #0c0513;
-  font-size: 1rem;
+  font-size: 2.5vh;
   font-weight: 400;
+  margin-left: 5%;
+  
+  position: relative;
+  /* top: 0px; */
+  bottom: 0;
+
 }
 .Footerhed{
   font-family: Montserrat;
@@ -326,7 +332,7 @@ body {
 
 @media (max-width: 767px) {
   .footer-copywright {
-    font-size: 0.5rem;
+    font-size: 2vh;
     text-align: left  ;
   }
 

@@ -7,7 +7,7 @@ import "./sectionTwo.css";
 
 function SectTwo() {
     return (
-        <section className="section-container">
+        <section className="section-container gg1">
             <Container fluid className="section-content" style={{overflow: 'hidden'}}>
                 <Row className="align-items-center full-height" style={{overflow: 'hidden'}}>
 

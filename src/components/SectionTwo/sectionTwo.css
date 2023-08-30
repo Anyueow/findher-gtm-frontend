@@ -34,7 +34,7 @@
   background-size: 100% 0.3rem;
   background-color: rgba(226, 11, 60, 0.83);
   line-height: 75px;
-  color:white;
+  color: white;
 }
 
 .description {
@@ -45,8 +45,6 @@
 
 .emphasis {
   font-weight: bold;
-
-
 }
 
 .image-content {
@@ -67,7 +65,12 @@
 .mobile {
   display: none;
 }
-
+.gg1 {
+  display: block !important;
+}
+.gg2 {
+  display: none !important;
+}
 /* For mobile views, you might want to hide the desktop image and show the mobile image */
 @media (max-width: 767px) {
   .desktop {
@@ -88,17 +91,23 @@
   .image-content {
     padding: 0% !important;
   }
-
+  .gg1 {
+    display: none !important;
+  }
+  .gg2 {
+    display: block !important;
+  }
   .mobile {
     width: 100%;
-    margin-top: 43px;
+    margin-top: 19vh;
   }
 
   .description {
     width: 100%;
+    font-size: 23px;
   }
 
-  .title{
+  .title {
     font-size: 1.8rem;
     width: 100%;
     overflow: hidden;
@@ -110,8 +119,24 @@
     background-color: rgba(226, 11, 60, 0.83);
     line-height: 60px;
   }
-  .section-two-image{
+  .section-two-image {
     margin-top: -40% !important;
   }
+  .dis1 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+  }
+  .piclower-text{
+    display: flex;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000ba;
+    font-weight: 400;
+    font-size: 1.1em;
+    padding-top: 3vh;
+    
+    margin-left: 10px;
 
+    
+  }
 }
