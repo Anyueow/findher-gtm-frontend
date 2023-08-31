@@ -459,6 +459,9 @@ heading-name3{
    background-color: #ee2c5b;
    border: #ee2c5b;
   }
+  .datetimepicker-input{
+    width: 255% !important;
+  }
 .underline-text {
     position: relative;
     display: inline-block;
@@ -475,7 +478,11 @@ heading-name3{
     background-color: black; 
   }
 
+
 @media (max-width: 600px) {
+    .datetimepicker-input{
+        width: 100% !important;
+      }
 
     .ROw{
         margin-top: 0% !important;

@@ -31,6 +31,7 @@ const FourthPage = () => {
                                 value={ratingValue}
                                 onClick={() => setter(ratingValue)}
                                 className="star-radio"
+                                required
                             />
                             <FaStar
                                 className="star-icon review-four-star-icon"
@@ -55,7 +56,6 @@ const FourthPage = () => {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-
         const submitRatings = async () => {
             const token = localStorage.getItem("token");
 
@@ -120,7 +120,7 @@ const FourthPage = () => {
         <Container className="ratings"
                    style={{marginTop:"20px" }}>
                      
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Row >
                     <h1 className="head-name review-four-head" style={{marginBottom:"3%", marginTop:"5%"}}>Tell us your experience at <b>{companyName}</b></h1>
                     <Col md={6}  xs="12">
@@ -157,15 +157,13 @@ const FourthPage = () => {
                             {createRatingInputGroup("compensation", setCompensationRating)}
                         </Form.Group>
                     </Col>
-                </Row>
-                <Row className="d-flex justify-content-center">
-
+                    <Row className="d-flex justify-content-center">
                         <Button type="submit"
-                                className="button-sub2 review-four-sub"
-                                style={{ marginBottom: '50px' }}
-                                onClick={handleSubmit}>
-                            Next </Button>
-
+                        className="button-sub2 review-four-sub"
+                        style={{ marginBottom: '50px' }}
+                        >
+                        Next </Button>
+                    </Row>
                 </Row>
             </Form>
         </Container>

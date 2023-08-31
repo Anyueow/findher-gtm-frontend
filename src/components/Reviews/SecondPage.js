@@ -173,9 +173,9 @@ export const SecondPage = () => {
                   />
                 </Form.Group>
               </Col>
-              <Col md={6} xs={6} style={{ marginTop: "-1%" }}>
+              <Col md={6} xs={6} >
                 <Form.Group>
-                  <Form.Label className="mt-3">End Date</Form.Label>
+                  <Form.Label className="">End Date</Form.Label>
                   <br />
                   <DatePicker
                     selected={endDate}
