@@ -20,38 +20,38 @@ const testimonials = [
     name: "Sneha M.",
 
     message:
-      "Findher has been a game-changer in my job search. It gave me insights I didn't " +
-      "even know I needed and connected me with a job that's a perfect fit. Highly recommend!",
+      "'Findher has been a game-changer in my job search. It gave me insights I didn't " +
+      "even know I needed and connected me with a job that's a perfect fit. Highly recommend!'",
     image: image1,
   },
   {
     name: "Radhika S.",
     message:
-      "As a working mom, finding the right job seemed overwhelming. But Findher's " +
-      "personalized matches and support made the process seamless. I'm so grateful!",
+      "'As a working mom, finding the right job seemed overwhelming. But Findher's " +
+      "personalized matches and support made the process seamless. I'm so grateful!'",
     image: image2,
   },
   {
     name: "Pooja K.",
 
     message:
-      "I was searching for a platform that truly understood the challenges women like me " +
-      "face in their careers. Their focus on my specific goals made all the difference",
+      "'I was searching for a platform that truly understood the challenges women like me " +
+      "face in their careers. Their focus on my specific goals made all the difference'",
     image: image3,
   },
   {
     name: "Radhika S.",
     message:
-      "As a working mom, finding the right job seemed overwhelming. But Findher's " +
-      "personalized matches and support made the process seamless. I'm so grateful!",
+      "'As a working mom, finding the right job seemed overwhelming. But Findher's " +
+      "personalized matches and support made the process seamless. I'm so grateful!'",
     image: image4,
   },
   {
     name: "Pooja K.",
 
     message:
-      "I was searching for a platform that truly understood the challenges women like me " +
-      "face in their careers. Their focus on my specific goals made all the difference",
+      "'I was searching for a platform that truly understood the challenges women like me " +
+      "face in their careers. Their focus on my specific goals made all the difference'",
     image: image5,
   },
 
