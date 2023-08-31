@@ -116,7 +116,7 @@ const FourthPage = () => {
 
     return (
         <div>
-                   <ReviewProgressBar percent={65}/>
+                   <ReviewProgressBar percent={35}/>
         <Container className="ratings"
                    style={{marginTop:"20px" }}>
                      

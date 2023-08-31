@@ -45,10 +45,12 @@
   
   .step-number.active {
     background-color: #ee2c5b;
+    border: #ee2c5b ;
   }
   
   .step-number.inactive {
     background-color:#f2b1aa;
+    border: #f2b1aa;
   }
   
   .step-label {
