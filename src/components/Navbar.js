@@ -21,7 +21,9 @@ function NavBar() {
             window.removeEventListener("scroll", scrollHandler);
         };
     }, []);
-
+    const joinExternalSurvey = () => {
+        window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank', 'noopener noreferrer');
+    };
     return (
         <div className={`custom-navbar ${navColor ? 'navbar-colored' : ''}`}>
             <div className="container">
@@ -37,9 +39,7 @@ function NavBar() {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="https://www.surveymonkey.com/r/NMD3GRV">
-                            <strong style={{color:"#E20B3CD4"}}>
-                               Join Now </strong></Link>
+                    <strong style={{ color: "#E20B3CD4", cursor: "pointer" }} onClick={joinExternalSurvey}>Join Now</strong>
                     </li>
                     {/*<li>*/}
                     {/*    <Link to="/business_register">For Businesses</Link>*/}

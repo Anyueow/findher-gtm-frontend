@@ -14,7 +14,7 @@
     justify-content: center;
 
     text-align: left;
-    height: 105vh;
+    height: 0%;
 }
 .formCont{
     display:flex;
@@ -460,7 +460,18 @@ heading-name3{
   }
 
 @media (max-width: 600px) {
+    .chk-bttn{
+        width: 100%!important;
+        padding: 10px;
+        margin-left: 5%;
+    }
+    .para{
+        font-size: 1rem!important;
+        width: 100%!important;
+        
+        text-align: justify;
 
+    }
     .ROw{
         margin-top: 0% !important;
     }
@@ -527,6 +538,10 @@ heading-name3{
     .underline-text-review-second{
         font-size: 90% !important;
     }
+    .head-name4{
+        font-size: 1.7rem!important;
+    }
+    
 }
 
 .Waitlistpara{
@@ -546,8 +561,12 @@ heading-name3{
 }
 
 @media (max-width: 600px) {
-    .sixpage-review-container .reviews-box{
+    .sixpage-review-container {
         margin-top: 100%;
+    }
+    .reviews-box{
+        margin-top: 19%;
+        width: 88vw;
     }
 }
 
@@ -564,7 +583,10 @@ heading-name3{
     .first-more-info{
        margin-left: 0% !important;
       }
-      .sub{
+      .subtt{
+        margin-top: 0 !important;
+    }
+      .sub1{
         margin-top: 120px !important;
       }
       .sub .form-grp{

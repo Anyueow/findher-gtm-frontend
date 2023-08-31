@@ -88,7 +88,7 @@ export const FirstPage = () => {
 
     return (
         <section>
-            <Container id="reviews" className="sub"
+            <Container id="reviews" className="sub sub1"
                        style={{ paddingTop: navbarHeight }}>
 
                 <Row className="ROw center-contents">
@@ -96,7 +96,7 @@ export const FirstPage = () => {
 
                         <div className="design">
                             <Row>
-                                <p className="head-name">
+                                <p className="head-name headnm2">
                                     Exclusive information
                                     about workplaces in India
                                 </p>
@@ -109,7 +109,7 @@ export const FirstPage = () => {
 
                             </Row>
                             <Row>
-                                <Col md={7} xs={7}>
+                                <Col md={7} xs={7} style={{paddingRight:"15px",width:"66%", position: "relative",right: "9%"}}>
                                     <Button className="button-sub first-more-info" onClick={handleClick}> More info </Button>
 
                                 </Col>

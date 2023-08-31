@@ -99,6 +99,9 @@
   }
   .mobile {
     width: 100%;
+    margin-top: 0vh;
+  }
+  .mob22{
     margin-top: 19vh;
   }
 

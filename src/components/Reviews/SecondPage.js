@@ -98,22 +98,24 @@ export const SecondPage = () => {
                     value={companies}
                     onChange={(e) => setCompany(e.target.value)}
                   >
+                    <option>Choose Company Name</option>
                     {companyNames.map((companyName, index) => (
-                      <option key={index} value={companyName}>
-                        {companyName}
+                      <option key={index} value={companyName} >
+                        {companyName} 
                       </option>
                     ))}
                   </Form.Select>
                 </Form.Group>
               </Col>{" "}
-              <Col md={6} xs={12}>
+              <Col md={6} xs={12} style={{marginTop:"27px"}}>
                 <Form.Group>
                   <Form.Label>Office Location</Form.Label>
                   <Form.Select
                     value={Loc}
                     onChange={(e) => setLoc(e.target.value)}
                   >
-                    {companyLocs.map((companyLoc, index) => (
+                    <option>Choose Office Location</option>
+                    {companyLocs?.map((companyLoc, index) => (
                       <option key={index} value={companyLoc}>
                         {companyLoc}
                       </option>
@@ -123,7 +125,7 @@ export const SecondPage = () => {
               </Col>
             </Row>
 
-            <Row style={{ marginBottom: "2%" }}>
+            <Row style={{ marginBottom: "2%",marginTop:"27px" }}>
               <Form.Group>
                 <Form.Label>Your Job Title</Form.Label>
                 <Form.Select
@@ -132,6 +134,7 @@ export const SecondPage = () => {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 >
+                  <option>Choose Job Title</option>
                   {titles.map((titleOption, index) => (
                     <option key={index} value={titleOption}>
                       {titleOption}
@@ -160,7 +163,7 @@ export const SecondPage = () => {
               </Col>
               <Col md={6} xs={6} style={{ marginTop: "-1%" }}>
                 <Form.Group>
-                  <Form.Label className="mt-3">End Date</Form.Label>
+                  <Form.Label className="mt-1" >End Date</Form.Label>
                   <br />
                   <DatePicker
                     selected={endDate}

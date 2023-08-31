@@ -14,7 +14,7 @@
     justify-content: center;
 
     text-align: left;
-    height: 105vh;
+    height: 0%;
 }
 .formCont{
     display:flex;
@@ -135,7 +135,10 @@ body, button, input, select, textarea {
     text-align: left;
 
 }
-
+.headnm2{
+    width: 100%;
+    padding: 0px;
+}
 .head-name-2 {
     color: black;
     font-family: "League Spartan-SemiBold";
@@ -157,6 +160,7 @@ heading-name3{
     font-weight: 200;
     padding-bottom: 1%;
     text-align: left;
+    padding: 0%;
 
 }
 
@@ -479,6 +483,7 @@ heading-name3{
         margin-top: 0% !important;
         margin-left: 0% !important;
         margin-right: 0% !important;
+        padding: 66px;
     }
     .reviewbtn{
         font-size: 0.8rem;

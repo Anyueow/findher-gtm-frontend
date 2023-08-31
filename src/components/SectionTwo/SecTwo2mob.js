@@ -54,7 +54,7 @@ function SecTwo2mob() {
             />
             <img
               src={mobbase}
-              className="display-image mobile"
+              className="display-image mobile mob22"
               alt="Findher Demo"
             />
           </Col>
