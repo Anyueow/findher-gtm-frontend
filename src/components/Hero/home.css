@@ -198,12 +198,14 @@
         width: 70% !important;
     }
     .footer-icons{
-        width: 72%;
-        padding: 0px;
-        margin-left: 123px!important;
-        margin-bottom: 0em!important;
-        position: relative;
-        bottom: 32%;
+        
+    width: 100%;
+    padding: 0px;
+    margin-right: 3px!important;
+    margin-bottom: 0em!important;
+    position: relative;
+    bottom: 5%;
+
     }
     .logomob{
         width: 91% !important;;
@@ -216,16 +218,17 @@
         max-width: 100%!important;
     }
     .iconside{
-        margin-top: 47px!important;
+        margin-top: 0px!important;
     }
     .contactuss{
         position: relative;
-        top: 12%;
+        top: 5%;
         font-size: 1.3rem!important;
     }
     .mob77{
         position: relative;
-        bottom: 34vh;
+        bottom: 18vh;
+        margin: 7vh 0.2vh;
 
     }
 }

@@ -45,7 +45,7 @@ function NavBar() {
                     {/*    <Link to="/business_register">For Businesses</Link>*/}
                     {/*</li>*/}
                     <li>
-                        <a style={{ marginLeft:"10px",paddingLeft:"0px"}}href="#contact">Contact</a>
+                        <a style={{ marginLeft:"10px",paddingLeft:"0px",left:"6px",position:"relative" }}href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
