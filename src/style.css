@@ -185,8 +185,9 @@ body {
   }
 
   .navbar-menu a {
-    padding: 10px 20px;
+    padding: 10px 9px;
     display: block;
+    margin-right: 24px;
   }
 }
 
@@ -341,11 +342,11 @@ body {
   }
 
   .Footerhed{
-    margin-top: 3%;
+    margin-top: 6%;
     margin-bottom: 3%;
     text-align: left  ;
     text-decoration-color: #0c0513;
-    font-size: 1rem;
+    font-size: 1.3rem;
     max-width: 80%;
   }
 }

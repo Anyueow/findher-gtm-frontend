@@ -127,7 +127,7 @@
   }
   .dis1 {
     font-family: "Noto Sans", sans-serif;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
   .piclower-text{
     display: flex;

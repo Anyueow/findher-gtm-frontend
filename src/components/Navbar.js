@@ -39,13 +39,13 @@ function NavBar() {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                    <strong style={{ color: "#E20B3CD4", cursor: "pointer" }} onClick={joinExternalSurvey}>Join Now</strong>
+                    <strong style={{ color: "#E20B3CD4", cursor: "pointer",marginRight:"20px"}} onClick={joinExternalSurvey}>Join Now</strong>
                     </li>
                     {/*<li>*/}
                     {/*    <Link to="/business_register">For Businesses</Link>*/}
                     {/*</li>*/}
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a style={{ marginLeft:"10px",paddingLeft:"0px"}}href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>

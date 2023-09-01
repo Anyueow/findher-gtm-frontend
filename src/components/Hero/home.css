@@ -197,6 +197,37 @@
     .signup-btn {
         width: 70% !important;
     }
+    .footer-icons{
+        width: 72%;
+        padding: 0px;
+        margin-left: 123px!important;
+        margin-bottom: 0em!important;
+        position: relative;
+        bottom: 32%;
+    }
+    .logomob{
+        width: 91% !important;;
+    }
+    .logomob img{
+        max-width: 14vh !important;
+    }
+    .footertxt{
+        font-size: 0.9rem!important;
+        max-width: 100%!important;
+    }
+    .iconside{
+        margin-top: 47px!important;
+    }
+    .contactuss{
+        position: relative;
+        top: 12%;
+        font-size: 1.3rem!important;
+    }
+    .mob77{
+        position: relative;
+        bottom: 34vh;
+
+    }
 }
 
 

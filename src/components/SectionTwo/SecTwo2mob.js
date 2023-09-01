@@ -19,7 +19,7 @@ function SecTwo2mob() {
         >
           <Col md={5} xs={12} className="text-content" style={{paddingLeft:"26px"}}>
             <h1 className="title">
-              <div style={{ fontSize: "20px", fontWeight: "600" }}>
+              <div style={{ fontSize: "22px",  }}>
                 That's why we're building Find
                 <span style={{ color: "rgba(226, 11, 60, 0.83)" }}>Her,</span>
               </div>
@@ -28,13 +28,13 @@ function SecTwo2mob() {
               className="description dis1"
               style={{ width: "100%", display: "block",color:"black"}}
             >
-              <span className="emphasis" >
+              <span className="emphasis2" >
                 {" "}
                 So you can be in the know,
               </span>{" "}
               <span
-                className="emphasis"
-                style={{ color: "rgba(226, 11, 60, 0.83)",fontWeight: "800" }}
+                className="emphasis2"
+                style={{ color: "rgba(226, 11, 60, 0.83)" }}
               >
                 not in the dark.
               </span>

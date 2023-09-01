@@ -488,13 +488,14 @@ heading-name3{
     .para{
         font-size: 1rem!important;
         width: 100%!important;
-            .datetimepicker-input{
-        width: 100% !important;
-      }
+            
 
         text-align: justify;
 
     }
+    .datetimepicker-input{
+        width: 100% !important;
+      }
     .ROw{
         margin-top: 0% !important;
     }
