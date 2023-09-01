@@ -185,8 +185,9 @@ body {
   }
 
   .navbar-menu a {
-    padding: 10px 20px;
+    padding: 10px 9px;
     display: block;
+    margin-right: 24px;
   }
 }
 
@@ -303,8 +304,14 @@ body {
   font-family: Montserrat;
   text-align: left  ;
   text-decoration-color: #0c0513;
-  font-size: 1rem;
+  font-size: 2.5vh;
   font-weight: 400;
+  margin-left: 5%;
+  
+  position: relative;
+  /* top: 0px; */
+  bottom: 0;
+
 }
 .Footerhed{
   font-family: Montserrat;
@@ -326,7 +333,7 @@ body {
 
 @media (max-width: 767px) {
   .footer-copywright {
-    font-size: 0.5rem;
+    font-size: 2vh;
     text-align: left  ;
   }
 
@@ -335,11 +342,11 @@ body {
   }
 
   .Footerhed{
-    margin-top: 3%;
+    margin-top: 6%;
     margin-bottom: 3%;
     text-align: left  ;
     text-decoration-color: #0c0513;
-    font-size: 1rem;
+    font-size: 1.3rem;
     max-width: 80%;
   }
 }

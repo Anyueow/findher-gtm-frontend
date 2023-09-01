@@ -116,5 +116,9 @@
 
           margin-bottom: 0% !important;
       }
+      .outer-container{
+        height: 102vh;
+      }
       
 }
+

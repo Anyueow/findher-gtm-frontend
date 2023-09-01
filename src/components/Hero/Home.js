@@ -34,7 +34,7 @@ function Home() {
                     </h3>
                             <a href="https://www.surveymonkey.com/r/NMD3GRV"
                                className="signup-btn desktop"
-                               style={{marginTop:"3%", display: 'inline-block', textDecoration: 'none'}}
+                               style={{marginTop:"3%", display: 'inline-block', textDecoration: 'none',position:"absolute",left:"2%"}}
                                target="_blank"
                                rel="noopener noreferrer">
                                 Sign up today!

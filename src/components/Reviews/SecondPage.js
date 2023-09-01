@@ -109,14 +109,14 @@ export const SecondPage = () => {
                   >
                     <option value="">Select a company</option>
                     {companyNames.map((companyName, index) => (
-                      <option key={index} value={companyName}>
-                        {companyName}
+                      <option key={index} value={companyName} >
+                        {companyName} 
                       </option>
                     ))}
                   </Form.Select>
                 </Form.Group>
               </Col>{" "}
-              <Col md={6} xs={12}>
+              <Col md={6} xs={12} style={{marginTop:"27px"}}>
                 <Form.Group>
                   <Form.Label>Office Location</Form.Label>
                   <Form.Select
@@ -135,7 +135,7 @@ export const SecondPage = () => {
               </Col>
             </Row>
 
-            <Row style={{ marginBottom: "2%" }}>
+            <Row style={{ marginBottom: "2%",marginTop:"27px" }}>
               <Form.Group>
                 <Form.Label>Your Job Title</Form.Label>
                 <Form.Select

@@ -10,7 +10,7 @@ export const ThirdPage = () => {
   return (
     <div>
     <ReviewProgressBar percent={100}/>
-    <Container className="sub sixpage-review-container">
+    <Container className="subtt sub sixpage-review-container ">
       <Row className="reviews-box">
         <h1 className="head-name4">
           Thank you for <span className="pink"> sharing! </span>
