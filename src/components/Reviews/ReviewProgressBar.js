@@ -3,9 +3,13 @@ import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import "./ReviewProgressBar.css";
 import { Row, Col } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import logo from "../../Assets/logo.png";
 
 function ReviewProgressBar(props) {
+
+  const navigate = useNavigate();
+
   return (
     <div className="progress-container">
       <Row className="fixed-top pt-2">
@@ -13,7 +17,8 @@ function ReviewProgressBar(props) {
           <img src={logo} alt="brand" className="logo" />
         </Col>
         <Col md={2} xs={4}>
-          <button className="progress-btn py-2">
+          <button className="progress-btn py-2"
+          onClick={ ()=>{navigate('/reviews_login')}}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -38,13 +43,16 @@ function ReviewProgressBar(props) {
         <Step transition="scale">
           {({ accomplished }) => (
             <div className="step-container">
-              <div
+              <button
                 className={`step-number ${
                   props.percent > 0 ? "active" : "inactive"
                 }`}
+                onClick={ ()=>{navigate('/reviews_one')}}
+                type="button"
+                disabled={props.percent < 0 }
               >
                 1
-              </div>
+              </button>
               <div
                 className={`step-label ${
                   props.percent > 0 ? "step-label-active" : "inactive"
@@ -58,19 +66,22 @@ function ReviewProgressBar(props) {
         <Step transition="scale">
           {({ accomplished }) => (
             <div className="step-container">
-              <div
+              <button
                 className={`step-number ${
                   props.percent >= 35 ? "active" : "inactive"
                 }`}
+                onClick={ ()=>{navigate('/reviews_three')}}
+                type="button"
+                disabled={props.percent  < 36 }
               >
                 2
-              </div>
+              </button>
               <div
                 className={`step-label ${
                   props.percent >= 35 ? "step-label-active" : "inactive"
                 }`}
               >
-                Your Expierence
+                Your Experience
               </div>
             </div>
           )}
@@ -78,13 +89,16 @@ function ReviewProgressBar(props) {
         <Step transition="scale">
           {({ accomplished }) => (
             <div className="step-container">
-              <div
+              <button
                 className={`step-number ${
                   props.percent >= 65 ? "active" : "inactive"
                 }`}
+                onClick={ ()=>{navigate('/reviews_four')}}
+                type="button"
+                disabled={props.percent < 66 }
               >
                 3
-              </div>
+              </button>
               <div
                 className={`step-label ${
                   props.percent >= 65 ? "step-label-active" : "inactive"
@@ -98,13 +112,16 @@ function ReviewProgressBar(props) {
         <Step transition="scale">
           {({ accomplished }) => (
             <div className="step-container">
-              <div
+              <button
                 className={`step-number ${
                   props.percent === 100 ? "active" : "inactive"
                 }`}
+                onClick={ ()=>{navigate('/successUser')}}
+                type="button"
+                disabled={props.percent < 100 }
               >
                 4
-              </div>
+              </button>
               <div
                 className={`step-label ${
                   props.percent === 100 ? "step-label-active" : "inactive"

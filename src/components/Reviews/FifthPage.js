@@ -60,7 +60,7 @@ const FifthPage = () => {
                 credentials: "include",
                 body: JSON.stringify(payload),
             });
-
+  
             if (response.ok) {
                 const result = await response.json();
                 console.log(result);
@@ -80,88 +80,89 @@ const FifthPage = () => {
 
     return (
       <div>
-      <ReviewProgressBar percent={35}/>
-      <Container className="sub" style={containerStyle}>
-        <Row className="reviews-box">
-          <h1 className="head-name" style={{ marginBottom: "3%" }}>
-            Tell us your experience at <b>{companyName}</b>
-          </h1>
-          <Form>
-            <Form.Group className="question-grp">
-              <Form.Label className="question-grp-q">
-                1. What are some good things about this workplace?
-              </Form.Label>
-              <Form.Control
-                className="custom-input"
-                type="text"
-                placeholder="Type answer here..."
-                value={goodThings}
-                onChange={(e) => setGoodThings(e.target.value)}
-              />
-            </Form.Group>
+        <ReviewProgressBar percent={65} />
+        <Container className="sub" style={containerStyle}>
+          <Row className="reviews-box">
+            <h1 className="head-name" style={{ marginBottom: "3%" }}>
+              Tell us your experience at <b>{companyName}</b>
+            </h1>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="question-grp">
+                <Form.Label className="question-grp-q">
+                  1. What are some good things about this workplace?
+                </Form.Label>
+                <Form.Control
+                  // className="custom-input"
+                  type="text"
+                  placeholder="Type answer here..."
+                  value={goodThings}
+                  onChange={(e) => setGoodThings(e.target.value)}
+                  required
+                />
+              </Form.Group>
 
-            <Form.Group className="question-grp">
-              <Form.Label className="question-grp-q">
-                2. What are some not-so-good things about this workplace?{" "}
-              </Form.Label>
-              <Form.Control
-                className="custom-input"
-                type="text"
-                placeholder="Type answer here..."
-                value={badThings}
-                onChange={(e) => setBadThings(e.target.value)}
-              />{" "}
-            </Form.Group>
+              <Form.Group className="question-grp">
+                <Form.Label className="question-grp-q">
+                  2. What are some not-so-good things about this workplace?{" "}
+                </Form.Label>
+                <Form.Control
+                  className="custom-input"
+                  type="text"
+                  placeholder="Type answer here..."
+                  value={badThings}
+                  onChange={(e) => setBadThings(e.target.value)}
+                  required
+                />{" "}
+              </Form.Group>
 
-            <Row>
-              <Col md={6} xs="auto">
-                <Form.Group className="question-grp">
-                  <Form.Label className="question-grp-q">
-                    3. What are some amenities this place offer?
-                  </Form.Label>
-                  <Form.Control
-                    className="custom-input"
-                    type="text"
-                    placeholder="Type answer here..."
-                    value={amenities}
-                    onChange={(e) => setAmenities(e.target.value)}
-                  />
-                </Form.Group>
-              </Col>
+              <Row>
+                <Col md={6} xs="auto">
+                  <Form.Group className="question-grp">
+                    <Form.Label className="question-grp-q">
+                      3. What are some amenities this place offer?
+                    </Form.Label>
+                    <Form.Control
+                      className="custom-input"
+                      type="text"
+                      placeholder="Type answer here..."
+                      value={amenities}
+                      onChange={(e) => setAmenities(e.target.value)}
+                      required
+                    />
+                  </Form.Group>
+                </Col>
 
-              <Col md={6} xs="auto">
-                <Form.Group className="question-grp">
-                  <Form.Label className="question-grp-q">
-                    4. What other benefits are provided?
-                  </Form.Label>
-                  <Form.Control
-                    className="custom-input"
-                    type="text"
-                    placeholder="Type answer here..."
-                    value={benefits}
-                    onChange={(e) => setBenefits(e.target.value)}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form>
-
-          <Button
-            type="submit"
-            className="button-sub"
-            onClick={handleSubmit}
-            data-bs-toggle="tooltip"
-            data-bs-placement="right"
-            title="By submitting, you consent to us utilizing
+                <Col md={6} xs="auto">
+                  <Form.Group className="question-grp">
+                    <Form.Label className="question-grp-q">
+                      4. What other benefits are provided?
+                    </Form.Label>
+                    <Form.Control
+                      className="custom-input"
+                      type="text"
+                      placeholder="Type answer here..."
+                      value={benefits}
+                      onChange={(e) => setBenefits(e.target.value)}
+                      required
+                    />
+                  </Form.Group>
+                </Col> 
+                <Button
+                  type="submit"
+                  className="button-sub"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  title="By submitting, you consent to us utilizing
                  your feedback anonymously to gather and
                  display workplace insights."
-          >
-            Submit Review!
-          </Button>
-
-          <ReactTooltip id="FifthSubmit" place="right" effect="solid" />
-        </Row>
-      </Container>
+                >
+                  Submit Review!
+                </Button>
+              </Row>
+            </Form>
+            <ReactTooltip id="FifthSubmit" place="right" effect="solid" />
+          </Row>
+        </Container>
       </div>
     );
 };

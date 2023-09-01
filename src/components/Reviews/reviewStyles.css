@@ -442,7 +442,26 @@ heading-name3{
 .SecondPageToast .toast-body {
     background-color: rgba(255, 255, 255, 1); 
   }
-
+.Second-page-validation-toast{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 28% !important;
+    font-weight: 400;
+}
+.Second-page-validation-toast  .toast-body {
+    background-color: rgba(255, 255, 255, 1); 
+    text-align: center;
+  }
+  .Second-page-validation-toast  .toast-body .btn{
+   background-color: #ee2c5b;
+   border: #ee2c5b;
+  }
+  .datetimepicker-input{
+    width: 255% !important;
+  }
 .underline-text {
     position: relative;
     display: inline-block;
@@ -459,6 +478,7 @@ heading-name3{
     background-color: black; 
   }
 
+
 @media (max-width: 600px) {
     .chk-bttn{
         width: 100%!important;
@@ -468,7 +488,10 @@ heading-name3{
     .para{
         font-size: 1rem!important;
         width: 100%!important;
-        
+            .datetimepicker-input{
+        width: 100% !important;
+      }
+
         text-align: justify;
 
     }
