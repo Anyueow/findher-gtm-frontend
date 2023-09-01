@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, InputGroup, Toast } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import "./reviewStyles.css";
 import { useNavigate } from "react-router-dom";
@@ -17,6 +17,11 @@ const FourthPage = () => {
     const [diversityRating, setDiversityRating] = useState(0);
     const [safetyRating, setSafetyRating] = useState(0);
     const [compensationRating, setCompensationRating] = useState(0);
+    const [isFormValid, setisFormValid] = useState({
+        message: "",
+        for: "",
+        status: false,
+      });
 
     const createRatingInputGroup = (name, setter) => {
         return (
@@ -51,11 +56,65 @@ const FourthPage = () => {
 
     const navigate = useNavigate();  // Import useHistory for navigation
    
+    function checkForm() {
+      if (flexibilityRating <= 0) {
+        setisFormValid({
+          message: "Please slect flexibility rating star",
+          for: "flexibility",
+          status: true,
+        });
+        return true;
+      }
+      else if (managementRating <= 0) {
+        setisFormValid({
+          message: "Please slect management rating star",
+          for: "management",
+          status: true,
+        });
+        return true;
+      }
+      else if (coWorkersRating  <= 0) {
+        setisFormValid({
+          message: "Please slect co-workers rating star",
+          for: "co-workers",
+          status: true,
+        });
+        return true;
+      }
+      else if (diversityRating  <= 0) {
+        setisFormValid({
+          message: "Please slect diversity rating star",
+          for: "diversity",
+          status: true,
+        });
+        return true;
+      }
+      else if (safetyRating  <= 0) {
+        setisFormValid({
+          message: "Please slect safety rating star",
+          for: "safety",
+          status: true,
+        });
+        return true;
+      }
+      else if (compensationRating  <= 0) {
+        setisFormValid({
+          message: "Please slect compensation rating star",
+          for: "compensation",
+          status: true,
+        });
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
 
     const handleSubmit = async (e) => {
-
         e.preventDefault();
-
+        if(checkForm()){
+            return;
+        }
         const submitRatings = async () => {
             const token = localStorage.getItem("token");
 
@@ -116,11 +175,11 @@ const FourthPage = () => {
 
     return (
         <div>
-                   <ReviewProgressBar percent={65}/>
+                   <ReviewProgressBar percent={35}/>
         <Container className="ratings"
                    style={{marginTop:"20px" }}>
                      
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Row >
                     <h1 className="head-name review-four-head" style={{marginBottom:"3%", marginTop:"5%"}}>Tell us your experience at <b>{companyName}</b></h1>
                     <Col md={6}  xs="12">
@@ -157,17 +216,32 @@ const FourthPage = () => {
                             {createRatingInputGroup("compensation", setCompensationRating)}
                         </Form.Group>
                     </Col>
-                </Row>
-                <Row className="d-flex justify-content-center">
-
+                    <Row className="d-flex justify-content-center">
                         <Button type="submit"
-                                className="button-sub2 review-four-sub"
-                                style={{ marginBottom: '50px' }}
-                                onClick={handleSubmit}>
-                            Next </Button>
-
+                        className="button-sub2 review-four-sub"
+                        style={{ marginBottom: '50px' }}
+                        >
+                        Next </Button>
+                    </Row>
                 </Row>
             </Form>
+            {isFormValid.status && (
+          <Toast className="Second-page-validation-toast">
+            <Toast.Body>
+              <p >{isFormValid.message}</p>
+              <Button
+                type="button"
+                className="btn"
+                onClick={() =>
+                  setisFormValid((prevState) => ({
+                    ...prevState,
+                    status: false,
+                  }))
+                }
+              >Ok</Button>
+            </Toast.Body>
+          </Toast>
+        )}
         </Container>
         </div>
     );
