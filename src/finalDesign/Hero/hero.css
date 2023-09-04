@@ -77,3 +77,32 @@
 .JoinButtonH:active {
     background-color: #FF1493; /* even darker pink on active click */
 }
+
+.header{
+    width: 70% !important;
+}
+
+@media (max-width:600px) {
+.gradient-section{
+    margin-top: 70px;
+}
+.header{
+    font-size: 28px !important;
+    width: 90% !important;
+    line-height: 40px;
+}
+.hero-sub{
+    width: 95% !important;
+}
+.JoinButtonH{
+    width: 60% !important;
+    padding: 0.5rem 1.5rem !important;
+}
+.hero-section{
+    height: 100vh !important; 
+}
+.gradient-section {
+    width: 100% !important;
+    height: 90vh; 
+}
+}
