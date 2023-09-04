@@ -1,0 +1,114 @@
+.job-search-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.line {
+    width: 1px;
+    height: 6rem; /* Adjust based on your needs */
+    background-color: #000; /* Color of the line */
+    margin: 0 auto; /* Center the line */
+}
+
+.rectangle {
+    width: 220px; /* Adjust based on your needs */
+    height: 320px; /* Adjust based on your needs */
+    background-color: #f5f5f5; /* Color of the rectangle */
+    margin: 0 auto; /* Center the rectangle */
+    border-radius: 10px;
+}
+
+/* Custom class to reduce horizontal padding */
+.tight-padding {
+    padding-left: 5px;  /* Adjust as needed */
+    padding-right: 5px; /* Adjust as needed */
+}
+
+
+.job-search-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.job-search-section .col {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center;  /* Center children vertically */
+    align-items: center;  /* Center children horizontally */
+}
+
+.job-search-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2%;
+}
+
+.job-search-section h3 {
+    font-size: 3rem;
+    color: #666;
+    width:40%;
+    text-align: center;
+    margin-bottom: 2.5%;
+}
+
+.job-search-section p {
+    font-size: 1rem;
+    color: #888;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.job-search-section h4 {
+    font-size: 1.5rem;
+    color: #888;
+    width: 70%;
+    font-weight: 400;
+
+}
+
+
+.job-search-section img {
+    width: 70%;
+    margin-top: 8%;
+    margin-right: 10px;
+}
+
+.img-in-rectangle{
+    width:120%;
+    margin-bottom: 0;
+}
+
+.JoinButtonS {
+    margin-top: 2%;
+    padding: 0.8rem 2rem;   /* top/bottom padding and left/right padding */
+    font-size: 1.2rem;
+    color: #ffffff;
+    width: 18%;
+    background-color: rgba(226, 11, 60, 0.83);  /* or any desired color */
+    border: none;  /* remove default border */
+    border-radius: .5rem;  /* rounded corners, adjust as desired */
+    transition: background-color 0.3s ease;
+    align-content: center;/* smooth transition for hover effect */
+}
+
+.JoinButtonS:hover {
+    background-color: #FF69B4;  /* slightly darker pink on hover */
+    color: #ffffff;  /* change text color on hover if needed */
+}
+
+.JoinButtonS:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 182, 193, 0.5); /* Bootstrap's way to indicate focus, adjust color as needed */
+}
+
+.JoinButtonS:active {
+    background-color: #FF1493; /* even darker pink on active click */
+}
