@@ -1,0 +1,79 @@
+.gradient-section {
+    position: relative; /* This is important to position the pseudo-element correctly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    background-image: linear-gradient(120deg, #dff851 0%, #8fd3f4 100%);    border-radius: 0 0 25% 25%;
+    z-index: 1; /* Ensure the main content is above the pseudo-element */
+}
+.gradient-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%; /* Adjust this value to control the height of the blurred area */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Gradient fade */
+    backdrop-filter: blur(25px);
+    border-radius: 0 0 20% 20%;
+    z-index: -1; /* Place it behind the main content of .gradient-section */
+}
+
+
+
+.justify-content-center {
+    align-items: center;
+    align-content: center;
+
+}
+
+
+.content .header {
+    color: #000000;  /* For visibility on gradient */
+    margin-bottom: 5%;  /* Space between title and subtitle */
+    font-size: 4.6rem;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.content .sub {
+    color: #000000;  /* For visibility on gradient */
+    margin-bottom: 5%;  /* Space between subtitle and button */
+    font-size: 1.2rem;
+    font-family: "Noto Sans Old South Arabian";
+    text-align: center;
+    width: 50%;
+
+}
+.content .col {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center;  /* Center children vertically */
+    align-items: center;  /* Center children horizontally */
+}
+
+.JoinButtonH {
+    padding: 1.5rem 2rem;   /* top/bottom padding and left/right padding */
+    font-size: 1.1rem;
+    color: #ffffff;
+    width: 18%;
+    background-color: rgba(226, 11, 60, 0.83);  /* or any desired color */
+    border: none;  /* remove default border */
+    border-radius: .5rem;  /* rounded corners, adjust as desired */
+    transition: background-color 0.3s ease;
+    align-content: center;/* smooth transition for hover effect */
+}
+
+.JoinButtonH:hover {
+    background-color: #FF69B4;  /* slightly darker pink on hover */
+    color: #ffffff;  /* change text color on hover if needed */
+}
+
+.JoinButtonH:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 182, 193, 0.5); /* Bootstrap's way to indicate focus, adjust color as needed */
+}
+
+.JoinButtonH:active {
+    background-color: #FF1493; /* even darker pink on active click */
+}
