@@ -17,7 +17,7 @@ function SectionOne() {
                         information, leaving you in the dark about a potential employer's compatibility with your needs and aspirations. FindHer offers exclusive and reliable insights into different workplaces, allowing you to make informed decisions about your next career move.
 
                     </p>
-                    <img src={demo} alt="Placeholder Image 1" />
+                    <img src={demo} alt="Placeholder 1" />
                 </Col>
             </Row>
             <Row className="justify-content-center mt-5">
