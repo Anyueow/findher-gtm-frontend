@@ -32,6 +32,12 @@ import DetailsTwoB2B from "./components/Businesses/DetailsTwoB2B";
 import EndPage from "./components/Businesses/endPage";
 import SecTwo2mob from "./components/SectionTwo/SecTwo2mob";
 
+import HeroFinal from "./finalDesign/Hero/Hero";
+import SectOneF from "./finalDesign/SectionOne/SectionOne";
+import SectTwoF from "./finalDesign/SectionTwo/SectionTwo";
+import SectThreeF from "./finalDesign/SectionThree/SectionThree";
+import TestF from "./finalDesign/Testimonial/Testimonial";
+
 function MainContent() {
 
 
@@ -47,6 +53,18 @@ function MainContent() {
         <Testimonial />
 
 
+      </>
+  );
+}
+
+function NewDesign() {
+  return (
+      <>
+      <HeroFinal />
+  <SectOneF />
+  <SectTwoF />
+  <SectThreeF />
+  <TestF />
       </>
   );
 }
@@ -94,6 +112,8 @@ function App() {
             <Route path="/update_details" element={<DetailsOneB2B />} />
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
             <Route path="/successBizz" element={<EndPage />} />
+            <Route path="/new" element={<NewDesign />} />
+
 
 
 
