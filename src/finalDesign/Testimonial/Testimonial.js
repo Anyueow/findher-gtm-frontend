@@ -18,7 +18,7 @@ const TestimonialSection = () => {
 
     return (
         <div>
-            <Container>
+            <Container className='Testimonial-container'>
                 <Container
                     style={{
                         height: "70vh",

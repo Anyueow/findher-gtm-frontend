@@ -12,7 +12,7 @@
     width: 80%;
     height: 600px;
     align-content: flex-end;
-    overflow: hidden;
+    overflow-x: hidden !important;
     left:35%;
 
     border-radius: 20px;
@@ -49,6 +49,9 @@
 .row.no-gutter {
     margin-right: 0;
     margin-left: 0;
+}
+.no-gutter {
+    overflow-x: hidden;
 }
 .upper {
     top: -40%;
@@ -115,15 +118,42 @@
 
 @media (max-width:600px) {
     .head{
-        font-size: xx-large !important;
-        font-weight: normal !important;
+        font-size: 24px !important;
+        font-weight: 100 !important;
         text-align: left;
-        margin: 20px 0px;
+        margin: 10px 20px;
+        line-height: 40px;
     }
     .sub{
         font-size: small !important;
         font-weight: 100 !important;
         text-align: center;
-        line-height: 150%;
+        line-height: 25px;
+        margin: 10px 20px;
+    }
+    .JoinButton{
+        font-size: 15px;
+    }
+    .decorative-rectangle{
+        height: 250px;
+        width: 100%;
+        margin-left: 0%;
+        border-radius: 20px 20px 0px 0px;
+       
+    }
+    .overlay-image{
+        height: 220px !important;
+        width: 85%;
+    }
+    .decorative-rectangle-right{
+        height: 250px !important;
+        align-content: center;
+        left:0%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .no-gutter{
+        padding-left: 0% !important;
+        padding: 0%;
     }
 }

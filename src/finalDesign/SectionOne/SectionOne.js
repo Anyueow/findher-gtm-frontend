@@ -17,10 +17,10 @@ function SectionOne() {
                         information, leaving you in the dark about a potential employer's compatibility with your needs and aspirations. FindHer offers exclusive and reliable insights into different workplaces, allowing you to make informed decisions about your next career move.
 
                     </p>
-                    <img src={demo} alt="Placeholder 1" />
+                    <img src={demo} alt="Placeholder 1" className='section-one-first-img' />
                 </Col>
             </Row>
-            <Row className="justify-content-center mt-5">
+            <Row className="justify-content-center mt-5 rectangle-row">
                 <Col md={3} className="text-center mx-1 justify-content-center">
                     <div className="line mb-n3"></div>
                     <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
@@ -43,7 +43,7 @@ function SectionOne() {
                     </div>
                 </Col>
 
-                <p
+                <p className='sec-one-last-p'
                 style={{marginTop:"5vw", fontSize:"1.1rem",
                 width:"60%",
                 color:"black"}}>FindHer helps you discover
