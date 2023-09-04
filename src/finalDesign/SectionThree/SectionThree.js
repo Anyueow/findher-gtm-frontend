@@ -8,7 +8,7 @@ import img4 from "./Untitled design-24.png";
 import img5 from "./screentop.png";
 function SectionThree() {
     return (
-        <Container className="my-5">
+        <Container className="my-5 section-three-container">
             {/* The Whole Picture */}
             <Row className="mb-4 align-items-center">
                 <Col md={7} className="no-gutter">

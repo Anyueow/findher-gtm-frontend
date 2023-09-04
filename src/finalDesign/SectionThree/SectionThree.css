@@ -108,3 +108,22 @@
 .JoinButton:active {
     background-color: #FF1493; /* even darker pink on active click */
 }
+
+.section-three-container{
+    display: block !important;
+}
+
+@media (max-width:600px) {
+    .head{
+        font-size: xx-large !important;
+        font-weight: normal !important;
+        text-align: left;
+        margin: 20px 0px;
+    }
+    .sub{
+        font-size: small !important;
+        font-weight: 100 !important;
+        text-align: center;
+        line-height: 150%;
+    }
+}
