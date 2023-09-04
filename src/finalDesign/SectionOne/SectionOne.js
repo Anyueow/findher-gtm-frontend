@@ -24,21 +24,21 @@ function SectionOne() {
                 <Col md={3} className="text-center mx-1 justify-content-center">
                     <div className="line mb-n3"></div>
                     <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
-                        <img src={img1} alt=" in Rectangle" className="img-in-rectangle" />
+                        <img src={img1} alt=" in Rectangle" className="in-rectangle" />
                         <h4>The Whole Picture</h4>
                     </div>
                 </Col>
                 <Col md={3} className="text-center mx-1 justify-content-center">
                     <div className="line mb-n3"></div>
                     <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
-                        <img src={img2} alt="Image in Rectangle" className="img-in-rectangle" />
+                        <img src={img2} alt="Image in Rectangle" className="in-rectangle" />
                         <h4>Exclusive insights</h4>
                     </div>
                 </Col>
                 <Col md={3} className="text-center mx-1 justify-content-center">
                     <div className="line mb-n3"></div>
                     <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
-                        <img src={img3} alt="Image in Rectangle" className="img-in-rectangle" />
+                        <img src={img3} alt="Image in Rectangle" className="in-rectangle" />
                         <h4>Personalized For You</h4>
                     </div>
                 </Col>
