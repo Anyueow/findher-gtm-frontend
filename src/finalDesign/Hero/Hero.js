@@ -4,15 +4,15 @@ import "./hero.css";
 
 function Hero() {
     return (
-        <section style={{height:"120vh"}}>
+        <section style={{height:"120vh"}} className="hero-section">
             <div className="gradient-section">
             <Container className="content">
                 <Row className="justify-content-center">
                     <Col className="justify-content-center">
                     {/* h-100 ensures the row takes the full height of its parent */}
 
-                        <h1 className="header">Information You Need to<br/>Find The Best Jobs For You</h1>
-                        <h4 className="sub">
+                        <h1 className="header">Information You Need to Find The Best Jobs For You</h1>
+                        <h4 className="sub hero-sub">
                             With 10,000+ ratings, reviews, and overviews on Indian workplaces,
                             you can learn what it’s like to work at a company directly from the women who have been there.
                         </h4>
