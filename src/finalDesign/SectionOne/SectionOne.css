@@ -50,19 +50,24 @@
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 2%;
+    line-height:normal;
 }
 
 .job-search-section h3 {
     font-size: 3rem;
-    color: #666;
+    color: #000000;
+    line-height: 1.2em;
     width:40%;
     text-align: center;
+    font-weight: 500;
     margin-bottom: 2.5%;
 }
 
 .job-search-section p {
     font-size: 1rem;
-    color: #888;
+    color: #2c2c2c;
+    line-height: 1.4em;
+    font-weight: 100;
     width: 50%;
     margin: 0 auto;
 }
@@ -119,7 +124,7 @@
     width: 100% !important;
 }
 .job-search-section p{
-    font-size: 15px;
+    font-size: 12px;
     width: 100% !important;
 }
 .section-one-first-img{
