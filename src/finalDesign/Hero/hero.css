@@ -1,11 +1,15 @@
 .gradient-section {
-    position: relative; /* This is important to position the pseudo-element correctly */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 120vh;
-    background-image: linear-gradient(120deg, #dff851 0%, #8fd3f4 100%);    border-radius: 0 0 25% 25%;
-    z-index: 1; /* Ensure the main content is above the pseudo-element */
+    background-image: linear-gradient(120deg, #dff851 0%, #8fd3f4 100%);
+    border-radius: 0 0 0% 0%;
+    z-index: 1;
+    box-shadow: inset 0px -47px 39px -2px white, inset 0 0 0px 0px white;
+    /* opacity: 0.5; */
+    background: linear-gradient(120deg, #dff851 -31%, #8fd3f4 100%);
 }
 .gradient-section::before {
     content: "";
@@ -13,11 +17,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 30%; /* Adjust this value to control the height of the blurred area */
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Gradient fade */
+    height: 30%; 
+    /* background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); 
     backdrop-filter: blur(25px);
     border-radius: 0 0 20% 20%;
-    z-index: -1; /* Place it behind the main content of .gradient-section */
+    z-index: -1;  */
 }
 
 
@@ -103,6 +107,6 @@
 }
 .gradient-section {
     width: 100% !important;
-    height: 90vh; 
+    height: 96vh; 
 }
 }
