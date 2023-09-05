@@ -92,7 +92,7 @@ const FifthPage = () => {
                   1. What are some good things about this workplace?
                 </Form.Label>
                 <Form.Control
-                  // className="custom-input"
+                  className="custom-input"
                   type="text"
                   placeholder="Type answer here..."
                   value={goodThings}

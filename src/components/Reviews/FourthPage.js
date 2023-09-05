@@ -29,7 +29,7 @@ const FourthPage = () => {
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
                     return (
-                        <label key={i}>
+                        <label key={i} className='review-four-star-label'>
                             <input
                                 type="radio"
                                 name={name}
