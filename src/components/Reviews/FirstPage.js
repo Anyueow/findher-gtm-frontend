@@ -19,6 +19,11 @@ export const FirstPage = () => {
                                                      password: false
                                                  });
 
+    const [isOtp,setisOtp]= useState({
+        status:false,
+        value:'',
+        isError:false,
+    });
     const navigate = useNavigate();
 
     const handleInputChange = (e) => {
@@ -31,7 +36,68 @@ export const FirstPage = () => {
         navigate("/");
     };
 
-    const handleSubmit = async (e) => {
+    const handleUserdetailsSubmit = async (e) => {
+        e.preventDefault();
+        console.log('handleUserdetailsSubmit')
+        const { email, phoneNumber, password } = user;
+        if (email && phoneNumber && password) {
+            try {
+                const response = await fetch("https://findher-backend.onrender.com/verify", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    credentials: "include", // Include this line
+                    body: JSON.stringify({
+                                             email: email,
+                                             phoneNumber: phoneNumber,
+                                             password: password,
+                                         }),
+                });
+          
+    
+
+            console.log("its been sent")
+
+
+
+        if (response.ok) {
+            
+                const data = await response.json();
+                setisOtp((prevState) => ({ ...prevState, status: !prevState.status }));
+                console.log(data); // Print the response data to the console for debugging purp
+            } else {
+                 console.log("dammit these errors")
+            // Handle the error response
+                const data = await response.json();
+                console.error(`Error: ${response.status} ${response.statusText}`);
+                console.error(data.message); // Print the error message from the backend
+
+                // Display error messages for duplicate email or phone number
+                setFormErrors({
+                                  email: data.message === "Email already in use.",
+                                  phoneNumber: data.message === "Phone number already in use.",
+                                  password: false,
+                              });
+            }
+        } catch (error) {
+            console.log(error)
+            console.error("Error Name:", error.name);
+    console.error("Error Message:", error.message);
+    console.error("Stack Trace:", error.stack);
+        }
+        } else {
+            // Update formErrors to show which fields are missing
+            setFormErrors({
+                              email: !email,
+                              phoneNumber: !phoneNumber,
+                              password: !password,
+                          });
+        }
+        
+    };
+    
+    const handleOTPSubmit = async (e) => {
         e.preventDefault();
 
         const { email, phoneNumber, password } = user;
@@ -47,6 +113,7 @@ export const FirstPage = () => {
                                          email: email,
                                          phoneNumber: phoneNumber,
                                          password: password,
+                                         otp: isOtp.value,
                                      }),
             });
 
@@ -55,6 +122,7 @@ export const FirstPage = () => {
 
 
         if (response.ok) {
+            setisOtp((prevState) => ({ ...prevState, status: !prevState.status }));
                 const data = await response.json();
                 localStorage.setItem("token", data.token);
                 console.log(data); // Print the response data to the console for debugging purposes
@@ -83,7 +151,6 @@ export const FirstPage = () => {
                           });
         }
     };
-
     const isFormValid = user.email && user.phoneNumber && user.password;
 
     return (
@@ -119,13 +186,15 @@ export const FirstPage = () => {
 
 
                     <Col md={6} className="formDes">
-                        <Row>
+                       {!isOtp.status && ( 
+                        <>
+                       <Row>
                             <h2 className="head-name Waitlist" >
                                 Join the Waitlist!</h2>
                                 <p className="small Waitlistpara">To be the first to access ratings, reviews, and how 10,000+ different workplaces in India support the women working for them</p>
                         </Row><Row>
 
-                        <Form onSubmit={handleSubmit} className="form-wrapper">
+                        <Form  className="form-wrapper">
                             <Form.Group className="form-grp">
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control
@@ -160,11 +229,11 @@ export const FirstPage = () => {
                             </Form.Group>
                             <Button
                                 className="button-sub reviewbtn"
-                                type="submit"
                                 disabled={!isFormValid}
                                 style={{marginBottom:"3%"}}
+                                onClick={handleUserdetailsSubmit}
                             >
-                                Register
+                                Send OTP
                             </Button>
 
 
@@ -176,7 +245,50 @@ export const FirstPage = () => {
                             <p> Log in instead</p>
                         </Link>
 
+                        </> )}
+                        {isOtp.status && ( 
+                        <>
+                       <Row>
+                       <h2 className="head-name Waitlist" >
+                                Join the Waitlist!</h2>
+                                <p className="small Waitlistpara">To be the first to access ratings, reviews, and how 10,000+ different workplaces in India support the women working for them</p>
+                         </Row>
+                        <Row>
 
+                        <Form onSubmit={handleOTPSubmit} className="form-wrapper">
+                            <Form.Group className="form-grp">
+                                <Form.Label>Please enter OTP to continue...</Form.Label>
+                                <Form.Control
+                                    name="otp" // Added name attribute
+                                    type="text"
+                                    pattern="^[0-9]{6}$"
+                                    title="Only number are allowed"
+                                    value={isOtp.value}
+                                    maxLength={6}
+                                    onChange={(e) => setisOtp(prevState => ({ ...prevState, value: e.target.value }))}
+                                    required
+                                />
+                                {isOtp.isError && <p className="error-message">Invalid OTP</p>}
+                            </Form.Group>
+                            <Button
+                                className="button-sub reviewbtn"
+                                type="submit"
+                                disabled={isOtp.value.length<6}
+                                style={{marginBottom:"3%"}}
+                            >
+                                Submit
+                            </Button>
+
+
+                        </Form>
+                    </Row>
+                        <Link to="/login" className="nav-link2"
+                              style={{fontSize:"1rem", color:"#ee2c5b"}}
+                        >
+                            <p> Log in instead</p>
+                        </Link>
+
+                        </> )}
                     </Col>
                 </Row>
 

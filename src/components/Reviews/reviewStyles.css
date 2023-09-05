@@ -634,17 +634,21 @@ heading-name3{
         margin-left: 2%;
     }
     .review-four-head{
-        margin-top: 23% !important;
+        margin-top: 18% !important;
+        margin-bottom: 8% !important;
     }
   .review-heads{
-    font-size: larger;
+    font-size: large !important;
   }
   .review-subs{
-    font-size: medium;
-    margin-bottom: 0px;
+    font-size: medium !important;
+    margin-bottom: 0px !important;
   }
   .review-four-star-icon{
-    width: 40% !important;
+    width: 60% !important;
+  }
+  .review-four-star-label{
+    width: 15% !important;
   }
   .input-group-four label{
     width: 20%;
@@ -657,3 +661,27 @@ heading-name3{
   }
 }
 
+  /* Third Page */
+
+  .review-third-container{
+    margin-top: 10%;
+  }
+
+  .review-third-logo{
+    margin-bottom: 13%;
+  }
+
+  @media (max-width: 600px) {
+    .review-third-container h1{
+        margin-top: 15% !important;
+        font-size: 2.5rem !important;
+      }
+      .review-third-container h2{
+        font-size: 1.5rem !important;
+        margin-bottom: 10% !important;
+      }
+      .social-icon{
+        font-size: 30px !important;
+        margin-bottom: 250% !important;
+      }
+  }

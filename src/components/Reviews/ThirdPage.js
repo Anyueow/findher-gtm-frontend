@@ -38,26 +38,26 @@ export const ThirdPage = () => {
     };
 
     return (
-        <Container id="reviews" className="sub">
+        <Container id="reviews" className="sub review-third-container">
 
 
-<Row className="reviews-box" style={{marginTop: "40%"}}>
+<Row className="reviews-box" >
 
-                <h1 className="head-name" style={{fontSize:"5rem", marginBottom:"2rem"}} >
+                <h1 className="head-name" style={{fontSize:"3rem", marginBottom:"2rem"}} >
                     No worries!
                 </h1>
-            <h2 style={{fontSize:"3rem", marginBottom:"2rem"}}>
+            <h2 style={{fontSize:"2rem", marginBottom:"5rem"}}>
                 You can join our waitlist even if you have
                 never worked anywhere before.  All you
                 need to do is share this with someone who has. </h2>
 
-            <Row className="flex-lg-fill">
-                <Col xs="auto" onClick={() => handleShare('facebook')}><FaFacebookF className="social-icon" /></Col>
-                <Col xs="auto" onClick={() => handleShare('email')}><FaEnvelope className="social-icon" /></Col>
-                <Col xs="auto" onClick={() => handleShare('whatsapp')}><FaWhatsapp className="social-icon"/></Col>
-                <Col xs="auto" onClick={() => handleShare('instagram')}><FaInstagram className="social-icon"/></Col>
-                <Col xs="auto" onClick={() => handleShare('linkedin')}><FaLinkedinIn className="social-icon"/></Col>
-                <Col xs="auto" onClick={() => handleShare('copyLink')}><FaLink className="social-icon"/></Col>
+            <Row className="flex-lg-fill review-third-logo">
+                <Col xs="2" onClick={() => handleShare('facebook')}><FaFacebookF className="social-icon" /></Col>
+                <Col xs="2" onClick={() => handleShare('email')}><FaEnvelope className="social-icon" /></Col>
+                <Col xs="2" onClick={() => handleShare('whatsapp')}><FaWhatsapp className="social-icon"/></Col>
+                <Col xs="2" onClick={() => handleShare('instagram')}><FaInstagram className="social-icon"/></Col>
+                <Col xs="2" onClick={() => handleShare('linkedin')}><FaLinkedinIn className="social-icon"/></Col>
+                <Col xs="2" onClick={() => handleShare('copyLink')}><FaLink className="social-icon"/></Col>
             </Row>
 
 </Row>
