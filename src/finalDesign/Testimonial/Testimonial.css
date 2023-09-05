@@ -30,6 +30,7 @@
 }
 /* Increase space between the card and the dots */
 .slick-slider .slick-dots {
+    position: static;
     bottom: -60px; /* Adjust this value to move the dots up or down */
 }
 
@@ -42,7 +43,7 @@
 
 /* Style the active dot */
 .slick-slider .slick-dots li.slick-active button:before {
-    color: #000 !important; /* Adjust the color of the active dot if needed */
+    color: #ee2c5b !important; /* Adjust the color of the active dot if needed */
 }
 
 
@@ -57,4 +58,16 @@
 }
 .Testimonial-container{
     overflow: hidden;
+}
+
+@media (max-width:600px) {
+    .TestimonialCardDiv{
+        margin-left: 0% !important;
+    }
+    .slick-slide img {
+        display: inline !important;
+    }
+    .img-test-div{
+        margin-left: 0% !important;
+    }
 }
