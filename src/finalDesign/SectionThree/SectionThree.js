@@ -25,7 +25,7 @@ function SectionThree() {
           />
         </Col>
         <Col md={5} className="no-gutter">
-          <h3 className="head">The Whole Picture</h3>
+          <h3 className="head wholeHead">The Whole Picture</h3>
           <p className="sub">
             Knowledge is power, and having access to the whole picture empowers
             you to make informed career choices. FindHer ensures that you're in
