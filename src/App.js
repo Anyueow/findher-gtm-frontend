@@ -36,7 +36,7 @@ import HeroFinal from "./newDesign/Hero/Hero";
 import SectOneF from "./newDesign/SectionOne/SectionOne";
 import SectTwoF from "./newDesign/SectionTwo/SectionTwo";
 import SectThreeF from "./newDesign/SectionThree/SectionThree";
-import TestF from "./finalDesign/Testimonial/Testimonial";
+import TestF from "./newDesign/Testimonial/Testimonial";
 
 function MainContent() {
 
