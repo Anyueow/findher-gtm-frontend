@@ -1,0 +1,181 @@
+.content-hero .header-hero {
+    color: #000000;  /* For visibility on gradient */
+    margin-bottom: 5%;  /* Space between title and subtitle */
+    font-size: 56px;
+    font-weight: 700;
+    font-family: Helvetica;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+    text-align: center;
+    width: 60% ;
+    margin-left: 22% ;
+    margin-right: 22% ;
+}
+
+.content-hero .sub {
+    color: #000000;  /* For visibility on gradient */
+    margin-bottom: 5%;  /* Space between subtitle and button */
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Noto Sans Old South Arabian";
+    text-align: center;
+    width: 70% ;
+    margin-left: 15% ;
+    margin-right: 15% ;
+}
+
+.hero-header-span{
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    width: 27%;
+}
+
+.JoinButton-hero {
+    padding: 8px;   /* top/bottom padding and left/right padding */
+    font-size: 17px;
+    font-weight: bold ;
+    color: black;
+    width: 13% ;
+    background-color: rgb(255, 213, 90);  /* or any desired color */
+    border: none;  /* remove default border */
+    border-radius: .5rem;  /* rounded corners, adjust as desired */
+    align-content: center;/* smooth transition for hover effect */
+}
+
+.JoinButton-hero:hover {
+    width: 13.5% !important;
+    font-size: 18px;
+   background-color: rgb(255, 213, 90);  /* or any desired color */
+   color: black;
+}
+
+.JoinButton-hero:active {
+    background-color: rgb(255, 213, 90) !important;
+    color: black !important; 
+    border: none !important;
+}
+
+.JoinButton-hero:focus {
+    background-color: rgb(255, 213, 90) !important;
+    color: black !important; 
+    border: none !important;
+}
+
+.hero-section{
+    height: 120vh;
+}
+
+@media (min-width:600px) and (max-width:830px) {
+    .hero-section{
+        height: 100vh;
+    }
+    .content-hero .header-hero {
+        font-size: 42px;
+        letter-spacing: 1px;
+        line-height: 1.4em;
+        width: 95% !important;
+        margin-left: 2% !important;
+        margin-right: 2% !important;
+    }
+    .hero-header-span{
+        position: absolute;
+        top: 9%;
+        left: 12%;
+        width: 33%;
+    }
+    .hero-sub{
+        width: 95% !important;
+        margin-left: 2% !important;
+        margin-right: 5% !important;
+        letter-spacing: 1px;
+        line-height: 1.4em;
+    }
+    .JoinButton-hero {
+        width: 25% !important;
+        margin-top: 7%;
+    }
+    .JoinButton-hero:hover {
+        width: 26% !important;
+        font-size: 18px;
+    }
+}
+@media (max-width:600px) {
+    .hero-section{
+        height: 95vh;
+    }
+    .content-hero .header-hero {
+        font-size: 32px;
+        letter-spacing: 1px;
+        line-height: 1.4em;
+        width: 95% !important;
+        margin-left: 2% !important;
+        margin-right: 0% !important;
+    }
+    .hero-header-span{
+        position: absolute;
+        top: 5%;
+        left: 9%;
+        width: 65%;
+    }
+    .hero-sub{
+        width: 95% !important;
+        font-size: 14px !important;
+        width: 98% !important;
+        margin-left: 1% !important;
+        margin-right: 1% !important;
+        letter-spacing: 1px !important;
+        line-height: 1.4em;
+    }
+    .JoinButton-hero {
+        width: 45% !important;
+        margin-top: 0%;
+        font-size: 14px;
+    }
+    .JoinButton-hero:hover {
+        width: 26% !important;
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width:600px) {
+.gradient-section{
+    margin-top: 70px;
+}
+.header{
+    font-size: 28px !important;
+    width: 90% !important;
+    line-height: 40px;
+}
+.hero-sub{
+    width: 95% !important;
+}
+.JoinButtonH{
+    width: 60% !important;
+    padding: 0.5rem 1.5rem !important;
+}
+ .hero-section{
+    margin: 96px 32px 64px !important;
+    height: 100vh !important; 
+} 
+
+} */
