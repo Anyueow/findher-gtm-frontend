@@ -76,6 +76,13 @@
     color: #888 !important;
 }
 
+.mobile{
+    display: none !important;
+}
+.desktop{
+    display: block !important;
+}
+
 @media (min-width:600px) and (max-width:830px) {
     .sec-one-sub-p{
         color: #888;
@@ -146,6 +153,12 @@
         margin: 18px 0px;
         padding: 8px ;
         font-size: 15px;
+    }
+    .mobile{
+        display: block !important;
+    }
+    .desktop{
+        display: none !important;
     }
  }
 

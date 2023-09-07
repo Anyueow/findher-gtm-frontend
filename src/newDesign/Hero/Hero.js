@@ -4,7 +4,7 @@ import "./hero.css";
 
 function Hero() {
     return (
-        <section  className="hero-section d-flex justify-content-center align-items-center">
+        <section className="hero-section d-flex justify-content-center align-items-center">
             <Container className="content-hero">
                 <Row className="">
                     <Col className="">

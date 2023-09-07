@@ -5,6 +5,7 @@ import demo from "./Group 167.webp";
 import img1 from "./Artboard 1-2.png";
 import img2 from "./Artboard 1 copy.png";
 import img3 from "./Artboard 1 copy 2.png";
+import img4 from "./Group 181.png";
 
 function SectionOne() {
   return (
@@ -25,26 +26,31 @@ function SectionOne() {
           <img
             src={demo}
             alt="Placeholder 1"
-            className="section-one-first-img"
+            className="section-one-first-img desktop"
+          />
+          <img
+            src={img4}
+            alt="Placeholder 1"
+            className="section-one-first-img mobile"
           />
         </Col>
       </Row>
       <Row className="justify-content-center mt-5 rectangle-row">
-        <Col md={3} className="text-center mx-1 justify-content-center">
+        <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
           <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
             <img src={img1} alt="in Rectangle" className="img-in-rectangle" />
             <h4>The Whole Picture</h4>
           </div>
         </Col>
-        <Col md={3} className="text-center mx-1 justify-content-center">
+        <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
           <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
             <img src={img2} alt="in Rectangle" className="img-in-rectangle" />
             <h4>Exclusive insights</h4>
           </div>
         </Col>
-        <Col md={3} className="text-center mx-1 justify-content-center">
+        <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
           <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center">
             <img src={img3} alt="in Rectangle" className="img-in-rectangle" />
