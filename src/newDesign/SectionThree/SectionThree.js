@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
 import "./SectionThree.css";
-import img1 from "./shutterstock_1125823856 (1).webp";
+// import img1 from "./shutterstock_1125823856 (1).webp";
 import img2 from "./screen 4.png";
 import img3 from "./screen 5.webp";
-import img4 from "./Untitled design-24.png";
-import img5 from "./screentop.png";
+// import img4 from "./Untitled design-24.png";
+// import img5 from "./screentop.png";
 import row1img2 from "./row1img2.webp";
 import row2img2 from "./row2img2.webp";
 import row3img1 from "./row3img1.webp";
