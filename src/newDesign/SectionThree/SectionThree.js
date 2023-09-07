@@ -11,6 +11,16 @@ function SectionThree() {
     <Container className="my-5 section-three-container">
       {/* The Whole Picture */}
       <Row className="mb-4 align-items-center">
+      <Col md={5} className="no-gutter">
+          <h3 className="head wholeHead">The Whole Picture</h3>
+          <p className="wholePara">
+            Knowledge is power, and having access to the whole picture empowers
+            you to make informed career choices. FindHer ensures that you're in
+            control of your path, whether you're just starting or advancing your
+            career.
+          </p>
+          <Button className="AcessButton">Get Acess!</Button>
+        </Col>
         <Col md={7} xs={12} className="no-gutter">
           <div className="decorative-rectangle"></div>
           <Image
@@ -24,20 +34,11 @@ function SectionThree() {
             alt="Decorative Image 1"
           />
         </Col>
-        <Col md={5} className="no-gutter">
-          <h3 className="head wholeHead">The Whole Picture</h3>
-          <p className="sub">
-            Knowledge is power, and having access to the whole picture empowers
-            you to make informed career choices. FindHer ensures that you're in
-            control of your path, whether you're just starting or advancing your
-            career.
-          </p>
-          <Button className="JoinButton">Join us now</Button>
-        </Col>
       </Row>
 
       <Row className="mb-4 align-items-center" style={{ marginTop: "8%" }}>
-        <Col md={7} className="no-gutter mobile">
+ 
+        <Col md={7} className="no-gutter ">
           <div className="decorative-rectangle-right"></div>
           <Image
             src={img3}
@@ -50,7 +51,6 @@ function SectionThree() {
             alt="Decorative Image 1"
           />
         </Col>
-
         <Col md={5} className="no-gutter">
           <h3 className="head" style={{ marginLeft: "6%" }}>
             Exclusive Insights
@@ -61,22 +61,9 @@ function SectionThree() {
             culture, work-life balance, and the unspoken aspects that truly
             matter.
           </p>
-          <Button style={{ marginLeft: "6%" }} className="JoinButton">
+          <Button style={{ marginLeft: "6%" }} className="AcessButton">
             Join us now
           </Button>
-        </Col>
-        <Col md={7} className="no-gutter desktop">
-          <div className="decorative-rectangle-right"></div>
-          <Image
-            src={img3}
-            className="overlay-image-right"
-            alt="Decorative Image 1"
-          />
-          <Image
-            src={img4}
-            className="overlay-image-right-two"
-            alt="Decorative Image 1"
-          />
         </Col>
       </Row>
       <Row className="mb-4 align-items-center" style={{ marginTop: "8%" }}>
@@ -96,7 +83,7 @@ function SectionThree() {
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.
           </p>
-          <Button className="JoinButton">Join us now</Button>
+          <Button className="AcessButton">Join us now</Button>
         </Col>
       </Row>
     </Container>
