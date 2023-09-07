@@ -1,14 +1,13 @@
 
 
 
-.sec-two-head{
+.succStory{
     font-size: 1.5rem;
-    color: #888;
+    color: #757272;
     width:55%;
     text-align: center;
-    margin-top: 8%;
-    margin-bottom: 2%;
-    font-weight: 400;
+    margin-top: 0%!important;
+    margin-bottom: 1%!important;
 }
 .newMsg1{
     font-size: 3rem;

@@ -37,6 +37,9 @@ import SectOneF from "./newDesign/SectionOne/SectionOne";
 import SectTwoF from "./newDesign/SectionTwo/SectionTwo";
 import SectThreeF from "./newDesign/SectionThree/SectionThree";
 import TestF from "./newDesign/Testimonial/Testimonial";
+import SectionFour from "./newDesign/SectionFour/SectionFour";
+import FaqSection from "./newDesign/FaqSection/FaqSection";
+import SectionSix from "./newDesign/SectionSix/SectionSix";
 
 function MainContent() {
 
@@ -64,7 +67,10 @@ function NewDesign() {
   <SectOneF />
   <SectTwoF />
   <SectThreeF />
+  <SectionFour/>
   <TestF />
+  <FaqSection/>
+  <SectionSix/>
       </>
   );
 }

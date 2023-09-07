@@ -1,0 +1,30 @@
+.faqInner{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 20rem;
+    border-radius: 43px;
+    gap: 20px;
+    /* display: flex; */
+    text-align: left;
+}
+.accordion-button, .collapsed, .faqItems{
+    border-radius: 21px!important;
+    background: rgb(246, 245, 244);
+    padding: 15px;
+    border: none !important;
+}
+.accordion-button:not(.collapsed){
+    background: rgb(246, 245, 244)!important;
+    border: none !important;
+    border-color: rgb(246, 245, 244)!important;
+}
+.faqbodyPP {
+    border-radius: 21px!important;
+    font-size: 18px;
+    color: rgb(78 78 78 / 81%)!important;
+}
+@media (max-width:600px){
+    .faqInner{
+        margin: 21px;
+    }
+}
