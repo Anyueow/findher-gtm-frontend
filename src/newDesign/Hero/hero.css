@@ -12,15 +12,15 @@
     margin-right: 22% ;
 }
 
-.content-hero .sub {
+.content-hero .hero-sub {
     color: #000000;  /* For visibility on gradient */
     margin-bottom: 5%;  /* Space between subtitle and button */
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     font-family: "Noto Sans Old South Arabian";
     text-align: center;
-    width: 70% !important;
-    margin-left: 15% ;
+    width: 65% !important;
+    margin-left: 20% ;
     margin-right: 15% ;
 }
 
