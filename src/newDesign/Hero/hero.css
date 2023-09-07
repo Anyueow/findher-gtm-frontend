@@ -35,9 +35,9 @@
     padding: 8px;   /* top/bottom padding and left/right padding */
     font-size: 17px;
     font-weight: bold ;
-    color: black;
+    color: white;
     width: 13% ;
-    background-color: rgb(255, 213, 90);  /* or any desired color */
+    background-color: #e20b3c;  /* or any desired color */
     border: none;  /* remove default border */
     border-radius: .5rem;  /* rounded corners, adjust as desired */
     align-content: center;/* smooth transition for hover effect */
@@ -47,18 +47,18 @@
     width: 13.5% !important;
     font-size: 18px;
    background-color: rgb(255, 213, 90);  /* or any desired color */
-   color: black;
+   color: white;
 }
 
 .JoinButton-hero:active {
     background-color: rgb(255, 213, 90) !important;
-    color: black !important; 
+    color: white !important; 
     border: none !important;
 }
 
 .JoinButton-hero:focus {
     background-color: rgb(255, 213, 90) !important;
-    color: black !important; 
+    color: white !important; 
     border: none !important;
 }
 

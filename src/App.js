@@ -35,7 +35,7 @@ import SecTwo2mob from "./components/SectionTwo/SecTwo2mob";
 import HeroFinal from "./newDesign/Hero/Hero";
 import SectOneF from "./newDesign/SectionOne/SectionOne";
 import SectTwoF from "./newDesign/SectionTwo/SectionTwo";
-import SectThreeF from "./finalDesign/SectionThree/SectionThree";
+import SectThreeF from "./newDesign/SectionThree/SectionThree";
 import TestF from "./finalDesign/Testimonial/Testimonial";
 
 function MainContent() {

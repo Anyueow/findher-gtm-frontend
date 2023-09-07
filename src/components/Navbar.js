@@ -55,10 +55,10 @@ function NavBar() {
           <li>
             <strong
               style={{
-                color: "black",
+                color: "white",
                 cursor: "pointer",
                 marginRight: "20px",
-                backgroundColor: "rgb(255, 213, 90)",
+                backgroundColor: "#e20b3c",
                 padding: "10px",
                 borderRadius: ".5rem",
               }}
