@@ -9,8 +9,8 @@ import img4 from "./Group 181.png";
 
 function SectionOne() {
   return (
-    <div className="job-search-section" style={{overflow:"hidden"}}>
-      <Row className="justify-content-center" style={{overflow:"hidden"}}>
+    <div className="job-search-section">
+      <Row className="justify-content-center" >
         <Col className="justify-content-center">
           <h5 className="sec-one-head font-weight-bold howwecan">How We Help You</h5>
           <h3 className="sec-one-sub">

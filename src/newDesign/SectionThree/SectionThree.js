@@ -12,9 +12,9 @@ import row3img1 from "./row3img1.webp";
 import row3img2 from "./row3img2.webp";
 function SectionThree() {
   return (
-    <Container className="my-5 section-three-container secOutCont" style={{overflowX:"hidden"}}> 
+    <Container className="my-5 section-three-container secOutCont" > 
       {/* The Whole Picture */}
-      <Row className="mb-4 align-items-center sec3Rows" style={{overflowX:"hidden"}}>
+      <Row className="mb-4 align-items-center sec3Rows" >
         <Col md={5} className="no-gutter">
           <h3 className="head wholeHead">The Whole Picture</h3>
           <p className="wholePara">
