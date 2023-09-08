@@ -1,7 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {AiFillInstagram, AiFillMail} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
 import logo from "../Assets/logo.png";
 import './Hero/home.css';
 import './Footer.css';

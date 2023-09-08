@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import pic from "./18.80328ac61c501e8b10f2.png";
 import "./Testimonial.css";
 // import Slider from "react-slick";
@@ -58,7 +58,6 @@ const TestimonialSection = () => {
                   slidesPerView: 3, // 2 slides for screens above 600px 
                 }
               }}
-              className="swiper_container"
             >
               <SwiperSlide>
                   <TestimonialCard
