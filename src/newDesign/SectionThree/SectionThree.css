@@ -1,0 +1,252 @@
+.decorative-rectangle {
+  width: 70%;
+  height: 550px;
+  margin-left: 35%;
+  border-radius: 20px;
+  /* background-color: #f5f5f5;  */
+  position: relative;
+  z-index: 1;
+}
+.wholePara{
+  font-size: 1.2rem;
+  color: #888;
+  text-align: left;
+}
+.decorative-rectangle-right {
+  width: 80%;
+  height: 96vh;
+  overflow-x: hidden !important;
+  left: 0%;
+
+  border-radius: 20px;
+  /* background-color: #bad343;  */
+  position: relative;
+  z-index: 1;
+}
+
+.overlay-image {
+  position: absolute;
+  border-radius: 20px;
+  top: 48%;
+  left: 60%;
+  transform: translate(-50%, -45%);
+  width: 70%; /* Adjust based on your needs */
+  height: auto;
+  z-index: 2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow added */
+}
+.overlay-image-right {
+  position: absolute;
+  border-radius: 20px;
+  top: 42%;
+  left: 60%;
+  transform: translate(-50%, -45%);
+  width: 53%;
+  height: auto;
+  z-index: 2;
+}
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.row.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutter {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+.upper {
+  top: -40%;
+}
+.overlay-image-two {
+  position: absolute;
+  border-radius: 20px;
+  top: 70%;
+  left: 33%;
+
+  transform: translate(-50%, -45%);
+  width: 62%; /* Adjust based on your needs */
+  height: auto;
+  z-index: 2;
+}
+.overlay-image-three {
+  position: absolute;
+  border-radius: 20px;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -45%);
+  width: 67%;
+  height: auto;
+  z-index: 2;
+}
+.overlay-image-right-two {
+  position: absolute;
+  border-radius: 20px;
+  top: 65%;
+  left: 25%;
+  transform: translate(-50%, -45%);
+  width: 47%;
+  height: auto;
+  z-index: 2;
+}
+.overlay-image-right-three {
+  position: absolute;
+  border-radius: 20px;
+  top: 59%;
+  left: 63%;
+  transform: translate(-50%, -45%);
+  width: 64%;
+  height: auto;
+  z-index: 2;
+}
+.head {
+  font-size: 3rem;
+  margin-bottom: 6%;
+}
+
+.sub {
+  font-size: 1.3rem;
+  margin-bottom: 6%;
+}
+
+.AcessButton {
+  margin-top: 2%;
+  padding: 0.6rem 1.6rem; /* top/bottom padding and left/right padding */
+  font-size: 1.2rem;
+  color: #ffffff;
+  width: 45%;
+  background-color: rgba(226, 11, 60, 0.83); /* or any desired color */
+  border: none; /* remove default border */
+  border-radius: 0.5rem; /* rounded corners, adjust as desired */
+  transition: background-color 0.3s ease;
+  align-content: center; /* smooth transition for hover effect */
+}
+
+.AcessButton:hover {
+  background-color: rgb(255, 213, 90); /* slightly darker pink on hover */
+  color: #ffffff; /* change text color on hover if needed */
+}
+
+.AcessButton:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255, 213, 90); /* Bootstrap's way to indicate focus, adjust color as needed */
+}
+
+.AcessButton:active {
+  background-color: rgb(255, 213, 90); /* even darker pink on active click */
+}
+
+.section-three-container {
+  display: flex!important;
+  justify-content: center;
+  overflow-x: hidden;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sec3Rows{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.wholeHead{
+  font-weight: bold!important;
+  font-size: 3.2rem!important;
+}
+@media (min-width:600px) and (max-width:830px) {
+  .decorative-rectangle {
+    width: 70%;
+    height: 400px;
+  }
+  .wholePara{
+    font-size: 1rem;
+    color: #888;
+  }
+  .wholeHead{
+    font-size: 2rem !important; 
+  }
+  .AcessButton {
+    width: 55%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* .head {
+    font-size: 24px !important;
+    font-weight: 100 !important;
+    text-align: left;
+    margin: 10px 20px;
+    line-height: 40px;
+  }
+  .sub {
+    font-size: small !important;
+    font-weight: 100 !important;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px 20px;
+  } */
+  .wholePara{
+    font-size: 0.9rem;
+    color: #888;
+    width: 90%;
+  }
+  .wholeHead{
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    margin-top: 10%;
+  }
+  .AcessButton {
+    font-size: 15px;
+  }
+  .decorative-rectangle {
+    height: 250px;
+    width: 95%;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 0%;
+    background-color: rgb(195, 209, 0);
+  }
+  .overlay-image {
+    height: 200px !important;
+    width: 80%;
+  }
+  .overlay-image-two {
+    top: 75%;
+    left: 70%;
+    width: 50%;
+  }
+  .decorative-rectangle-right {
+    height: 250px !important;
+    align-content: center;
+    left: 0%;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .no-gutter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    margin-top: 10%;
+  }
+  .overlay-image-right {
+    height: 250px;
+    width: 45%;
+    top: 40%;
+    left: 60%;
+  }
+  .overlay-image-right-two {
+    height: 150px;
+    width: 45%;
+    top: 60%;
+    left: 35%;
+  }
+  .section-three-container {
+    margin-top: 0rem !important;
+  }
+}

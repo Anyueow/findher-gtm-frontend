@@ -32,11 +32,14 @@ import DetailsTwoB2B from "./components/Businesses/DetailsTwoB2B";
 import EndPage from "./components/Businesses/endPage";
 import SecTwo2mob from "./components/SectionTwo/SecTwo2mob";
 
-import HeroFinal from "./finalDesign/Hero/Hero";
-import SectOneF from "./finalDesign/SectionOne/SectionOne";
-import SectTwoF from "./finalDesign/SectionTwo/SectionTwo";
-import SectThreeF from "./finalDesign/SectionThree/SectionThree";
-import TestF from "./finalDesign/Testimonial/Testimonial";
+import HeroFinal from "./newDesign/Hero/Hero";
+import SectOneF from "./newDesign/SectionOne/SectionOne";
+import SectTwoF from "./newDesign/SectionTwo/SectionTwo";
+import SectThreeF from "./newDesign/SectionThree/SectionThree";
+import TestF from "./newDesign/Testimonial/Testimonial";
+import SectionFour from "./newDesign/SectionFour/SectionFour";
+import FaqSection from "./newDesign/FaqSection/FaqSection";
+import SectionSix from "./newDesign/SectionSix/SectionSix";
 
 function MainContent() {
 
@@ -64,7 +67,10 @@ function NewDesign() {
   <SectOneF />
   <SectTwoF />
   <SectThreeF />
+  <SectionFour/>
   <TestF />
+  <FaqSection/>
+  <SectionSix/>
       </>
   );
 }
