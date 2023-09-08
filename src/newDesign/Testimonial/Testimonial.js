@@ -35,13 +35,14 @@ const TestimonialSection = () => {
       <Container className="Testimonial-container ">
           <Row className="align-items-center mt-4" style={{ overflowX: "hidden" }}>
             <Swiper
+            className="testimonial-swiper"
              initialSlide={1}
               autoplay={{ delay: 3000 }}
               effect={"coverflow"}
               grabCursor={true}
-              centeredSlides={false}
+              centeredSlides={true}
               loop={true}
-              spaceBetween={20}
+              spaceBetween={30}
               pagination={{ clickable: true }} 
               coverflowEffect={{
                 rotate: 0,
@@ -54,11 +55,8 @@ const TestimonialSection = () => {
                   slidesPerView: 1, // 1 slide for screens less than 600px wide
                 },
                 600: {
-                  slidesPerView: 2, // 2 slides for screens between 600px and 830px wide
-                },
-                830: {
-                  slidesPerView: 3, // 3 slides for screens 831px wide and above
-                },
+                  slidesPerView: 3, // 2 slides for screens above 600px 
+                }
               }}
               className="swiper_container"
             >

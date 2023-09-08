@@ -20,8 +20,7 @@
     position: absolute !important;
 }
 .swiper_container{ 
-    height: 58vh !important;
-   
+    height: 58vh !important;  
 }
 .swiper-pagination{
     background-color: rgba(0, 0, 0, 0.2);
@@ -67,28 +66,6 @@
     display: none !important;
 }
 
-/* Increase space between the card and the dots */
-.slick-slider {
-    margin-bottom: 30px; /* Adjust this value as needed */
-}
-/* Increase space between the card and the dots */
-.slick-slider .slick-dots {
-    position: static;
-    bottom: -60px; /* Adjust this value to move the dots up or down */
-}
-
-/* Style the dots */
-.slick-slider .slick-dots li button:before {
-    font-size: 12px !important; /* Adjust the size of the dots if needed */
-    color: #777 !important; /* Adjust the color if needed */
-    opacity: 1 !important;
-}
-
-/* Style the active dot */
-.slick-slider .slick-dots li.slick-active button:before {
-    color: #ee2c5b !important; /* Adjust the color of the active dot if needed */
-}
-
 
 .zeld{
     font-size: 2rem;
@@ -116,6 +93,12 @@
     .testimonial-rectangle{
         height: 38vh !important;
     }
+    .swiper_container{ 
+        height: 48vh !important;  
+    }
+    .swiper-pagination{
+        margin-left: 40%;
+    }
 }
 
 @media (min-width:600px) and (max-width:830px) {
@@ -126,5 +109,12 @@
         padding-right : 7%;
         padding-top : 10%;
         padding-bottom : 5%;
+    }
+    .swiper_container{ 
+        height: 40vh !important;  
+    }
+    .swiper-pagination{
+        margin-left: 44%;
+        margin-bottom: 5%;
     }
 }
