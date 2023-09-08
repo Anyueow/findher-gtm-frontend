@@ -1,17 +1,21 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
 import "./SectionThree.css";
-import img1 from "./shutterstock_1125823856 (1).webp";
+// import img1 from "./shutterstock_1125823856 (1).webp";
 import img2 from "./screen 4.png";
 import img3 from "./screen 5.webp";
-import img4 from "./Untitled design-24.png";
-import img5 from "./screentop.png";
+// import img4 from "./Untitled design-24.png";
+// import img5 from "./screentop.png";
+import row1img2 from "./row1img2.webp";
+import row2img2 from "./row2img2.webp";
+import row3img1 from "./row3img1.webp";
+import row3img2 from "./row3img2.webp";
 function SectionThree() {
   return (
-    <Container className="my-5 section-three-container">
+    <Container className="my-5 section-three-container secOutCont">
       {/* The Whole Picture */}
-      <Row className="mb-4 align-items-center">
-      <Col md={5} className="no-gutter">
+      <Row className="mb-4 align-items-center sec3Rows">
+        <Col md={5} className="no-gutter">
           <h3 className="head wholeHead">The Whole Picture</h3>
           <p className="wholePara">
             Knowledge is power, and having access to the whole picture empowers
@@ -24,7 +28,7 @@ function SectionThree() {
         <Col md={7} xs={12} className="no-gutter">
           <div className="decorative-rectangle"></div>
           <Image
-            src={img1}
+            src={row1img2}
             className="overlay-image"
             alt="Decorative Image 1"
           />
@@ -36,8 +40,10 @@ function SectionThree() {
         </Col>
       </Row>
 
-      <Row className="mb-4 align-items-center" style={{ marginTop: "8%" }}>
- 
+      <Row
+        className="mb-4 align-items-center sec3Rows"
+        // style={{ marginTop: "8%" }}
+      >
         <Col md={7} className="no-gutter ">
           <div className="decorative-rectangle-right"></div>
           <Image
@@ -46,16 +52,16 @@ function SectionThree() {
             alt="Decorative Image 1"
           />
           <Image
-            src={img4}
+            src={row2img2}
             className="overlay-image-right-two"
             alt="Decorative Image 1"
           />
         </Col>
         <Col md={5} className="no-gutter">
-          <h3 className="head" style={{ marginLeft: "6%" }}>
+          <h3 className="head wholeHead" style={{ marginLeft: "6%" }}>
             Exclusive Insights
           </h3>
-          <p className="sub" style={{ marginLeft: "6%" }}>
+          <p className="sub wholePara" style={{ marginLeft: "6%" }}>
             We believe that you deserve more than just a job title. Our platform
             offers a treasure trove of insider insights, spanning workplace
             culture, work-life balance, and the unspoken aspects that truly
@@ -66,24 +72,32 @@ function SectionThree() {
           </Button>
         </Col>
       </Row>
-      <Row className="mb-4 align-items-center" style={{ marginTop: "8%" }}>
+      <Row
+        className="mb-4 align-items-center sec3Rows"
+        // style={{ marginTop: "8%" }}
+      >
         <Col md={7} className="no-gutter">
-          <div className="decorative-rectangle"></div>
-          <Image
-            src={img5}
-            className="overlay-image-two"
-            style={{ top: "45%" }}
-            alt="Decorative Image 1"
-          />
-        </Col>
-        <Col md={5} className="no-gutter">
-          <h3 className="head">Personalized For You</h3>
-          <p className="sub" style={{ width: "85%" }}>
+        <h3 className="head wholeHead ">Personalized For You</h3>
+          <p className="subc wholePara" style={{ width: "85%" }}>
             Your unique experiences and aspirations deserve recognition. With
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.
           </p>
           <Button className="AcessButton">Join us now</Button>
+        </Col>
+        <Col md={5} className="no-gutter">
+        <div className="decorative-rectangle"></div>
+          <Image
+            src={row3img1}
+            className="overlay-image-three"
+            style={{ top: "45%" }}
+            alt="Decorative Image 1"
+          />
+          <Image
+            src={row3img2}
+            className="overlay-image-right-three"
+            alt="Decorative Image 3"
+          />
         </Col>
       </Row>
     </Container>
