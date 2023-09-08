@@ -12,7 +12,7 @@ function Footer() {
         <Row className="marg justify-content-md-start">
           <Col md="9" lg="10" className="logomob">
             <img src={logo} className="img-fluid my-3" alt="brand" style={{ maxWidth: '21%',marginLeft:"-5px", display:"block" }} />
-            <p className="Footer-hed">© 2023. All rights reserved</p>
+            <p className="Footer-hed">© {year}. All rights reserved</p>
           </Col>
           <Col md="3" lg="2" className="contact-side">
           <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
