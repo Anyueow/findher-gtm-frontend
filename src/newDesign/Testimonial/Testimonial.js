@@ -32,7 +32,7 @@ const TestimonialSection = () => {
 
   return (
     <div>
-      <Container className="Testimonial-container my-5">
+      <Container className="Testimonial-container ">
           <Row className="align-items-center mt-4" style={{ overflowX: "hidden" }}>
             <Swiper
              initialSlide={1}
@@ -50,11 +50,14 @@ const TestimonialSection = () => {
                 modifier: 1,
               }}
               breakpoints={{
-                780: {
-                  slidesPerView: 1, 
+                599: {
+                  slidesPerView: 1, // 1 slide for screens less than 600px wide
                 },
-                781: {
-                  slidesPerView: 3, 
+                600: {
+                  slidesPerView: 2, // 2 slides for screens between 600px and 830px wide
+                },
+                830: {
+                  slidesPerView: 3, // 3 slides for screens 831px wide and above
                 },
               }}
               className="swiper_container"
@@ -120,13 +123,9 @@ const TestimonialCard = ({
   name,
 }) => {
   return (
-    <div className="rectangle"
+    <div className="testimonial-rectangle"
     style={{
-        width: "100%", height: "48vh",
-        paddingLeft: "7%",
-        paddingRight: "7%",
-        paddingTop: "20%",
-        paddingBottom: "10%",
+        width: "101%", height: "48vh",
         textAlign: "left" 
     }}>
    <div className="card-body">

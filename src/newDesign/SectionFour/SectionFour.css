@@ -7,7 +7,7 @@
     width:55%;
     text-align: center;
     margin-top: 0%!important;
-    margin-bottom: 1%!important;
+    margin-bottom: 2%!important;
 }
 .newMsg1{
     font-size: 3rem;
@@ -36,6 +36,10 @@
     }
     .job-search-section {
         padding: 4%;
+    }
+    .newMsg1{
+        width: 110%;
+        font-size: 25px !important;
     }
     /* .sec-two-container{
         border-top:1px #888 solid;
