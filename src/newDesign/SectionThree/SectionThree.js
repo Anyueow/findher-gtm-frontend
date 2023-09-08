@@ -23,7 +23,7 @@ function SectionThree() {
             control of your path, whether you're just starting or advancing your
             career.
           </p>
-          <Button className="AcessButton">Get Acess!</Button>
+          <Button className="AcessButton">Get Access</Button>
         </Col>
         <Col md={7} xs={12} className="no-gutter">
           <div className="decorative-rectangle"></div>
