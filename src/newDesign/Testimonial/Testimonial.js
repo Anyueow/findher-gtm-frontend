@@ -18,7 +18,7 @@ const TestimonialSection = () => {
     };
 
     return (
-        <div>
+        <div style={{overflowX:"hidden"}}> 
             <Container className='Testimonial-container my-5'>
                 <Container
                     style={{

@@ -4,7 +4,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import sec6img from './sec6img.webp'
 function SectionSix() {
   return (
-    <div className="section6">
+    <div className="section6" style={{overflowX:"hidden"}}>
       <Row className="sec6cont"> 
         <Col className="sec6stuffs">
             <Col className="stuffsInner">

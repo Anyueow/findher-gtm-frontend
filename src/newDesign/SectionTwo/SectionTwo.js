@@ -5,7 +5,7 @@ import {Col, Row} from "react-bootstrap";
 
 function SectionTwo() {
     return (
-        <div className="job-search-section sec-two-container">
+        <div className="job-search-section sec-two-container" style={{overflowX:"hidden"}}>
             <Row className="justify-content-center">
                 <Col className="justify-content-center">
                     <h2 className='sec-two-head font-weight-bold'>Why Choose FindHer?

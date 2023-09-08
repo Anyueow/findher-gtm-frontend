@@ -43,16 +43,16 @@ function NavBar() {
           ☰
         </button>
         <ul className={`navbar-menu ${showMenu ? "show" : ""}`}>
-          <li>
+          <li className="navItems">
             <Link to="/">Features</Link>
           </li>
-          <li>
+          <li className="navItems">
             <Link to="/">Testimonials</Link>
           </li>
-          <li>
+          <li className="navItems">
             <Link to="/">FAQ</Link>
           </li>
-          <li>
+          <li className="navItems" style={{marginBottom:"30px"}}>
             <strong
               style={{
                 color: "white",
@@ -61,6 +61,7 @@ function NavBar() {
                 backgroundColor: "#e20b3c",
                 padding: "10px",
                 borderRadius: ".5rem",
+                
               }}
               onClick={joinExternalSurvey}
             >
