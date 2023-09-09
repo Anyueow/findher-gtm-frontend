@@ -127,12 +127,15 @@
 
 @media (max-width:600px) {
     .job-search-section h3{
-        font-size: x-large !important;
+        font-size: 1.7rem !important;
         width: 100% !important;
+        margin: 1rem 0;
     }
     .job-search-section p{
         font-size: 15px;
         width: 100% !important;
+        font-family: "Inter", sans-serif!important;
+        line-height: 1.75rem;
     }
     
     
@@ -156,9 +159,21 @@
     }
     .mobile{
         display: block !important;
+        width: 85%!important;
     }
     .desktop{
         display: none !important;
+    }
+    .howwecan{
+        font-weight: 200!important;
+        color: #777272;
+    }
+    .sec-one-sub{
+        font-weight: bold;
+        color: rgb(51, 51, 51);
+    }
+    .mobBtnsec1{
+        margin: 0px !important;
     }
  }
 

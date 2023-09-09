@@ -10,10 +10,15 @@ import img4 from "./Group 181.png";
 function SectionOne() {
   return (
     <div className="job-search-section">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" >
         <Col className="justify-content-center">
+<<<<<<< HEAD
           <h5 className="sec-one-head font-weight-bold sec-one-h5">How We Help You</h5>
           <h3 className="sec-one-sub sec-one-h3">
+=======
+          <h5 className="sec-one-head font-weight-bold howwecan">How We Help You</h5>
+          <h3 className="sec-one-sub">
+>>>>>>> origin/main
             Redesigning Job Search for Indian Women
           </h3>
           <p className="sec-one-sub-p sec-one-para">
@@ -72,8 +77,8 @@ function SectionOne() {
           information you need in one place.
         </p>
       </Row>
-      <div className="my-4" style={{ height: "30px" }}>
-        <Button className="JoinButtonS"> Join the Waitlist!</Button>
+      <div className="my-4 mobBtnsec1" style={{ height: "fit-content" }}>
+        <Button className="JoinButtonS">Sign Me Up</Button>
       </div>
     </div>
   );

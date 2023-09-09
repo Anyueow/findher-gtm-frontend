@@ -6,16 +6,16 @@ import Accordion from "react-bootstrap/Accordion";
 function FaqSection() {
   return (
     <>
-      <div className="job-search-section sec-two-container">
+      <div className="job-search-section faq-container">
         <Row className="justify-content-center">
           <Col className="justify-content-center">
             <h2 className="sec-two-head succStory">FAQ</h2>
-            <h1 className="sec-two-sub newMsg1">Got a question?</h1>
+            <h1 className="sec-two-sub newMsg1 mt-3">Got a question?</h1>
           </Col>
         </Row>
       </div>
       <div className="faqBox">
-        <Accordion defaultActiveKey="0" className="faqInner" style={{borderRadius:"21px"}}>
+        <Accordion  className="faqInner" style={{borderRadius:"21px"}}>
           <Accordion.Item eventKey="0" className="faqItems">
             <Accordion.Header>Who is FindHer for?</Accordion.Header>
             <Accordion.Body>

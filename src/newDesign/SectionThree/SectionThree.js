@@ -12,9 +12,9 @@ import row3img1 from "./row3img1.webp";
 import row3img2 from "./row3img2.webp";
 function SectionThree() {
   return (
-    <Container className="my-5 section-three-container secOutCont">
+    <Container className="my-5 section-three-container secOutCont" > 
       {/* The Whole Picture */}
-      <Row className="mb-4 align-items-center sec3Rows">
+      <Row className="mb-4 align-items-center sec3Rows" >
         <Col md={5} className="no-gutter">
           <h3 className="head wholeHead">The Whole Picture</h3>
           <p className="wholePara">
@@ -23,7 +23,7 @@ function SectionThree() {
             control of your path, whether you're just starting or advancing your
             career.
           </p>
-          <Button className="AcessButton">Get Acess!</Button>
+          <Button className="AcessButton mobBtn7">Get Acess!</Button>
         </Col>
         <Col md={7} xs={12} className="no-gutter">
           <div className="decorative-rectangle"></div>
@@ -41,7 +41,7 @@ function SectionThree() {
       </Row>
 
       <Row
-        className="mb-4 align-items-center sec3Rows"
+        className="mb-4 align-items-center sec3Rows sec3row2"
         // style={{ marginTop: "8%" }}
       >
         <Col md={7} className="no-gutter ">
@@ -57,7 +57,7 @@ function SectionThree() {
             alt="Decorative Image 1"
           />
         </Col>
-        <Col md={5} className="no-gutter">
+        <Col md={5} className="no-gutter ">
           <h3 className="head wholeHead" style={{ marginLeft: "6%" }}>
             Exclusive Insights
           </h3>
@@ -67,7 +67,7 @@ function SectionThree() {
             culture, work-life balance, and the unspoken aspects that truly
             matter.
           </p>
-          <Button style={{ marginLeft: "6%" }} className="AcessButton">
+          <Button style={{ marginLeft: "6%" }} className="AcessButton mobBtn7">
             Join us now
           </Button>
         </Col>
@@ -83,10 +83,10 @@ function SectionThree() {
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.
           </p>
-          <Button className="AcessButton">Join us now</Button>
+          <Button className="AcessButton mobBtn7" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
         </Col>
         <Col md={5} className="no-gutter">
-        <div className="decorative-rectangle"></div>
+        <div className="decorative-rectangle lstOne"></div>
           <Image
             src={row3img1}
             className="overlay-image-three"
