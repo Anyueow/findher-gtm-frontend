@@ -52,25 +52,34 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     /* gap: 2rem; */
 }
 .sec-two-box .sec-two-h2{
     color: #4e4e4e;
     font-size: 1.3rem;
-    font-weight: lighter;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    font-weight: 400;
     margin-top: 4rem;
 }
 .sec-two-box .sec-two-h1{
     color: #222222;
     margin-bottom: 4rem;
+    font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
     width: 60%;
+    letter-spacing: 0;
+    line-height: 1.2em;
     font-weight: 700;
 }
 @media (width<800px) {
     .sec-two-box .sec-two-h1{
         font-size: 1.6rem;
-        width: 90%;
+        font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
         font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.2em;
+        width: 330px;
     }
     .sec-two-box .sec-two-h2{
         font-size: 1.2rem;

@@ -14,7 +14,7 @@ function FaqSection() {
           </Col>
         </Row>
       </div>
-      <div className="faqBox">
+      <div className="faqBox faq-container">
         <Accordion  className="faqInner" style={{borderRadius:"21px"}}>
           <Accordion.Item eventKey="0" className="faqItems">
             <Accordion.Header>Who is FindHer for?</Accordion.Header>

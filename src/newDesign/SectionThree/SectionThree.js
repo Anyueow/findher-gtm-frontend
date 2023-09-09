@@ -23,7 +23,7 @@ function SectionThree() {
             control of your path, whether you're just starting or advancing your
             career.
           </p>
-          <Button className="AcessButton mobBtn7">Get Acess!</Button>
+          <Button className="hero-button">Get Acess!</Button>
         </Col>
         <Col md={7} xs={12} className="no-gutter">
           <div className="decorative-rectangle"></div>
@@ -67,7 +67,7 @@ function SectionThree() {
             culture, work-life balance, and the unspoken aspects that truly
             matter.
           </p>
-          <Button style={{ marginLeft: "6%" }} className="AcessButton mobBtn7">
+          <Button style={{ marginLeft: "6%" }} className=" hero-button">
             Join us now
           </Button>
         </Col>
@@ -83,7 +83,7 @@ function SectionThree() {
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.
           </p>
-          <Button className="AcessButton mobBtn7" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
+          <Button className="hero-button" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
         </Col>
         <Col md={5} className="no-gutter">
         <div className="decorative-rectangle lstOne"></div>

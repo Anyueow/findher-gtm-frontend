@@ -40,3 +40,17 @@
         font-size: 30px;
     }
 }
+@media (width>810px) {
+    
+    .faqInner{
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+@media (width<810px) {
+    
+    .faqInner{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
