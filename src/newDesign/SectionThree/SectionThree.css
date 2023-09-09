@@ -123,7 +123,7 @@
   width: auto;
   background-color: rgba(226, 11, 60, 0.83); /* or any desired color */
   border: none; /* remove default border */
-  border-radius: 0.5rem; /* rounded corners, adjust as desired */
+  border-radius: 0.7rem; /* rounded corners, adjust as desired */
   transition: background-color 0.3s ease;
   align-content: center; /* smooth transition for hover effect */
 }
@@ -150,7 +150,7 @@
 }
 
 .sec3Rows{
-  width: 90%;
+  width: 96%;
   display: flex;
   justify-content: space-between;
 }
@@ -159,6 +159,10 @@
   font-size: 3.2rem!important;
 }
 @media (min-width:600px) and (max-width:830px) {
+  .sec3Rows{
+    display: flex;
+    flex-direction: row;
+  }
   .decorative-rectangle {
     width: 70%;
     height: 400px;
@@ -191,40 +195,60 @@
     margin: 10px 20px;
   } */
   .wholePara{
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: #888;
-    width: 90%;
+    width: 92%;
+    text-align: center;
+    margin-left: 0px !important;
+    line-height: 1.75rem;
   }
   .wholeHead{
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
     font-weight: bold;
     margin-top: 10%;
   }
   .AcessButton {
-    font-size: 15px;
+    width: 72%;
+    font-size: 21px;
   }
   .decorative-rectangle {
-    height: 250px;
-    width: 95%;
+    height: 259px;
+    width: 100%;
     border-radius: 20px 20px 20px 20px;
     margin-left: 0%;
     background-color: rgb(195, 209, 0);
   }
   .overlay-image {
     height: 200px !important;
-    width: 80%;
+    width: 87%;
+    left: 50%;
+    top: 41%;
   }
+  /* .mobBtn7{
+    width: 82%;
+    font-size: 21px;
+  } */
   .overlay-image-two {
     top: 75%;
-    left: 70%;
-    width: 50%;
+    left: 73%;
+    width: 60%;
+  }
+  .overlay-image-three{
+    left: 43%;
+  }
+  .lstOne{
+    height: 43vh;
   }
   .decorative-rectangle-right {
-    height: 250px !important;
+    height: 40vh !important;
     align-content: center;
     left: 0%;
     width: 100%;
-    border-radius: 0px;
+    background-color: rgba(0, 144, 226, 0.63);
+    border-radius: 25px;
+  }
+  .overlay-image-right-three{
+    top: 69%;
   }
   .no-gutter {
     justify-content: center;
@@ -232,18 +256,24 @@
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    margin-top: 10%;
+    margin: 11% 0;
+    width: 100%;
+    padding: 10px 0px;
   }
   .overlay-image-right {
-    height: 250px;
-    width: 45%;
-    top: 40%;
+    height: 305px;
+    width: 56%;
+    top: 42%;
     left: 60%;
   }
+  .sec3row2{
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .overlay-image-right-two {
-    height: 150px;
-    width: 45%;
-    top: 60%;
+    height: 172px;
+    width: 47%;
+    top: 66%;
     left: 35%;
   }
   .section-three-container {

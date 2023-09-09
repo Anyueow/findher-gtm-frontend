@@ -30,6 +30,64 @@ const TestimonialSection = () => {
 //     // },
 //   };
 
+<<<<<<< HEAD
+    return (
+        <div style={{overflowX:"hidden"}}> 
+            <Container className='Testimonial-container my-5'>
+                <Container
+                    style={{
+                        height: "80vh",
+                        backgroundColor: "pink",
+                        alignItems: "center",
+                        borderRadius: "1.5rem",
+                        padding: "5%"
+                    }}
+                    className="rect">
+                    <Row className="align-items-center  overflow-hidden mt-4">
+                        <Col md={4} style={{ marginLeft: "3%" }}>
+                            <h3 className="zeld"> Our Success Stories</h3>
+                            <h1 className="head head-testimonial">Why Women Love FindHer</h1>
+                        </Col>
+                        <Col md={6} style={{ marginLeft: "8%" }} className='TestimonialCardDiv'>
+                            <Slider {...settings}>
+                                {/* Testimonial 1 */}
+                                <div>
+                                    <TestimonialCard
+                                        testimonial="'FindHer helped me land my dream job'"
+                                        description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
+                                        name="Jane Doe1"
+                                        position="Marketing Manager"
+                                        image={pic}
+                                    />
+                                </div>
+                                <div>
+                                    <TestimonialCard
+                                        testimonial="'FindHer helped me land my dream job'"
+                                        description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
+                                        name="Jane Doe2"
+                                        position="Marketing Manager"
+                                        image={pic}
+                                    />
+                                </div>
+                                <div>
+                                    <TestimonialCard
+                                        testimonial="'FindHer helped me land my dream job'"
+                                        description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
+                                        name="Jane Doe3"
+                                        position="Marketing Manager"
+                                        image={pic}
+                                    />
+                                </div>
+                                {/* Add more testimonials as needed */}
+                            </Slider>
+                        </Col>
+                    </Row>
+                </Container>
+            </Container>
+        </div>
+    );
+}
+=======
   return (
     <div>
       <Container className="Testimonial-container ">
@@ -111,6 +169,7 @@ const TestimonialSection = () => {
     </div>
   );
 };
+>>>>>>> origin/main
 
 // ... (rest of your code remains unchanged)
 

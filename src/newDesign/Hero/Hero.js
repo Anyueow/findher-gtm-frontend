@@ -4,8 +4,8 @@ import "./hero.css";
 
 function Hero() {
     return (
-        <section className="hero-section d-flex justify-content-center align-items-center">
-            <Container className="content-hero">
+        <section className="hero-section d-flex justify-content-center align-items-center" >
+            <Container className="content-hero" >
                 <Row className="">
                     <Col className="">
                     {/* h-100 ensures the row takes the full height of its parent */}

@@ -5,7 +5,7 @@ import sec6img from './sec6img.webp';
 import img1 from "./images/download.svg"
 function SectionSix() {
   return (
-    <div className="section6">
+    <div className="section6" >
       <Row className="sec6cont"> 
         <Col className="sec6stuffs">
             <Col className="stuffsInner">
