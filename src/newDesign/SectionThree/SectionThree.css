@@ -120,7 +120,7 @@
   padding: 0.6rem 1.6rem; /* top/bottom padding and left/right padding */
   font-size: 1.2rem;
   color: #ffffff;
-  width: 45%;
+  width: auto;
   background-color: rgba(226, 11, 60, 0.83); /* or any desired color */
   border: none; /* remove default border */
   border-radius: 0.7rem; /* rounded corners, adjust as desired */

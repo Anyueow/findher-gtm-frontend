@@ -1,0 +1,22 @@
+.new-footer {
+    padding-top: 0px;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+}
+
+.contact-side h4 a {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: .03em;
+}
+
+.contact-side {
+    text-align: left;
+}
+.Footer-hed{
+    text-align: left;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    color: #888;
+}
