@@ -156,7 +156,7 @@
 }
 .wholeHead{
   font-weight: bold!important;
-  font-size: 3.2rem!important;
+  font-size: 3.2vw!important;
 }
 @media (min-width:600px) and (max-width:830px) {
   .sec3Rows{
@@ -171,11 +171,12 @@
     font-size: 1rem;
     color: #888;
   }
-  .wholeHead{
+  /* .wholeHead{
     font-size: 2rem !important; 
-  }
+  } */
   .AcessButton {
     width: 55%;
+    font-size: 1.1rem;
   }
 }
 
@@ -209,7 +210,7 @@
   }
   .AcessButton {
     width: 72%;
-    font-size: 21px;
+    font-size: 2.5vh;
   }
   .decorative-rectangle {
     height: 259px;

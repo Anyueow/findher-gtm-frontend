@@ -1,42 +1,73 @@
-.faqInner{
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 20rem;
-    border-radius: 43px;
-    gap: 20px;
-    /* display: flex; */
-    text-align: left;
+.faqInner {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 22rem;
+  border-radius: 43px;
+  gap: 20px;
+  /* display: flex; */
+  text-align: left;
 }
-.accordion-button, .collapsed, .faqItems{
-    border-radius: 21px!important;
-    background: rgb(246, 245, 244);
-    padding: 15px;
-    border: none !important;
+.accordion-button,
+.collapsed,
+.faqItems {
+  border-radius: 21px !important;
+  background: rgb(246, 245, 244);
+  padding: 15px;
+  border: none !important;
 }
-.accordion-button:not(.collapsed){
-    background: rgb(246, 245, 244)!important;
-    border: none !important;
-    border-color: rgb(246, 245, 244)!important;
+.accordion-button:not(.collapsed) {
+  background: rgb(246, 245, 244) !important;
+  border: none !important;
+  border-color: rgb(246, 245, 244) !important;
 }
 .faqbodyPP {
-    border-radius: 21px!important;
-    font-size: 18px;
-    color: rgb(78 78 78 / 81%)!important;
+  border-radius: 21px !important;
+  font-size: 18px;
+  color: rgb(78 78 78 / 81%) !important;
 }
-@media (max-width:600px){
-    .faqInner{
-        margin: 21px;
-    }
-    .newMsg1{
-        font-size: 20px;
-    }
+@media (max-width: 600px) {
+  .faqInner {
+    margin: 21px;
+  }
+  .newMsg1 {
+    font-size: 20px;
+  }
 }
 
-@media (min-width:600px) and (max-width:830px) {
-    .faqInner {
-        margin: 21px;
-    }
-    .newMsg1{
-        font-size: 30px;
-    }
+@media (min-width: 600px) and (max-width: 830px) {
+  .faqInner {
+    margin: 38px;
+  }
+  .newMsg1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 830px) and (max-width: 1000px) {
+  .faqInner {
+    margin: 21px;
+  }
+  .newMsg1 {
+    font-size: 30px;
+  }
+  .sec6head{
+    width: 100%;
+  }
+  .sec6cont {
+    width: 100% !important;
+    height: 100%;
+    overflow: hidden;
+  }
+  .section6 {
+    width: 85% !important;
+    height: 28vh !important;
+  }
+  .sec6head p{
+    width: 100%;
+    font-size: 3.5vw!important;
+  }
+  .sec6stuffs{
+    height: fit-content;
+    padding: 0;
+    margin: 3vh!important;
+  }
 }
