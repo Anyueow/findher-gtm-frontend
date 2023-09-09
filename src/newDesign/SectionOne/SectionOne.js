@@ -12,13 +12,10 @@ function SectionOne() {
     <div className="job-search-section">
       <Row className="justify-content-center" >
         <Col className="justify-content-center">
-<<<<<<< HEAD
-          <h5 className="sec-one-head font-weight-bold sec-one-h5">How We Help You</h5>
-          <h3 className="sec-one-sub sec-one-h3">
-=======
+
           <h5 className="sec-one-head font-weight-bold howwecan">How We Help You</h5>
           <h3 className="sec-one-sub">
->>>>>>> origin/main
+
             Redesigning Job Search for Indian Women
           </h3>
           <p className="sec-one-sub-p sec-one-para">
