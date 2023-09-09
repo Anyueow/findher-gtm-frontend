@@ -1,0 +1,53 @@
+.sec-seven-container{
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.sec-seven-container .sec-seven-heading{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.sec-seven-container .sec-seven-para{
+    width: 50%;
+    line-height: 2rem;
+    color: #4e4e4e;
+}
+.sec-seven-container .sec-seven-form{
+    margin-bottom: 5rem;
+    min-width: 300px;
+    width: 20%;
+    position: relative;
+}
+.sec-seven-container .sec-seven-input{
+    /* all: unset;   */
+    background-color: #f6f5f4;
+    border: none;
+    outline: none;
+    padding: 1rem 1rem;
+    width: 100%;
+}
+.sec-seven-container .sec-seven-button{
+    position: absolute;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    color: white;
+    background-color: #ee2c5b;
+    right: 0;
+    top: 0.5rem;
+}
+@media (width<800px) {
+    .sec-seven-container .sec-seven-heading{
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+    .sec-seven-container .sec-seven-para{
+        font-size: 1rem;
+        width: 80%;
+        line-height: 1.5rem;
+        color: #4e4e4e;
+    }
+}

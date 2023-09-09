@@ -40,7 +40,7 @@ import TestF from "./newDesign/Testimonial/Testimonial";
 import SectionFour from "./newDesign/SectionFour/SectionFour";
 import FaqSection from "./newDesign/FaqSection/FaqSection";
 import SectionSix from "./newDesign/SectionSix/SectionSix";
-
+import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
 function MainContent() {
 
 
@@ -71,6 +71,7 @@ function NewDesign() {
   <TestF />
   <FaqSection/>
   <SectionSix/>
+  <SectionSeven/>
       </>
   );
 }

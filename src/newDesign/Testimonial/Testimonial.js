@@ -1,36 +1,36 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row } from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import pic from "./18.80328ac61c501e8b10f2.png";
 import "./Testimonial.css";
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import SwiperCore, {Pagination, Autoplay } from "swiper";
+import Slider from "react-slick";
 SwiperCore.use([Pagination,Autoplay]);
 
 const TestimonialSection = () => {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     centerPadding: "100px", // Adjust the padding value as needed
-//     // initialSlide: sliderIndex, // Start at the current slide index
-//     // afterChange: (currentSlide) => {
-//     //   setSliderIndex(currentSlide);
-//     // },
-//   };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerPadding: "100px", // Adjust the padding value as needed
+    // initialSlide: sliderIndex, // Start at the current slide index
+    // afterChange: (currentSlide) => {
+    //   setSliderIndex(currentSlide);
+    // },
+  };
 
-<<<<<<< HEAD
+
     return (
         <div style={{overflowX:"hidden"}}> 
             <Container className='Testimonial-container my-5'>
@@ -87,89 +87,7 @@ const TestimonialSection = () => {
         </div>
     );
 }
-=======
-  return (
-    <div>
-      <Container className="Testimonial-container ">
-          <Row className="align-items-center mt-4" style={{ overflowX: "hidden" }}>
-            <Swiper
-            className="testimonial-swiper"
-             initialSlide={1}
-              autoplay={{ delay: 3000 }}
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              loop={true}
-              spaceBetween={30}
-              pagination={{ clickable: true }} 
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-              }}
-              breakpoints={{
-                599: {
-                  slidesPerView: 1, // 1 slide for screens less than 600px wide
-                },
-                600: {
-                  slidesPerView: 3, // 2 slides for screens above 600px 
-                }
-              }}
-            >
-              <SwiperSlide>
-                  <TestimonialCard
-                    testimonial="'FindHer helped me land my dream job'"
-                    description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-                    name="Jane Doe1"
-                    position="Marketing Manager"
-                    image={pic}
-                  />
-              </SwiperSlide>
-              <SwiperSlide>
-                  <TestimonialCard
-                    testimonial="'FindHer helped me land my dream job'"
-                    description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-                    name="Jane Doe2"
-                    position="Marketing Manager"
-                    image={pic}
-                  />
-              </SwiperSlide>
-              <SwiperSlide>
-                  <TestimonialCard
-                    testimonial="'FindHer helped me land my dream job'"
-                    description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-                    name="Jane Doe3"
-                    position="Marketing Manager"
-                    image={pic}
-                  />
-              </SwiperSlide>
-              <SwiperSlide>
-                  <TestimonialCard
-                    testimonial="'FindHer helped me land my dream job'"
-                    description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-                    name="Jane Doe4"
-                    position="Marketing Manager"
-                    image={pic}
-                  />
-              </SwiperSlide>
-              <SwiperSlide>
-                  <TestimonialCard
-                    testimonial="'FindHer helped me land my dream job'"
-                    description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-                    name="Jane Doe5"
-                    position="Marketing Manager"
-                    image={pic}
-                  />
-              </SwiperSlide>
-              {/* Add more testimonials as needed */}
-            </Swiper>
-          </Row>
-      </Container>
-    </div>
-  );
-};
->>>>>>> origin/main
+
 
 // ... (rest of your code remains unchanged)
 
