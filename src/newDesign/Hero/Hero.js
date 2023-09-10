@@ -7,7 +7,7 @@ function Hero() {
         <section className="hero-section d-flex justify-content-center align-items-center" >
             <Container className="content-hero" >
                 <Row className="">
-                    <Col className="">
+                    <Col className="heroInner">
                     {/* h-100 ensures the row takes the full height of its parent */}
                         <h1 className="header-hero mt-0 mb-4 hero-h1 ">Information <span className="hero-header-span">   <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="auto" viewBox="0 0 284 23">
                             <path
@@ -16,13 +16,14 @@ function Hero() {
                                 stroke-width="5" stroke-linecap="round" fill="transparent" opacity="1" pathLength="1"
                                 stroke-dashoffset="0px" stroke-dasharray="1px 1px">
                             </path>
-                        </svg></span> You Need to Find The Best Jobs For You</h1>
+                        </svg>
+                        </span> You Need to Find The Best Jobs For You</h1>
                         <h4 className="hero-sub hero-h4">
                             With 10,000+ ratings, reviews, and overviews on Indian workplaces,
                             you can learn what it’s like to work at a company directly from the women who have been there.
                         </h4>
-                        <div className="my-5" style={{height:"30px"}}>
-                        <Button className="JoinButton-hero">Join the Waitlist!</Button>
+                        <div className="my-5" style={{height:"30px", margin:"0!important"}}>
+                        <Button className="JoinButton-hero" style={{ margin:"0"}}>Join the Waitlist!</Button>
                         </div>
                     </Col>
                 </Row>

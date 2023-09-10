@@ -28,6 +28,14 @@ function NavBar() {
       "noopener noreferrer"
     );
   };
+
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className={`custom-navbar ${navColor ? "navbar-colored" : ""}`}>
       <div className="container">
@@ -44,15 +52,22 @@ function NavBar() {
         </button>
         <ul className={`navbar-menu ${showMenu ? "show" : ""}`}>
           <li className="navItems">
-            <Link to="/">Features</Link>
+          <a href="#features" onClick={(e) => scrollToSection(e, 'features')}>
+              Features
+            </a>
           </li>
           <li className="navItems">
-            <Link to="/">Testimonials</Link>
+          <a href="#testimonial" onClick={(e) => scrollToSection(e, 'testimonial')}>
+              Testimonials
+            </a>
           </li>
           <li className="navItems">
-            <Link to="/">FAQ</Link>
+          <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')}>
+              FAQ
+            </a>
           </li>
-          <li className="navItems" style={{marginBottom:"30px"}}>
+          <li className="navItems" style={{margin:"10px",display:"flex",
+                alignItems: "center"}}>
             <strong
               style={{
                 color: "white",
@@ -61,6 +76,8 @@ function NavBar() {
                 backgroundColor: "#e20b3c",
                 padding: "10px",
                 borderRadius: ".5rem",
+                display:"flex",
+                alignItems: "center"
                 
               }}
               onClick={joinExternalSurvey}

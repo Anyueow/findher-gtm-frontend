@@ -12,7 +12,7 @@ import row3img1 from "./row3img1.webp";
 import row3img2 from "./row3img2.webp";
 function SectionThree() {
   return (
-    <Container className="my-5 section-three-container secOutCont" > 
+    <Container className="my-5 section-three-container secOutCont" id="features"> 
       {/* The Whole Picture */}
       <Row className="mb-4 align-items-center sec3Rows" >
         <Col md={5} className="no-gutter">

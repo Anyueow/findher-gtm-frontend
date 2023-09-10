@@ -37,11 +37,13 @@
 }
 .sec6head p{
     font-weight: bold;
-    font-size: 5vh;
+    font-size: 3.8vh;
 }
 .sec6body{
     text-align: left;
-    font-size: 2.7vh;
+    font-size: 1.2rem;
+    color: rgb(78 78 78 / 70%);
+    line-height: 1.75rem;
 }
 .secbtn{
     margin-left: 5%;
@@ -108,7 +110,7 @@
     }
 
     .sec6head p {
-        font-size: 2.5vh;
+        font-size: 2.4vh!important;
     } 
 
     .sec6body p{
