@@ -11,7 +11,7 @@ function SectionOne() {
   return (
     <div className="job-search-section">
       <Row className="justify-content-center" >
-        <Col className="justify-content-center">
+        <Col className="justify-content-center section-one-container">
 
           <h5 className="sec-one-head font-weight-bold howwecan sec-one-h5">How We Help You</h5>
           <h3 className="sec-one-sub sec-one-h3">
@@ -61,12 +61,11 @@ function SectionOne() {
         </Col>
 
         <p
-          className="sec-one-last-p sec-one-para"
+          className="sec-one-last-para"
           style={{
             marginTop: "5vw",
             fontSize: "1.1rem",
             width: "60%",
-            color: "black",
           }}
         >
           FindHer helps you discover job opportunities that match your skills

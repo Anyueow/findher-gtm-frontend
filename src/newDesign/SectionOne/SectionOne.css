@@ -126,17 +126,17 @@
 }
 
 @media (max-width:600px) {
-    .job-search-section h3{
+    /* .job-search-section h3{
         font-size: 1.7rem !important;
         width: 100% !important;
         margin: 1rem 0;
-    }
-    .job-search-section p{
+    } */
+    /* .job-search-section p{
         font-size: 15px;
         width: 100% !important;
         font-family: "Inter", sans-serif!important;
         line-height: 1.75rem;
-    }
+    } */
     
     
     .rectangle{
@@ -230,7 +230,7 @@
 
 }
 .section-one-container{
-    border: 1px solid black;
+    gap: 0.8rem;
 }
 .sec-one-h5{
     color: #4e4e4e;
@@ -239,7 +239,7 @@
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0em;
-    line-height: 1.4em;
+    line-height: 1.4em;   
 }
 .sec-one-h3{
     width: 40%;
@@ -278,11 +278,12 @@
     .sec-one-para{
         color: #4e4e4e;
         font-size: 1rem;
-        width: 80%;
+        width: 65%;
         line-height: 1.4rem;
     }
     .sec-one-h3{
-        width: 70%;
+        width: 50%;
+        font-size: 32px;
     }
    
     .card .card-h4{
@@ -295,13 +296,16 @@
 }
 @media (width<800px) {
     .sec-one-para{
-        color: #4e4e4e;
-        font-size: 1rem;
-        width: 100%;
-        line-height: 1.8rem;
+        color: #818180;
+        font-size: 15px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        width: 300px;
+        line-height: 1.6em;
     }
     .sec-one-h3{
-        width: 50%;
+        width: 300px;
+        font-size: 25px;
     }
     
     .card .card-h4{
@@ -311,8 +315,14 @@
     .card .card-img{
         width: 70%;
     }
+    .sec-one-last-para{
+        color: #656565;
+        font-family: "Inter", sans-serif;
+        width: 330px !important;
+        font-size: 15px;
+        line-height: 1.6em;
+    }
 }
-
 .hero-button{
     min-width: fit-content;
     padding: 1rem 1rem;
@@ -321,6 +331,8 @@
     background-color: #f04a72;
     font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
     border-radius: 15px;
+    transition: all;
+    transition-duration: 500ms;
     border: none;
 }
 .hero-button:hover {

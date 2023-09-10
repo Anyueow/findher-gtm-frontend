@@ -187,6 +187,14 @@
     width: 55%;
     font-size: 1.1rem;
   }
+  .img-two{
+    width: 45%;
+    background-position: center;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+    aspect-ratio: 1;
+  }
 }
 
 @media (max-width: 600px) {
@@ -255,7 +263,7 @@
     height: 40vh !important;
     align-content: center;
     left: 0%;
-    width: 100%;
+    width: 80%;
     background-color: rgba(0, 144, 226, 0.63);
     border-radius: 25px;
   }
@@ -291,6 +299,45 @@
   .section-three-container {
     margin-top: 0rem !important;
   }
+  .img-div{
+    max-width: 300px;
+    height: 330px !important;
+    min-height: fit-content;
+    position: relative;
+  }
+  .img-one{
+    max-width: 200px;
+    max-height: 250px;
+    background-position: center;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+    aspect-ratio: 1;
+    position: absolute;
+    position: absolute;
+  }
+  .img-two{
+    max-width: 180px;
+    max-height: 150px;
+    background-position: center;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 40%;
+  }
+  .img-two-last{
+    max-width: 180px;
+    max-height: 150px;
+    background-position: center;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 60%;
+  }
 }
 
 .hero-button{
@@ -301,6 +348,8 @@
   background-color: #f04a72;
   font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
   border-radius: 15px;
+  transition: all;
+  transition-duration: 500ms;
   border: none;
 }
 .hero-button:hover {

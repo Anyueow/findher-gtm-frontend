@@ -125,8 +125,8 @@
     }
 }
 .hero-button-six{
-    min-width: fit-content;
-    padding: 0.6rem 2rem;
+    width: 250px;
+    padding: 0.6rem 0rem;
     font-size: 18px;
     font-weight: 700;
     background-color: #f04a72;
@@ -136,9 +136,9 @@
   }
   @media (width<450px) {
     .hero-button-six{
-        min-width: 200px;
+        width: 200px;
         font-size: 1rem;
-        padding: 0.3rem 0.3rem;
+        padding: 0.8rem 0.3rem;
     }
   }
   .hero-button-six:hover {
@@ -188,7 +188,7 @@
 @media  (width<810px) {
     .sec-six-container{
         width: 80%;
-        min-width: 280px;
+        max-width: 350px;
     }
     .sec-six-div{
         flex-direction: column-reverse;
@@ -207,8 +207,9 @@
         
     }
     .sec-six-left .sec-six-heading p{
-        font-size: 32px ;
+        font-size: 32px !important;
         text-align: center;
+        min-width: 250px !important;
         font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
         font-weight: 700;
         letter-spacing: 0em;
@@ -219,7 +220,7 @@
     .sec-six-left .sec-six-sub{
         margin: 0 auto;
         text-align: center;
-        font-size: 25px ;
+        font-size: 25px important;
         font-family: "Inter", sans-serif;
         font-weight: 400;
         letter-spacing: 0px;

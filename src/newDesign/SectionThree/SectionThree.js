@@ -26,15 +26,15 @@ function SectionThree() {
           <Button className="hero-button">Get Acess!</Button>
         </Col>
         <Col md={7} xs={12} className="no-gutter">
-          <div className="decorative-rectangle"></div>
+          <div className="decorative-rectangle img-div"></div>
           <Image
             src={row1img2}
-            className="overlay-image"
+            className="overlay-image img-one"
             alt="Decorative Image 1"
           />
           <Image
             src={img2}
-            className="overlay-image-two"
+            className="overlay-image-two img-two"
             alt="Decorative Image 1"
           />
         </Col>
@@ -45,15 +45,15 @@ function SectionThree() {
         // style={{ marginTop: "8%" }}
       >
         <Col md={7} className="no-gutter ">
-          <div className="decorative-rectangle-right"></div>
+          <div className="decorative-rectangle-right img-div"></div>
           <Image
             src={img3}
-            className="overlay-image-right"
+            className="overlay-image-right img-one"
             alt="Decorative Image 1"
           />
           <Image
             src={row2img2}
-            className="overlay-image-right-two"
+            className="overlay-image-right-two img-two"
             alt="Decorative Image 1"
           />
         </Col>
@@ -86,16 +86,16 @@ function SectionThree() {
           <Button className="hero-button" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
         </Col>
         <Col md={5} className="no-gutter">
-        <div className="decorative-rectangle lstOne"></div>
+        <div className="decorative-rectangle lstOne img-div"></div>
           <Image
             src={row3img1}
-            className="overlay-image-three"
+            className="overlay-image-three img-one"
             style={{ top: "45%" }}
             alt="Decorative Image 1"
           />
           <Image
             src={row3img2}
-            className="overlay-image-right-three"
+            className="overlay-image-right-three img-two-last"
             alt="Decorative Image 3"
           />
         </Col>

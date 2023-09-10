@@ -21,7 +21,7 @@ function Hero() {
                             With 10,000+ ratings, reviews, and overviews on Indian workplaces,
                             you can learn what it’s like to work at a company directly from the women who have been there.
                         </h4>
-                        <div className="my-5" style={{height:"30px"}}>
+                        <div className="my-4" style={{height:"30px"}}>
                         <Button className="hero-button">Join the Waitlist!</Button>
                         </div>
                     </Col>
