@@ -52,7 +52,7 @@
   .sec6head{
     width: 100%;
   }
-  .sec6cont {
+  /* .sec6cont {
     width: 100% !important;
     height: 100%;
     overflow: hidden;
@@ -60,7 +60,7 @@
   .section6 {
     width: 85% !important;
     height: 28vh !important;
-  }
+  } */
   .sec6head p{
     width: 100%;
     font-size: 3.5vw!important;

@@ -126,17 +126,17 @@
 }
 
 @media (max-width:600px) {
-    .job-search-section h3{
+    /* .job-search-section h3{
         font-size: 1.7rem !important;
         width: 100% !important;
         margin: 1rem 0;
-    }
-    .job-search-section p{
+    } */
+    /* .job-search-section p{
         font-size: 15px;
         width: 100% !important;
         font-family: "Inter", sans-serif!important;
         line-height: 1.75rem;
-    }
+    } */
     
     
     .rectangle{
@@ -229,52 +229,114 @@
     font-weight: 400;
 
 }
-
+.section-one-container{
+    gap: 0.8rem;
+}
 .sec-one-h5{
     color: #4e4e4e;
-    font-size: 1.3rem;
-    font-weight:lighter ;
+    font-size: 21px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1.4em;   
 }
 .sec-one-h3{
     width: 40%;
     color: #222222;
     font-weight: 600;
+    font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
 }
 
 .sec-one-para{
-    color: #4e4e4e;
+    color: #656565;
+    font-family: "Inter", sans-serif;
     width: 40%;
     font-size: 1.2rem;
     line-height: 2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #f5f5f5; /* Color of the rectangle */
+    margin: 0 auto; /* Center the rectangle */
+    border-radius: 10px;
+}
+
+.card .card-h4{
+    font-size: 1.1rem;
+    color: #4e4e4e;
+}
+.card .card-img{
+    width: 70%;
 }
 @media (800px<width<1200px  ) {
     .sec-one-para{
         color: #4e4e4e;
         font-size: 1rem;
-        width: 80%;
+        width: 65%;
         line-height: 1.4rem;
     }
     .sec-one-h3{
+        width: 50%;
+        font-size: 32px;
+    }
+   
+    .card .card-h4{
+        font-size: 0.8rem;
+        color: #4e4e4e;
+    }
+    .card .card-img{
         width: 70%;
     }
 }
 @media (width<800px) {
     .sec-one-para{
-        color: #4e4e4e;
-        font-size: 1rem;
-        width: 100%;
-        line-height: 1.8rem;
+        color: #818180;
+        font-size: 15px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        width: 300px;
+        line-height: 1.6em;
     }
     .sec-one-h3{
-        width: 50%;
+        width: 300px;
+        font-size: 25px;
+    }
+    
+    .card .card-h4{
+        font-size: 1.1rem;
+        color: #4e4e4e;
+    }
+    .card .card-img{
+        width: 70%;
+    }
+    .sec-one-last-para{
+        color: #656565;
+        font-family: "Inter", sans-serif;
+        width: 330px !important;
+        font-size: 15px;
+        line-height: 1.6em;
     }
 }
-.card-container{
-    padding: 0 0;
-    width: 280px;
-    height: 400px;
+.hero-button{
+    min-width: fit-content;
+    padding: 1rem 1rem;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #f04a72;
+    font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 500ms;
+    border: none;
 }
-.card-container .card-container-h4{
-    font-size: 1.2rem;
-    color: #4e4e4e;
+.hero-button:hover {
+   background-color: rgb(255, 213, 90);  
+   color: black;
+   transform: scale(1.08);
 }

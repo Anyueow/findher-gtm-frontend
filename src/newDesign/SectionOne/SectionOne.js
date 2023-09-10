@@ -11,10 +11,10 @@ function SectionOne() {
   return (
     <div className="job-search-section">
       <Row className="justify-content-center" >
-        <Col className="justify-content-center">
+        <Col className="justify-content-center section-one-container">
 
-          <h5 className="sec-one-head font-weight-bold howwecan">How We Help You</h5>
-          <h3 className="sec-one-sub">
+          <h5 className="sec-one-head font-weight-bold howwecan sec-one-h5">How We Help You</h5>
+          <h3 className="sec-one-sub sec-one-h3">
 
             Redesigning Job Search for Indian Women
           </h3>
@@ -40,33 +40,32 @@ function SectionOne() {
       <Row className="justify-content-center mt-5 rectangle-row">
         <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
-          <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center card-container">
-            <img src={img1} alt="in Rectangle" className="img-in-rectangle" />
-            <h4 className="card-container-h4">The Whole Picture</h4>
+          <div className=" shadow  card">
+            <img src={img1} alt="in Rectangle" className="img-in-rectangle card-img" />
+            <h4 className="card-h4">The Whole Picture</h4>
           </div>
         </Col>
         <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
-          <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center card-container">
-            <img src={img2} alt="in Rectangle" className="img-in-rectangle" />
-            <h4 className="card-container-h4">Exclusive insights</h4>
+          <div className=" shadow d-flex flex-column align-items-center justify-content-center card">
+            <img src={img2} alt="in Rectangle" className="img-in-rectangle card-img" />
+            <h4 className="card-h4">Exclusive insights</h4>
           </div>
         </Col>
-        <Col md={3} className="text-center mx-1 justify-content-center desktop">
+        <Col md={3} className="text-center mx-1 justify-content-center desktop card-img">
           <div className="line mb-n3"></div>
-          <div className="rectangle shadow d-flex flex-column align-items-center justify-content-center card-container">
-            <img src={img3} alt="in Rectangle" className="img-in-rectangle" />
-            <h4 className="card-container-h4">Personalized For You</h4>
+          <div className=" shadow d-flex flex-column align-items-center justify-content-center card">
+            <img src={img3} alt="in Rectangle" className="img-in-rectangle card-img" />
+            <h4 className="card-h4">Personalized For You</h4>
           </div>
         </Col>
 
         <p
-          className="sec-one-last-p"
+          className="sec-one-last-para"
           style={{
             marginTop: "5vw",
             fontSize: "1.1rem",
             width: "60%",
-            color: "black",
           }}
         >
           FindHer helps you discover job opportunities that match your skills
@@ -75,7 +74,7 @@ function SectionOne() {
         </p>
       </Row>
       <div className="my-4 mobBtnsec1" style={{ height: "fit-content" }}>
-        <Button className="JoinButtonS">Sign Me Up</Button>
+        <Button className="hero-button">Sign Me Up</Button>
       </div>
     </div>
   );

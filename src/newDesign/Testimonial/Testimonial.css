@@ -62,11 +62,13 @@
 .zeld{
     font-size: 2rem;
     font-weight: 400;
+    font-family: "Inter", sans-serif;
 }
 
 .head {
     font-size: 4rem;
     font-weight: 400;
+    font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
 }
 
 

@@ -23,18 +23,18 @@ function SectionThree() {
             control of your path, whether you're just starting or advancing your
             career.
           </p>
-          <Button className="AcessButton mobBtn7">Get Acess!</Button>
+          <Button className="hero-button">Get Acess!</Button>
         </Col>
         <Col md={7} xs={12} className="no-gutter">
-          <div className="decorative-rectangle"></div>
+          <div className="decorative-rectangle img-div"></div>
           <Image
             src={row1img2}
-            className="overlay-image"
+            className="overlay-image img-one"
             alt="Decorative Image 1"
           />
           <Image
             src={img2}
-            className="overlay-image-two"
+            className="overlay-image-two img-two"
             alt="Decorative Image 1"
           />
         </Col>
@@ -45,15 +45,15 @@ function SectionThree() {
         // style={{ marginTop: "8%" }}
       >
         <Col md={7} className="no-gutter ">
-          <div className="decorative-rectangle-right"></div>
+          <div className="decorative-rectangle-right img-div"></div>
           <Image
             src={img3}
-            className="overlay-image-right"
+            className="overlay-image-right img-one"
             alt="Decorative Image 1"
           />
           <Image
             src={row2img2}
-            className="overlay-image-right-two"
+            className="overlay-image-right-two img-two"
             alt="Decorative Image 1"
           />
         </Col>
@@ -67,7 +67,7 @@ function SectionThree() {
             culture, work-life balance, and the unspoken aspects that truly
             matter.
           </p>
-          <Button style={{ marginLeft: "6%" }} className="AcessButton mobBtn7">
+          <Button style={{ marginLeft: "6%" }} className=" hero-button">
             Join us now
           </Button>
         </Col>
@@ -83,19 +83,19 @@ function SectionThree() {
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.
           </p>
-          <Button className="AcessButton mobBtn7" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
+          <Button className="hero-button" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
         </Col>
         <Col md={5} className="no-gutter">
-        <div className="decorative-rectangle lstOne"></div>
+        <div className="decorative-rectangle lstOne img-div"></div>
           <Image
             src={row3img1}
-            className="overlay-image-three"
+            className="overlay-image-three img-one"
             style={{ top: "45%" }}
             alt="Decorative Image 1"
           />
           <Image
             src={row3img2}
-            className="overlay-image-right-three"
+            className="overlay-image-right-three img-two-last"
             alt="Decorative Image 3"
           />
         </Col>
