@@ -5,7 +5,7 @@ import { Col, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 function FaqSection() {
   return (
-    <>
+    <div id="faq">
       <div className="job-search-section faq-container">
         <Row className="justify-content-center">
           <Col className="justify-content-center">
@@ -48,7 +48,7 @@ function FaqSection() {
           </Accordion.Item>
         </Accordion>
       </div>
-    </>
+    </div>
   );
 }
 

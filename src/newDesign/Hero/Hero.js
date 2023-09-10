@@ -7,7 +7,7 @@ function Hero() {
         <section className="hero-section d-flex justify-content-center align-items-center" >
             <Container className="content-hero hero-container" >
                 <Row className="">
-                    <Col className="">
+                    <Col className="heroInner">
                     {/* h-100 ensures the row takes the full height of its parent */}
                         <h1 className=" mt-0 mb-4 hero-h1 ">Information <span className="hero-header-span">   <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="auto" viewBox="0 0 284 23">
                             <path

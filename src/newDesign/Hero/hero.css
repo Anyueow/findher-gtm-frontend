@@ -10,6 +10,11 @@
     width: 60% ;
     margin-left: 22% ;
     margin-right: 22% ;
+    
+}
+.content-hero{
+    display: flex;
+    justify-content: center;
 }
 .hero-section {
     height: 100vh;
@@ -67,6 +72,8 @@
 
 .hero-section{
     height: 120vh;
+    background: linear-gradient(180deg,#fed2f1 0%,rgba(149,184,231,.32) 59.26115522934533%,rgba(248,209,242,.04) 100%);
+    box-shadow: 0 1px 2px #00000040;
 }
 
 @media (min-width:600px) and (max-width:830px) {
@@ -105,7 +112,10 @@
 }
 @media (max-width:600px) {
     .hero-section{
-        height: 95vh;
+        height: 73vh;
+    }
+    .heroInner{
+        margin-top: 6rem;
     }
     .content-hero .header-hero {
         font-size: 32px;
@@ -250,6 +260,8 @@
         text-align: center;
     }
 }
+
+
 
 
 
