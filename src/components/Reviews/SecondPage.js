@@ -116,7 +116,7 @@ export const SecondPage = () => {
                   </Form.Select>
                 </Form.Group>
               </Col>{" "}
-              <Col md={6} xs={12} style={{marginTop:"27px"}}>
+              <Col md={6} xs={12} >
                 <Form.Group>
                   <Form.Label>Office Location</Form.Label>
                   <Form.Select
@@ -195,7 +195,7 @@ export const SecondPage = () => {
               >
                 Next
               </Button>
-              <Link to="/reviews_two" className="nav-link2">
+              <Link to="/reviews_two" className="nav-link2 bottom-link">
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
