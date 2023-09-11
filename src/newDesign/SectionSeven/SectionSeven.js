@@ -24,7 +24,7 @@ export const SectionSeven = (props) => {
 
     console.log(email);
     try {
-      const response = await fetch('http://localhost:5000/newsletter', {
+      const response = await fetch('https://findher-backend.onrender.com/newsletter', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
