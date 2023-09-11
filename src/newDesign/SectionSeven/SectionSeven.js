@@ -98,9 +98,9 @@ export const SectionSeven = (props) => {
           {message && <div className="sec-seven-message">{message}</div>}
         </form>
       </div>
-      {openPopup && (
+      {openPopup ? (
         <ModalPopup setOpenPopup={setOpenPopup} setBlur={setBlur} />
-      )}
+      ):(<div></div>)}
     </motion.div>
   );
 };
