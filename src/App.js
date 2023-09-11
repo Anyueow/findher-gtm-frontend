@@ -41,13 +41,15 @@ import SectionFour from "./newDesign/SectionFour/SectionFour";
 import FaqSection from "./newDesign/FaqSection/FaqSection";
 import SectionSix from "./newDesign/SectionSix/SectionSix";
 import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
+import ModalPopup from "./newDesign/ModalPopup/ModalPopup";
 function MainContent() {
-
+ 
 
 
 
   return (
       <>
+      
         <Hero />
         <SectionOne />
           <SectionTwo/>
@@ -61,8 +63,10 @@ function MainContent() {
 }
 
 function NewDesign() {
+  const [blur,setBlur]=useState(0);
   return (
       <>
+      <div className={blur ?"blur-background " :""}>
       <HeroFinal />
   <SectOneF />
   <SectTwoF />
@@ -71,7 +75,8 @@ function NewDesign() {
   <TestF />
   <FaqSection/>
   <SectionSix/>
-  <SectionSeven/>
+  </div>
+  <SectionSeven setBlur={setBlur}/>
       </>
   );
 }
@@ -120,6 +125,7 @@ function App() {
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/new" element={<NewDesign />} />
+            <Route path="/pop" element={<ModalPopup/>} />
 
 
 
