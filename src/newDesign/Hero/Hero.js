@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./hero.css";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
@@ -9,36 +10,58 @@ function Hero() {
         <Row className="">
           <Col className="heroInner">
             {/* h-100 ensures the row takes the full height of its parent */}
-            <h1 className=" mt-0 mb-4 hero-h1 ">
-              Information{" "}
-              <span className="hero-header-span">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="auto"
-                  viewBox="0 0 284 23"
-                >
-                  <path
-                    d="M 3 3 L 280.663 3 C 269.449 3 258.349 3.9 247.279 4.764 C 221.349 6.787 195.529 8.92 169.786 11.556 C 151.278 13.451 132.755 15.328 114.19 17.061 C 113.357 17.139 90.773 19.35 90.951 19.635 C 91.634 20.727 116.442 19.025 118.838 18.968 C 135.096 18.578 151.406 18.638 167.64 18.014"
-                    stroke="hsl(342, 100%, 50%)"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                    fill="transparent"
-                    opacity="1"
-                    pathLength="1"
-                    stroke-dashoffset="0px"
-                    stroke-dasharray="1px 1px"
-                  ></path>
-                </svg>
-              </span>
-              You Need to Find the Best Jobs For You
-            </h1>
-            <h4 className=" hero-h4">
+            <motion.h1
+              className=" mt-0 mb-4 hero-h1 "
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Information You Need to Find the Best Jobs For You
+            </motion.h1>
+            <span className="hero-header-span">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="auto"
+                viewBox="0 0 284 23"
+              >
+                <path
+                  d="M 3 3 L 280.663 3 C 269.449 3 258.349 3.9 247.279 4.764 C 221.349 6.787 195.529 8.92 169.786 11.556 C 151.278 13.451 132.755 15.328 114.19 17.061 C 113.357 17.139 90.773 19.35 90.951 19.635 C 91.634 20.727 116.442 19.025 118.838 18.968 C 135.096 18.578 151.406 18.638 167.64 18.014"
+                  stroke="hsl(342, 100%, 50%)"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  fill="transparent"
+                  opacity="1"
+                  pathLength="1"
+                  stroke-dashoffset="0px"
+                  stroke-dasharray="1px 1px"
+                ></path>
+              </svg>
+            </span>
+            <motion.h4
+              className=" hero-h4"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               With 10,000+ ratings, reviews, and overviews on Indian workplaces,
               you can learn what it’s like to work at a company directly from
               the women who have been there.
-            </h4>
+            </motion.h4>
             <div className="my-4" style={{ height: "30px" }}>
-              <Button className="hero-button">Join the Waitlist</Button>
+              <motion.Button
+                initial={{ opacity: 0, y: -300 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0, 
+                   delay: 0.2,  
+                  },
+                }}
+                className="hero-button"
+              >
+                Join the Waitlist
+              </motion.Button>
             </div>
           </Col>
         </Row>

@@ -9,8 +9,23 @@ import img3 from "./screen 5.webp";
 import row1img2 from "./row1img2.webp";
 import row2img2 from "./row2img2.webp";
 import row3img1 from "./row3img1.webp";
-import row3img2 from "./row3img2.webp";
+import row3img2 from "./row3img2.webp"; 
+import { motion } from "framer-motion";
+
 function SectionThree() {
+    const containerVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+    transition: { duration: 1 ,
+    delay:2
+},
+  };
   return (
     <Container className="my-5 section-three-container secOutCont" id="features"> 
       {/* The Whole Picture */}
