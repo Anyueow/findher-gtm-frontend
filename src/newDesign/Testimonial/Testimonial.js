@@ -19,7 +19,7 @@ const TestimonialSection = () => {
       <Container className="Testimonial-container my-5" style={{ overflowX: "hidden" }}>
             <Swiper
             className="testimonial_swiper_container"
-              autoplay={{ delay: 3000,  disableOnInteraction: false, }}
+              autoplay={{ delay: 1000,  disableOnInteraction: false, }}
               effect={"coverflow"}
               grabCursor={true}
               centeredSlides={true}

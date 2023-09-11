@@ -16,7 +16,7 @@ function SectionSix() {
             <p>Supercharge your job search process with insights and information from women who've worked there.</p>
 
             </Col>
-            <Button className="AcessButton secbtn exclusive-btn hero-button-six">Get Exclusive Access!</Button>
+            <Button className="AcessButton secbtn exclusive-btn hero-button-six">Get Exclusive Access</Button>
             </Col>
         </Col>
         <Col className="sec6img sec-six-right">

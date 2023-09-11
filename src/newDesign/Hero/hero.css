@@ -34,8 +34,8 @@
 
 .hero-header-span{
     position: absolute;
-    top: 10%;
-    left: 26%;
+    top: 12%;
+    left: 21%;
     width: 27%;
 }
 
@@ -167,10 +167,10 @@
         font-weight: 700;
     }
     .content-hero .hero-h4{
-        width: 800px !important;
+        width: 53% !important;
         color: #8b8e91;
         font-family: "Inter", sans-serif;
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: 0em;
         line-height: 1.75em;
@@ -216,7 +216,12 @@
         line-height: 1.5em;
         margin: 0 auto !important;
     }
-    
+    .hero-header-span{
+        position: absolute;
+        top: 9%;
+        left: 4%;
+        width: 37%;
+    }
 }
 
 @media ((max-width: 809px))  {
@@ -238,6 +243,12 @@
         line-height: 1.75em;
         font-weight: 400;
         text-align: center;
+    }
+    .hero-header-span{
+        position: absolute;
+        top: 11%;
+        left: 11%;
+        width: 55%;
     }
     
 }

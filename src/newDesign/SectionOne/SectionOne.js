@@ -9,7 +9,7 @@ import img4 from "./Group 181.png";
 
 function SectionOne() {
   return (
-    <div className="job-search-section">
+    <div className="job-search-section mt-5">
       <Row className="justify-content-center" >
         <Col className="justify-content-center section-one-container">
 
@@ -18,7 +18,7 @@ function SectionOne() {
 
             Redesigning Job Search for Indian Women
           </h3>
-          <p className="sec-one-sub-p sec-one-para">
+          <p className="sec-one-para">
             It's common for job postings to lack detailed information, leaving
             you in the dark about a potential employer's compatibility with your
             needs and aspirations. FindHer offers exclusive and reliable
@@ -37,24 +37,24 @@ function SectionOne() {
           />
         </Col>
       </Row>
-      <Row className="justify-content-center mt-5 rectangle-row">
+      <Row className="justify-content-center mt-5 sec-one-rectangle-row">
         <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
-          <div className=" shadow  card">
+          <div className="sec-one-card  card">
             <img src={img1} alt="in Rectangle" className="img-in-rectangle card-img" />
             <h4 className="card-h4">The Whole Picture</h4>
           </div>
         </Col>
-        <Col md={3} className="text-center mx-1 justify-content-center desktop">
+        <Col md={3} className="text-center mx-4 justify-content-center desktop">
           <div className="line mb-n3"></div>
-          <div className=" shadow d-flex flex-column align-items-center justify-content-center card">
+          <div className=" sec-one-card  d-flex flex-column align-items-center justify-content-center card">
             <img src={img2} alt="in Rectangle" className="img-in-rectangle card-img" />
             <h4 className="card-h4">Exclusive insights</h4>
           </div>
         </Col>
         <Col md={3} className="text-center mx-1 justify-content-center desktop card-img">
           <div className="line mb-n3"></div>
-          <div className=" shadow d-flex flex-column align-items-center justify-content-center card">
+          <div className=" sec-one-card  d-flex flex-column align-items-center justify-content-center card">
             <img src={img3} alt="in Rectangle" className="img-in-rectangle card-img" />
             <h4 className="card-h4">Personalized For You</h4>
           </div>

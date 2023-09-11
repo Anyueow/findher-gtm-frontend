@@ -26,7 +26,7 @@
 .sec-seven-container .sec-seven-form, .blur-background2 {
     margin-bottom: 5rem;
     min-width: 300px;
-    width: 20%;
+    width: 33%;
     position: relative;
 }
 .sec-seven-container .sec-seven-input, .blur-background2 {
@@ -64,5 +64,8 @@
         width: 80%;
         line-height: 1.5rem;
         color: #4e4e4e;
+    }
+    .sec-seven-container .sec-seven-form, .blur-background2 {
+        width: 65%;
     }
 }
