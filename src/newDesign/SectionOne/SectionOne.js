@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useRef } from "react";
+import React from "react";
 import "./SectionOne.css";
 import { Button, Col, Row } from "react-bootstrap";
 import demo from "./Group 167.webp";
