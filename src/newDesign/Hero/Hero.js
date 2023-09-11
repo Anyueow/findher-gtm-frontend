@@ -48,8 +48,8 @@ function Hero() {
               the women who have been there.
             </motion.h4>
             <div className="my-4" style={{ height: "30px" }}>
-              <motion.button
-                initial={{ opacity: 0, y: -300 }}
+              <motion.Button
+                initial={{ opacity: 0, y: -100 }}
                 animate={{
                   opacity: 1,
                   y: 0,
@@ -61,7 +61,7 @@ function Hero() {
                 className="JoinButton-hero"
               >
                 Join the Waitlist
-              </motion.button>
+              </motion.Button>
             </div>
           </Col>
         </Row>
