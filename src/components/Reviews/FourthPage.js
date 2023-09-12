@@ -10,7 +10,7 @@ const FourthPage = () => {
   // within your component
 
 
-  const companyName = "placeholder"; // Placeholder for company name
+  const companyName = localStorage.getItem('companyName'); // Placeholder for company name
   const [flexibilityRating, setFlexibilityRating] = useState(0);
   const [managementRating, setManagementRating] = useState(0);
   const [coWorkersRating, setCoWorkersRating] = useState(0);
@@ -195,7 +195,7 @@ const FourthPage = () => {
 
         <Form onSubmit={handleSubmit}>
           <Row >
-            <h1 className="head-name review-four-head" style={{ marginBottom: "3%", marginTop: "5%" }}>Tell us your experience at <b>{companyName}</b></h1>
+            <h1 className="head-name review-four-head" style={{ marginBottom: "3%", marginTop: "5%" }}>Tell us your experience at <span style={{ color: "#ee2c5b" }}>{companyName}</span></h1>
             <Col md={6} xs="12">
               <Form.Group className="rating-box">
                 <Form.Label className="review-heads">1. Flexibility </Form.Label>

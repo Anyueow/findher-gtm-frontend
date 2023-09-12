@@ -43,7 +43,6 @@ export const SecondPage = () => {
         startDate: startDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
         endDate: endDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
       };
-
       try {
         const response = await fetch(
           "https://findher-backend.onrender.com/protectedRoute/createReview",
@@ -57,12 +56,12 @@ export const SecondPage = () => {
             body: JSON.stringify(reviewData),
           }
         );
-
         if (response.ok) {
           const data = await response.json();
           console.log(data);
           // Save the review ID in the localStorage
           localStorage.setItem("reviewId", data.reviewId);
+          localStorage.setItem('companyName', companies);
           navigate("/reviews_three");
         } else {
           // Handle the error response
