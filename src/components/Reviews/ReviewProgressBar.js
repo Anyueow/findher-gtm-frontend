@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import "./ReviewProgressBar.css";
-import { Row, Col } from "react-bootstrap";
+import {Button, Row, Col, Toast } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import logo from "../../Assets/logo.png";
 
 function ReviewProgressBar(props) {
 
   const navigate = useNavigate();
+  const [close, setClose] = useState(false); 
 
   return (
     <div className="progress-container">
@@ -18,7 +19,13 @@ function ReviewProgressBar(props) {
         </Col>
         <Col md={2} xs={4}>
           <button className="progress-btn py-2"
-          onClick={ ()=>{navigate('/reviews_login')}}>
+              onClick={() =>
+                setClose((prevState) => ({
+                  ...prevState,
+                  status: false,
+                }))
+              }
+         >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -68,17 +75,17 @@ function ReviewProgressBar(props) {
             <div className="step-container">
               <button
                 className={`step-number ${
-                  props.percent >= 35 ? "active" : "inactive"
+                  props.percent >= 25 ? "active" : "inactive"
                 }`}
                 onClick={ ()=>{navigate('/reviews_three')}}
                 type="button"
-                disabled={props.percent  < 36 }
+                disabled={props.percent  < 26 }
               >
                 2
               </button>
               <div
                 className={`step-label ${
-                  props.percent >= 35 ? "step-label-active" : "inactive"
+                  props.percent >= 25 ? "step-label-active" : "inactive"
                 }`}
               >
                 Your Experience
@@ -91,11 +98,11 @@ function ReviewProgressBar(props) {
             <div className="step-container">
               <button
                 className={`step-number ${
-                  props.percent >= 65 ? "active" : "inactive"
+                  props.percent >= 50 ? "active" : "inactive"
                 }`}
                 onClick={ ()=>{navigate('/reviews_four')}}
                 type="button"
-                disabled={props.percent < 66 }
+                disabled={props.percent < 56 }
               >
                 3
               </button>
@@ -114,11 +121,11 @@ function ReviewProgressBar(props) {
             <div className="step-container">
               <button
                 className={`step-number ${
-                  props.percent >= 65 ? "active" : "inactive"
+                  props.percent >= 75 ? "active" : "inactive"
                 }`}
                 onClick={ ()=>{navigate('/reviews_four')}}
                 type="button"
-                disabled={props.percent < 66 }
+                disabled={props.percent < 76 }
               >
                 4
               </button>
@@ -156,6 +163,21 @@ function ReviewProgressBar(props) {
           )}
         </Step>
       </ProgressBar>
+      {close.status && (
+          <Toast className="review-progress-toast">
+            <Toast.Body>
+              <h3>Are you sure you want to exit?</h3>
+              <p>You will lose your progress</p>
+              <Button
+                type="button"
+                className="btn"
+                onClick={ ()=>{navigate('/reviews_login')}}
+              >
+                Ok
+              </Button>
+            </Toast.Body>
+          </Toast>
+        )}
     </div>
   );
 }

@@ -62,6 +62,29 @@
     color: #ee2c5b;
   }
 
+  .review-progress-toast{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 40% !important;
+    font-weight: 600;
+}
+
+.review-progress-toast .toast-body {
+    background-color: rgba(255, 255, 255, 1); 
+  }
+/* .Second-page-validation-toast{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 28% !important;
+    font-weight: 400;
+} */
+
   @media (max-width: 600px) {
     .RSPBprogressBar {
       margin-top: 40%;

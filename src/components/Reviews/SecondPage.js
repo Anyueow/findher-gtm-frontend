@@ -17,7 +17,7 @@ export const SecondPage = () => {
   const [title, setTitle] = useState("");
   const [currentlyWorking, setCurrentlyWorking] = useState(false);
 
-  const [showToast, setShowToast] = useState(true); // Add this state
+  const [showToast, setShowToast] = useState(true); 
 
   const navigate = useNavigate();
   const handleSubmit = (e) => {
@@ -239,18 +239,20 @@ export const SecondPage = () => {
               </Col>
             </Row>
             <Row>
+              <div className="d-flex justify-content-center">
               <Button
-                className="button-sub"
+                className="button-sub-review"
                 type="submit"
-                style={{ marginTop: "3%" }}
+                style={{ marginTop: "3%", width:"auto" }}
               >
                 Next
               </Button>
+              </div>
               <Link to="/reviews_two" className="nav-link2 bottom-link">
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
-            <button className="sec-page-arrow"
+            <button className="left-review-arrow"
             type="submit"
             >
               <svg

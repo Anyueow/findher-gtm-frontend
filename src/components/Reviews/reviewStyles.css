@@ -163,37 +163,36 @@ heading-name3{
 }
 
 
-.button-sub {
+.button-sub-review {
 
-    padding: 1rem 2rem;
-    font-family: "Montserrat-SemiBold";
-    font-size: 1rem;
-    border-radius: 2rem;
+    padding: 8px 60px;
+    border-radius: 5px;
     background-color: #ee2c5b;
     border: none  ;
-
+    font-family: DM Serif Text;
+    font-size: 25px;
 }
-.button-sub:disabled {
+.button-sub-review:disabled {
     background-color: #c78c9a;  /* Example gray color for disabled state */
     cursor: not-allowed;       /* Display a not allowed cursor */
 }
 
 
-.button-sub2{
-    margin: 2rem 0px;
-    padding: 1rem 5rem;
-
-
+.button-review-four{
+    padding: 8px 60px;
     align-content: center;
-    width: 30%;
-    font-family: "Montserrat-SemiBold";
-    font-size: 2rem;
-    border-radius: 2rem;
+    border-radius: 5px;
     background-color: rgba(226, 11, 60, 0.83);
     border: none  ;
+    text-align: center;
+    font-family: DM Serif Text;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    width: fit-content;
 }
 /* Optional hover effect */
-.button-sub:hover {
+.button-sub-review:hover {
     background-color: rgb(218, 224, 29);
     color: black;
     border: none;
@@ -201,7 +200,7 @@ heading-name3{
 
 }
 
-.button-sub2:hover {
+.button-review-four:hover {
     background-color: rgb(218, 224, 29);
     color: black;
     border: none;
@@ -452,6 +451,12 @@ heading-name3{
     background-color: rgba(255, 255, 255, 1); 
     text-align: center;
   }
+  .Second-page-validation-toast  {
+    top: 50% !important;
+    left: 50% !important;
+    position: fixed;
+  }
+
   .Second-page-validation-toast  .toast-body .btn{
    background-color: #ee2c5b;
    border: #ee2c5b;
@@ -497,7 +502,7 @@ heading-name3{
         margin-top: 0% !important;
     }
 
-    .button-sub{
+    .button-sub-review{
         width: 90%;
         align-content: center;
     }
@@ -543,7 +548,7 @@ heading-name3{
     /* .custom-input, .custom-input2{
         width: 100%;
     } */
-    .button-sub{
+    .button-sub-review{
 
         margin-left: 25px;
     }
@@ -632,10 +637,17 @@ heading-name3{
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
   }
-.sec-page-arrow{
-    position: absolute;
-    top: 60%;
+.left-review-arrow{
+    position: fixed;
+    top: 50%;
     right: 5%;
+    background-color: transparent;
+    border: none;
+}
+.right-review-arrow{
+    position: fixed;
+    top: 50%;
+    left: 5%;
     background-color: transparent;
     border: none;
 }
@@ -672,14 +684,11 @@ heading-name3{
   }
 
     
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .ratings{
         margin-left: 2%;
     }
-    .review-four-head{
-        margin-top: 18% !important;
-        margin-bottom: 8% !important;
-    }
+
   .review-heads{
     font-size: large !important;
   }
@@ -689,6 +698,7 @@ heading-name3{
   }
   .review-four-star-icon{
     width: 60% !important;
+
   }
   .review-four-star-label{
     width: 15% !important;
@@ -698,12 +708,12 @@ heading-name3{
   }
  
   
-  .review-four-sub{
+  /* .review-four-sub{
     width: 70% !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     font-size: x-large !important;
-  }
+  } */
 }
 
 @media (min-width:600px) and (max-width:830px) {

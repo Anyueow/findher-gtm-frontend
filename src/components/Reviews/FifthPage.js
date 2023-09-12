@@ -80,7 +80,7 @@ const FifthPage = () => {
 
     return (
       <div>
-        <ReviewProgressBar percent={65} />
+        <ReviewProgressBar percent={50} />
         <Container className="sub" style={containerStyle}>
           <Row className="reviews-box">
             <h1 className="head-name" style={{ marginBottom: "3%" }}>

@@ -20,6 +20,8 @@ import ThirdPage from "./components/Reviews/ThirdPage";
 import FourthPage from "./components/Reviews/FourthPage";
 import FifthPage from "./components/Reviews/FifthPage";
 import SixthPage from "./components/Reviews/SixthPage";
+import SeventhPage from "./components/Reviews/SeventhPage";
+
 import { NavbarProvider } from './components/NavbarContext';
 import SectionThree from "./components/SectionThree/SectionThree";
 import Testimonial from "./components/Testimonial/Testimonial";
@@ -118,6 +120,7 @@ function App() {
               <Route path="/reviews_two" element={<ThirdPage />}/>
               <Route path="/reviews_three" element={<FourthPage />}/>
               <Route path="/reviews_four" element={<FifthPage />}/>
+              <Route path="/reviews_five" element={<SeventhPage />}/>
               <Route path="/successUser" element={<SixthPage />}/>
               <Route path="/business_register" element={<BizReg />} />
               <Route path="/email_signin" element={<EmailSignIn />} />
