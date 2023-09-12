@@ -16,7 +16,6 @@ export const SecondPage = () => {
   const [Loc, setLoc] = useState("");
   const [title, setTitle] = useState("");
   const [currentlyWorking, setCurrentlyWorking] = useState(false);
-  
 
   const [showToast, setShowToast] = useState(true); // Add this state
 
@@ -42,14 +41,14 @@ export const SecondPage = () => {
 
       const reviewData = {
         companyName: companies,
-        industry:industry,
+        industry: industry,
         companyOffice: Loc,
         positionTitle: title,
-        employmentDetails:employment,
-        department:department,
-        workingStatus:currentlyWorking,
+        employmentDetails: employment,
+        department: department,
+        workingStatus: currentlyWorking,
         startDate: startDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
-        endDate: currentlyWorking? null :endDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
+        endDate: currentlyWorking ? null : endDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
       };
 
       try {
@@ -87,7 +86,13 @@ export const SecondPage = () => {
     submitReview();
   };
 
-  const employmentStatus = ["Full Time","Part Time","Contract","Unpaid Internship","Paid Internship"];
+  const employmentStatus = [
+    "Full Time",
+    "Part Time",
+    "Contract",
+    "Unpaid Internship",
+    "Paid Internship",
+  ];
   const [isFormValid, setisFormValid] = useState({
     message: "",
     for: "",
@@ -168,7 +173,9 @@ export const SecondPage = () => {
               </Col>
               <Col md={3} xs={6}>
                 <Form.Group>
-                  <Form.Label className="Office-Location">Start Date</Form.Label>
+                  <Form.Label className="Office-Location">
+                    Start Date
+                  </Form.Label>
                   <br />
                   <DatePicker
                     selected={startDate}
@@ -186,7 +193,7 @@ export const SecondPage = () => {
                   <br />
                   <DatePicker
                     selected={endDate}
-                    disabled={currentlyWorking} 
+                    disabled={currentlyWorking}
                     onChange={(date) => setEndDate(date)}
                     className="form-control"
                     dateFormat="yyyy-MM-dd"
@@ -195,12 +202,12 @@ export const SecondPage = () => {
                 </Form.Group>
               </Col>
             </Row>
-            <Row
-              style={{ marginBottom: "2%" }}
-            >
+            <Row style={{ marginBottom: "2%" }}>
               <Col md={6} xs={9}>
-              <Form.Group>
-                  <Form.Label className="Office-Location">Your Employment status</Form.Label>
+                <Form.Group>
+                  <Form.Label className="Office-Location">
+                    Your Employment status
+                  </Form.Label>
                   <Form.Select
                     value={employment}
                     onChange={(e) => setEmployment(e.target.value)}
@@ -208,16 +215,20 @@ export const SecondPage = () => {
                   >
                     <option value="">Select one</option>
                     {employmentStatus.map((status, index) => (
-                      <option key={index} value={status} >
-                        {status} 
+                      <option key={index} value={status}>
+                        {status}
                       </option>
                     ))}
                   </Form.Select>
                 </Form.Group>
               </Col>
-              <Col md={4} xs={12} className="d-flex justify-content-center align-items-center Office-Location">
+              <Col
+                md={4}
+                xs={12}
+                className="d-flex justify-content-center align-items-center Office-Location"
+              >
                 <Form.Group>
-                <Form.Label></Form.Label>
+                  <Form.Label></Form.Label>
                   <Form.Check
                     type="checkbox"
                     label="I’m currently in this position"
@@ -239,6 +250,26 @@ export const SecondPage = () => {
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
+            <button className="sec-page-arrow"
+            type="submit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <circle cx="25" cy="25" r="25" fill="#F6B5A8" />
+                <path
+                  d="M23 17L31 24.5L23 32"
+                  stroke="#EE2C5B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </Form>
         </Row>
         {showToast && (

@@ -632,7 +632,13 @@ heading-name3{
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
   }
-
+.sec-page-arrow{
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    background-color: transparent;
+    border: none;
+}
   @media (max-width: 600px) {
     .first-more-info{
        margin-left: 0% !important;
