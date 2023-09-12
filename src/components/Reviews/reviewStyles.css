@@ -392,10 +392,6 @@ heading-name3{
 
 }
 
-.form-grp-one {
-    align-content: center;
-    padding: 8%
-}
 
 .link-nav {
 
@@ -609,6 +605,27 @@ heading-name3{
 
   /* first Page */
 
+.review-one-head-name{
+    font-family: DM Serif Text;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 42px */
+  }
+
+  .form-grp-one {
+    align-content: center;
+    padding: 8%;
+    width: 72%;
+    color: var(--Black, #201C1D);
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: 0.25px;
+}
+
 .first-more-info{
     width: 200% !important;
     height: fit-content !important;
@@ -638,9 +655,16 @@ heading-name3{
           font-family: Montserrat;
 
       }
+      .form-grp-one {
+        width: 82%;
+    }
+    .review-one-head-name{
+        font-size: 20px;
+        line-height: 120%; /* 42px */
+        margin: 18px 0px;
+      }
   }
 
-    /* first Page */
     
   @media (max-width: 600px) {
     .ratings{
@@ -674,6 +698,17 @@ heading-name3{
     padding-bottom: 5px !important;
     font-size: x-large !important;
   }
+}
+
+@media (min-width:600px) and (max-width:830px) {
+    .form-grp-one {
+        width: 85%;
+        padding-top: 0% !important;
+    }
+    .review-one-head-name{
+        font-size: 24px;
+        line-height: 120%; /* 42px */
+      }
 }
 
   /* Third Page */

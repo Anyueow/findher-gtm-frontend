@@ -10,18 +10,22 @@ export const SecondPage = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [companies, setCompany] = useState("");
-  const [showToast, setShowToast] = useState(true); // Add this state
-
+  const [department, setDepartment] = useState("");
+  const [employment, setEmployment] = useState("");
+  const [industry, setIndustry] = useState("");
   const [Loc, setLoc] = useState("");
-
   const [title, setTitle] = useState("");
+  const [currentlyWorking, setCurrentlyWorking] = useState(false);
+  
+
+  const [showToast, setShowToast] = useState(true); // Add this state
 
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const submitReview = async () => {
-      if (endDate <= startDate) {
+      if (endDate <= startDate && !currentlyWorking) {
         setisFormValid({
           message: "End date must be greater than start date",
           for: "Date",
@@ -38,10 +42,14 @@ export const SecondPage = () => {
 
       const reviewData = {
         companyName: companies,
+        industry:industry,
         companyOffice: Loc,
         positionTitle: title,
+        employmentDetails:employment,
+        department:department,
+        workingStatus:currentlyWorking,
         startDate: startDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
-        endDate: endDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
+        endDate: currentlyWorking? null :endDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
       };
 
       try {
@@ -63,7 +71,7 @@ export const SecondPage = () => {
           console.log(data);
           // Save the review ID in the localStorage
           localStorage.setItem("reviewId", data.reviewId);
-          localStorage.setItem('companyName', companies);
+          localStorage.setItem("companyName", companies);
           navigate("/reviews_three");
         } else {
           // Handle the error response
@@ -79,9 +87,7 @@ export const SecondPage = () => {
     submitReview();
   };
 
-  const companyNames = ["Company 1", "Company 2", "Company 3"];
-  const companyLocs = ["Office 1", "Office 2"];
-  const titles = ["Manager", "Associate", "Intern"];
+  const employmentStatus = ["Full Time","Part Time","Contract","Unpaid Internship","Paid Internship"];
   const [isFormValid, setisFormValid] = useState({
     message: "",
     for: "",
@@ -94,7 +100,7 @@ export const SecondPage = () => {
       <Container className="container-second" style={{ marginTop: "20px" }}>
         <Row className="ROw">
           <Form onSubmit={handleSubmit} className="form-grp-one">
-            <h1 className="head-name" style={{ marginBottom: "4%" }}>
+            <h1 className="review-one-head-name" style={{ marginBottom: "4%" }}>
               Tell us about one{" "}
               <span style={{ color: "#ee2c5b" }}> company </span>
               you’ve worked at before :{" "}
@@ -103,87 +109,120 @@ export const SecondPage = () => {
               <Col md={6} xs={12}>
                 <Form.Group>
                   <Form.Label>Company Name</Form.Label>
-                  <Form.Select
+                  <Form.Control
                     value={companies}
                     onChange={(e) => setCompany(e.target.value)}
                     required
-                  >
-                    <option value="">Select a company</option>
-                    {companyNames.map((companyName, index) => (
-                      <option key={index} value={companyName} >
-                        {companyName} 
-                      </option>
-                    ))}
-                  </Form.Select>
+                  ></Form.Control>
                 </Form.Group>
               </Col>{" "}
-              <Col md={6} xs={12} className="Office-Location" >
+              <Col md={6} xs={12} className="Office-Location">
                 <Form.Group>
-                  <Form.Label>Office Location</Form.Label>
-                  <Form.Select
-                    value={Loc}
-                    onChange={(e) => setLoc(e.target.value)}
+                  <Form.Label>Industry</Form.Label>
+                  <Form.Control
+                    value={industry}
+                    onChange={(e) => setIndustry(e.target.value)}
                     required
-                  >
-                    <option value="">Select a location</option>
-                    {companyLocs.map((companyLoc, index) => (
-                      <option key={index} value={companyLoc}>
-                        {companyLoc}
-                      </option>
-                    ))}
-                  </Form.Select>
+                  ></Form.Control>
                 </Form.Group>{" "}
               </Col>
             </Row>
 
-            <Row style={{ marginBottom: "2%",marginTop:"27px" }}>
-              <Form.Group>
-                <Form.Label>Your Job Title</Form.Label>
-                <Form.Select
-                  as="select"
-                  style={{ padding: "20px" }}
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  required
-                >
-                  <option value="">Select a designation</option>
-                  {titles.map((titleOption, index) => (
-                    <option key={index} value={titleOption}>
-                      {titleOption}
-                    </option>
-                  ))}
-                </Form.Select>
-              </Form.Group>
+            <Row style={{ marginBottom: "2%", marginTop: "27px" }}>
+              <Col md={6} xs={12}>
+                <Form.Group>
+                  <Form.Label>Your Job Title</Form.Label>
+                  <Form.Control
+                    style={{ padding: "20px" }}
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                  ></Form.Control>
+                </Form.Group>
+              </Col>
+              <Col md={6} xs={12} className="Office-Location">
+                <Form.Group>
+                  <Form.Label>Location (enter city)</Form.Label>
+                  <Form.Control
+                    value={Loc}
+                    onChange={(e) => setLoc(e.target.value)}
+                    required
+                  ></Form.Control>
+                </Form.Group>
+              </Col>
             </Row>
 
             <Row
               style={{ marginBottom: "2%" }}
               className="justify-content-between"
             >
-              <Col md={6} xs={6}>
+              <Col md={6} xs={12} className="Office-Location">
                 <Form.Group>
-                  <Form.Label>Start Date</Form.Label>
+                  <Form.Label>The Department you were working in</Form.Label>
+                  <Form.Control
+                    value={department}
+                    onChange={(e) => setDepartment(e.target.value)}
+                    required
+                  ></Form.Control>
+                </Form.Group>{" "}
+              </Col>
+              <Col md={3} xs={6}>
+                <Form.Group>
+                  <Form.Label className="Office-Location">Start Date</Form.Label>
                   <br />
                   <DatePicker
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
                     style={{ width: "400px" }} // Adding this line to set the width to 100%
-                    className="form-control datetimepicker-input"
+                    className="form-control"
                     dateFormat="yyyy-MM-dd"
                     required
                   />
                 </Form.Group>
               </Col>
-              <Col md={6} xs={6} >
+              <Col md={3} xs={6}>
                 <Form.Group>
-                  <Form.Label className="">End Date</Form.Label>
+                  <Form.Label className="Office-Location">End Date</Form.Label>
                   <br />
                   <DatePicker
                     selected={endDate}
+                    disabled={currentlyWorking} 
                     onChange={(date) => setEndDate(date)}
-                    className="form-control datetimepicker-input "
+                    className="form-control"
                     dateFormat="yyyy-MM-dd"
                     required
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row
+              style={{ marginBottom: "2%" }}
+            >
+              <Col md={6} xs={9}>
+              <Form.Group>
+                  <Form.Label className="Office-Location">Your Employment status</Form.Label>
+                  <Form.Select
+                    value={employment}
+                    onChange={(e) => setEmployment(e.target.value)}
+                    required
+                  >
+                    <option value="">Select one</option>
+                    {employmentStatus.map((status, index) => (
+                      <option key={index} value={status} >
+                        {status} 
+                      </option>
+                    ))}
+                  </Form.Select>
+                </Form.Group>
+              </Col>
+              <Col md={4} xs={12} className="d-flex justify-content-center align-items-center Office-Location">
+                <Form.Group>
+                <Form.Label></Form.Label>
+                  <Form.Check
+                    type="checkbox"
+                    label="I’m currently in this position"
+                    // checked={isChecked}
+                    onChange={(e) => setCurrentlyWorking(!currentlyWorking)}
                   />
                 </Form.Group>
               </Col>
@@ -238,7 +277,7 @@ export const SecondPage = () => {
         {isFormValid.status && (
           <Toast className="Second-page-validation-toast">
             <Toast.Body>
-              <p >{isFormValid.message}</p>
+              <p>{isFormValid.message}</p>
               <Button
                 type="button"
                 className="btn"
@@ -248,7 +287,9 @@ export const SecondPage = () => {
                     status: false,
                   }))
                 }
-              >Ok</Button>
+              >
+                Ok
+              </Button>
             </Toast.Body>
           </Toast>
         )}

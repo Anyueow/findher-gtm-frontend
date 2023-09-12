@@ -114,13 +114,36 @@ function ReviewProgressBar(props) {
             <div className="step-container">
               <button
                 className={`step-number ${
+                  props.percent >= 65 ? "active" : "inactive"
+                }`}
+                onClick={ ()=>{navigate('/reviews_four')}}
+                type="button"
+                disabled={props.percent < 66 }
+              >
+                4
+              </button>
+              <div
+                className={`step-label ${
+                  props.percent >= 65 ? "step-label-active" : "inactive"
+                }`}
+              >
+                Company Features
+              </div>
+            </div>
+          )}
+        </Step>
+        <Step transition="scale">
+          {({ accomplished }) => (
+            <div className="step-container">
+              <button
+                className={`step-number ${
                   props.percent === 100 ? "active" : "inactive"
                 }`}
                 onClick={ ()=>{navigate('/successUser')}}
                 type="button"
                 disabled={props.percent < 100 }
               >
-                4
+                5
               </button>
               <div
                 className={`step-label ${
