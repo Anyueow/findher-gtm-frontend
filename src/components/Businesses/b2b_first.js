@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import "./bizzstyles.css";
 import NavbarContext from "../NavbarContext";
+import Footer from "../Footer";
 
 export const B2b_first = () => {
     const navbarHeight = React.useContext(NavbarContext);
@@ -181,6 +182,7 @@ export const B2b_first = () => {
                     </Col>
                 </Row>
             </Container>
+            <Footer/>
         </section>
     );
 };

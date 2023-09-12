@@ -56,7 +56,7 @@ function MainContent() {
           <SecTwo2mob/>
         <SectionThree />
         <Testimonial />
-
+        <Footer/>
 
       </>
   );
@@ -77,6 +77,7 @@ function NewDesign() {
   <SectionSix/>
   </div>
   <SectionSeven setBlur={setBlur}/>
+  <Footer/>
       </>
   );
 }
@@ -131,7 +132,7 @@ function App() {
 
 
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
       </NavbarProvider>
