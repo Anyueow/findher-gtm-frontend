@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {Button, Col, Container, Form, Row,} from 'react-bootstrap';
+import {Button, Col, Container, Dropdown, Form, Row,} from 'react-bootstrap';
 import "./reviewStyles.css";
 import {useNavigate} from "react-router-dom";
 import NavbarContext from "../NavbarContext";
 import ReactTooltip from "react-tooltip";
 import ReviewProgressBar from "./ReviewProgressBar";
-
+import {DropdownBox} from './DropdownBox'
 const isSafariOrMac = () => {
     const ua = window.navigator.userAgent;
     return /^((?!chrome|android).)*safari/i.test(ua);
@@ -87,66 +87,13 @@ const FifthPage = () => {
               Tell us your experience at <span style={{ color: "#ee2c5b" }}>{companyName}</span>
             </h1>
             <Form onSubmit={handleSubmit}>
-              <Form.Group className="question-grp">
-                <Form.Label className="question-grp-q">
-                  1. What are some good things about this workplace?
-                </Form.Label>
-                <Form.Control
-                  className="custom-input"
-                  type="text"
-                  placeholder="Type answer here..."
-                  value={goodThings}
-                  onChange={(e) => setGoodThings(e.target.value)}
-                  required
-                />
-              </Form.Group>
-
-              <Form.Group className="question-grp">
-                <Form.Label className="question-grp-q">
-                  2. What are some not-so-good things about this workplace?{" "}
-                </Form.Label>
-                <Form.Control
-                  className="custom-input"
-                  type="text"
-                  placeholder="Type answer here..."
-                  value={badThings}
-                  onChange={(e) => setBadThings(e.target.value)}
-                  required
-                />{" "}
-              </Form.Group>
+              <DropdownBox title={`Can you share an example of a flexible work arrangement you've experienced at this company?`} value={goodThings} func={setGoodThings}/>  
+              <DropdownBox title={`What are some not-so-good things about this workplace?{"`} value={badThings} func={setBadThings}/>  
+              <DropdownBox title={`What are some amenities this place offer?`} value={amenities} func={setAmenities}/>  
+              <DropdownBox title={`What other benefits are provided?`} value={benefits} func={setBenefits}/>
 
               <Row>
-                <Col md={6} xs="auto">
-                  <Form.Group className="question-grp">
-                    <Form.Label className="question-grp-q">
-                      3. What are some amenities this place offer?
-                    </Form.Label>
-                    <Form.Control
-                      className="custom-input"
-                      type="text"
-                      placeholder="Type answer here..."
-                      value={amenities}
-                      onChange={(e) => setAmenities(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
 
-                <Col md={6} xs="auto">
-                  <Form.Group className="question-grp">
-                    <Form.Label className="question-grp-q">
-                      4. What other benefits are provided?
-                    </Form.Label>
-                    <Form.Control
-                      className="custom-input"
-                      type="text"
-                      placeholder="Type answer here..."
-                      value={benefits}
-                      onChange={(e) => setBenefits(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col> 
                 <Button
                   type="submit"
                   className="button-sub"

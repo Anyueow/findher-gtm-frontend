@@ -44,12 +44,7 @@ const FourthPage = () => {
                 onClick={() => setter(ratingValue)}
                 className="star-radio"
               />
-              <div className="rating-div">
-                <div className="rating-title">{i === 0 && "Strongly"}</div>
-                <div className="rating-title">{i === 1 && "Disagree"}</div>
-                <div className="rating-title">{i === 2 && "Neutral"}</div>
-                <div className="rating-title">{i === 3 && "Agree"}</div>
-                <div className="rating-title">{i === 4 && "StronglyAgree"}</div>
+                <div className="rating-title">{i === 0 && "Strongly DisAgree"} {i === 1 && "Somewhat DisAgree"}{i === 2 && "Agree/ DisAgree"}{i === 3 && "Somewhat Agree"}{i === 4 && "Strongly Agree"}</div>
                 <BsCircleFill
                   className="star-icon review-four-star-icon"
                   color={
@@ -66,11 +61,11 @@ const FourthPage = () => {
                       ? safetyRating
                       : compensationRating)
                       ? "blue"
-                      : "#e4e5e9"
+                      : "#dbd9fd"
                   }
+                  
                   size={40}
                 />
-              </div>
             </label>
           );
         })}
@@ -210,7 +205,7 @@ const FourthPage = () => {
             <Col md={6} xs="12" className="fourth-left">
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
-                  1. I had the flexibility I needed to balance my work and
+                   I had the flexibility I needed to balance my work and
                   personal life:{" "}
                 </Form.Label>
                 <div className="form-stars">
@@ -219,7 +214,7 @@ const FourthPage = () => {
               </Form.Group>
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
-                  2. I feel supported by my bosses and leadership{" "}
+                  I feel supported by my bosses and leadership{" "}
                 </Form.Label>
                 <div className="form-stars">
                   {createRatingInputGroup("management", setManagementRating)}
@@ -227,7 +222,7 @@ const FourthPage = () => {
               </Form.Group>
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
-                  3. The workplace fosters a positive and friendly team culture{" "}
+                  The workplace fosters a positive and friendly team culture{" "}
                 </Form.Label>
                 <div className="form-stars">
                   {createRatingInputGroup("coWorkers", setCoWorkersRating)}
@@ -237,7 +232,7 @@ const FourthPage = () => {
             <Col md={6} xs="auto" className="fourth-right">
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
-                  4. I have several female co-workers and managers{" "}
+                  I have several female co-workers and managers{" "}
                 </Form.Label>
                 <div className="form-stars">
                   {createRatingInputGroup("diversity", setDiversityRating)}
@@ -245,7 +240,7 @@ const FourthPage = () => {
               </Form.Group>
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
-                  5. I feel safe and included at work.{" "}
+                  I feel safe and included at work.{" "}
                 </Form.Label>
                 <div className="form-stars">
                   {createRatingInputGroup("safety", setSafetyRating)}
@@ -253,7 +248,7 @@ const FourthPage = () => {
               </Form.Group>
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
-                  6. I feel fairly compensated in pay or other benefits{" "}
+                  I feel fairly compensated in pay or other benefits{" "}
                 </Form.Label>
                 <div className="form-stars">
                   {createRatingInputGroup(

@@ -31,16 +31,22 @@
 .review-label{
     width: 100%;
     height: 60px;
+    font-size: 2rem;
 }
 .rating-div{
-    /* border: 1px solid black; */
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 .rating-div .rating-title{
     /* font-size: 0.8rem; */
     color: #6C6C6C;
+    width: 50%;
     text-align: center;
     font-family: Poppins;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 124%; /* 12.4px */
@@ -89,6 +95,7 @@ text-align: left !important;
         font-family: Poppins;
         font-size: 20px;
         font-style: normal;
+        font-size: 1.5rem;
         font-weight: 400;
         line-height: 124%; /* 24.8px */
     }
@@ -106,21 +113,21 @@ text-align: left !important;
         font-size: 1.5rem ;
         height: 50%;
         width: 100%;
-        background-color: #DFE077;
         padding: 1rem 1rem;
-        border: 1px solid red;
     }
     .form-stars{
         height: 50%;
     }
-    
+    .star-icon{
+        width: 2rem;
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     
     .fourth-left{
         /* border: 1px solid black; */
-    
+        width: 100%;
     }
     .fourth-right{
         width: 100%;
@@ -129,9 +136,14 @@ text-align: left !important;
         font-size: 1.5rem ;
         height: 50%;
         width: 100%;
-        background-color: #DFE077;
         padding: 1rem 1rem;
-        border: 1px solid red;
+    }
+    .rating-div{
+        width: 19%;
+        /* border: 1px solid black; */
+    }
+    .rating-title{
+        height: 50%;
     }
     .form-stars{
         height: 50%;
@@ -139,7 +151,37 @@ text-align: left !important;
 }
 @media (width<500px) {
     .star-icon{
-        width: 5rem;
+        /* width: 5rem; */
+    }
+    .fourth-rating-box{
+        height: auto;
+    }
+    .review-label{
+        color: #000;
+        font-family: Poppins;
+        font-style: normal;
+        font-size: 1.1rem;
+        
+    }
+    .form-stars{
+        /* height: 5rem; */
+    }
+    .rating-div{
+        width: 33%;
+    }
+    .star-icon{
+        font-size: 0.5rem !important;
+    }
+    .inp-group{
+        width: 100%;
+        font-size: 0.3rem;
+        /* gap: 2rem;    */
+        flex-wrap: wrap;
+        margin-top: 0;
+        justify-content: unset;
+    }
+    .review-label{
+        padding: 0 0;
     }
 }
 
