@@ -9,12 +9,12 @@
 .sec-one-sub-p{
     font-size: 1rem;
     color: #888;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .section-one-first-img{
-    width: 55% !important;
+    width: 70% !important;
     margin-top: 3% !important;
 }
 
@@ -31,14 +31,13 @@
     border-radius: 10px;
 }
 
-.rectangle-row{
+.sec-one-rectangle-row{
     margin-top: 0% !important;
     margin-left: 1%;
 }
 
-.rectangle-row .col-md-3{
-   
-    width: 19% !important;
+.sec-one-rectangle-row .col-md-3{
+    width: 25% !important;
 }
 
 .JoinButtonS {
@@ -82,7 +81,9 @@
 .desktop{
     display: block !important;
 }
-
+.sec-one-card {
+    height: 65vh !important;
+}
 @media (min-width:600px) and (max-width:830px) {
     .sec-one-sub-p{
         color: #888;
@@ -93,7 +94,7 @@
         margin-top: 3% !important;
     }
     
-    .rectangle-row .col-md-3{
+    .sec-one-rectangle-row .col-md-3{
     width: 29% !important;
     }
     .rectangle {
@@ -126,26 +127,13 @@
 }
 
 @media (max-width:600px) {
-    /* .job-search-section h3{
-        font-size: 1.7rem !important;
-        width: 100% !important;
-        margin: 1rem 0;
-    } */
-    /* .job-search-section p{
-        font-size: 15px;
-        width: 100% !important;
-        font-family: "Inter", sans-serif!important;
-        line-height: 1.75rem;
-    } */
-    
-    
-    .rectangle{
-        width: 170px; /* Adjust based on your needs */
-        height: 220px; /* Adjust based on your needs */
-    }
-    .rectangle h4{
+    /* .rectangle{ */
+        /* width: 170px; Adjust based on your needs */
+        /* height: 220px; Adjust based on your needs */
+    /* } */
+    /* .rectangle h4{
         font-size: large;
-    }
+    } */
     .sec-one-last-p{
         margin-top: 40px !important;
         font-size: medium !important;
@@ -251,7 +239,7 @@
 .sec-one-para{
     color: #656565;
     font-family: "Inter", sans-serif;
-    width: 40%;
+    width: 50%;
     font-size: 1.2rem;
     line-height: 2rem;
 }
@@ -293,6 +281,13 @@
     .card .card-img{
         width: 70%;
     }
+    .sec-one-card {
+        height: 52vh !important;
+    }
+    .section-one-first-img{
+        width: 75% !important;
+        margin-top: 3% !important;
+    }
 }
 @media (width<800px) {
     .sec-one-para{
@@ -300,7 +295,7 @@
         font-size: 15px;
         font-family: "Inter", sans-serif;
         font-weight: 500;
-        width: 300px;
+        width: 65%;
         line-height: 1.6em;
     }
     .sec-one-h3{
@@ -318,9 +313,16 @@
     .sec-one-last-para{
         color: #656565;
         font-family: "Inter", sans-serif;
-        width: 330px !important;
+        width: 70% !important;
         font-size: 15px;
         line-height: 1.6em;
+    }
+    .sec-one-card {
+        height: 48vh !important;
+    }
+    .section-one-first-img{
+        width: 75% !important;
+        margin-top: 3% !important;
     }
 }
 .hero-button{

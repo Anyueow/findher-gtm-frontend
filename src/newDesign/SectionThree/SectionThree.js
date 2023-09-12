@@ -9,13 +9,15 @@ import img3 from "./screen 5.webp";
 import row1img2 from "./row1img2.webp";
 import row2img2 from "./row2img2.webp";
 import row3img1 from "./row3img1.webp";
-import row3img2 from "./row3img2.webp";
+import row3img2 from "./row3img2.webp"; 
+
 function SectionThree() {
+
   return (
     <Container className="my-5 section-three-container secOutCont" id="features"> 
       {/* The Whole Picture */}
-      <Row className="mb-4 align-items-center sec3Rows" >
-        <Col md={5} className="no-gutter">
+      <Row className="align-items-center sec3Rows" >
+        <Col sm={5} className="no-gutter">
           <h3 className="head wholeHead">The Whole Picture</h3>
           <p className="wholePara">
             Knowledge is power, and having access to the whole picture empowers
@@ -23,41 +25,41 @@ function SectionThree() {
             control of your path, whether you're just starting or advancing your
             career.
           </p>
-          <Button className="hero-button">Get Acess!</Button>
+          <Button className="hero-button">Get Access</Button>
         </Col>
-        <Col md={7} xs={12} className="no-gutter">
+        <Col sm={7}  className="no-gutter">
           <div className="decorative-rectangle img-div"></div>
           <Image
             src={row1img2}
-            className="overlay-image img-one"
+            className="overlay-image sec-three-img-one"
             alt="Decorative Image 1"
           />
           <Image
             src={img2}
-            className="overlay-image-two img-two"
+            className="overlay-image-two sec-three-img-two"
             alt="Decorative Image 1"
           />
         </Col>
       </Row>
 
       <Row
-        className="mb-4 align-items-center sec3Rows sec3row2"
+        className="align-items-center sec3Rows sec3row2"
         // style={{ marginTop: "8%" }}
       >
-        <Col md={7} className="no-gutter ">
+        <Col sm={7} className="no-gutter">
           <div className="decorative-rectangle-right img-div"></div>
           <Image
             src={img3}
-            className="overlay-image-right img-one"
+            className="overlay-image-right sec-three-img-one"
             alt="Decorative Image 1"
           />
           <Image
             src={row2img2}
-            className="overlay-image-right-two img-two"
+            className="overlay-image-right-two sec-three-img-two"
             alt="Decorative Image 1"
           />
         </Col>
-        <Col md={5} className="no-gutter ">
+        <Col sm={5} className="no-gutter ">
           <h3 className="head wholeHead" style={{ marginLeft: "6%" }}>
             Exclusive Insights
           </h3>
@@ -73,10 +75,10 @@ function SectionThree() {
         </Col>
       </Row>
       <Row
-        className="mb-4 align-items-center sec3Rows"
+        className="align-items-center sec3Rows"
         // style={{ marginTop: "8%" }}
       >
-        <Col md={7} className="no-gutter">
+        <Col sm={7} className="no-gutter">
         <h3 className="head wholeHead ">Personalized For You</h3>
           <p className="subc wholePara" style={{ width: "85%" }}>
             Your unique experiences and aspirations deserve recognition. With
@@ -85,17 +87,17 @@ function SectionThree() {
           </p>
           <Button className="hero-button" style={{fontWeight:"bold",color: "#ffffffe0"}}>Take Me There</Button>
         </Col>
-        <Col md={5} className="no-gutter">
+        <Col sm={5} className="no-gutter">
         <div className="decorative-rectangle lstOne img-div"></div>
           <Image
             src={row3img1}
-            className="overlay-image-three img-one"
+            className="overlay-image-three sec-three-img-one"
             style={{ top: "45%" }}
             alt="Decorative Image 1"
           />
           <Image
             src={row3img2}
-            className="overlay-image-right-three img-two-last"
+            className="overlay-image-right-three sec-three-img-two-last"
             alt="Decorative Image 3"
           />
         </Col>

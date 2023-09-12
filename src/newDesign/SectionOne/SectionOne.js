@@ -6,55 +6,102 @@ import img1 from "./Artboard 1-2.png";
 import img2 from "./Artboard 1 copy.png";
 import img3 from "./Artboard 1 copy 2.png";
 import img4 from "./Group 181.png";
+import { motion } from "framer-motion";
 
 function SectionOne() {
+
+  const containerVariants = {
+    initial:{
+      opacity: 0, 
+      y: 100
+    },
+    animate:{
+      opacity:1,
+      y:0,
+    },
+    transition:{duration: 1 }
+  };
   return (
-    <div className="job-search-section">
-      <Row className="justify-content-center" >
+    <div className="job-search-section mt-5">
+      <Row className="justify-content-center" 
+      >
         <Col className="justify-content-center section-one-container">
 
-          <h5 className="sec-one-head font-weight-bold howwecan sec-one-h5">How We Help You</h5>
-          <h3 className="sec-one-sub sec-one-h3">
+          <motion.h5 className="sec-one-head font-weight-bold howwecan sec-one-h5"
+               variants={containerVariants}
+               initial="initial"
+              whileInView="animate"
+              viewport ={{
+                once:true,
+              }}
+          >How We Help You</motion.h5>
+          <motion.h3 className="sec-one-sub sec-one-h3"
+              variants={containerVariants}
+              initial="initial"
+             whileInView="animate"
+             viewport ={{
+               once:true,
+             }}
+          >
 
             Redesigning Job Search for Indian Women
-          </h3>
-          <p className="sec-one-sub-p sec-one-para">
+          </motion.h3>
+          <motion.p className="sec-one-para"
+              variants={containerVariants}
+              initial="initial"
+             whileInView="animate"
+             viewport ={{
+               once:true,
+             }}
+          >
             It's common for job postings to lack detailed information, leaving
             you in the dark about a potential employer's compatibility with your
             needs and aspirations. FindHer offers exclusive and reliable
             insights into different workplaces, allowing you to make informed
             decisions about your next career move.
-          </p>
-          <img
+          </motion.p>
+          <motion.img
             src={demo}
             alt="Placeholder 1"
             className="section-one-first-img desktop"
+            variants={containerVariants}
+            initial="initial"
+           whileInView="animate"
+           viewport ={{
+             once:true,
+           }}
           />
-          <img
+          <motion.img
             src={img4}
             alt="Placeholder 1"
             className="section-one-first-img mobile"
+            variants={containerVariants}
+            initial="initial"
+           whileInView="animate"
+           viewport ={{
+             once:true,
+           }}
           />
         </Col>
       </Row>
-      <Row className="justify-content-center mt-5 rectangle-row">
+      <Row className="justify-content-center mt-5 sec-one-rectangle-row">
         <Col md={3} className="text-center mx-1 justify-content-center desktop">
           <div className="line mb-n3"></div>
-          <div className=" shadow  card">
+          <div className="sec-one-card  card">
             <img src={img1} alt="in Rectangle" className="img-in-rectangle card-img" />
             <h4 className="card-h4">The Whole Picture</h4>
           </div>
         </Col>
-        <Col md={3} className="text-center mx-1 justify-content-center desktop">
+        <Col md={3} className="text-center mx-4 justify-content-center desktop">
           <div className="line mb-n3"></div>
-          <div className=" shadow d-flex flex-column align-items-center justify-content-center card">
+          <div className=" sec-one-card  d-flex flex-column align-items-center justify-content-center card">
             <img src={img2} alt="in Rectangle" className="img-in-rectangle card-img" />
             <h4 className="card-h4">Exclusive insights</h4>
           </div>
         </Col>
         <Col md={3} className="text-center mx-1 justify-content-center desktop card-img">
           <div className="line mb-n3"></div>
-          <div className=" shadow d-flex flex-column align-items-center justify-content-center card">
+          <div className=" sec-one-card  d-flex flex-column align-items-center justify-content-center card">
             <img src={img3} alt="in Rectangle" className="img-in-rectangle card-img" />
             <h4 className="card-h4">Personalized For You</h4>
           </div>

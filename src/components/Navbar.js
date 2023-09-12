@@ -82,7 +82,7 @@ function NavBar() {
               }}
               onClick={joinExternalSurvey}
             >
-              Join the Waitlist!
+              Join the Waitlist
             </strong>
           </li>
           {/* <li>
