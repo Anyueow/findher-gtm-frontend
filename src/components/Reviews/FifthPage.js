@@ -27,7 +27,7 @@ const FifthPage = () => {
 
     const containerStyle = isSafariOrMac()
                            ? {minHeight: "100vh", paddingTop: navbarHeight}
-                           : {minHeight: "130vh", paddingTop: navbarHeight};
+                           : {minHeight: "130vh"};
 
 
     const handleSubmit = async (e) => {

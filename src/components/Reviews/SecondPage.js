@@ -116,7 +116,7 @@ export const SecondPage = () => {
                   </Form.Select>
                 </Form.Group>
               </Col>{" "}
-              <Col md={6} xs={12} >
+              <Col md={6} xs={12} className="Office-Location">
                 <Form.Group>
                   <Form.Label>Office Location</Form.Label>
                   <Form.Select
@@ -157,7 +157,7 @@ export const SecondPage = () => {
 
             <Row
               style={{ marginBottom: "2%" }}
-              className="justify-content-lg-start"
+              className="justify-content-between"
             >
               <Col md={6} xs={6}>
                 <Form.Group>
