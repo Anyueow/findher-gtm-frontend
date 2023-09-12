@@ -63,6 +63,7 @@ export const SecondPage = () => {
           console.log(data);
           // Save the review ID in the localStorage
           localStorage.setItem("reviewId", data.reviewId);
+          localStorage.setItem('companyName', companies);
           navigate("/reviews_three");
         } else {
           // Handle the error response
@@ -116,7 +117,7 @@ export const SecondPage = () => {
                   </Form.Select>
                 </Form.Group>
               </Col>{" "}
-              <Col md={6} xs={12} >
+              <Col md={6} xs={12} className="Office-Location" >
                 <Form.Group>
                   <Form.Label>Office Location</Form.Label>
                   <Form.Select
@@ -157,7 +158,7 @@ export const SecondPage = () => {
 
             <Row
               style={{ marginBottom: "2%" }}
-              className="justify-content-lg-start"
+              className="justify-content-between"
             >
               <Col md={6} xs={6}>
                 <Form.Group>

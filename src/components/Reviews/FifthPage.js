@@ -23,11 +23,11 @@ const FifthPage = () => {
     const navigate = useNavigate();
     const navbarHeight = React.useContext(NavbarContext);
 
-    const companyName = "placeholder"; // Placeholder for company name
+    const companyName =  localStorage.getItem('companyName'); // Placeholder for company name
 
     const containerStyle = isSafariOrMac()
                            ? {minHeight: "100vh", paddingTop: navbarHeight}
-                           : {minHeight: "130vh", paddingTop: navbarHeight};
+                           : {minHeight: "130vh"};
 
 
     const handleSubmit = async (e) => {
@@ -84,7 +84,7 @@ const FifthPage = () => {
         <Container className="sub" style={containerStyle}>
           <Row className="reviews-box">
             <h1 className="head-name" style={{ marginBottom: "3%" }}>
-              Tell us your experience at <b>{companyName}</b>
+              Tell us your experience at <span style={{ color: "#ee2c5b" }}>{companyName}</span>
             </h1>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="question-grp">

@@ -461,7 +461,7 @@ heading-name3{
    border: #ee2c5b;
   }
   .datetimepicker-input{
-    width: 255% !important;
+    width: 250% !important;
   }
 .underline-text {
     position: relative;
@@ -567,6 +567,18 @@ heading-name3{
         font-size: 1.7rem!important;
     }
     
+}
+
+@media (max-width: 767px) {
+    .Office-Location{
+        margin-top: 5%;
+    }
+}
+
+@media  (width<1024px) {
+    .datetimepicker-input{
+        width: 130%;
+      }
 }
 
 .Waitlistpara{
