@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, InputGroup, Toast } from 'react-bootstrap';
 import { BsCircleFill } from 'react-icons/bs'
 import "./reviewStyles.css";
+import "./FourthPage.css";
 import { useNavigate } from "react-router-dom";
 import ReviewProgressBar from "./ReviewProgressBar";
 
@@ -25,17 +26,11 @@ const FourthPage = () => {
 
   const createRatingInputGroup = (name, setter) => {
     return (
-      <InputGroup className='' id='linear-scale' style={{
-        width: "80%",
-        display: "flex",
-        justifyContent: "space-between",
-        marginTop:"2rem",
-        marginBottom:"2rem",
-      }}>
+      <InputGroup  className='inp-group'>
         {[...Array(5)].map((star, i) => {
           const ratingValue = i + 1;
           return (
-            <label key={i} className='review-four-star-label'>
+            <label key={i} className='rating-div'>
               <input
                 type="radio"
                 name={name}
@@ -52,7 +47,7 @@ const FourthPage = () => {
                 <div className='rating-title'>{i === 4 && "StronglyAgree"}</div>
                 <BsCircleFill
                   className="star-icon review-four-star-icon"
-                  color={ratingValue <= (name === 'flexibility' ? flexibilityRating :
+                  color={ratingValue === (name === 'flexibility' ? flexibilityRating :
                     name === 'management' ? managementRating :
                       name === 'coWorkers' ? coWorkersRating :
                         name === 'diversity' ? diversityRating :
@@ -194,40 +189,46 @@ const FourthPage = () => {
         style={{ marginTop: "20px" }}>
 
         <Form onSubmit={handleSubmit}>
-          <Row >
+          <Row className='fourth-row'>
             <h1 className="head-name review-four-head" style={{ marginBottom: "3%", marginTop: "5%" }}>Tell us your experience at <b>{companyName}</b></h1>
-            <Col md={6} xs="12">
-              <Form.Group className="rating-box">
-                <Form.Label className="review-heads">1. Flexibility </Form.Label>
-                <h3 className="review-subs"> I am able to schedule my work as per my requirements </h3>
-                {createRatingInputGroup("flexibility", setFlexibilityRating)}
+            <Col md={6} xs="12" className='fourth-left'>
+              <Form.Group className="rating-box fourth-rating-box">
+                <Form.Label className="review-label">1. I am able to schedule my work as per my requirements </Form.Label>
+                <div className='form-stars'>
+                  {createRatingInputGroup("flexibility", setFlexibilityRating)}
+                </div>
               </Form.Group>
-              <Form.Group className="rating-box">
-                <Form.Label className="review-heads">2. Management </Form.Label>
-                <h3 className="review-subs">I feel supported by my bosses and leadership</h3>
-                {createRatingInputGroup("management", setManagementRating)}
+              <Form.Group className="rating-box fourth-rating-box">
+                <Form.Label className="review-label">2. I feel supported by my bosses and leadership </Form.Label>
+                <div className='form-stars'>
+                  {createRatingInputGroup("management", setManagementRating)}
+                </div>
               </Form.Group>
-              <Form.Group className="rating-box">
-                <Form.Label className="review-heads">3. Co-Workers </Form.Label>
-                <h3 className="review-subs">The workplace fosters a positive and friendly team culture</h3>
-                {createRatingInputGroup("coWorkers", setCoWorkersRating)}
+              <Form.Group className="rating-box fourth-rating-box">
+                <Form.Label className="review-label">3. The workplace fosters a positive and friendly team culture </Form.Label>
+                <div className='form-stars'>
+                  {createRatingInputGroup("coWorkers", setCoWorkersRating)}
+                </div>
               </Form.Group>
             </Col>
-            <Col md={6} xs="auto">
-              <Form.Group className="rating-box">
-                <Form.Label className="review-heads">4. Diversity </Form.Label>
-                <h3 className="review-subs">I have several female co-workers and managers</h3>
-                {createRatingInputGroup("diversity", setDiversityRating)}
+            <Col md={6} xs="auto" className='fourth-right'>
+              <Form.Group className="rating-box fourth-rating-box">
+                <Form.Label className="review-label">4. I have several female co-workers and managers </Form.Label>
+                <div className='form-stars'>
+                  {createRatingInputGroup("diversity", setDiversityRating)}
+                </div>
               </Form.Group>
-              <Form.Group className="rating-box">
-                <Form.Label className="review-heads">5. Safety </Form.Label>
-                <h3 className="review-subs">I feel safe and included at work.</h3>
-                {createRatingInputGroup("safety", setSafetyRating)}
+              <Form.Group className="rating-box fourth-rating-box">
+                <Form.Label className="review-label">5. I feel safe and included at work. </Form.Label>
+                <div className='form-stars'>
+                  {createRatingInputGroup("safety", setSafetyRating)}
+                </div>
               </Form.Group>
-              <Form.Group className="rating-box">
-                <Form.Label className="review-heads">6. Compensation </Form.Label>
-                <h3 className="review-subs">I feel fairly compensated in pay or other benefits</h3>
-                {createRatingInputGroup("compensation", setCompensationRating)}
+              <Form.Group className="rating-box fourth-rating-box">
+                <Form.Label className="review-label">6. I feel fairly compensated in pay or other benefits </Form.Label>
+                <div className='form-stars'>
+                  {createRatingInputGroup("compensation", setCompensationRating)}
+                </div>
               </Form.Group>
             </Col>
             <Row className="d-flex justify-content-center">
