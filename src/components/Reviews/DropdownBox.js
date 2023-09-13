@@ -6,13 +6,13 @@ import "./Dropdown.css";
 
 export const DropdownBox = (props) => {
    const [questions, setQuestions] = useState(false);
-
+  
 
 
   useEffect(() => {
     const shuffledQuestions = shuffleArray(props.questions);
     setQuestions(shuffledQuestions.slice(0, 6));
-  },[]);
+  },[props.questions.length]);
 
   const shuffleArray = (array) => {
     const shuffled = array.slice();
