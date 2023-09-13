@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Container, Form, Row, Col, Toast } from "react-bootstrap";
 import "./reviewStyles.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ReviewProgressBar from "./ReviewProgressBar";
+import axios from "axios";
+import TextField from '@mui/material/TextField';
+
+
+import Autocomplete from "@mui/material/Autocomplete";
 
 export const SecondPage = () => {
   const [startDate, setStartDate] = useState("");
@@ -17,9 +22,47 @@ export const SecondPage = () => {
   const [title, setTitle] = useState("");
   const [currentlyWorking, setCurrentlyWorking] = useState(false);
 
-  const [showToast, setShowToast] = useState(true); 
+  const [showToast, setShowToast] = useState(true);
+
+  const [CompanyList, setCompanyList] = useState([]);
 
   const navigate = useNavigate();
+
+  const getCompanies = async (cname) => {
+    const apikey=process.env.REACT_APP_xrapidKey
+    const hostkey=process.env.REACT_APP_xrapidHost
+    const options = {
+      method: "GET",
+      url: "https://crunchbase-crunchbase-v1.p.rapidapi.com/autocompletes",
+      params: {
+        query: { cname },
+        limit: "5",
+      },
+      headers: {
+        "X-RapidAPI-Key": {apikey},
+        "X-RapidAPI-Host": {hostkey},
+      },
+    };
+
+    try {
+      const response = await axios.request(options);
+      if (response.status === 200) {
+        // Handle the response data here, for example:
+        const companyData = response.data;
+        // console.log(companyData);
+
+        // You can return the data or perform additional actions here
+        return companyData;
+      } else {
+        // Handle other status codes if needed
+        console.error(`Request failed with status code ${response.status}`);
+      }
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -99,6 +142,48 @@ export const SecondPage = () => {
     status: false,
   });
 
+  // const [query, setState] = useState("");
+  const debounce = (fn, delay) => {
+    let timer;
+    return function () {
+      let context = this,
+        args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(context, args), delay);
+    };
+  };
+  const apiCall = (val) => setCompany(val);
+  const delayQuery = debounce((val) => apiCall(val), 1000);
+  const handleCompanyChange = (e) => {
+    if(e.target.value!==null)
+      delayQuery(e.target.value);
+    else setCompanyList([])
+  };
+  useEffect(() => {
+    async function apiCall(params) {
+      const data = await getCompanies(companies);
+      const temp = data.entities.map((item) => item.identifier.value);
+      setCompanyList(temp);
+    }
+    apiCall();
+    console.log(CompanyList, "companieslist",companies);
+  }, [companies]);
+
+  const autoCompleteRef = useRef();
+ const inputRef = useRef();
+//  const options = {....
+//  };
+ useEffect(() => {
+  autoCompleteRef.current = new window.google.maps.places.Autocomplete(
+   inputRef.current,
+  //  options
+  );
+  autoCompleteRef.current.addListener("place_changed", async function () {
+   const place = await autoCompleteRef.current.getPlace();
+   setLoc(place)
+   console.log({ place });
+  });
+ }, []);
   return (
     <div>
       <ReviewProgressBar percent={1} />
@@ -114,11 +199,26 @@ export const SecondPage = () => {
               <Col md={6} xs={12}>
                 <Form.Group>
                   <Form.Label>Company Name</Form.Label>
-                  <Form.Control
-                    value={companies}
-                    onChange={(e) => setCompany(e.target.value)}
+                  {/* <Form.Control
+                    // value={companies}
+                    onChange={handleCompanyChange}
                     required
-                  ></Form.Control>
+                  ></Form.Control> */}
+                  <Autocomplete
+                    disablePortal
+                    id="combo-box-demo"
+                    onInputChange={handleCompanyChange}
+                    options={CompanyList}
+                    sx={{ width: 415 }}
+                    renderInput={(params) => (
+                      // <Form.Control
+                      //   {...params}
+                      //   onChange={handleCompanyChange}
+                      //   required
+                      // ></Form.Control>
+                      <TextField {...params} />
+                    )}
+                  />
                 </Form.Group>
               </Col>{" "}
               <Col md={6} xs={12} className="Office-Location">
@@ -149,8 +249,9 @@ export const SecondPage = () => {
                 <Form.Group>
                   <Form.Label>Location (enter city)</Form.Label>
                   <Form.Control
-                    value={Loc}
-                    onChange={(e) => setLoc(e.target.value)}
+                    // value={Loc}
+                    // onChange={(e) => setLoc(e.target.value)}
+                    ref={inputRef}
                     required
                   ></Form.Control>
                 </Form.Group>
@@ -240,21 +341,19 @@ export const SecondPage = () => {
             </Row>
             <Row>
               <div className="d-flex justify-content-center">
-              <Button
-                className="button-sub-review"
-                type="submit"
-                style={{ marginTop: "3%", width:"auto" }}
-              >
-                Next
-              </Button>
+                <Button
+                  className="button-sub-review"
+                  type="submit"
+                  style={{ marginTop: "3%", width: "auto" }}
+                >
+                  Next
+                </Button>
               </div>
               <Link to="/reviews_two" className="nav-link2 bottom-link">
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
-            <button className="left-review-arrow"
-            type="submit"
-            >
+            <button className="left-review-arrow" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"

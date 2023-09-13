@@ -1,0 +1,46 @@
+.exitcont {
+    background-color: white;
+    width: 30%;
+    position: absolute;
+    height: 30%;
+    top: 30%;
+    border-radius: 10px;
+    left: 35%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 3px 19px 3px rgba(0, 0, 0, 0.5);
+}
+.exith1{
+    margin-top: 21px;
+}
+.exith1 p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.exith2 p{
+    font-family: sans-serif;
+    color: black;
+}
+.exitbtns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.exitbtn{
+    margin: 20px;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    width: 20%;
+}
+.exitcancel{
+    border: 0.5px solid pink;
+    background-color: white;
+}
+.exityes{
+    background-color: #f1406b;
+    color: white;
+}
