@@ -1,9 +1,9 @@
 import React from "react";
 import './ExitPopup.css'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 function ExitPopup(props) {
-    const {setExitpopup}=props;
-    const navigate = useNavigate();
+    // const {setExitpopup}=props;
+    // const navigate = useNavigate();
   return (
     <div>
       <div className="exitcont">

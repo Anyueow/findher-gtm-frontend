@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import "./ReviewProgressBar.css";
-import { Button, Row, Col, Toast } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import logo from "../../Assets/logo.png";
 import ExitPopup from "../../newDesign/ModalPopup/ExitPopup";
