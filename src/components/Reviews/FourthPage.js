@@ -268,7 +268,7 @@ const FourthPage = () => {
               </Button>
             </Row>
           </Row>
-          <button className="left-review-arrow" type="submit">
+          <button className="right-review-arrow" type="submit">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -286,7 +286,7 @@ const FourthPage = () => {
               />
             </svg>
           </button>
-          <button className="right-review-arrow" 
+          <button className="left-review-arrow" 
           onClick={()=>navigate('/reviews_one')}
           >
             <svg

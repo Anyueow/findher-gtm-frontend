@@ -166,7 +166,6 @@ export const SecondPage = () => {
       setCompanyList(temp);
     }
     apiCall();
-    console.log(CompanyList, "companieslist",companies);
   }, [companies]);
 
   const autoCompleteRef = useRef();
@@ -181,7 +180,6 @@ export const SecondPage = () => {
   autoCompleteRef.current.addListener("place_changed", async function () {
    const place = await autoCompleteRef.current.getPlace();
    setLoc(place)
-   console.log({ place });
   });
  }, []);
   return (
@@ -353,7 +351,7 @@ export const SecondPage = () => {
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
-            <button className="left-review-arrow" type="submit">
+            <button className="right-review-arrow" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
