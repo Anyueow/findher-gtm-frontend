@@ -12,7 +12,7 @@ export const DropdownBox = (props) => {
   useEffect(() => {
     const shuffledQuestions = shuffleArray(props.questions);
     setQuestions(shuffledQuestions.slice(0, 6));
-  },[props.questions.length]);
+  },[props.questions.length]); 
 
   const shuffleArray = (array) => {
     const shuffled = array.slice();
