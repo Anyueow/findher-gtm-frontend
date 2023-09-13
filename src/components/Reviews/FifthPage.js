@@ -18,10 +18,12 @@ const FifthPage = () => {
   const [questionOne, setQuestionOne] = useState({
     question: "",
     answer: "",
+    wordsCount:false
   });
   const [questionTwo, setQuestionTwo] = useState({
     question: "",
     answer: "",
+    wordsCount:false
   });
 
     // within your component
@@ -38,6 +40,40 @@ const FifthPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const questionOneWords = questionOne.answer.split(/\s+/).filter((word) => word !== "");
+        if (questionOneWords.length < 50) {
+          setQuestionOne((prevState) => ({
+            ...prevState,
+            wordsCount: true
+          }));
+          console.error('Question One answer does not have at least 50 words.');
+          return;
+        }
+        else{
+          setQuestionOne((prevState) => ({
+            ...prevState,
+            wordsCount: false
+          }));
+        }
+      
+        // Check the word count of questionTwo's answer
+        const questionTwoWords = questionTwo.answer.split(/\s+/).filter((word) => word !== "");
+        if (questionTwoWords.length < 50) {
+          setQuestionTwo((prevState) => ({
+            ...prevState,
+            wordsCount: true
+          }));
+          console.error('Question Two answer does not have at least 50 words.');
+          return;
+        }
+        else{
+          setQuestionTwo((prevState) => ({
+            ...prevState,
+            wordsCount: false
+          }));
+        }
+      
+
         // Get the reviewId and token from local storage
         const reviewId = localStorage.getItem('reviewId');
         const token = localStorage.getItem('token');
@@ -51,7 +87,8 @@ const FifthPage = () => {
             questionOne,
             questionTwo,
         };
-      
+
+    
 
         try {
             const response = await fetch('https://findher-backend.onrender.com/updateReviewDetails', {
@@ -123,23 +160,68 @@ const FifthPage = () => {
             <Form onSubmit={handleSubmit}>
               <DropdownBox questions={questionSetOne} value={questionOne} reponse={setQuestionOne}/>  
               <DropdownBox questions={questionSettwo} value={questionTwo} reponse={setQuestionTwo}/>  
-              <Row>
+              <Row className='d-flex justify-content-center'>
 
                 <Button
                   type="submit"
-                  className="button-sub"
+                  className="button-sub-review button-review-five"
                   data-bs-toggle="tooltip"
                   data-bs-placement="right"
                   title="By submitting, you consent to us utilizing
                  your feedback anonymously to gather and
                  display workplace insights."
                 >
-                  Submit Review!
+                  Next
                 </Button>
               </Row>
+              <button className="right-review-arrow" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+            >
+              <circle cx="25" cy="25" r="25" fill="#F6B5A8" />
+              <path
+                d="M23 17L31 24.5L23 32"
+                stroke="#EE2C5B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button className="left-review-arrow" 
+          onClick={()=>navigate('/reviews_three')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+            >
+              <circle
+                cx="25"
+                cy="25"
+                r="25"
+                transform="matrix(-1 0 0 1 50 0)"
+                fill="#F6B5A8"
+              />
+              <path
+                d="M27 17L19 24.5L27 32"
+                stroke="#EE2C5B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
             </Form>
             <ReactTooltip id="FifthSubmit" place="right" effect="solid" />
           </Row>
+
         </Container>
       </div>
     );
