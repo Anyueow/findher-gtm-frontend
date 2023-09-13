@@ -1,0 +1,57 @@
+.seven-review-row{
+    width: 70%;
+    padding: 2%;
+    color: var(--Black, #201C1D);
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: 0.25px;
+}
+
+.search-features{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+}
+.search-features:hover{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.search-features:focus{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.search-features:active{
+    width: 100% !important;
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #888; 
+}
+
+.review-seven-options {
+    border: 1px solid #888; 
+    height: 200px;
+    overflow-y: scroll;
+    border-top:none ;
+    padding: 10%;
+    padding-top: 5%;
+    text-align: start;
+}
+.Seven-selcted-key{
+    background-color: #ECEDFF;
+    width: fit-content;
+}
+
+.review-seven-options .form-check{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    height: 30px;
+}
