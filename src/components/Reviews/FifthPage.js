@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Col, Container, Dropdown, Form, Row,} from 'react-bootstrap';
+import {Button, Container, Form, Row} from 'react-bootstrap';
 import "./reviewStyles.css";
 import {useNavigate} from "react-router-dom";
 import NavbarContext from "../NavbarContext";

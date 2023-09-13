@@ -166,7 +166,6 @@ export const SecondPage = () => {
       setCompanyList(temp);
     }
     apiCall();
-    console.log(CompanyList, "companieslist",companies);
   }, [companies]);
 
   const autoCompleteRef = useRef();
@@ -181,7 +180,6 @@ export const SecondPage = () => {
   autoCompleteRef.current.addListener("place_changed", async function () {
    const place = await autoCompleteRef.current.getPlace();
    setLoc(place)
-   console.log({ place });
   });
  }, []);
   return (
