@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import "./SeventhPage.css";
 import ReviewProgressBar from "./ReviewProgressBar";
-import {
-  Form,
-  Button,
-  Container,
-  Row,
-  Col,
-  InputGroup,
-  Toast,
-} from "react-bootstrap";
+import {Form, Button, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function SeventhPage() {
+
+  const navigate = useNavigate(); 
+
   const [firstOne, setFirstOne] = useState([]);
   const [setTwo, setsetTwo] = useState([]);
 
   const [showFirstOne, setshowFirstOne] = useState(false);
-  const [setTwoShow, setsetTwoShow] = useState(false);
+  const [setSecondShow, setsetSecondShow] = useState(false);
 
   const companyName = localStorage.getItem("companyName");
 
@@ -75,6 +71,32 @@ function SeventhPage() {
     prevOptions.filter((item) => item !== data)
   );
   }
+
+  const AddFirstOne = (data) => {
+    setFirstOne((prevOptions) => [...prevOptions, data]);
+  }
+  
+  const handleSecondCheckboxChange = (option) => {
+    console.log("Checkbox clicked:", option);
+
+    if (setTwo.includes(option)) {
+      setsetTwo((prevOptions) =>
+        prevOptions.filter((item) => item !== option)
+      );
+    } else {
+      setsetTwo((prevOptions) => [...prevOptions, option]);
+    }
+  };
+
+  const handleSecondClose = (data) => {
+    setsetTwo((prevOptions) =>
+    prevOptions.filter((item) => item !== data)
+  );
+  }
+
+  const AddSecondOne = (data) => {
+    setsetTwo((prevOptions) => [...prevOptions, data]);
+  }
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -98,21 +120,20 @@ function SeventhPage() {
             Select all that apply.
           </h5>
           <Form onSubmit={handleSubmit}>
-            <Col md={5}>
+            <Col md={7}>
               <Form.Control
-                className="search-features py-4"
+               className={`search-features py-4 ${showFirstOne ? 'search-features-active' : 'class-when-false'}`}
                 onClick={() => setshowFirstOne(!showFirstOne)}
                 type="text"
                 placeholder="Search features"
-                onKeyPress={function(e) {
+                onKeyDown={function(e) {
                   if (e.key === "Enter") {
-                    // Call your search function here
-                    handleSearch(e.target.value); // You need to define the handleSearch function
+                    AddFirstOne(e.target.value); 
                   }
                 }}
               />
               {showFirstOne && (
-                <div className="review-seven-options">
+                <div className="review-seven-options review-seven-custom-checkbox">
                   {optionsOne.map((option, index) => (
                     <Form.Check
                       key={index}
@@ -126,11 +147,48 @@ function SeventhPage() {
                 </div>
               )}
             </Col>
-            <Col md={3} className="d-flex justify-content-center">
+            <Col md={6} className="d-flex justify-content-center mt-3">
               {firstOne[0] && 
               firstOne.map((data,index)=>(
-                <div className="Seven-selcted-key mx-2" key={index}>{data}
-                <button className="btn btn-close" onClick={()=>handleFirstClose(data)}></button>
+                <div className="Seven-selcted-key d-flex justify-content-center mx-2 px-3 py-2" key={index}><p className="m-0">{data}</p>
+                <button className="btn btn-close ms-4" onClick={()=>handleFirstClose(data)}></button>
+                </div>
+              ))
+
+              }
+            </Col>
+            <Col md={7}>
+              <Form.Control
+               className={`search-features py-4 ${setSecondShow ? 'search-features-active' : 'class-when-false'}`}
+                onClick={() => setsetSecondShow(!setSecondShow)}
+                type="text"
+                placeholder="Search features"
+                onKeyDown={function(e) {
+                  if (e.key === "Enter") {
+                    AddSecondOne(e.target.value); 
+                  }
+                }}
+              />
+              {setSecondShow && (
+                <div className="review-seven-options review-seven-custom-checkbox">
+                  {optionsTwo.map((option, index) => (
+                    <Form.Check
+                      key={index}
+                      type="checkbox"
+                      label={option}
+                      id={`option-${index}`}
+                      checked={setTwo.includes(option)}
+                      onChange={() => handleSecondCheckboxChange(option)}
+                    />
+                  ))}
+                </div>
+              )}
+            </Col>
+            <Col md={6} className="d-flex justify-content-center mt-3">
+              {setTwo[0] && 
+              setTwo.map((data,index)=>(
+                <div className="Seven-selcted-key d-flex justify-content-center mx-2 px-3 py-2" key={index}><p className="m-0">{data}</p>
+                <button className="btn btn-close ms-4" onClick={()=>handleSecondClose(data)}></button>
                 </div>
               ))
 
@@ -142,6 +200,50 @@ function SeventhPage() {
             >
               Next
             </Button>
+            <button className="right-review-arrow" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+            >
+              <circle cx="25" cy="25" r="25" fill="#F6B5A8" />
+              <path
+                d="M23 17L31 24.5L23 32"
+                stroke="#EE2C5B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button className="left-review-arrow" 
+          onClick={()=>navigate('/reviews_four')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+            >
+              <circle
+                cx="25"
+                cy="25"
+                r="25"
+                transform="matrix(-1 0 0 1 50 0)"
+                fill="#F6B5A8"
+              />
+              <path
+                d="M27 17L19 24.5L27 32"
+                stroke="#EE2C5B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
           </Form>
         </Row>
       </Container>
