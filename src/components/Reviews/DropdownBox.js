@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
-import { IoMdArrowDropdown } from "react-icons/io";
+// import { IoMdArrowDropdown } from "react-icons/io";
 import "./reviewStyles.css";
 import "./Dropdown.css";
 
@@ -12,7 +12,7 @@ export const DropdownBox = (props) => {
   useEffect(() => {
     const shuffledQuestions = shuffleArray(props.questions);
     setQuestions(shuffledQuestions.slice(0, 6));
-  }, []);
+  });
 
   const shuffleArray = (array) => {
     const shuffled = array.slice();
