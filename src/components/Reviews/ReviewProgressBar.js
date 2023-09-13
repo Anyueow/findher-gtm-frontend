@@ -10,7 +10,6 @@ import ExitPopup from "../../newDesign/ModalPopup/ExitPopup";
 function ReviewProgressBar(props) {
   const navigate = useNavigate();
   const [close, setClose] = useState(false);
-  
   return (
     <div className="progress-container">
       <Row className="fixed-top pt-2">
