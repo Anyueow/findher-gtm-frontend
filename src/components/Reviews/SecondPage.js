@@ -7,11 +7,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import ReviewProgressBar from "./ReviewProgressBar";
 import axios from "axios";
 import TextField from '@mui/material/TextField';
-
+// import debounce from 'lodash/debounce';
+// require('dotenv').config();
 
 import Autocomplete from "@mui/material/Autocomplete";
+import GoogleMapsLoader from "./GoogleMapsLoader";
 
 export const SecondPage = () => {
+
+  
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [companies, setCompany] = useState("");
@@ -20,6 +24,7 @@ export const SecondPage = () => {
   const [industry, setIndustry] = useState("");
   const [Loc, setLoc] = useState("");
   const [title, setTitle] = useState("");
+  const [Com,setCom]=useState("");
   const [currentlyWorking, setCurrentlyWorking] = useState(false);
 
   const [showToast, setShowToast] = useState(true);
@@ -39,8 +44,8 @@ export const SecondPage = () => {
         limit: "5",
       },
       headers: {
-        "X-RapidAPI-Key": {apikey},
-        "X-RapidAPI-Host": {hostkey},
+        "X-RapidAPI-Key": `${apikey}`,
+        "X-RapidAPI-Host": `${hostkey}`,
       },
     };
 
@@ -83,19 +88,20 @@ export const SecondPage = () => {
       }
 
       const reviewData = {
-        companyName: companies,
+        companyName: Com,
         industry: industry,
         companyOffice: Loc,
         positionTitle: title,
-        employmentDetails: employment,
+        employementStatus: employment,
         department: department,
-        workingStatus: currentlyWorking,
+        currworking: currentlyWorking,
         startDate: startDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
         endDate: currentlyWorking ? null : endDate.toISOString().split("T")[0], // Convert the date to a string in the format YYYY-MM-DD
       };
 
       try {
         const response = await fetch(
+          // "https://findher-backend.onrender.com/protectedRoute/createReview",
           "https://findher-backend.onrender.com/protectedRoute/createReview",
           {
             method: "POST",
@@ -155,15 +161,20 @@ export const SecondPage = () => {
   const apiCall = (val) => setCompany(val);
   const delayQuery = debounce((val) => apiCall(val), 1000);
   const handleCompanyChange = (e) => {
-    if(e.target.value!==null)
-      delayQuery(e.target.value);
-    else setCompanyList([])
+    // if(e.target.value!==null) {
+    //   if(e.target.value == 0) return;
+    //   setCompanyList([])
+    // }
+    // else setCompanyList([])
+    delayQuery(e.target.value);
   };
+  console.log(Com,"selected company");
   useEffect(() => {
     async function apiCall(params) {
       const data = await getCompanies(companies);
       const temp = data.entities.map((item) => item.identifier.value);
       setCompanyList(temp);
+      console.log(data, "companieslist",companies);
     }
     apiCall();
   }, [companies]);
@@ -172,18 +183,44 @@ export const SecondPage = () => {
  const inputRef = useRef();
 //  const options = {....
 //  };
- useEffect(() => {
+
+const addScript = () => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_API}&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    script.onload = resolve
+    script.onerror = reject
+    document.body.appendChild(script);
+  })
+}
+
+const getRestData = () => {
   autoCompleteRef.current = new window.google.maps.places.Autocomplete(
-   inputRef.current,
-  //  options
-  );
-  autoCompleteRef.current.addListener("place_changed", async function () {
-   const place = await autoCompleteRef.current.getPlace();
-   setLoc(place)
-  });
+    inputRef.current,
+   //  options
+   );
+   autoCompleteRef.current.addListener("place_changed", async function () {
+    const place = await autoCompleteRef.current.getPlace();
+    setLoc(place.formatted_address)
+    console.log(place.formatted_address);
+   });
+}
+
+const getScript = async () => {
+  await addScript();
+  getRestData();
+}
+ useEffect(() => {
+  getScript();  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
+
   return (
     <div>
+      <GoogleMapsLoader />
       <ReviewProgressBar percent={1} />
       <Container className="container-second" style={{ marginTop: "20px" }}>
         <Row className="ROw">
@@ -205,6 +242,7 @@ export const SecondPage = () => {
                   <Autocomplete
                     disablePortal
                     id="combo-box-demo"
+                    onChange={(_, v) => setCom(v)}
                     onInputChange={handleCompanyChange}
                     options={CompanyList}
                     sx={{ width: 415 }}
@@ -351,7 +389,7 @@ export const SecondPage = () => {
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
-            <button className="right-review-arrow" type="submit">
+            <button className="left-review-arrow" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
