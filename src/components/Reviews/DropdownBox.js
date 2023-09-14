@@ -12,6 +12,7 @@ export const DropdownBox = (props) => {
   useEffect(() => {
     const shuffledQuestions = shuffleArray(props.questions);
     setQuestions(shuffledQuestions.slice(0, 6));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[props.questions.length]); 
 
   const shuffleArray = (array) => {
