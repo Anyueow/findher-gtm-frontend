@@ -94,6 +94,7 @@
     .step-label {
       margin-top: 20px;
       font-size: 8px;
+      width: 40px;
     }
     .progress-container img{
       margin-left: 0%;

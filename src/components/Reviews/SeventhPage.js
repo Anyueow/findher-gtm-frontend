@@ -130,7 +130,8 @@ const handleFirstInputChange = (e) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submit");
-    console.log("Selected Options:", firstOne);
+    console.log("Selected firstOne:", firstOne);
+    console.log("Selected SecondOne:", setTwo);
   };
   return (
     <div>

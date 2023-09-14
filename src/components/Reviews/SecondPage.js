@@ -234,12 +234,8 @@ const getScript = async () => {
               <Col md={6} xs={12}>
                 <Form.Group>
                   <Form.Label>Company Name</Form.Label>
-                  {/* <Form.Control
-                    // value={companies}
-                    onChange={handleCompanyChange}
-                    required
-                  ></Form.Control> */}
                   <Autocomplete
+                    className="review-second-auto-comp"
                     disablePortal
                     id="combo-box-demo"
                     onChange={(_, v) => setCom(v)}
@@ -247,12 +243,9 @@ const getScript = async () => {
                     options={CompanyList}
                     sx={{ width: 415 }}
                     renderInput={(params) => (
-                      // <Form.Control
-                      //   {...params}
-                      //   onChange={handleCompanyChange}
-                      //   required
-                      // ></Form.Control>
-                      <TextField {...params} />
+                      <TextField
+                      className="review-second-auto-comp"
+                      {...params} />
                     )}
                   />
                 </Form.Group>
@@ -385,11 +378,11 @@ const getScript = async () => {
                   Next
                 </Button>
               </div>
-              <Link to="/reviews_two" className="nav-link2 bottom-link">
+              <Link to="/reviews_two" className="nav-link2 review-second-bottom-link d-flex justify-content-center">
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
-            <button className="left-review-arrow" type="submit">
+            <button className="left-review-arrow desktop" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
