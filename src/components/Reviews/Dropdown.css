@@ -16,6 +16,22 @@
     color: #6c6c6c;
 }
 
-/* .review-five-drop{
+.review-five-drop{
+   overflow: hidden;
+   overflow-wrap: break-word;
+   width: 100%;
+   display: inline-block;
+   white-space: pre-line;
+   text-overflow: ellipsis;
+   font-family: Poppins;
+}
 
-} */
+.review-five-drop-option{
+    font:  14px "Helvetica Neue", sans-serif;
+    appearance: none;
+    font-family: Poppins;
+    padding: 20px 40px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }

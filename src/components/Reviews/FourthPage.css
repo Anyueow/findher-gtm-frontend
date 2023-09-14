@@ -149,6 +149,38 @@ text-align: left !important;
         height: 50%;
     }
 }
+@media (min-width: 600px) and (max-width: 830px) {
+    .desktop-view {
+        display: none !important;
+    }
+}
+@media (width<600px) {
+.fourth-row{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin: 5% auto;
+}
+.review-four-head{
+    font-size: 24px;
+    line-height: 120%; 
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.inp-group{
+    flex-wrap: nowrap;
+}
+.rating-title{
+    font-size: 12px !important;
+   
+}
+.rating-div{
+    align-items: flex-start;
+}
+.desktop-view {
+    display: none !important;
+}
+}
+
 @media (width<500px) {
     .star-icon{
         /* width: 5rem; */
@@ -176,7 +208,7 @@ text-align: left !important;
         width: 100%;
         font-size: 0.3rem;
         /* gap: 2rem;    */
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         margin-top: 0;
         justify-content: unset;
     }

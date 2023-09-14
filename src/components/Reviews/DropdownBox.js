@@ -13,7 +13,7 @@ export const DropdownBox = (props) => {
     const shuffledQuestions = shuffleArray(props.questions);
     setQuestions(shuffledQuestions.slice(0, 6));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[props.questions.length]); 
+  },[]); 
 
   const shuffleArray = (array) => {
     const shuffled = array.slice();
@@ -30,7 +30,7 @@ export const DropdownBox = (props) => {
     <div className="DropDown">
       <Form.Group className="question-grp">
         <div>
-          <h5 className="px-2 py-3">Answer one of the following questions:</h5>
+          <h5 className="px-2 py-3" style={{fontFamily:"Poppins"}}>Answer one of the following questions:</h5>
           <Form.Select
             style={{ backgroundColor: "#ECEDFF" }}
             className="review-five-drop py-3"
@@ -44,7 +44,7 @@ export const DropdownBox = (props) => {
             required
           >
             {questions && questions.map((status, index) => (
-                      <option key={index} value={status}>
+                      <option className="review-five-drop-option" key={index} value={status}>
                         {status}
                       </option>
                     ))}

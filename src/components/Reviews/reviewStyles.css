@@ -405,13 +405,19 @@ heading-name3{
 
     font-family: Montserrat-Regular;
 }
-.bottom-link{
+.review-second-bottom-link{
     font-size: 1.3rem!important;
 }
 
 
 /* Second Page Reviews */
 
+.review-second-auto-comp{
+    width: 100% !important;
+}
+.review-second-auto-comp input{
+    padding: 0px !important;
+}
 .container-second {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -602,6 +608,9 @@ heading-name3{
     }
     .head-name4{
         font-size: 1.7rem!important;
+    }
+    .review-second-bottom-link{
+        font-size: 0.8rem!important;
     }
     
 }
