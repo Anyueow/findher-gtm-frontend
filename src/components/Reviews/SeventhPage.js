@@ -3,6 +3,7 @@ import "./SeventhPage.css";
 import ReviewProgressBar from "./ReviewProgressBar";
 import {Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { IoIosArrowDown } from 'react-icons/io';
 
 function SeventhPage() {
 
@@ -13,6 +14,9 @@ function SeventhPage() {
 
   const [showFirstOne, setshowFirstOne] = useState(false);
   const [setSecondShow, setsetSecondShow] = useState(false);
+
+  const [filteredFirstOptions, setFilteredFirstOptions] = useState();
+  const [filteredSecondOptions, setFilteredSecondOptions] = useState();
 
   const companyName = localStorage.getItem("companyName");
 
@@ -54,6 +58,19 @@ function SeventhPage() {
     "Inconsistent work hours"
 ];
 
+
+
+const handleFirstInputChange = (e) => {
+  e.preventDefault();
+  console.log(handleFirstInputChange)
+  setshowFirstOne(true);
+  const filtered = optionsOne.filter((option) =>
+    option.toLowerCase().includes(e.target.value.toLowerCase())
+  );
+
+  setFilteredFirstOptions(filtered);
+};
+
   const handleFirstCheckboxChange = (option) => {
     console.log("Checkbox clicked:", option);
 
@@ -72,9 +89,10 @@ function SeventhPage() {
   );
   }
 
-  const AddFirstOne = (data) => {
-    setFirstOne((prevOptions) => [...prevOptions, data]);
-  }
+  const AddFirstOne = (e) => {
+    e.preventDefault();
+    setFirstOne((prevOptions) => [...prevOptions, e.target.value]);
+  };
   
   const handleSecondCheckboxChange = (option) => {
     console.log("Checkbox clicked:", option);
@@ -94,13 +112,24 @@ function SeventhPage() {
   );
   }
 
-  const AddSecondOne = (data) => {
-    setsetTwo((prevOptions) => [...prevOptions, data]);
+  const AddSecondOne = (e) => {
+    e.preventDefault();
+    setsetTwo((prevOptions) => [...prevOptions, e.target.value]);
   }
+
+  const handleSecondInputChange = (e) => {
+    e.preventDefault();
+    setSecondShow(true)
+    const filtered = optionsTwo.filter((option) =>
+      option.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+  
+    setFilteredSecondOptions(filtered);
+  };
   
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log("Submit");
     console.log("Selected Options:", firstOne);
   };
   return (
@@ -122,25 +151,32 @@ function SeventhPage() {
           <Form onSubmit={handleSubmit}>
             <Row>
             <Col md={6}>
+            <div className="seven-review-input-with-icon">
               <Form.Control
-               className={`search-features py-4 ${showFirstOne ? 'search-features-active' : 'class-when-false'}`}
-                onClick={() => setshowFirstOne(!showFirstOne)}
+               className={`search-features py-4 ${showFirstOne ? 'search-features-active' : ''}`}
                 type="text"
                 placeholder="Search features"
+                onClick={() => {setshowFirstOne(!showFirstOne)
+                  setFilteredFirstOptions(optionsOne)
+                }}
                 onKeyDown={function(e) {
                   if (e.key === "Enter") {
-                    AddFirstOne(e.target.value); 
+                    AddFirstOne(e); 
                   }
                 }}
+                onChange={(e) => handleFirstInputChange(e)}
               />
+                  <IoIosArrowDown className="seven-review-dropdown-icon" style={{ zIndex: 2 }}
+                />
+                </div>
               {showFirstOne && (
                 <div className="review-seven-options review-seven-custom-checkbox">
-                  {optionsOne.map((option, index) => (
+                  {filteredFirstOptions.map((option, index) => (
                     <Form.Check
                       key={index}
                       type="checkbox"
                       label={option}
-                      id={`option-${index}`}
+                      id={`optionOne-${index}`}
                       checked={firstOne.includes(option)}
                       onChange={() => handleFirstCheckboxChange(option)}
                     />
@@ -171,25 +207,32 @@ function SeventhPage() {
             </Row>
             <Row>
             <Col md={6} className="mt-5">
+            <div className="seven-review-input-with-icon">
               <Form.Control
-               className={`search-features py-4 ${setSecondShow ? 'search-features-active' : 'class-when-false'}`}
-                onClick={() => setsetSecondShow(!setSecondShow)}
+               className={`search-features py-4 ${setSecondShow ? 'search-features-active' : ''}`}
+                onClick={() => {setsetSecondShow(!setSecondShow)
+                  setFilteredSecondOptions(optionsTwo)
+                }}
+                onChange={(e) => handleSecondInputChange(e)}
                 type="text"
                 placeholder="Search features"
                 onKeyDown={function(e) {
                   if (e.key === "Enter") {
-                    AddSecondOne(e.target.value); 
+                    AddSecondOne(e); 
                   }
                 }}
               />
+              <IoIosArrowDown className="seven-review-dropdown-icon" style={{ zIndex: 2 }}
+                />
+              </div>
               {setSecondShow && (
                 <div className="review-seven-options review-seven-custom-checkbox">
-                  {optionsTwo.map((option, index) => (
+                  {filteredSecondOptions.map((option, index) => (
                     <Form.Check
                       key={index}
                       type="checkbox"
                       label={option}
-                      id={`option-${index}`}
+                      id={`optionTwo-${index}`}
                       checked={setTwo.includes(option)}
                       onChange={() => handleSecondCheckboxChange(option)}
                     />

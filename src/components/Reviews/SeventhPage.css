@@ -19,6 +19,7 @@
 }
 .search-features-active{
     border-radius: 25px 25px 0px 0px;
+    border-bottom:none !important ;
 }
 .search-features:hover{
     width: 100%;
@@ -85,4 +86,21 @@
   .review-seven-custom-checkbox .form-check-input:checked {
     background-color: #EF2B5B;
     border-color: #EF2B5B;
+}
+
+
+
+.seven-review-input-with-icon{
+  position: relative;
+}
+
+.seven-review-dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px; /* Adjust the right distance as needed */
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the icon from blocking input clicks */
+  color: #555; /* Icon color */
+  font-size: 30px; /* Icon size */
+  z-index: 1;
 }
