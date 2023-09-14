@@ -132,6 +132,60 @@ const handleFirstInputChange = (e) => {
     console.log("Submit");
     console.log("Selected firstOne:", firstOne);
     console.log("Selected SecondOne:", setTwo);
+    const submitFeatures = async () => {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        console.error("No token found. Please log in.");
+        return;
+      }
+      // Get reviewId from local storage
+      const reviewId = localStorage.getItem("reviewId");
+
+      if (!reviewId) {
+        console.error("No reviewId found. Please log in.");
+        return;
+      }
+
+      // Prepare the ratings object
+      const features = {
+        firstOne,
+        setTwo
+      };
+
+      try {
+        // Make an asynchronous request to the backend API
+        const response = await fetch(
+          "https://findher-backend.onrender.com/updateFeatures",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`, // Assuming your token is stored in local storage
+            },
+            credentials: "include", // Include this line
+            body: JSON.stringify({ reviewId, features }),
+          }
+        );
+
+        // Handle response
+        if (response.ok) {
+          const result = await response.json();
+          console.log(result);
+          console.log("She works!!");
+
+          // Navigate to the next page
+          navigate("/successUser");
+        } else {
+          // Handle error
+          const errorMessage = await response.text();
+          console.error(errorMessage);
+        }
+      } catch (error) {
+        console.error("Error occurred:", error);
+      }
+    };
+    submitFeatures();
   };
   return (
     <div>
@@ -151,7 +205,7 @@ const handleFirstInputChange = (e) => {
           </h5>
           <Form onSubmit={handleSubmit}>
             <Row>
-            <Col md={6}>
+            <Col md={6} className="sevCont">
             <div className="seven-review-input-with-icon">
               <Form.Control
                className={`search-features py-4 ${showFirstOne ? 'search-features-active' : ''}`}
@@ -207,7 +261,7 @@ const handleFirstInputChange = (e) => {
              )}
             </Row>
             <Row>
-            <Col md={6} className="mt-5">
+            <Col md={6} className="mt-5 sevCont ">
             <div className="seven-review-input-with-icon">
               <Form.Control
                className={`search-features py-4 ${setSecondShow ? 'search-features-active' : ''}`}

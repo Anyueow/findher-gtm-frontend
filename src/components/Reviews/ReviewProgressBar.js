@@ -17,16 +17,7 @@ function ReviewProgressBar(props) {
           <img src={logo} alt="brand" className="logo" />
         </Col>
         <Col md={2} xs={4}>
-          <button
-            className="progress-btn py-2"
-            onClick={() => {
-              setClose((prevState) => ({
-                ...prevState,
-                status: true,
-              }));
-              // setExitpopup(1);
-            }}
-          >
+          <button className="progress-btn py-2" onClick={()=>setClose(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -174,7 +165,7 @@ function ReviewProgressBar(props) {
           )}
         </Step>
       </ProgressBar>
-      {close.status && (
+      {close && (
         // <Toast className="review-progress-toast">
         //   <Toast.Body>
         //     <h3>Are you sure you want to exit?</h3>
@@ -188,7 +179,7 @@ function ReviewProgressBar(props) {
         //     </Button>
         //   </Toast.Body>
         // </Toast>
-        <ExitPopup />
+        <ExitPopup setClose={setClose} />
       )}
     </div>
   );

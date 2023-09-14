@@ -111,3 +111,13 @@
   font-size: 30px; /* Icon size */
   z-index: 1;
 }
+@media (width< 1200px) {
+  .sevCont{
+    width: 100%;
+  }
+  .seven-review-row{
+    width: 100%;
+  }
+
+
+}

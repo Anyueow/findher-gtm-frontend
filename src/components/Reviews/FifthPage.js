@@ -106,7 +106,7 @@ const FifthPage = () => {
                 console.log(result);
 
                 // Navigate to the next page if needed
-                navigate('/successUser');
+                navigate('/reviews_five');
             } else {
                 const errorMessage = await response.text();
                 console.error(errorMessage);

@@ -1,46 +1,93 @@
 .exitcont {
-    background-color: white;
-    width: 30%;
-    position: absolute;
-    height: 30%;
-    top: 30%;
-    border-radius: 10px;
-    left: 35%;
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 2px 3px 19px 3px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  width: 30%;
+  position: absolute;
+  height: 30%;
+  top: 30%;
+  border-radius: 10px;
+  left: 35%;
+  z-index: 99;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 3px 19px 3px rgba(0, 0, 0, 0.5);
 }
-.exith1{
-    margin-top: 21px;
+.exith1 {
+  margin-top: 21px;
 }
-.exith1 p{
+.exith1 p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.exith2 p {
+  font-family: sans-serif;
+  color: black;
+}
+.exitbtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.exitbtn {
+  margin: 20px;
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  width: 20%;
+}
+.exitcancel {
+  border: 0.5px solid pink;
+  background-color: white;
+}
+.exityes {
+  background-color: #f1406b;
+  color: white;
+}
+@media (min-width: 600px) and (max-width: 1100px) {
+  .exitcont {
+    width: 72vw;
+    left: 15%;
+    height: fit-content;
+  }
+  .exith1 {
+    margin-top: 6vh;
+    padding: 0px 6px;
+  }
+  .exith1 p {
+    margin: 0;
+    font-size: 2.2em;
+  }
+  .exith2 p {
+    font-size: 2rem;
+    margin-top: 1vh;
+  }
+  .exitbtn {
     font-size: 1.5rem;
-    font-weight: bold;
-    
+  }
 }
-.exith2 p{
-    font-family: sans-serif;
-    color: black;
-}
-.exitbtns{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.exitbtn{
-    margin: 20px;
-    padding: 8px;
-    border-radius: 7px;
-    border: none;
-    width: 20%;
-}
-.exitcancel{
-    border: 0.5px solid pink;
-    background-color: white;
-}
-.exityes{
-    background-color: #f1406b;
-    color: white;
+@media (width < 600px) {
+  .exitcont {
+    width: 87vw;
+    left: 6%;
+  }
+  .exitbtns {
+    padding: 10px;
+  }
+  .exith2 p {
+    margin: 0;
+  }
+  .exith1 p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  .exitbtn {
+    margin: 2vh 20px;
+    padding: 5px 2px;
+    width: 25%;
+  }
+  .exith1 {
+    margin-top: 6vh;
+    padding: 0px 6px;
+  }
 }
