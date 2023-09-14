@@ -119,7 +119,7 @@ const handleFirstInputChange = (e) => {
 
   const handleSecondInputChange = (e) => {
     e.preventDefault();
-    setSecondShow(true)
+    setsetSecondShow(true)
     const filtered = optionsTwo.filter((option) =>
       option.toLowerCase().includes(e.target.value.toLowerCase())
     );
