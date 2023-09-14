@@ -48,10 +48,17 @@
     padding-top: 5%;
     text-align: start;
 }
+
+.review-seven-options::-webkit-scrollbar {
+    width: 0em; /* Adjust as needed */
+  }
+
+
 .Seven-selcted-key{
     background-color: #ECEDFF;
     width: fit-content;
     border-radius: 25px;
+    height: 40px;
 }
 
 .review-seven-options .form-check{

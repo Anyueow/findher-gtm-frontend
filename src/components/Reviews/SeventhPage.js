@@ -120,7 +120,8 @@ function SeventhPage() {
             Select all that apply.
           </h5>
           <Form onSubmit={handleSubmit}>
-            <Col md={7}>
+            <Row>
+            <Col md={6}>
               <Form.Control
                className={`search-features py-4 ${showFirstOne ? 'search-features-active' : 'class-when-false'}`}
                 onClick={() => setshowFirstOne(!showFirstOne)}
@@ -147,17 +148,29 @@ function SeventhPage() {
                 </div>
               )}
             </Col>
-            <Col md={6} className="d-flex justify-content-center mt-3">
+            {showFirstOne && ( <Col md={6} className="d-flex flex-wrap align-content-start">
               {firstOne[0] && 
               firstOne.map((data,index)=>(
-                <div className="Seven-selcted-key d-flex justify-content-center mx-2 px-3 py-2" key={index}><p className="m-0">{data}</p>
+                <div className="Seven-selcted-key d-flex justify-content-center mx-2 my-3 px-3 py-2" key={index}><p className="m-0">{data}</p>
                 <button className="btn btn-close ms-4" onClick={()=>handleFirstClose(data)}></button>
                 </div>
               ))
-
               }
             </Col>
-            <Col md={7}>
+             )}
+            {!showFirstOne && (<Col md={12} className="d-flex justify-content-start my-3 flex-wrap">
+              {firstOne[0] && 
+              firstOne.map((data,index)=>(
+                <div className="Seven-selcted-key d-flex justify-content-center mx-2 my-3 px-3 py-2" key={index}><p className="m-0">{data}</p>
+                <button className="btn btn-close ms-4" onClick={()=>handleFirstClose(data)}></button>
+                </div>
+              ))
+              }
+            </Col>
+             )}
+            </Row>
+            <Row>
+            <Col md={6} className="mt-5">
               <Form.Control
                className={`search-features py-4 ${setSecondShow ? 'search-features-active' : 'class-when-false'}`}
                 onClick={() => setsetSecondShow(!setSecondShow)}
@@ -184,16 +197,29 @@ function SeventhPage() {
                 </div>
               )}
             </Col>
-            <Col md={6} className="d-flex justify-content-center mt-3">
+            {setSecondShow && (
+            <Col md={6} className="d-flex flex-wrap align-content-start mt-5">
               {setTwo[0] && 
               setTwo.map((data,index)=>(
-                <div className="Seven-selcted-key d-flex justify-content-center mx-2 px-3 py-2" key={index}><p className="m-0">{data}</p>
+                <div className="Seven-selcted-key d-flex justify-content-center mx-2 my-3 px-3 py-2" key={index}><p className="m-0">{data}</p>
                 <button className="btn btn-close ms-4" onClick={()=>handleSecondClose(data)}></button>
                 </div>
               ))
-
               }
             </Col>
+              )}
+            {!setSecondShow && (
+            <Col md={12} className="d-flex justify-content-start my-3 flex-wrap">
+              {setTwo[0] && 
+              setTwo.map((data,index)=>(
+                <div className="Seven-selcted-key d-flex justify-content-center mx-2 my-3 px-3 py-2" key={index}><p className="m-0">{data}</p>
+                <button className="btn btn-close ms-4" onClick={()=>handleSecondClose(data)}></button>
+                </div>
+              ))
+              }
+            </Col>
+              )}
+            </Row>
             <Button
               type="submit"
               className="button-review-four review-four-sub mt-5"
