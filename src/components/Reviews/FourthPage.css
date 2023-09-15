@@ -128,25 +128,33 @@ text-align: left !important;
     .fourth-left{
         /* border: 1px solid black; */
         width: 100%;
+        height: fit-content;
     }
     .fourth-right{
         width: 100%;
     }
     .review-label{
         font-size: 1.5rem ;
-        height: 50%;
+        height: 28%;
         width: 100%;
-        padding: 1rem 1rem;
+        padding: 1rem 0rem;
     }
     .rating-div{
         width: 19%;
+        align-items: flex-start;
         /* border: 1px solid black; */
     }
     .rating-title{
         height: 50%;
     }
     .form-stars{
-        height: 50%;
+        height: 41%;
+    }
+    .rating-box{
+        height: 26%;
+    }
+    .inp-group{
+        margin:0;
     }
 }
 @media (min-width: 600px) and (max-width: 830px) {
