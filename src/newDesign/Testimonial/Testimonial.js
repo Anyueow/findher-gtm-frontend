@@ -65,38 +65,35 @@ const TestimonialSection = () => {
           <SwiperSlide>
             <TestimonialCard
               testimonial='"FindHer helped me land my dream job"'
-              description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-              name="Jane Doe1"
+              description="FindHer's commitment to diversity and inclusivity assured me that my potential would be recognized
+              , leading me to an opportunity that truly aligns with my aspirations."
+              name="Radhika S."
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
-              testimonial='"FindHer helped me land my dream job"'
-              description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-              name="Jane Doe2"
+              testimonial='"The best career platform"'
+              description="I was searching for a platform that truly understood the challenges women like me face in their careers.
+              Their focus on my specific goals made all the difference."
+              name="Hemangi G."
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
-              testimonial='"FindHer helped me land my dream job"'
-              description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-              name="Jane Doe3"
+              testimonial='"FindHer made job search easy!"'
+              description="As a working mom, finding the right job seemed overwhelming.
+              But Findher's personalized matches and support made the process seamless. I'm so grateful!"
+              name="Chaya R."
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
-              testimonial='"FindHer helped me land my dream job"'
-              description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-              name="Jane Doe4"
+              testimonial='"Findher has been a game-changer."'
+              description="It gave me insights I didn't even know I needed and connected me with a job that's a perfect fit. Highly recommend."
+              name="Sneha M."
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <TestimonialCard
-              testimonial='"FindHer helped me land my dream job"'
-              description="FindHer provided me with valuable insights and information that helped me find the job of my dreams. I couldn't have done it without them."
-              name="Jane Doe5"
-            />
-          </SwiperSlide>
+
           {/* Add more testimonials as needed */}
         </Swiper>
       </Container>

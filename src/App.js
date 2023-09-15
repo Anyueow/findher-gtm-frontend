@@ -113,7 +113,7 @@ function App() {
           <Navbar />
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<MainContent />} />
+            <Route path="/" element={<NewDesign />} />
               <Route path="/reviews_login" element={<FirstPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/reviews_one" element={<SecondPage />}/>
@@ -128,7 +128,7 @@ function App() {
             <Route path="/update_details" element={<DetailsOneB2B />} />
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
             <Route path="/successBizz" element={<EndPage />} />
-            <Route path="/new" element={<NewDesign />} />
+            <Route path="/old" element={<MainContent />} />
 
 
 

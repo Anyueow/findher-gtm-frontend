@@ -19,7 +19,8 @@
     font-weight: 600;
 }
 .sec-seven-container .sec-seven-para, .blur-background2 {
-    width: 50%;
+    width: 46%;
+    font-size: 1.1rem;
     line-height: 2rem;
     color: #4e4e4e;
 }
@@ -32,6 +33,7 @@
 .sec-seven-container .sec-seven-input, .blur-background2 {
     /* all: unset;   */
     background-color: #f6f5f4;
+    border-radius: 3rem;
     border: none;
     outline: none;
     padding: 1rem 1rem;
@@ -39,13 +41,13 @@
 }
 .sec-seven-container .sec-seven-button, .blur-background2 {
     position: absolute;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.8rem;
     border-radius: 0.3rem;
     border: none;
     color: white;
     background-color: #ee2c5b;
+    border-radius: 2rem;
     right: 0;
-    top: 0.5rem;
 }
 .sec-seven-message{
     color: red;
@@ -60,7 +62,7 @@
         line-height: 2rem;
     }
     .sec-seven-container .sec-seven-para{
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: 80%;
         line-height: 1.5rem;
         color: #4e4e4e;

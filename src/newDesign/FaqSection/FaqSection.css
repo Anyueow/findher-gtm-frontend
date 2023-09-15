@@ -1,7 +1,7 @@
 .faqInner {
   display: flex;
   flex-direction: column;
-  margin: 3rem 22rem;
+  margin: 3rem 16rem;
   border-radius: 43px;
   gap: 20px;
   /* display: flex; */

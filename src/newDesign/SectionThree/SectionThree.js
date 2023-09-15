@@ -63,7 +63,7 @@ function SectionThree() {
           <h3 className="head wholeHead" style={{ marginLeft: "6%" }}>
             Exclusive Insights
           </h3>
-          <p className="sub wholePara" style={{ marginLeft: "6%" }}>
+          <p className="wholePara" style={{ marginLeft: "6%" }}>
             We believe that you deserve more than just a job title. Our platform
             offers a treasure trove of insider insights, spanning workplace
             culture, work-life balance, and the unspoken aspects that truly
@@ -80,7 +80,7 @@ function SectionThree() {
       >
         <Col sm={7} className="no-gutter">
         <h3 className="head wholeHead ">Personalized For You</h3>
-          <p className="subc wholePara" style={{ width: "85%" }}>
+          <p className="subc wholePara" style={{ width: "65%" }}>
             Your unique experiences and aspirations deserve recognition. With
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.

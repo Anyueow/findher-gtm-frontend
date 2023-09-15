@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import logo from "../Assets/logo.png";
 import './Hero/home.css';
 import './Footer.css';
+import linkedinIcon from '../Assets/icons8-linkedin-100.png';
+import instaIcon from '../Assets/icons8-instagram-100.png';
 
 function Footer() {
   let date = new Date();
@@ -20,16 +22,27 @@ function Footer() {
                  Contact
                 </a></h4>
             <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
-                style={{ textDecoration:"none",color:"black" ,cursor:"pointer" }} target="_blank" rel="noopener noreferrer">
+                style={{ textDecoration:"none",color:"#f04a72" ,cursor:"pointer" }} target="_blank" rel="noopener noreferrer">
                  info@findher.work
                 </a></h4>
-                <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
+
+
+
+
+
+                  <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
                 style={{ textDecoration:"none",color:"black" ,cursor:"pointer" }} target="_blank" rel="noopener noreferrer">
-                 LinkedIn
+                      <img src={linkedinIcon}
+                           style={{width:"12%"}}/>
+                      <span>  </span>LinkedIn
+
                 </a></h4>
+
                 <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
                 style={{ textDecoration:"none",color:"black" ,cursor:"pointer" }} target="_blank" rel="noopener noreferrer">
-                Instagram
+                    <img src={instaIcon}
+                         style={{width:"12%"}}/>
+                    <span>  </span>Instagram
                 </a></h4>
           </Col>
           

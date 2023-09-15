@@ -14,6 +14,7 @@
     width: 100%;
     background-color: rgb(246, 245, 244);
     border-radius: 21px;
+    padding: 3%;
 }
 .sec6stuffs{
     display: flex;
@@ -29,6 +30,8 @@
     width: 74%;
 } */
 .sec6head{
+    font-size: 1.3rem;
+    letter-spacing: -0.05rem;
     display: flex;
     justify-content: flex-start;
 }
@@ -41,7 +44,7 @@
 }
 .sec6body{
     text-align: left;
-    font-size: 20px !important;
+    font-size: 1rem !important;
     color: rgb(78 78 78 / 70%);
     line-height: 2.25rem !important;
     padding-right: 0px;
@@ -85,7 +88,7 @@
     .sec6body{
         font-size: 1.7vh!important;
         text-wrap: initial;
-        padding: 0;
+        padding: 0 5%;
         text-align: center;
     }
     .stuffsInner{
@@ -152,9 +155,10 @@
     display: flex;
 }
 .sec-six-sub{
+    font-size: 0.5rem;
     color: #4e4e4e;
 }
-@media ((width>810px)and (width<1200px)) {
+@media (width>810px)and (width<1200px) {
     .sec-six-container{
         width: 80%;
     }
@@ -163,7 +167,7 @@
 
     }
     .sec-six-left .sec-six-heading p{
-        font-size: 29px ;
+        font-size: 1.5rem ;
         font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
         font-weight: 700;
         letter-spacing: 0em;
@@ -176,7 +180,7 @@
         width: 30%;
     }
     .sec-six-left .sec-six-sub{
-        font-size: 25px ;
+        width:100%;
         font-family: "Inter", sans-serif;
         font-weight: 400;
         letter-spacing: 0px;
@@ -205,7 +209,7 @@
         
     }
     .sec-six-left .sec-six-heading p{
-        font-size: 32px !important;
+        font-size: 2rem !important;
         text-align: center;
         min-width: 250px !important;
         font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;

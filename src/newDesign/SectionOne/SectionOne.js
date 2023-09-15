@@ -27,7 +27,7 @@ function SectionOne() {
       >
         <Col className="justify-content-center section-one-container">
 
-          <motion.h5 className="sec-one-head font-weight-bold howwecan sec-one-h5"
+          <motion.h5 className=" font-weight-bold howwecan sec-one-h5"
                variants={containerVariants}
                initial="initial"
               whileInView="animate"
@@ -44,7 +44,7 @@ function SectionOne() {
              }}
           >
 
-            Redesigning Job Search for Indian Women
+            Redesigning Job Search <br/> for Indian Women
           </motion.h3>
           <motion.p className="sec-one-para"
               variants={containerVariants}
@@ -54,11 +54,12 @@ function SectionOne() {
                once:true,
              }}
           >
-            It's common for job postings to lack detailed information, leaving
-            you in the dark about a potential employer's compatibility with your
-            needs and aspirations. FindHer offers exclusive and reliable
-            insights into different workplaces, allowing you to make informed
-            decisions about your next career move.
+              Women experience the workplace differently,
+              but job search currently lacks information on
+              factors important to them. FindHer offers exclusive and
+              reliable insights into different workplaces so you can make
+              informed decisions about your next career move.
+
           </motion.p>
           <motion.img
             src={demo}
@@ -96,7 +97,7 @@ function SectionOne() {
           <div className="line mb-n3"></div>
           <div className=" sec-one-card  d-flex flex-column align-items-center justify-content-center card">
             <img src={img2} alt="in Rectangle" className="img-in-rectangle card-img" />
-            <h4 className="card-h4">Exclusive insights</h4>
+            <h4 className="card-h4">Exclusive Insights</h4>
           </div>
         </Col>
         <Col md={3} className="text-center mx-1 justify-content-center desktop card-img">
@@ -111,7 +112,7 @@ function SectionOne() {
           className="sec-one-last-para"
           style={{
             marginTop: "5vw",
-            fontSize: "1.1rem",
+            fontSize: "1.3rem",
             width: "60%",
           }}
         >

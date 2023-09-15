@@ -34,7 +34,7 @@ function SectionSix() {
             <Col className="sec6head sec-six-heading">
               <p>Be in the know!</p>
             </Col>
-            <Col className="sec6body sec-six-sub">
+            <Col className="sec6body sec-six-sub" >
               <p>
                 Supercharge your job search process with insights and
                 information from women who've worked there.

@@ -105,15 +105,7 @@
   height: auto;
   z-index: 2;
 }
-.head {
-  font-size: 3rem;
-  margin-bottom: 6%;
-}
 
-.sub {
-  font-size: 1.3rem;
-  margin-bottom: 6%;
-}
 
 .AcessButton {
   margin-top: 2%;
@@ -147,12 +139,16 @@
   overflow-x: hidden;
   align-items: center;
   flex-direction: column;
+  min-width:55%;
+  height: auto;
 }
 
 .sec3Rows{
-  width: 96%;
+  margin-bottom: -15%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
+
 }
 .wholeHead{
   font-weight: bold!important;
@@ -160,9 +156,19 @@
   font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
 }
 @media (min-width:600px) and (max-width:830px) {
+
+  .section-three-container {
+    overflow-x: hidden;
+
+    min-width: 85%;
+    margin-top: 0rem !important;
+  }
   .sec3Rows{
+    margin-bottom: 15%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+
   }
   .decorative-rectangle {
     width: 70%;
@@ -179,6 +185,7 @@
     font-family: "Inter", sans-serif;
   }
   .wholeHead{
+    margin-top: 5%;
     font-size: 1.8rem !important; 
     font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
   }
@@ -290,6 +297,9 @@
     left: 35%;
   }
   .section-three-container {
+    overflow-x: hidden;
+
+    min-width: 85%;
     margin-top: 0rem !important;
   }
   .img-div{

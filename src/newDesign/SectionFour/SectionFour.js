@@ -50,7 +50,7 @@ function SectionFour() {
            viewport={{
              once: true,
            }}
-          >Why women love FindHer.</motion.h1>
+          >Why Women Love FindHer.</motion.h1>
         </Col>
       </Row>
     </div>

@@ -31,7 +31,7 @@ function FaqSection() {
       <div className="job-search-section faq-container">
         <Row className="justify-content-center">
           <Col className="justify-content-center">
-            <h2 className="sec-two-head succStory">FAQ</h2>
+            <h2 className="sec-two-head succStory">FAQs</h2>
             <h1 className="sec-two-sub newMsg1 mt-3">Got a question?</h1>
           </Col>
         </Row>
