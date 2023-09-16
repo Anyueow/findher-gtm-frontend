@@ -21,14 +21,14 @@ function NavBar() {
       window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
-  const joinExternalSurvey = () => {
-    // window.open(
-    //   "https://www.surveymonkey.com/r/NMD3GRV",
-    //   "_blank",
-    //   "noopener noreferrer"
-    // );
-    // Navigate("/reviews_login")
-  };
+  // const joinExternalSurvey = () => {
+  //   // window.open(
+  //   //   "https://www.surveymonkey.com/r/NMD3GRV",
+  //   //   "_blank",
+  //   //   "noopener noreferrer"
+  //   // );
+  //   // Navigate("/reviews_login")
+  // };
 
   const scrollToSection = (event, sectionId) => {
     event.preventDefault();
