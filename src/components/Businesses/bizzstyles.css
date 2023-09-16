@@ -23,7 +23,7 @@
 
 .reviews-box{
 
-    max-width: 80vw;
+    max-width: 80%;
     height: fit-content;
 
 }
@@ -228,7 +228,7 @@ heading-name3{
 }
 
 .social-icon{
-    font-size:5rem;
+    font-size:3rem;
     margin-top: 3rem;
     margin-right: 4rem;
     color: #ee2c5b;

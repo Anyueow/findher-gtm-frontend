@@ -48,6 +48,8 @@
     border: none;  /* remove default border */
     border-radius: .85rem;  /* rounded corners, adjust as desired */
     align-content: center;/* smooth transition for hover effect */
+    transition: all;
+    transition-duration: 500ms;
 }
 
 .JoinButton-hero:hover {

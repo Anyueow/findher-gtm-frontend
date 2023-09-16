@@ -116,6 +116,7 @@ function App() {
             <Route path="/" element={<NewDesign />} />
               <Route path="/reviews_login" element={<FirstPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/landingPage" element={<NewDesign />} />
               <Route path="/reviews_one" element={<SecondPage />}/>
               <Route path="/reviews_two" element={<ThirdPage />}/>
               <Route path="/reviews_three" element={<FourthPage />}/>

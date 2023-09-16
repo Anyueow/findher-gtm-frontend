@@ -40,7 +40,8 @@
 }
 .sec6head p{
     font-weight: 700;
-    font-size: 180%;
+    font-size: 2.8vw;
+    width: 100%;
 }
 .sec6body{
     text-align: left;
@@ -67,7 +68,10 @@
 .exclusive-btn {
     width: auto;
 }
-
+.hero-button-six, .sec6head ,.sec6body{
+    padding: 0;
+    margin: 0;
+}
 @media (max-width:600px){
     .sec6cont{
         display: flex;
@@ -114,9 +118,13 @@
         width: 60% !important;
         transform: translate(90%,-12%) !important;
     }
+    .hero-button-six, .sec6head ,.sec6body{
+        padding: 0;
+        margin: 0;
+    }
 }
 
-@media (min-width:600px) and (max-width:830px) {
+@media (min-width:600px) and (max-width:860px) {
     .section6 {
         width: 90%;
         
@@ -124,6 +132,10 @@
     .sec6body {
         padding-right: 0;
         
+    }
+    .hero-button-six, .sec6head ,.sec6body{
+        padding: 0;
+        margin: 0;
     }
 }
 .hero-button-six{
@@ -167,7 +179,7 @@
 
     }
     .sec-six-left .sec-six-heading p{
-        font-size: 1.5rem ;
+        font-size: 4vw ;
         font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
         font-weight: 700;
         letter-spacing: 0em;
@@ -220,7 +232,7 @@
     }
     
     .sec-six-left .sec-six-sub{
-        margin: 2rem 2rem 0rem 0rem;
+        margin: 1rem 0rem 0rem 0rem;
         text-align: center;
         font-size: 14px !important;
         font-family: "Inter", sans-serif;
@@ -236,11 +248,15 @@
     }
 .stuffsInner {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 .sec6stuffs{
     padding: 0;
 }
 .sec6cont {
-    padding: 0;
+    padding: 18px;
 }
 }

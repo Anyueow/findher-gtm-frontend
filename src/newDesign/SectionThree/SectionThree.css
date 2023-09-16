@@ -136,7 +136,7 @@
 .section-three-container {
   display: flex!important;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
   align-items: center;
   flex-direction: column;
   min-width:55%;
@@ -144,7 +144,7 @@
 }
 
 .sec3Rows{
-  margin-bottom: -15%;
+  margin-bottom: -8%;
   width: 80%;
   display: flex;
   justify-content: space-between;

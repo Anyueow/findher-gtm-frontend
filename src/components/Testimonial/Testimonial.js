@@ -62,7 +62,7 @@ function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section className="testimonial-section">
+    <section className="testimonial-section" id="testimonial">
       <div className="center-contents">
         <h1 className="test-head test-head-testimonial my-5">
           What these women have to say about{" "}

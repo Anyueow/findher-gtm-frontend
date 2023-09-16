@@ -28,6 +28,7 @@ const TestimonialSection = () => {
   return (
     <motion.div
       variants={containerVariants}
+      id="testimonial"
       initial="initial"
       whileInView="animate"
       viewport={{

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import logo from "../Assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
   const [navColor, setNavColor] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-
+  const navigate = useNavigate(); 
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY >= 20) {
@@ -22,19 +22,23 @@ function NavBar() {
     };
   }, []);
   const joinExternalSurvey = () => {
-    window.open(
-      "https://www.surveymonkey.com/r/NMD3GRV",
-      "_blank",
-      "noopener noreferrer"
-    );
+    // window.open(
+    //   "https://www.surveymonkey.com/r/NMD3GRV",
+    //   "_blank",
+    //   "noopener noreferrer"
+    // );
+    // Navigate("/reviews_login")
   };
 
   const scrollToSection = (event, sectionId) => {
     event.preventDefault();
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate("/");
+    setTimeout(() => {
+      const contactSection = document.getElementById(sectionId);
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
   return (
     <div className={`custom-navbar ${navColor ? "navbar-colored" : ""}`}>
@@ -52,19 +56,19 @@ function NavBar() {
         </button>
         <ul className={`navbar-menu ${showMenu ? "show" : ""}`}>
           <li className="navItems">
-          <a href="#features" onClick={(e) => scrollToSection(e, 'features')}>
+          <Link to="/landingPage" onClick={(e) => scrollToSection(e, 'features')}>
               Features
-            </a>
+            </Link>
           </li>
           <li className="navItems">
-          <a href="#testimonial" onClick={(e) => scrollToSection(e, 'testimonial')}>
+          <Link to="/landingPage" onClick={(e) => scrollToSection(e, 'testimonial')}>
               Testimonials
-            </a>
+            </Link>
           </li>
           <li className="navItems">
-          <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')}>
+          <Link to="/landingPage" onClick={(e) => scrollToSection(e, 'faq')}>
               FAQ
-            </a>
+            </Link>
           </li>
           <li className="navItems" style={{margin:"10px",display:"flex",
                 alignItems: "center"}}>
@@ -80,7 +84,7 @@ function NavBar() {
                 alignItems: "center"
                 
               }}
-              onClick={joinExternalSurvey}
+              onClick={()=>navigate('/reviews_login')}
             >
               Join the Waitlist
             </strong>
