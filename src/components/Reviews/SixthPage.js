@@ -15,13 +15,13 @@ export const ThirdPage = () => {
         <h1 className="head-name4">
           Thank you for <span className="pink"> sharing! </span>
         </h1>
-        <h2 className="para">
+        <h2 className="success-review-para">
           You are on our <span className="strong pink">waitlist </span>
           and will be among the <strong> first </strong> to access our platform
           when we launch. In the meantime, we’re building to make job
           information accessible to more women.
         </h2>
-        <h2 className="para">
+        <h2 className="success-review-para">
           If you want to co-create with us, here’s how you can join our journey
           :{" "}
         </h2>
