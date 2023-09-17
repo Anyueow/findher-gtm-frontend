@@ -2,8 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./hero.css";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="hero-section d-flex justify-content-center align-items-center">
       <Container className="content-hero hero-container">
@@ -48,7 +50,7 @@ function Hero() {
               the women who have been there.
             </motion.h4>
             <div className="my-4" style={{ height: "30px" }}>
-              <motion.Button
+              <motion.button
                 initial={{ opacity: 0, y: -100 }}
                 animate={{
                   opacity: 1,
@@ -58,10 +60,11 @@ function Hero() {
                    delay: 0.2,  
                   },
                 }}
+                onclick={()=>navigate('/reviews_login')}
                 className="JoinButton-hero"
               >
                 Join the Waitlist
-              </motion.Button>
+              </motion.button>
             </div>
           </Col>
         </Row>
