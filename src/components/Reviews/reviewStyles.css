@@ -22,11 +22,7 @@
     align-items: center;
 }
 
-.reviews-box{
-    max-width: 80vw;
-    height: fit-content;
 
-}
 
 .reviews-box2{
     margin-top: 23%;
@@ -775,12 +771,13 @@ heading-name3{
   /* Third Page */
 
   .review-third-container{
-    margin-top: 10%;
+    margin-top: 13%;
   }
 
   .review-third-logo{
     margin-bottom: 13%;
   }
+
 
   @media (max-width: 600px) {
     .review-third-container h1{
@@ -794,5 +791,11 @@ heading-name3{
       .social-icon{
         font-size: 30px !important;
         margin-bottom: 250% !important;
+      }
+  }
+
+  @media (min-width:600px) and (max-width:830px) {
+    .review-third-container{
+        margin-top: 25%;
       }
   }

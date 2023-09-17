@@ -38,7 +38,7 @@ export const ThirdPage = () => {
     };
 
     return (
-        <Container id="reviews" className="sub review-third-container">
+        <Container id="reviews" className="d-flex justify-content-center align-items-center review-third-container">
 
 
 <Row className="reviews-box" >
@@ -46,18 +46,18 @@ export const ThirdPage = () => {
                 <h1 className="head-name" style={{fontSize:"3rem", marginBottom:"2rem"}} >
                     No worries!
                 </h1>
-            <h2 style={{fontSize:"2rem", marginBottom:"9rem"}}>
+            <h2 style={{fontSize:"2rem", textAlign:"left"}}>
                 You can join our waitlist even if you have
                 never worked anywhere before.  All you
                 need to do is share this with someone who has. </h2>
 
             <Row className="flex-lg-fill review-third-logo">
-                <Col className="ico" xs="2" onClick={() => handleShare('facebook')}><FaFacebookF className="social-icon" /></Col>
-                <Col className="ico" xs="2" onClick={() => handleShare('email')}><FaEnvelope className="social-icon" /></Col>
-                <Col className="ico" xs="2" onClick={() => handleShare('whatsapp')}><FaWhatsapp className="social-icon"/></Col>
-                <Col className="ico" xs="2" onClick={() => handleShare('instagram')}><FaInstagram className="social-icon"/></Col>
-                <Col className="ico" xs="2" onClick={() => handleShare('linkedin')}><FaLinkedinIn className="social-icon"/></Col>
-                <Col className="ico" xs="2" onClick={() => handleShare('copyLink')}><FaLink className="social-icon"/></Col>
+                <Col className="ico" xs="2" lg="1" onClick={() => handleShare('facebook')}><FaFacebookF className="social-icon" /></Col>
+                <Col className="ico" xs="2" lg="1" onClick={() => handleShare('email')}><FaEnvelope className="social-icon" /></Col>
+                <Col className="ico" xs="2" lg="1"onClick={() => handleShare('whatsapp')}><FaWhatsapp className="social-icon"/></Col>
+                <Col className="ico" xs="2" lg="1" onClick={() => handleShare('instagram')}><FaInstagram className="social-icon"/></Col>
+                <Col className="ico" xs="2" lg="1" onClick={() => handleShare('linkedin')}><FaLinkedinIn className="social-icon"/></Col>
+                <Col className="ico" xs="2" lg="1" onClick={() => handleShare('copyLink')}><FaLink className="social-icon"/></Col>
             </Row>
 
 </Row>
