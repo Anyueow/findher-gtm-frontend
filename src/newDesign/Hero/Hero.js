@@ -64,7 +64,7 @@ function Hero() {
                     delay: 0.2,
                   },
                 }}
-                onclick={() => navigate("/reviews_login")}
+                onClick={()=>navigate('/reviews_login')}
                 className="JoinButton-hero"
               >
                 Join the Waitlist
