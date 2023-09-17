@@ -41,12 +41,12 @@ const TestimonialSection = () => {
       >
         <Swiper
           className="testimonial_swiper_container"
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          spaceBetween={20}
+          spaceBetween={40}
           pagination={{ clickable: true }}
           coverflowEffect={{
             rotate: 0,
@@ -56,11 +56,11 @@ const TestimonialSection = () => {
           }}
           breakpoints={{
             600: {
-              slidesPerView: 1,
+              slidesPerView: 1, // Mobile view
             },
             601: {
-              slidesPerView: 3,
-            },
+              slidesPerView: 2, // Tablet view
+            }
           }}
         >
           <SwiperSlide>
