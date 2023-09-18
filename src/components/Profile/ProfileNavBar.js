@@ -4,9 +4,10 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import logo from "../../Assets/logo.png";
 import bell from "../../Assets/bell.png";
 import goback from "../../Assets/goback.png";
-import "./CSS/ProfileNavBar.css"
+import "./CSS/ProfileNavBar.css";
+import profile from "../../Assets/profile.webp";
 
-function ProfileNavBar() {
+function ProfileNavBar(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -19,11 +20,9 @@ function ProfileNavBar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <img src={logo} alt="brand" className="logo" />
-          <div className="mx-3">
-          <img src={bell} alt="brand" className="bell-icon" />
-            <Button>bell</Button>
-          </div>
+          <img src={bell} alt="brand" className="bell-icon float-right" />
         </div>
+          <img style={{width:"2.5%"}}  className="profile-picture float-right mx-3" src={props.newImage ? props.newImage : profile} alt="Profile"/>
       </nav>
       <Offcanvas show={show} className="Profile-Offcanvas" onHide={handleClose}>
         <Offcanvas.Header >

@@ -23,12 +23,12 @@ function Profile() {
 
   return (
     <section>
-      <ProfileNavBar />
-      <div className="profile-container d-flex justify-content-center pt-5 mt-5">
-        <Row style={{ width: "90%" }} className="mt-5">
-          <Col lg="4">
+      <ProfileNavBar newImage={newImage}/>
+      <div className="profile-container d-flex justify-content-center pt-3 mt-4">
+        <Row style={{ width: "90%" }} className="mt-5 d-flex justify-content-center">
+          <Col lg="4" md="6" className="mb-4">
             <div className="card profile-card">
-              <div class="card-body mt-3 ms-3">
+              <div class="card-body  ms-3">
                 <h4 class="card-title" style={{ textAlign: "left" }}>
                   Contact Details
                 </h4>
@@ -58,7 +58,7 @@ function Profile() {
                     </Col>
                   </Row>
 
-                  <Row className="mt-5" style={{ textAlign: "left" }}>
+                  <Row className="mt-4" style={{ textAlign: "left" }}>
                     <Col xs="12">
                       {" "}
                       <Form.Label className="mb-0">Phone Number</Form.Label>
@@ -73,7 +73,7 @@ function Profile() {
                         ></Form.Control>
                       </Form.Group>
                     </Col>
-                    <Col xs="8">
+                    <Col xs="9">
                       <Form.Group>
                         <Form.Control
                           required
@@ -84,8 +84,8 @@ function Profile() {
                     </Col>
                   </Row>
 
-                  <Row className="mt-5" style={{ textAlign: "left" }}>
-                    <Col xs="10" className="pe-0">
+                  <Row className="mt-4" style={{ textAlign: "left" }}>
+                    <Col xs="9" className="pe-0">
                       <Form.Group>
                         <Form.Label className="mb-0">Email</Form.Label>
                         <Form.Control
@@ -97,7 +97,7 @@ function Profile() {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <div className="mt-1" style={{ textAlign: "left" }}>
+                  <div className="mt-3" style={{ textAlign: "left" }}>
                     <Button href="#" className="profile-save-btn mt-4">
                       Save changes
                     </Button>
@@ -106,9 +106,9 @@ function Profile() {
               </div>
             </div>
           </Col>
-          <Col lg="4">
+          <Col lg="4" md="6" className="mb-4">
             <div className="card profile-card">
-              <div class="card-body mt-3 ms-3">
+              <div class="card-body mx-0 px-0">
                 <h4 class="card-title" style={{ textAlign: "left" }}>
                   Work Details
                 </h4>
@@ -134,8 +134,8 @@ function Profile() {
                     </Col>
                   </Row>
 
-                  <Row className="mt-3" style={{ textAlign: "left" }}>
-                    <Col xs="10" className="pe-0">
+                  <Row className="mt-2" style={{ textAlign: "left" }}>
+                    <Col xs="12" className="">
                       <Form.Group>
                         <Form.Label className="mb-0">Department</Form.Label>
                         <Form.Control
@@ -146,8 +146,8 @@ function Profile() {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Row className="mt-3" style={{ textAlign: "left" }}>
-                    <Col xs="10" className="pe-0">
+                  <Row className="mt-2" style={{ textAlign: "left" }}>
+                    <Col xs="12" className="">
                       <Form.Group>
                         <Form.Label className="mb-0">Location</Form.Label>
                         <Form.Control
@@ -160,7 +160,7 @@ function Profile() {
                     </Col>
                   </Row>
                   <div style={{ textAlign: "left" }}>
-                    <Button href="#" className="profile-save-btn mt-4">
+                    <Button href="#" className="profile-save-btn mt-3">
                       Save changes
                     </Button>
                   </div>
@@ -168,9 +168,9 @@ function Profile() {
               </div>
             </div>
           </Col>
-          <Col lg="4">
+          <Col lg="4" md="6" className="mb-4">
             <div className="card profile-card">
-              <div class="card-body mt-3 ms-3">
+              <div class="card-body ms-3">
                 <Form>
                   <Row className="mt-2">
                     <Col xs="12">
@@ -178,18 +178,17 @@ function Profile() {
                         Profile Details
                       </h4>
                     </Col>
-                    <Col xs="12" className="my-5 d-flex justify-content-center">
-                    <img style={{width:"50%"}}  className="rounded-circle" src={newImage ? newImage : profile} alt="Profile"/>
+                    <Col xs="12" className=" d-flex justify-content-center align-items-center profile-picture-div">
+                    <img className="profile-picture"src={newImage ? newImage : profile} alt="Profile"/>
                     </Col>
                     <Col xs="12" className="d-flex justify-content-center">
                       <Form.Group>
-                      <label className="profile-change">
+                      <label className="profile-change px-3 py-2">
                         <input
                           type="file"
                           accept=".jpg, .jpeg, .png, .gif"
                           style={{ display: "none" }}
                           onChange={handleProfile}
-                          id="profileUpload"
                         />
                          Change photo
                         </label>
@@ -200,6 +199,13 @@ function Profile() {
               </div>
             </div>
           </Col>
+          <div className="profile-last-div"  style={{ textAlign: "left" }}>
+      <h5>See who’s reacting & engaging with your reviews! </h5>
+      <h6>Product head at Rakuten saved your review. </h6>
+      <h6>Product designer at FindHer agreed with your review. </h6>
+      <h6>Product designer at FindHer agreed with your review. </h6>
+      <h6>Product designer at FindHer agreed with your review.  </h6>
+      </div>
         </Row>
       </div>
     </section>

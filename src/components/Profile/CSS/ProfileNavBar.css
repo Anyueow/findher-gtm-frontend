@@ -1,6 +1,6 @@
 
   .bell-icon{
-    width: 18%;
+    width: 1.5%;
   }
   .goback-icon{
     width: 12%;
@@ -16,3 +16,12 @@
     font-weight: 500;
     line-height: 30px;
   }
+
+  @media (min-width:600px) and (max-width:850px) {
+    .bell-icon{
+      width: 2%;
+    }
+    .profile-picture{
+      width: 3% !important;
+    }
+}
