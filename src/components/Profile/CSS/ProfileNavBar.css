@@ -1,0 +1,18 @@
+
+  .bell-icon{
+    width: 18%;
+  }
+  .goback-icon{
+    width: 12%;
+  }
+  .Profile-Offcanvas{
+    padding-top: 1%;
+    padding-left: 2%;
+  }
+
+  .profile-offcanvas-body{
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 30px;
+  }

@@ -1,0 +1,79 @@
+.profile-card{
+    border-radius:50px !important ;
+}
+
+.profile-container label{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Poppins;
+    line-height: 18px;
+}
+
+.profile-container input{
+    padding: 0px 10px !important;
+    background-color: #D9D9D95E !important;
+}
+
+.profile-container .card{
+    height: 440px !important;
+}
+
+.profile-save-btn{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-save-btn:hover{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-save-btn:active{
+    background: #4339F21F !important;
+    color: #979797 !important;
+    border: none !important;
+}
+
+.profile-save-btn:focus{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-save-btn:focus-visible{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+profile-change{
+    
+}
+
+.profile-change {
+
+    color: white;
+    background-color: #e20b3c;  
+    border: none;  
+
+}
+
+.profile-change:hover {
+    background-color: rgb(255, 213, 90);  
+    color: white !important; 
+    border: none !important;
+}
+
+.profile-change:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255, 213, 90); 
+    color: white !important; 
+    border: none !important;
+}
+
+.profile-change:active {
+    background-color: rgb(255, 213, 90); 
+    color: white !important; 
+    border: none !important;
+}

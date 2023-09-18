@@ -382,7 +382,7 @@ const getScript = async () => {
                 <p> If you haven't worked anywhere before, click here </p>
               </Link>
             </Row>
-            <button className="left-review-arrow desktop-view" type="submit">
+            <button className="right-review-arrow desktop-view" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"

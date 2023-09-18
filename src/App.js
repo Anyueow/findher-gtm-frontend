@@ -22,6 +22,8 @@ import FifthPage from "./components/Reviews/FifthPage";
 import SixthPage from "./components/Reviews/SixthPage";
 import SeventhPage from "./components/Reviews/SeventhPage";
 
+import Profile from "./components/Profile/Profile";
+
 import { NavbarProvider } from './components/NavbarContext';
 import SectionThree from "./components/SectionThree/SectionThree";
 import Testimonial from "./components/Testimonial/Testimonial";
@@ -110,12 +112,12 @@ function App() {
 
       <Router>
         <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<NewDesign />} />
               <Route path="/reviews_login" element={<FirstPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/landingPage" element={<NewDesign />} />
               <Route path="/reviews_one" element={<SecondPage />}/>
               <Route path="/reviews_two" element={<ThirdPage />}/>
