@@ -215,9 +215,35 @@ const getScript = async () => {
 }
  useEffect(() => {
   getScript();  
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
+const [jobTitles, setJobTitles] = useState([]);
 
+  useEffect(() => {
+    const fetchJobTitles = async () => {
+      console.log("hiii");
+      try {
+        const response = await fetch('http://localhost:5000/jobTitleList'); // Replace with your API endpoint
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log("dataaaa",data);
+        const tmp=[]
+        data.map((item)=>{
+          item.map((it)=>{
+            tmp.push(it.job_title)
+          })
+        })
+        setJobTitles(tmp);
+      } catch (error) {
+        console.error('Error fetching job titles:', error);
+      }
+    };
+
+    fetchJobTitles();
+  }, []);
   return (
     <div>
       <GoogleMapsLoader />
@@ -266,12 +292,27 @@ const getScript = async () => {
               <Col md={6} xs={12}>
                 <Form.Group>
                   <Form.Label>Your Job Title</Form.Label>
-                  <Form.Control
+                  {/* <Form.Control
                     style={{ padding: "20px" }}
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     required
-                  ></Form.Control>
+                  ></Form.Control> */}
+                  <Autocomplete
+                    className="review-second-auto-comp"
+                    disablePortal
+                    id="combo-box-demo"
+                    // freeSolo 
+                    // onChange={(_, v) => setCom(v)}
+                    // onInputChange={handleCompanyChange}
+                    options={jobTitles}
+                    sx={{ width: 415 }}
+                    renderInput={(params) => (
+                      <TextField
+                      className="review-second-auto-comp"
+                      {...params} />
+                    )}
+                  />
                 </Form.Group>
               </Col>
               <Col md={6} xs={12} className="Office-Location">

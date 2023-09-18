@@ -245,6 +245,35 @@ heading-name3{
 .star-radio {
     display: none;
 }
+/* Style for the radio button */
+.star-radio {
+  display: none; /* Hide the actual radio button */
+}
+
+/* Style for the label (outer circle) */
+.star-label {
+  width: 20px; /* Adjust the size of the outer circle */
+  height: 20px;
+  border: 2px solid #0074d9; /* Dark blue outer circle */
+  border-radius: 50%; /* Make it a circle */
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style for the inner circle when the radio button is checked */
+.star-radio:checked + .star-label .inner-circle {
+  content: "";
+  display: block;
+  width: 10px; /* Adjust the size of the inner circle */
+  height: 10px;
+  background-color: #00aeef; /* Light blue inner circle */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .review-heads {
     font-size: 2rem;
