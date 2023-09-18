@@ -109,9 +109,10 @@ function App() {
   }, []);
   return (
       <NavbarProvider value="5%">
-         <Navbar />
+      
       <Router>
         <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<NewDesign />} />

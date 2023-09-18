@@ -179,7 +179,7 @@ function Profile() {
                       </h4>
                     </Col>
                     <Col xs="12" className="my-5 d-flex justify-content-center">
-                    <img style={{width:"50%"}}  className="rounded-circle" src={newImage ? newImage : profile} />
+                    <img style={{width:"50%"}}  className="rounded-circle" src={newImage ? newImage : profile} alt="Profile"/>
                     </Col>
                     <Col xs="12" className="d-flex justify-content-center">
                       <Form.Group>
