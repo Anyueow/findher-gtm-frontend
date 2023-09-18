@@ -22,11 +22,7 @@
     align-items: center;
 }
 
-.reviews-box{
-    max-width: 80vw;
-    height: fit-content;
 
-}
 
 .reviews-box2{
     margin-top: 23%;
@@ -369,15 +365,6 @@ heading-name3{
     margin-bottom: 3%;
 }
 
-.para {
-    margin-bottom: 3%;
-
-    width: 85%;
-
-    font-size: 2.5rem;
-    font-family: "Montserrat-SemiBold";
-
-}
 
 
 .custom-input3 {
@@ -529,14 +516,6 @@ heading-name3{
         padding: 10px;
         margin-left: 5%;
     }
-    .para{
-        font-size: 1rem!important;
-        width: 100%!important;
-            
-
-        text-align: justify;
-
-    }
     .datetimepicker-input{
         width: 100% !important;
       }
@@ -636,6 +615,15 @@ heading-name3{
 }
 /* sixfth Page */
 
+
+.success-review-para {
+    margin-bottom: 3%;
+    width: 85%;
+    font-size: 1.2rem;
+    font-family: "Montserrat-SemiBold";
+
+}
+
 .tool-tip::before {
     border-right: none !important;
   }
@@ -651,6 +639,12 @@ heading-name3{
         margin-top: 19%;
         width: 88vw;
     }
+
+        .success-review-para{
+            font-size: 1rem!important;
+            width: 100%!important;
+            text-align: justify;
+        }
 }
 
   /* first Page */
@@ -775,12 +769,13 @@ heading-name3{
   /* Third Page */
 
   .review-third-container{
-    margin-top: 10%;
+    margin-top: 13%;
   }
 
   .review-third-logo{
     margin-bottom: 13%;
   }
+
 
   @media (max-width: 600px) {
     .review-third-container h1{
@@ -794,5 +789,11 @@ heading-name3{
       .social-icon{
         font-size: 30px !important;
         margin-bottom: 250% !important;
+      }
+  }
+
+  @media (min-width:600px) and (max-width:830px) {
+    .review-third-container{
+        margin-top: 25%;
       }
   }

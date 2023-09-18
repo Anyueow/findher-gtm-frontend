@@ -20,3 +20,9 @@
     letter-spacing: .03em;
     color: #888;
 }
+
+@media (max-width:600px) {
+    .footer-icons{
+        width: 6% !important;
+    }
+}

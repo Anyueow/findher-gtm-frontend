@@ -9,9 +9,10 @@
 }
 .wholePara{
   font-size: 1.2rem;
-  color: #4e4e4e;
+  color: rgb(78, 78, 78);
   text-align: left;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 .decorative-rectangle-right {
   width: 80%;
@@ -139,12 +140,11 @@
   overflow: hidden;
   align-items: center;
   flex-direction: column;
-  min-width:55%;
   height: auto;
 }
 
 .sec3Rows{
-  margin-bottom: -8%;
+  margin-bottom: -12%;
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -159,34 +159,31 @@
 
   .section-three-container {
     overflow-x: hidden;
-
-    min-width: 85%;
     margin-top: 0rem !important;
   }
   .sec3Rows{
-    margin-bottom: 15%;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15%;
 
   }
   .decorative-rectangle {
     width: 70%;
     height: 400px;
   }
-  .no-gutter{
-    align-items: center;
-    justify-content: center;
-  }
   .wholePara{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #4e4e4e; 
-    text-align: center;
+    text-align: left;
     font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 20px;
   }
   .wholeHead{
     margin-top: 5%;
     font-size: 1.8rem !important; 
+    text-align: left !important;
     font-family: "Inter-Bold", "Inter", "Inter Placeholder", sans-serif;
   }
   .AcessButton {
@@ -358,4 +355,10 @@
  background-color: rgb(255, 213, 90);  
  color: black;
  transform: scale(1.08);
+}
+
+@media (min-width:831px) and (max-width:960px) {
+  .wholeHead{
+  font-size: 1.5rem!important;
+  }
 }
