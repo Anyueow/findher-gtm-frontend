@@ -231,8 +231,8 @@ const [jobTitles, setJobTitles] = useState([]);
         const data = await response.json();
         console.log("dataaaa",data);
         const tmp=[]
-        data.map((item)=>{
-          item.map((it)=>{
+        data.forEach((item)=>{
+          item.forEach((it)=>{
             tmp.push(it.job_title)
           })
         })
@@ -303,7 +303,7 @@ const [jobTitles, setJobTitles] = useState([]);
                     disablePortal
                     id="combo-box-demo"
                     // freeSolo 
-                    // onChange={(_, v) => setCom(v)}
+                    onChange={(_, v) => setTitle(v)}
                     // onInputChange={handleCompanyChange}
                     options={jobTitles}
                     sx={{ width: 415 }}
