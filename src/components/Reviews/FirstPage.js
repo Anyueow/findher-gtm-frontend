@@ -10,13 +10,17 @@ export const FirstPage = () => {
     const [user, setUser] = useState({
                                          email: "",
                                          phoneNumber: "",
-                                         password: ""
-                                     });
+                                         password: "",
+                                         firstName:"",
+                                         lastName:""
+,                                     });
 
     const [formErrors, setFormErrors] = useState({
                                                      email: false,
                                                      phoneNumber: false,
-                                                     password: false
+                                                     password: false,
+                                                     firstName:false,
+                                                     lastName:false
                                                  });
 
     const [isOtp,setisOtp]= useState({
@@ -39,8 +43,8 @@ export const FirstPage = () => {
     const handleUserdetailsSubmit = async (e) => {
         e.preventDefault();
         console.log('handleUserdetailsSubmit')
-        const { email, phoneNumber, password } = user;
-        if (email && phoneNumber && password) {
+        const { email, phoneNumber, password, firstName, lastName} = user;
+        if (email && phoneNumber && password && firstName && lastName ) {
             try {
                 const response = await fetch("https://findher-backend.onrender.com/verify", {
                     method: "POST",
@@ -52,6 +56,8 @@ export const FirstPage = () => {
                                              email: email,
                                              phoneNumber: phoneNumber,
                                              password: password,
+                                             firstName:firstName,
+                                             lastName,lastName,
                                          }),
                 });
           
@@ -92,6 +98,8 @@ export const FirstPage = () => {
                               email: !email,
                               phoneNumber: !phoneNumber,
                               password: !password,
+                              firstName:!firstName,
+                              lastName:!lastName
                           });
         }
         
@@ -197,6 +205,32 @@ export const FirstPage = () => {
                         </Row><Row>
 
                         <Form  className="form-wrapper">
+                            <Row>
+                                <Col xs="5"  className="me-2">
+                        <Form.Group className="form-grp">
+                                <Form.Label>First Name</Form.Label>
+                                <Form.Control
+                                    name="firstName" // Added name attribute
+                                    type="text"
+                                    value={user.firstName}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </Form.Group>
+                            </Col>
+                            <Col xs="5" className="mx-4">
+                            <Form.Group className="form-grp">
+                                <Form.Label>Last Name</Form.Label>
+                                <Form.Control
+                                    name="lastName" // Added name attribute
+                                    type="text"
+                                    value={user.lastName}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </Form.Group>
+                            </Col>
+                            </Row>
                             <Form.Group className="form-grp">
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control
