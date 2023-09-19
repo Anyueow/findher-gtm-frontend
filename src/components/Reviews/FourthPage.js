@@ -8,7 +8,9 @@ import {
   InputGroup,
   Toast,
 } from "react-bootstrap";
-import { BsCircleFill } from "react-icons/bs";
+// import { BsCircleFill } from "react-icons/bs";
+import { FaRegCircleDot } from "react-icons/fa6";
+
 import "./reviewStyles.css";
 import "./FourthPage.css";
 import { useNavigate } from "react-router-dom";
@@ -46,7 +48,7 @@ const FourthPage = () => {
                 
               />
                 <div className="rating-title">{i === 0 && "Strongly Disagree"} {i === 1 && "Somewhat Disagree"}{i === 2 && "Agree/ Disagree"}{i === 3 && "Somewhat Agree"}{i === 4 && "Strongly Agree"}</div>
-                <BsCircleFill
+                <FaRegCircleDot
                   className="star-icon review-four-star-icon"
                   color={
                     ratingValue ===
