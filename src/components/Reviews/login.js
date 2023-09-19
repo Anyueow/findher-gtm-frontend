@@ -88,7 +88,7 @@ export const FirstPage = () => {
     }
   };
 
-  const isFormValid = user.email|| user.phoneNumber && user.password;
+  const isFormValid = (user.email|| user.phoneNumber) && user.password;
 
   return (
     <section>
