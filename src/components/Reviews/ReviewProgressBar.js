@@ -109,7 +109,7 @@ function ReviewProgressBar(props) {
                   props.percent >= 65 ? "step-label-active" : "inactive"
                 }`}
               >
-                your Review
+                Your Review
               </div>
             </div>
           )}
