@@ -1,0 +1,129 @@
+.profile-card{
+    border-radius:50px !important ;
+}
+.profile-picture-div{
+    height: 32vh;
+}
+.profile-picture{
+   clip-path: circle() !important;
+   width: 43%;
+}
+.profile-container .card-title{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-container label{
+    font-size: 14px !important;
+    font-weight: 400;
+    font-family: Poppins;
+    line-height: 16px;
+}
+
+.profile-container input{
+    padding: 0px 10px !important;
+    background-color: #D9D9D95E !important;
+    height:25px;
+    font-size: 12px;
+}
+
+.profile-container .card{
+    height: 330px !important;
+}
+
+.profile-save-btn{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-save-btn:hover{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-save-btn:active{
+    background: #4339F21F !important;
+    color: #979797 !important;
+    border: none !important;
+}
+
+.profile-save-btn:focus{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-save-btn:focus-visible{
+    background: #4339F21F;
+    color: #979797;
+    border: none;
+}
+
+.profile-change {
+    font-size: 18px !important;
+    color: white;
+    background-color: #EA394A;  
+    border: none;  
+    border-radius: 7px;
+}
+
+.profile-change:hover {
+    background-color: rgb(255, 213, 90);  
+    color: white !important; 
+    border: none !important;
+}
+
+.profile-change:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255, 213, 90); 
+    color: white !important; 
+    border: none !important;
+}
+
+.profile-change:active {
+    background-color: rgb(255, 213, 90); 
+    color: white !important; 
+    border: none !important;
+}
+
+.profile-last-div h5{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+    font-family: Poppins;
+}
+
+.profile-last-div h6{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: Poppins;
+    background-color: #FAFAFA;
+    padding: 5px 5px;
+}
+
+@media (max-width:600px) {
+    .profile-picture-div{
+        height: 25vh;
+    } 
+}
+
+@media (max-width:400px) {
+    .profile-picture-div{
+        height: 27vh;
+    } 
+}
+
+
+@media (min-width:600px) and (max-width:850px) {
+    .profile-picture-div{
+        height: 20vh;
+    } 
+}
+
+@media (min-width:831px) and (max-width:1000px) {
+    .profile-picture-div{
+        height: 15vh;
+    } 
+}
