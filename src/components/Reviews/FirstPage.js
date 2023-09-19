@@ -57,7 +57,7 @@ export const FirstPage = () => {
                                              phoneNumber: phoneNumber,
                                              password: password,
                                              firstName:firstName,
-                                             lastName,lastName,
+                                             lastName:lastName,
                                          }),
                 });
           

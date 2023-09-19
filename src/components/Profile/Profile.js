@@ -48,6 +48,7 @@ function Profile() {
 
       if (response.ok) {
         const data = await response.json();
+        console.log(data)
         setProfileDetails((prevState) => ({ ...prevState, profilePic }));
       } else {
         console.log("dammit these errors");
