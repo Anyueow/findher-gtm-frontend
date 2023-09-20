@@ -25,6 +25,7 @@
     background-color: #D9D9D95E !important;
     height:25px;
     font-size: 12px;
+    font-family: Poppins;
 }
 
 .profile-container .card{
@@ -102,6 +103,13 @@
     background-color: #FAFAFA;
     padding: 5px 5px;
 }
+
+.profile-name-tooltip{
+    background-color: #4339F230 !important;
+    color: black !important;
+    opacity: 1 !important; 
+}
+
 
 @media (max-width:600px) {
     .profile-picture-div{
