@@ -5,6 +5,7 @@ import { Col, Form, Row, Button } from "react-bootstrap";
 import ChangeNumEmail from "./ChangeNumEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import profile from "../../Assets/profile.webp"
 
 function Profile() {
 
@@ -423,7 +424,7 @@ function Profile() {
                     >
                       <img
                         className="profile-picture"
-                        src={editProfileDetails?.profilePic}
+                        src={editProfileDetails?.profilePic? editProfileDetails?.profilePic : profile}
                         alt=""
                       />
                     </Col>
