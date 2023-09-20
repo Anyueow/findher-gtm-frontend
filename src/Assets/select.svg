@@ -1,0 +1,12 @@
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="250.000000pt" height="250.000000pt" viewBox="0 0 500.000000 500.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <!-- Change the fill color for the outer path to dark blue (#0000AA) -->
+    <path d="M2355 3609 c-234 -30 -473 -148 -645 -319 -435 -436 -435 -1144 0 -1580 436 -436 1143 -436 1579 1 334 333 422 837 221 1266 -204 436 -672 692 -1155 632z" fill="#0000AA"/>
+
+    <!-- Create a new circle with a light blue fill (#00AABB) -->
+    <circle cx="2500" cy="2500" r="400" fill="#00AABB"/>
+</g>
+</svg>

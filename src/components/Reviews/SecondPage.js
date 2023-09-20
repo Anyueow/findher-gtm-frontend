@@ -116,7 +116,7 @@ export const SecondPage = () => {
 
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           // Save the review ID in the localStorage
           localStorage.setItem("reviewId", data.reviewId);
           localStorage.setItem("companyName", companies);
@@ -168,13 +168,13 @@ export const SecondPage = () => {
     // else setCompanyList([])
     delayQuery(e.target.value);
   };
-  console.log(Com,"selected company");
+  // console.log(Com,"selected company");
   useEffect(() => {
     async function apiCall(params) {
       const data = await getCompanies(companies);
       const temp = data.entities.map((item) => item.identifier.value);
       setCompanyList(temp);
-      console.log(data, "companieslist",companies);
+      // console.log(data, "companieslist",companies);
     }
     apiCall();
   }, [companies]);
@@ -205,7 +205,7 @@ const getRestData = () => {
    autoCompleteRef.current.addListener("place_changed", async function () {
     const place = await autoCompleteRef.current.getPlace();
     setLoc(place.formatted_address)
-    console.log(place.formatted_address);
+    // console.log(place.formatted_address);
    });
 }
 
@@ -218,32 +218,67 @@ const getScript = async () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
-const [jobTitles, setJobTitles] = useState([]);
+const [jobTitle, setJobTitle] = useState();
+const [jobTitleList, setJobTitleList] = useState([]);
 
+// console.log(jobTitle);
   useEffect(() => {
     const fetchJobTitles = async () => {
-      console.log("hiii");
+      // console.log("hiii");
       try {
-        const response = await fetch('http://localhost:5000/jobTitleList'); // Replace with your API endpoint
+        const response = await fetch('https://findher-backend.onrender.com/jobTitleList',{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({inputTitle:jobTitle})
+        }); // Replace with your API endpoint
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log("dataaaa",data);
-        const tmp=[]
-        data.forEach((item)=>{
-          item.forEach((it)=>{
-            tmp.push(it.job_title)
-          })
-        })
-        setJobTitles(tmp);
+        // console.log("dataaaa",data);
+        const tmp=data.matchingJobTitles.map(item => item.job_title);
+        setJobTitleList(tmp);
       } catch (error) {
         console.error('Error fetching job titles:', error);
       }
     };
 
     fetchJobTitles();
-  }, []);
+  }, [jobTitle]);
+
+  //for department
+const [dep, setDep] = useState();
+const [depList, setDepList] = useState([]);
+
+// console.log(dep);
+  useEffect(() => {
+    const fetchDep = async () => {
+      // console.log("hiii");
+      try {
+        const response = await fetch('https://findher-backend.onrender.com/jobDepList',{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({inputDep:dep})
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        // console.log("dataaaa",data);
+        const tmp=data.matchingDep.map(item => item.department);
+        setDepList(tmp);
+      } catch (error) {
+        console.error('Error fetching Departments:', error);
+      }
+    };
+
+    fetchDep();
+  }, [dep]);
+  // console.log("finalDep",department);
   return (
     <div>
       <GoogleMapsLoader />
@@ -302,10 +337,13 @@ const [jobTitles, setJobTitles] = useState([]);
                     className="review-second-auto-comp"
                     disablePortal
                     id="combo-box-demo"
-                    // freeSolo 
+                    freeSolo 
                     onChange={(_, v) => setTitle(v)}
-                    // onInputChange={handleCompanyChange}
-                    options={jobTitles}
+                    onInputChange={(e)=>{
+                      setJobTitle(e.target.value)
+                      setTitle(e.target.value)
+                    }}
+                    options={jobTitleList}
                     sx={{ width: 415 }}
                     renderInput={(params) => (
                       <TextField
@@ -335,11 +373,24 @@ const [jobTitles, setJobTitles] = useState([]);
               <Col md={6} xs={12} className="Office-Location">
                 <Form.Group>
                   <Form.Label>The Department you were working in</Form.Label>
-                  <Form.Control
-                    value={department}
-                    onChange={(e) => setDepartment(e.target.value)}
-                    required
-                  ></Form.Control>
+                  <Autocomplete
+                    className="review-second-auto-comp"
+                    disablePortal
+                    id="combo-box-demo"
+                    freeSolo 
+                    onChange={(_, v) => setDepartment(v)}
+                    onInputChange={(e)=>{
+                      setDep(e.target.value)
+                      setDepartment(e.target.value)
+                    }}
+                    options={depList}
+                    sx={{ width: 415 }}
+                    renderInput={(params) => (
+                      <TextField
+                      className="review-second-auto-comp"
+                      {...params} />
+                    )}
+                  />
                 </Form.Group>{" "}
               </Col>
               <Col md={3} xs={6}>
