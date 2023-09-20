@@ -75,7 +75,7 @@ function ProfileNavBar(props) {
         </div>
         <img
           style={{ width: "2.5%" }}
-          className="profile-picture float-right mx-3"
+          className="profile-picture-nav float-right mx-3"
           src={props.newImage}
           alt="Profile"
         />

@@ -53,7 +53,6 @@
 
 
   
-  /* Apply custom styles to the input fields */
   .otp-container input {
     width: 43px !important; 
     height: 40px !important;
@@ -64,13 +63,41 @@
     margin-right: 7% !important;
   }
   
-  /* Apply custom styles to the container */
+
   .otp-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  
+  @media (min-width:600px) and (max-width:850px) {
+    .numemailchange-profile-toast{
+      top: 28%  !important;
+      width: 48% !important;
+  }
+  .otp-container input {
+    width: 33px !important; 
+    height: 33px !important;
+    margin-left: 0% !important;
+  }
+  .otp-container {
+    margin-left: 10% !important;
+  }
+}
+
+@media (min-width:831px) and (max-width:1000px) {
+  .numemailchange-profile-toast{
+    top: 23%  !important;
+    width: 48% !important;
+}
+.otp-container input {
+  width: 33px !important; 
+  height: 33px !important;
+  margin-left: 0% !important;
+}
+.otp-container {
+  margin-left: 0% !important;
+}
+}
   
   

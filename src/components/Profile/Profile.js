@@ -228,9 +228,9 @@ function Profile() {
       <div className="profile-container d-flex justify-content-center pt-3 mt-4">
         <Row
           style={{ width: "90%" }}
-          className="mt-5 d-flex justify-content-center"
+          className="mt-5 d-flex justify-content-center profile-first-row"
         >
-          <Col lg="4" md="6" className="mb-4">
+          <Col lg="4" md="4" className="mb-4">
             <div className="card profile-card">
               <div className="card-body  ms-3">
                 <h4 className="card-title" style={{ textAlign: "left" }}>
@@ -274,7 +274,7 @@ function Profile() {
                       {" "}
                       <Form.Label className="mb-0">Phone Number</Form.Label>
                     </Col>
-                    <Col xs="3" md="2" className="pe-0">
+                    <Col xs="3" md="3" lg="2" className="pe-0">
                       <Form.Group>
                         <Form.Control
                           className="px-2"
@@ -298,7 +298,7 @@ function Profile() {
                   </Row>
 
                   <Row className="mt-4" style={{ textAlign: "left" }}>
-                    <Col xs="9" className="pe-0">
+                    <Col xs="9" md="11" lg="9" className="pe-0">
                       <Form.Group>
                         <Form.Label className="mb-0">Email</Form.Label>
                         <Form.Control
@@ -312,7 +312,7 @@ function Profile() {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <div className="mt-3 me-5 d-flex justify-content-between" style={{ textAlign: "left" }}>
+                  <div className="mt-3 me-5 d-flex justify-content-between profile-first-card-btn" style={{ textAlign: "left" }}>
                     <Button onClick={()=>setshowNumEmail(true)} disabled={!onChangeContact.cancel } className={`profile-save-btn mt-4 ${onChangeContact.cancel ? "profile-save-btn-active":""}`}>
                       Save changes
                     </Button>
@@ -326,14 +326,15 @@ function Profile() {
               </div>
             </div>
           </Col>
-          <Col lg="4" md="6" className="mb-4">
-            <div className="card profile-card">
+          <Col lg="4" md="4" className="mb-4">
+            <div className="card profile-card profile-card-2">
               <div className="card-body mx-0 px-0">
                 <h4 className="card-title" style={{ textAlign: "left" }}>
                   Work Details
                 </h4>
                 <Form>
-                  <div>
+                  <Row>
+                  <Col xs="12" md="11" lg="12">
                     <Form.Group style={{ textAlign: "left" }}>
                       <Form.Label className="mb-0">Current Company </Form.Label>
                       <Form.Control required 
@@ -342,13 +343,14 @@ function Profile() {
                       value={editProfileDetails?.companyName}
                       ></Form.Control>
                     </Form.Group>
-                  </div>
+                    </Col>
+                  </Row>
 
                   <Row className="mt-2" style={{ textAlign: "left" }}>
-                    <Col xs="12">
+                    <Col xs="12" md="10">
                       <Form.Label className="mb-0">Job Title </Form.Label>
                     </Col>
-                    <Col xs="12">
+                    <Col xs="12" md="11" lg="12">
                       <Form.Group>
                         <Form.Control
                           required
@@ -361,7 +363,7 @@ function Profile() {
                   </Row>
 
                   <Row className="mt-2" style={{ textAlign: "left" }}>
-                    <Col xs="12" className="">
+                    <Col xs="12" md="11" lg="12" className="">
                       <Form.Group>
                         <Form.Label className="mb-0">Department</Form.Label>
                         <Form.Control
@@ -375,7 +377,7 @@ function Profile() {
                     </Col>
                   </Row>
                   <Row className="mt-2" style={{ textAlign: "left" }}>
-                    <Col xs="12" className="">
+                    <Col xs="12"  md="11" lg="12" className="">
                       <Form.Group>
                         <Form.Label className="mb-0">Location</Form.Label>
                         <Form.Control
@@ -388,7 +390,7 @@ function Profile() {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <div className="d-flex justify-content-between">
+                  <div className="d-flex justify-content-between profile-first-card-btn-2">
                     <Button className={`profile-save-btn mt-3 mb-2 ${onChangeWork ?"profile-save-btn-active":""}`}
                     disabled={!onChangeWork}
                     onClick={UpdateWorkDetails}
@@ -405,7 +407,7 @@ function Profile() {
               </div>
             </div>
           </Col>
-          <Col lg="4" md="6" className="mb-4">
+          <Col lg="4" md="4" className="mb-4">
             <div className="card profile-card">
               <div className="card-body ms-3">
                 <Form>

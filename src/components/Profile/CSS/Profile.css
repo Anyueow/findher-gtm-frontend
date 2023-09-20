@@ -156,12 +156,56 @@
 
 @media (min-width:600px) and (max-width:850px) {
     .profile-picture-div{
-        height: 20vh;
+        height: 19vh;
     } 
+    .profile-first-row{
+        width: 100% !important;
+    }
+    .profile-save-btn-active{
+        line-height: 20px !important; 
+        font-size: 12px;
+    }
+    .profile-card .card-body{
+       padding-left: 10px !important;
+    }
+    .profile-first-card-btn{
+        margin-right: 0 !important;
+    }
+    .profile-first-card-btn-2{
+        width: 90% !important;
+    }
+    .profile-card-2 .card-body{
+        margin-left: 12px !important;
+     }
+     .profile-picture{
+        width: 70% !important;
+     }
 }
 
 @media (min-width:831px) and (max-width:1000px) {
     .profile-picture-div{
         height: 15vh;
     } 
+    .profile-first-row{
+        width: 100% !important;
+    }
+    .profile-save-btn-active{
+        line-height: 22px !important; 
+    }
+    .profile-card .card-body{
+        padding-left: 0px !important;
+     }
+     .profile-first-card-btn{
+        margin-right: 0 !important;
+    }
+    .profile-card-2 .card-body{
+        margin-left: 20px !important;
+     }
+     .profile-first-card-btn-2{
+        width: 90% !important;
+    }
+    .profile-picture{
+        width: 60%;
+     }
 }
+

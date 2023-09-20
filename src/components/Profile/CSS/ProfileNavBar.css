@@ -27,11 +27,17 @@
   .offcanvas-backdrop.show {
     opacity: 0;
 }
+
+.profile-picture-nav{
+  clip-path: circle() !important;
+  width: 43%;
+}
+
   @media (min-width:600px) and (max-width:850px) {
     .bell-icon{
       width: 2%;
     }
-    .profile-picture{
+    .profile-picture-nav{
       width: 3% !important;
     }
 }
