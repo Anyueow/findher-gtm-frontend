@@ -61,7 +61,7 @@ export const FirstPage = () => {
 
         // Save the JWT token in the localStorage
         localStorage.setItem("token", data.token); // Print the response data to the console for debugging purposes
-        navigate("/reviews_one"); // Assuming you have a success page to navigate to
+        navigate("/profile"); // Assuming you have a success page to navigate to
       } else {
         console.log("dammit these errors");
         // Handle the error response
@@ -88,7 +88,7 @@ export const FirstPage = () => {
     }
   };
 
-  const isFormValid = user.email && user.password;
+  const isFormValid = (user.email|| user.phoneNumber) && user.password;
 
   return (
     <section>
