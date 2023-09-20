@@ -424,7 +424,7 @@ function Profile() {
                       <img
                         className="profile-picture"
                         src={editProfileDetails?.profilePic}
-                        alt="Profile"
+                        alt=""
                       />
                     </Col>
                     <Col xs="12" className="d-flex justify-content-center">
