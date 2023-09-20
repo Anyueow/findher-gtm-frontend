@@ -5,7 +5,7 @@ import { Col, Form, Row, Button } from "react-bootstrap";
 import ChangeNumEmail from "./ChangeNumEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import profile from "../../Assets/profile.webp"
+import profile from "../../Assets/profile.png"
 
 function Profile() {
 
@@ -79,6 +79,7 @@ function Profile() {
       reader.onload = () => res(reader.result);
       reader.onerror = (e) => rej.e;
     });
+    console.log(Data)
     UploadProfilePicture(Data)
   };
 
