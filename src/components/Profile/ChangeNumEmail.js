@@ -3,9 +3,13 @@ import "./CSS/ChangeNumEmail.css";
 import { Button, Toast } from "react-bootstrap";
 import { useState } from "react";
 import OtpInput from "react-otp-input";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function ChangeNumEmail(props) {
   const [phoneNumber, setPhoneNumber] = useState();
+  const [email, setEmail] = useState();
   const [otp, setOtp] = useState();
   const [showOtp, setShowOtp] = useState(false);
 
@@ -16,7 +20,7 @@ function ChangeNumEmail(props) {
       return;
     }
     try {
-      const response = await fetch("https://findher-backend.onrender.com/profile/number/otp/request",
+      const response = await fetch(`https://findher-backend.onrender.com/profile/${!props?.onChangeContact.phoneNumber ?'number' : 'email'}/otp/request`,
        {
         method: "POST",
         headers: {
@@ -24,18 +28,23 @@ function ChangeNumEmail(props) {
           Authorization: `Bearer ${token}`,
         },
         credentials: "include", // Include this line
-        body:  JSON.stringify({phoneNumber,email:props.email}),
+        body: JSON.stringify(!props?.onChangeContact.phoneNumber ? { phoneNumber } : { email }),
       });
 
+      console.log(JSON.stringify(!props?.onChangeContact.phoneNumber ? { phoneNumber } : { email }))
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
+         toast.success(data.message, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         setShowOtp(true);
       } else {
         console.log("dammit these errors");
         // Handle the error response
-        console.log(response)
         const data = await response.json();
+        toast.error(data.message, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         console.error(`Error: ${response.status} ${response.statusText}`);
         console.error(data.message); // Print the error message from the backend
       }
@@ -54,7 +63,7 @@ function ChangeNumEmail(props) {
       return;
     }
     try {
-      const response = await fetch("https://findher-backend.onrender.com/profile/number/change",
+      const response = await fetch(`https://findher-backend.onrender.com/profile/${!props?.onChangeContact.phoneNumber ?'number' : 'email'}/change`,
        {
         method: "POST",
         headers: {
@@ -68,12 +77,17 @@ function ChangeNumEmail(props) {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
+        toast.success(data.message, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         window.location.reload();
       } else {
         console.log("dammit these errors");
         // Handle the error response
-        console.log(response)
         const data = await response.json();
+        toast.error(data.message, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         console.error(`Error: ${response.status} ${response.statusText}`);
         console.error(data.message); // Print the error message from the backend
       }
@@ -95,15 +109,14 @@ function ChangeNumEmail(props) {
             onClick={() => props.setshowNumEmail(!props.showNumEmail)}
           ></button>
           <br />
-          <p className="px-2 mt-1 mb-0">Re-enter new phone number</p>
+          <p className="px-2 mt-1 mb-0">{`Re-enter new ${!props?.onChangeContact.phoneNumber ? "phone number" :"email address"} `}</p>
           <input
             required
             placeholder="enter here"
             className="px-2 mb-2"
-            name="phone"
             disabled={showOtp}
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            value={!props.onChangeContact.phoneNumber ? phoneNumber : email}
+            onChange={!props.onChangeContact.phoneNumber ?  (e) => setPhoneNumber(e.target.value) : (e) => setEmail(e.target.value) }
           />
           {showOtp && (
             <div>
@@ -140,6 +153,7 @@ function ChangeNumEmail(props) {
           </Button>)}
         </Toast.Body>
       </Toast>
+      <ToastContainer/>
     </div>
   );
 }
