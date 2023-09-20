@@ -1,5 +1,6 @@
 .profile-card{
     border-radius:50px !important ;
+    background-color: #FAFAFA !important;
 }
 .profile-picture-div{
     height: 32vh;
@@ -22,9 +23,9 @@
 
 .profile-container input{
     padding: 0px 10px !important;
-    background-color: #D9D9D95E !important;
+    background-color: rgba(217, 217, 217, 0.37) !important;
     height:25px;
-    font-size: 12px;
+    font-size: 16px;
     font-family: Poppins;
 }
 
@@ -32,11 +33,34 @@
     height: 330px !important;
 }
 
-.profile-save-btn{
-    background: #4339F21F;
+.profile-save-btn:disabled{
+    background: rgba(67, 57, 242, 0.12);
     color: #979797;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    letter-spacing: 0.2px;
     border: none;
 }
+
+.profile-save-btn-active{
+    color: white;
+    background-color: #EA394A;  
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    letter-spacing: 0.2px;
+    border: none;
+    
+}
+
+
 
 .profile-save-btn:hover{
     background: #4339F21F;
@@ -110,6 +134,12 @@
     opacity: 1 !important; 
 }
 
+.Toastify__toast-body{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: Poppins;
+}
 
 @media (max-width:600px) {
     .profile-picture-div{
@@ -126,12 +156,56 @@
 
 @media (min-width:600px) and (max-width:850px) {
     .profile-picture-div{
-        height: 20vh;
+        height: 19vh;
     } 
+    .profile-first-row{
+        width: 100% !important;
+    }
+    .profile-save-btn-active{
+        line-height: 20px !important; 
+        font-size: 12px;
+    }
+    .profile-card .card-body{
+       padding-left: 10px !important;
+    }
+    .profile-first-card-btn{
+        margin-right: 0 !important;
+    }
+    .profile-first-card-btn-2{
+        width: 90% !important;
+    }
+    .profile-card-2 .card-body{
+        margin-left: 12px !important;
+     }
+     .profile-picture{
+        width: 70% !important;
+     }
 }
 
 @media (min-width:831px) and (max-width:1000px) {
     .profile-picture-div{
         height: 15vh;
     } 
+    .profile-first-row{
+        width: 100% !important;
+    }
+    .profile-save-btn-active{
+        line-height: 22px !important; 
+    }
+    .profile-card .card-body{
+        padding-left: 0px !important;
+     }
+     .profile-first-card-btn{
+        margin-right: 0 !important;
+    }
+    .profile-card-2 .card-body{
+        margin-left: 20px !important;
+     }
+     .profile-first-card-btn-2{
+        width: 90% !important;
+    }
+    .profile-picture{
+        width: 60%;
+     }
 }
+
