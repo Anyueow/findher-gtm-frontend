@@ -108,13 +108,12 @@ function Profile() {
         setProfileDetails((prevState) => ({ ...prevState, profilePic }));
         setEditeditProfileDetails((prevState) => ({ ...prevState, profilePic }));
       } else {
+        console.log("dammit these errors");
+        // Handle the error response
+        const data = await response.json();
         toast.error(data.message, {
           position: toast.POSITION.TOP_RIGHT,
         });
-        console.log("dammit these errors");
-        // Handle the error response
-        console.log(response)
-        const data = await response.json();
         console.error(`Error: ${response.status} ${response.statusText}`);
         console.error(data.message); // Print the error message from the backend
       }
