@@ -5,15 +5,102 @@
 .profile-picture-div{
     height: 32vh;
 }
-.profile-picture{
-   clip-path: circle() !important;
-   width: 43%;
+.profile-picture-container {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%; 
+    overflow: hidden;
+    width: 43%;
+    aspect-ratio: 1/1; 
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+    border-radius: 50%; 
+}
+.profile-container{
+    margin-top: 6%;
+    color: #000;
+font-family: Poppins !important;
+font-style: normal;
+}
+
+.modal-backdrop.show {
+    opacity: 0;
+    font-family: Poppins !important;
+    font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+}
+
+.profile-name-modal{
+    top: 16%;
+    left:-12%;
+    border-radius: 10px;
+}
+
+.profile-name-modal .modal-content{
+    background-color: #E4E2FF;
+    font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+width: 75%;
+}
+.profile-name-modal .modal-body{
+    padding: 5px 24px 5px 8px;
+}
+.form-control:focus{
+    box-shadow: none !important;
+    border: none !important;
+}
+.profile-container .form-control:focus{
+    box-shadow: none !important;
+    border: none !important;
+    background-color: rgba(217, 217, 217, 0.37);
+}
+.profile-work-modal{
+    top: 45%;
+    left: 22%;
+    border-radius: 10px;
+}
+.profile-work-modal .modal-content{
+    background-color: #EFEEFF;
+    font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+width: 85%;
+}
+.profile-work-modal .modal-body{
+    padding: 25px;
 }
 .profile-container .card-title{
     font-size: 16px;
     font-weight: 600;
 }
-
+.profile-work-modal p{
+    color: #000;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+}
+.profile-work-modal button{
+  background-color: white;
+  color: #EA394A;
+  border: none;
+  font-family: Poppins !important;
+  width: 100%;
+  font-size: 15px;
+font-style: normal;
+font-weight: 600;
+padding-top: 10px;
+padding-bottom: 10px;
+}
 .profile-container label{
     font-size: 14px !important;
     font-weight: 400;
@@ -23,10 +110,12 @@
 
 .profile-container input{
     padding: 0px 10px !important;
-    background-color: rgba(217, 217, 217, 0.37) !important;
+    background-color:rgba(217, 217, 217, 0.37);
     height:25px;
     font-size: 16px;
     font-family: Poppins;
+    /* opacity: 37%; */
+    color: #1E1E2E ;
 }
 
 .profile-container .card{
@@ -177,9 +266,17 @@
     .profile-card-2 .card-body{
         margin-left: 12px !important;
      }
-     .profile-picture{
-        width: 70% !important;
-     }
+     .profile-container{
+        margin-top: 10%;
+    }
+    .profile-work-modal{
+        top: 25%;
+        left: 22%;
+    }
+    .profile-name-modal{
+        top: 10%;
+    left:-3%;
+    }
 }
 
 @media (min-width:831px) and (max-width:1000px) {
@@ -204,8 +301,16 @@
      .profile-first-card-btn-2{
         width: 90% !important;
     }
-    .profile-picture{
-        width: 60%;
-     }
+     .profile-container{
+        margin-top: 10%;
+    }
+    .profile-name-modal{
+        top: 8.5%;
+    left:-6.5%;
+    }
+    .profile-work-modal{
+        top: 23%;
+        left: 22%;
+    }
 }
 

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import "./reviewStyles.css";
 import NavbarContext from "../NavbarContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const FirstPage = () => {
   const navbarHeight = React.useContext(NavbarContext);
@@ -66,6 +68,9 @@ export const FirstPage = () => {
         console.log("dammit these errors");
         // Handle the error response
         const data = await response.json();
+        toast.error(data.message, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
         console.error(`Error: ${response.status} ${response.statusText}`);
         console.error(data.message); // Print the error message from the backend
 
@@ -181,6 +186,7 @@ export const FirstPage = () => {
           </Col>
         </Row>
       </Container>
+      <ToastContainer/>
     </section>
   );
 };
