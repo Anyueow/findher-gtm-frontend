@@ -191,7 +191,7 @@ function Profile() {
         return;
       }
       try {
-        const response = await fetch("http://localhost:5000/profile/view",
+        const response = await fetch("https://findher-backend.onrender.com/profile/view",
          {
           headers: {
             "Content-Type": "application/json",

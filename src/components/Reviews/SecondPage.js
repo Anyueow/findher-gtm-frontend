@@ -12,6 +12,7 @@ import TextField from '@mui/material/TextField';
 
 import Autocomplete from "@mui/material/Autocomplete";
 import GoogleMapsLoader from "./GoogleMapsLoader";
+import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
 
 export const SecondPage = () => {
 
@@ -32,7 +33,8 @@ export const SecondPage = () => {
   const [CompanyList, setCompanyList] = useState([]);
 
   const navigate = useNavigate();
-
+  const  firstPageTime= usePageTimeTracker();
+  // console.log( (firstPageTime));
   const getCompanies = async (cname) => {
     const apikey=process.env.REACT_APP_xrapidKey
     const hostkey=process.env.REACT_APP_xrapidHost
@@ -88,6 +90,7 @@ export const SecondPage = () => {
       }
 
       const reviewData = {
+        firstPageTime:firstPageTime,
         companyName: Com,
         industry: industry,
         companyOffice: Loc,
@@ -279,6 +282,9 @@ const [depList, setDepList] = useState([]);
     fetchDep();
   }, [dep]);
   // console.log("finalDep",department);
+
+
+  
   return (
     <div>
       <GoogleMapsLoader />

@@ -6,6 +6,7 @@ import NavbarContext from "../NavbarContext";
 import ReactTooltip from "react-tooltip";
 import ReviewProgressBar from "./ReviewProgressBar";
 import {DropdownBox} from './DropdownBox'
+import { usePageTimeTracker } from '../../ReusableFunctions/usePageTimeTracker';
 const isSafariOrMac = () => {
     const ua = window.navigator.userAgent;
     return /^((?!chrome|android).)*safari/i.test(ua);
@@ -14,7 +15,7 @@ const isSafariOrMac = () => {
 
 
 const FifthPage = () => {
-
+  const thirdPageTime= usePageTimeTracker();
   const [questionOne, setQuestionOne] = useState({
     question: "",
     answer: "",
@@ -86,6 +87,7 @@ const FifthPage = () => {
             reviewId,
             questionOne,
             questionTwo,
+            thirdPageTime
         };
 
     
