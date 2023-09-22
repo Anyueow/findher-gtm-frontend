@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import "./reviewStyles.css";
-import NavbarContext from "../NavbarContext";
+// import NavbarContext from "../NavbarContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const FirstPage = () => {
-    const navbarHeight = React.useContext(NavbarContext);
+    // const navbarHeight = React.useContext(NavbarContext);
 
     const [user, setUser] = useState({
                                          email: "",
