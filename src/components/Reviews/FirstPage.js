@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import "./reviewStyles.css";
-import NavbarContext from "../NavbarContext";
+// import NavbarContext from "../NavbarContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const FirstPage = () => {
-    const navbarHeight = React.useContext(NavbarContext);
+    // const navbarHeight = React.useContext(NavbarContext);
 
     const [user, setUser] = useState({
                                          email: "",
@@ -42,7 +44,6 @@ export const FirstPage = () => {
 
     const handleUserdetailsSubmit = async (e) => {
         e.preventDefault();
-        console.log('handleUserdetailsSubmit')
         const { email, phoneNumber, password, firstName, lastName} = user;
         if (email && phoneNumber && password && firstName && lastName ) {
             try {
@@ -76,6 +77,9 @@ export const FirstPage = () => {
                  console.log("dammit these errors")
             // Handle the error response
                 const data = await response.json();
+                toast.error(data.message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                  });
                 console.error(`Error: ${response.status} ${response.statusText}`);
                 console.error(data.message); // Print the error message from the backend
 
@@ -139,9 +143,11 @@ export const FirstPage = () => {
                 navigate("/reviews_one"); // Assuming you have a success page to navigate to
             } else {
                  console.log("dammit these errors")
-
             // Handle the error response
                 const data = await response.json();
+                toast.error(data.message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                  });
                 console.error(`Error: ${response.status} ${response.statusText}`);
                 console.error(data.message); // Print the error message from the backend
 
@@ -166,10 +172,10 @@ export const FirstPage = () => {
     return (
         <section>
             <Container id="reviews" className="sub sub1"
-                       style={{ paddingTop: navbarHeight }}>
+                       style={{ paddingTop: "4%" }}>
 
                 <Row className="ROw center-contents">
-                    <Col md={6} className="align-content-center first-div">
+                    <Col md={6} className="align-content-center">
 
                         <div className="design">
                             <Row>
@@ -199,15 +205,15 @@ export const FirstPage = () => {
                        {!isOtp.status && ( 
                         <>
                        <Row>
-                            <h2 className="head-name Waitlist" >
+                            <h2 className="head-name head-name-review-signin Waitlist" >
                                 Join the Waitlist!</h2>
                                 <p className="small Waitlistpara">To be the first to access ratings, reviews, and how 10,000+ different workplaces in India support the women working for them</p>
                         </Row><Row>
 
                         <Form  className="form-wrapper">
-                            <Row>
-                                <Col xs="5"  className="me-2">
-                        <Form.Group className="form-grp">
+                            <Row className="form-grp-name">
+                                <Col xs="6"  className="pe-0">
+                        <Form.Group className="">
                                 <Form.Label>First Name</Form.Label>
                                 <Form.Control
                                     name="firstName" // Added name attribute
@@ -218,8 +224,8 @@ export const FirstPage = () => {
                                 />
                             </Form.Group>
                             </Col>
-                            <Col xs="5" className="mx-4">
-                            <Form.Group className="form-grp">
+                            <Col xs="6" className="pe-0">
+                            <Form.Group className="">
                                 <Form.Label>Last Name</Form.Label>
                                 <Form.Control
                                     name="lastName" // Added name attribute
@@ -329,7 +335,7 @@ export const FirstPage = () => {
                 </Row>
 
             </Container>
-
+            <ToastContainer/>
         </ section>
     );
 };

@@ -42,7 +42,7 @@
     background-color: #DFE077;
     border-radius: 40px;
     padding: 20% 30% 10% 15%;
-    margin: 8% 4%;
+    margin: 0% 4% !important;
     height: 510px;
 
 }
@@ -205,8 +205,12 @@ heading-name3{
 }
 
 .form-grp{
-    margin-bottom: 2%;
+    margin-bottom: 1.5% !important;
     width:80%;
+}
+.form-grp-name{
+    margin-bottom: 1.5%;
+    width:82%;
 }
 
 .full-width {
@@ -657,6 +661,12 @@ heading-name3{
     line-height: 150%; /* 42px */
   }
 
+  .head-name-review-signin{
+    margin-top: 4%;
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+
   .form-grp-one {
     align-content: center;
     padding: 8%;
@@ -702,6 +712,12 @@ heading-name3{
       }
       .sub .form-grp{
         margin-left: 10% !important;
+      }
+      .sub .form-grp-name{
+        margin-left: 8% !important;
+      }
+      .sub .form-grp-name .col-6{
+        padding-left: 3px !important;
       }
       .Waitlistpara{
         padding-left: 10% !important;

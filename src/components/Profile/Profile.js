@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from "react";
 import "./CSS/Profile.css";
 import ProfileNavBar from "./ProfileNavBar";
-import { Col, Form, Row, Button } from "react-bootstrap";
+import { Col, Form, Row, Button, Modal } from "react-bootstrap";
 import ChangeNumEmail from "./ChangeNumEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import profile from "../../Assets/profile.png"
+import profile from "../../Assets/profile.png";
 
 function Profile() {
-
   const [profileDetails, setProfileDetails] = useState();
   const [editProfileDetails, setEditeditProfileDetails] = useState();
   const [showNumEmail, setshowNumEmail] = useState(false);
+  const [showModalName, setShowModalName] = useState(false);
+  const [showModalWork, setShowModalWork] = useState(false);
+  
 
-  const [onChangeContact, setOnChangeContact] =useState({
-    email:false,
-    phoneNumber:false,
-    cancel:false,
+  const [onChangeContact, setOnChangeContact] = useState({
+    email: false,
+    phoneNumber: false,
+    cancel: false,
   });
 
-  const [onChangeWork, setOnChangeWork] =useState(false);
+  const handleCloseModalName = () => {
+    setShowModalName(false);
+  };
+
+  const [onChangeWork, setOnChangeWork] = useState(false);
 
   function handleOnChange(e) {
     const name = e.target.name;
@@ -28,48 +34,45 @@ function Profile() {
       [name]: e.target.value,
     });
 
-
-    if(name === "phoneNumber"){
+    if (name === "phoneNumber") {
       setOnChangeContact((prevState) => ({
         ...prevState,
         email: true,
-        cancel:true,
+        cancel: true,
       }));
-    }
-    else if( name === "email"){
+    } else if (name === "email") {
       setOnChangeContact((prevState) => ({
         ...prevState,
         phoneNumber: true,
-        cancel:true,
+        cancel: true,
       }));
+    } else {
+      setOnChangeWork(true);
     }
-    else{
-      setOnChangeWork(true)
-    }
-    console.log(onChangeWork)
-  };
-
-  function CancelOnChangeContact(){
-    setOnChangeContact({
-      email:false,
-      phoneNumber:false,
-      cancel:false,
-    })
-    setEditeditProfileDetails((prevState)=> ({ 
-      ...prevState,
-      email :profileDetails.email,
-      phoneNumber :profileDetails.phoneNumber
-    }))
   }
 
-  function CancelOnChangeWork(){
-    setOnChangeWork(!onChangeWork)
-    setEditeditProfileDetails((prevState) => ({ ...prevState, 
-      companyName : profileDetails.companyName ,
-     positionTitle : profileDetails.positionTitle,
-     companyOffice : profileDetails.companyOffice,
-     department : profileDetails.department }));
-    
+  function CancelOnChangeContact() {
+    setOnChangeContact({
+      email: false,
+      phoneNumber: false,
+      cancel: false,
+    });
+    setEditeditProfileDetails((prevState) => ({
+      ...prevState,
+      email: profileDetails.email,
+      phoneNumber: profileDetails.phoneNumber,
+    }));
+  }
+
+  function CancelOnChangeWork() {
+    setOnChangeWork(!onChangeWork);
+    setEditeditProfileDetails((prevState) => ({
+      ...prevState,
+      companyName: profileDetails.companyName,
+      positionTitle: profileDetails.positionTitle,
+      companyOffice: profileDetails.companyOffice,
+      department: profileDetails.department,
+    }));
   }
 
   const handleProfile = async (e) => {
@@ -79,36 +82,41 @@ function Profile() {
       reader.onload = () => res(reader.result);
       reader.onerror = (e) => rej.e;
     });
-    console.log(Data)
-    UploadProfilePicture(Data)
+    console.log(Data);
+    UploadProfilePicture(Data);
   };
 
-  async function UploadProfilePicture(profilePic){
+  async function UploadProfilePicture(profilePic) {
     const token = localStorage.getItem("token");
     if (!token) {
       console.error("No token found. Please log in.");
       return;
     }
     try {
-      const response = await fetch("https://findher-backend.onrender.com/profile/upload",
-       {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        credentials: "include", // Include this line
-        body:  JSON.stringify({profilePic}),
-      });
+      const response = await fetch(
+        "https://findher-backend.onrender.com/profile/upload",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include", // Include this line
+          body: JSON.stringify({ profilePic }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
         toast.success(data.message, {
           position: toast.POSITION.TOP_RIGHT,
         });
-        console.log(data)
+        console.log(data);
         setProfileDetails((prevState) => ({ ...prevState, profilePic }));
-        setEditeditProfileDetails((prevState) => ({ ...prevState, profilePic }));
+        setEditeditProfileDetails((prevState) => ({
+          ...prevState,
+          profilePic,
+        }));
       } else {
         console.log("dammit these errors");
         // Handle the error response
@@ -130,42 +138,71 @@ function Profile() {
     }
   }
 
-  async function UpdateWorkDetails(){
+  async function UpdateWorkDetails() {
     const token = localStorage.getItem("token");
     if (!token) {
       console.error("No token found. Please log in.");
       return;
     }
-    try {
-      const response = await fetch("https://findher-backend.onrender.com/profile/work",
-       {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        credentials: "include", // Include this line
-        body:  JSON.stringify({
-          companyName : editProfileDetails.companyName ,
-          positionTitle : editProfileDetails.positionTitle,
-          companyOffice : editProfileDetails.companyOffice,
-          department : editProfileDetails.department
-        }),
+    if(profileDetails.positionTitle === editProfileDetails.positionTitle.trim() || profileDetails.department  === editProfileDetails.department.trim() )
+    {
+      setShowModalWork(true);
+      const buttonClickPromise = new Promise((resolve) => {
+        const handleButtonClickInternal = (buttonName) => {
+          setShowModalWork(false);
+          if (buttonName === "Cancel") {
+            resolve(false); // Resolve with false for "Cancel" button
+          } else {
+            resolve(true); // Resolve with true for other buttons
+          } 
+        };
+        // Add event listeners for the buttons
+        setTimeout(() => {
+        document.getElementById("confirmButtonProfileWork").addEventListener("click", () => handleButtonClickInternal("Confirm"));
+        document.getElementById("cancelButtonProfileWork").addEventListener("click", () => handleButtonClickInternal("Cancel"));
+      }, 1000);
       });
+
+      const buttonResult = await buttonClickPromise; // Wait for the promise to resolve
+
+      if (!buttonResult) {
+        // Handle the case where "Cancel" was clicked (buttonResult is false)
+        console.log("Cancelled operation.");
+        return;
+      }
+    }
+    try {
+      const response = await fetch(
+        "https://findher-backend.onrender.com/profile/work",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include", // Include this line
+          body: JSON.stringify({
+            companyName: editProfileDetails.companyName.trim(),
+            positionTitle: editProfileDetails.positionTitle.trim(),
+            companyOffice: editProfileDetails.companyOffice.trim(),
+            department: editProfileDetails.department.trim(),
+          }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data)
         toast.success(data.message, {
           position: toast.POSITION.TOP_RIGHT,
         });
-        console.log(data)
-        setOnChangeWork(!onChangeWork)
-        setProfileDetails((prevState) => ({ ...prevState, 
-           companyName : editProfileDetails.companyName ,
-          positionTitle : editProfileDetails.positionTitle,
-          companyOffice : editProfileDetails.companyOffice,
-          department : editProfileDetails.department }));
+        setOnChangeWork(!onChangeWork);
+        setProfileDetails((prevState) => ({
+          ...prevState,
+          companyName: editProfileDetails.companyName,
+          positionTitle: editProfileDetails.positionTitle,
+          companyOffice: editProfileDetails.companyOffice,
+          department: editProfileDetails.department,
+        }));
       } else {
         console.log("dammit these errors");
         const data = await response.json();
@@ -191,23 +228,24 @@ function Profile() {
         return;
       }
       try {
-        const response = await fetch("https://findher-backend.onrender.com/profile/view",
-         {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
+        const response = await fetch(
+          "https://findher-backend.onrender.com/profile/view",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
           }
-        });
+        );
 
         if (response.ok) {
           const data = await response.json();
           setProfileDetails(data);
           setEditeditProfileDetails(data);
-          console.log(data); // Print the response data to the console for debugging purp
         } else {
           console.log("dammit these errors");
           // Handle the error response
-          console.log(response)
+          console.log(response);
           const data = await response.json();
           console.error(`Error: ${response.status} ${response.statusText}`);
           console.error(data.message); // Print the error message from the backend
@@ -222,12 +260,16 @@ function Profile() {
     fetchData();
   }, []);
 
-
-
   return (
     <section>
-      <ProfileNavBar newImage={editProfileDetails?.profilePic} />
-      <div className="profile-container d-flex justify-content-center pt-3 mt-4">
+      <ProfileNavBar
+        newImage={
+          editProfileDetails?.profilePic
+            ? editProfileDetails?.profilePic
+            : profile
+        }
+      />
+      <div className="profile-container d-flex justify-content-center">
         <Row
           style={{ width: "90%" }}
           className="mt-5 d-flex justify-content-center profile-first-row"
@@ -239,36 +281,43 @@ function Profile() {
                   Contact Details
                 </h4>
                 <Form>
-                  <Row className="mb-4 mt-2">
-                    <Col>
+                  <Row className="mb-4 mt-2" style={{ width: "98%" }}>
+                    <Col xs="6">
                       <Form.Group
                         style={{ textAlign: "left" }}
                         data-tip="profile-name-tooltip"
                         data-for="profile-name-tooltip"
                         data-html={true}
+                        onClick={() => setShowModalName(true)}
                       >
                         <Form.Label className="mb-0">First Name</Form.Label>
                         <Form.Control
                           required
-                          disabled
                           name="firstName"
                           value={editProfileDetails?.firstName}
                           style={{ color: "#BEBCBC" }}
                         ></Form.Control>
                       </Form.Group>
                     </Col>
-                    <Col>
-                      <Form.Group style={{ textAlign: "left" }}>
+                    <Col xs="6">
+                      <Form.Group style={{ textAlign: "left" }}
+                       onClick={() => setShowModalName(true)}
+                      >
                         <Form.Label className="mb-0">Last Name</Form.Label>
                         <Form.Control
                           required
-                          disabled
                           name="lastName"
                           value={editProfileDetails?.lastName}
                           style={{ color: "#BEBCBC" }}
                         ></Form.Control>
                       </Form.Group>
                     </Col>
+                    <Modal show={showModalName} onHide={handleCloseModalName} className="profile-name-modal">
+                      <Modal.Body>
+                        You cannot edit your name once you enter it. Please
+                        contact support to do so.
+                      </Modal.Body>
+                    </Modal>
                   </Row>
 
                   <Row className="mt-4" style={{ textAlign: "left" }}>
@@ -292,8 +341,8 @@ function Profile() {
                           required
                           name="phoneNumber"
                           disabled={onChangeContact.phoneNumber}
-                           value={editProfileDetails?.phoneNumber}
-                           onChange={handleOnChange}
+                          value={editProfileDetails?.phoneNumber}
+                          onChange={handleOnChange}
                         ></Form.Control>
                       </Form.Group>
                     </Col>
@@ -314,14 +363,30 @@ function Profile() {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <div className="mt-3 me-5 d-flex justify-content-between profile-first-card-btn" style={{ textAlign: "left" }}>
-                    <Button onClick={()=>setshowNumEmail(true)} disabled={!onChangeContact.cancel } className={`profile-save-btn mt-4 ${onChangeContact.cancel ? "profile-save-btn-active":""}`}>
+                  <div
+                    className="mt-3 me-5 d-flex justify-content-between profile-first-card-btn"
+                    style={{ textAlign: "left" }}
+                  >
+                    <Button
+                      onClick={() => setshowNumEmail(true)}
+                      disabled={!onChangeContact.cancel}
+                      className={`profile-save-btn mt-4 ${
+                        onChangeContact.cancel ? "profile-save-btn-active" : ""
+                      }`}
+                    >
                       Save changes
                     </Button>
-                    { onChangeContact.cancel && (
-                    <Button onClick={CancelOnChangeContact} className={`profile-save-btn px-4 mt-4 ${onChangeContact.cancel? "profile-save-btn-active":""}`}>
-                      Cancel
-                    </Button>
+                    {onChangeContact.cancel && (
+                      <Button
+                        onClick={CancelOnChangeContact}
+                        className={`profile-save-btn px-4 mt-4 ${
+                          onChangeContact.cancel
+                            ? "profile-save-btn-active"
+                            : ""
+                        }`}
+                      >
+                        Cancel
+                      </Button>
                     )}
                   </div>
                 </Form>
@@ -329,22 +394,25 @@ function Profile() {
             </div>
           </Col>
           <Col lg="4" md="4" className="mb-4">
-            <div className="card profile-card profile-card-2">
-              <div className="card-body mx-0 px-0">
+            <div className="card profile-card ">
+              <div className="card-body ms-0 ps-0">
                 <h4 className="card-title" style={{ textAlign: "left" }}>
                   Work Details
                 </h4>
                 <Form>
-                  <Row>
-                  <Col xs="12" md="11" lg="12">
-                    <Form.Group style={{ textAlign: "left" }}>
-                      <Form.Label className="mb-0">Current Company </Form.Label>
-                      <Form.Control required 
-                      name="companyName"
-                      onChange={handleOnChange}
-                      value={editProfileDetails?.companyName}
-                      ></Form.Control>
-                    </Form.Group>
+                  <Row style={{ width: "98%" }}>
+                    <Col xs="12" md="11" lg="12">
+                      <Form.Group style={{ textAlign: "left" }}>
+                        <Form.Label className="mb-0">
+                          Current Company{" "}
+                        </Form.Label>
+                        <Form.Control
+                          required
+                          name="companyName"
+                          onChange={handleOnChange}
+                          value={editProfileDetails?.companyName}
+                        ></Form.Control>
+                      </Form.Group>
                     </Col>
                   </Row>
 
@@ -379,7 +447,7 @@ function Profile() {
                     </Col>
                   </Row>
                   <Row className="mt-2" style={{ textAlign: "left" }}>
-                    <Col xs="12"  md="11" lg="12" className="">
+                    <Col xs="12" md="11" lg="12" className="">
                       <Form.Group>
                         <Form.Label className="mb-0">Location</Form.Label>
                         <Form.Control
@@ -393,18 +461,40 @@ function Profile() {
                     </Col>
                   </Row>
                   <div className="d-flex justify-content-between profile-first-card-btn-2">
-                    <Button className={`profile-save-btn mt-3 mb-2 ${onChangeWork ?"profile-save-btn-active":""}`}
-                    disabled={!onChangeWork}
-                    onClick={UpdateWorkDetails}
+                    <Button
+                      className={`profile-save-btn mt-3 mb-2 ${
+                        onChangeWork ? "profile-save-btn-active" : ""
+                      }`}
+                      disabled={!onChangeWork}
+                      onClick={UpdateWorkDetails}
                     >
                       Save changes
                     </Button>
-                    { onChangeWork && (
-                    <Button onClick={CancelOnChangeWork} className={`profile-save-btn px-4 mt-3 mb-2 ${onChangeWork? "profile-save-btn-active":""}`}>
-                      Cancel
-                    </Button>
+                    {onChangeWork && (
+                      <Button
+                        onClick={CancelOnChangeWork}
+                        className={`profile-save-btn px-4 mt-3 mb-2 ${
+                          onChangeWork ? "profile-save-btn-active" : ""
+                        }`}
+                      >
+                        Cancel
+                      </Button>
                     )}
                   </div>
+                  <Modal show={showModalWork} className="profile-work-modal">
+                      <Modal.Body>
+                       <p className="mb-1" style={{fontWeight:"600", fontSize:"18px",color:"#EA394A"}}>Before you save!!</p>
+                       <p>Recheck your job title & location. If it doesn’t match, your reviews will be voided and you might lose account privileges.</p>
+                       <Row className="d-flex justify-content-center align-items-center">
+                        <Col>
+                        <button id="confirmButtonProfileWork">They are the same</button>
+                        </Col>
+                        <Col>
+                        <button id="cancelButtonProfileWork">Ok, changing</button>
+                        </Col>
+                       </Row>
+                      </Modal.Body>
+                    </Modal>
                 </Form>
               </div>
             </div>
@@ -423,11 +513,17 @@ function Profile() {
                       xs="12"
                       className=" d-flex justify-content-center align-items-center profile-picture-div"
                     >
-                      <img
-                        className="profile-picture"
-                        src={editProfileDetails?.profilePic? editProfileDetails?.profilePic : profile}
-                        alt=""
-                      />
+                      <div class="profile-picture-container">
+                        <img
+                          className="profile-picture"
+                          src={
+                            editProfileDetails?.profilePic
+                              ? editProfileDetails?.profilePic
+                              : profile
+                          }
+                          alt=""
+                        />
+                      </div>
                     </Col>
                     <Col xs="12" className="d-flex justify-content-center">
                       <Form.Group>
@@ -455,8 +551,16 @@ function Profile() {
           </div>
         </Row>
       </div>
-      <ToastContainer/>
-      {showNumEmail && (  <ChangeNumEmail onChangeContact={onChangeContact} showNumEmail={showNumEmail} setshowNumEmail={setshowNumEmail} email={editProfileDetails?.email} phoneNumber={editProfileDetails?.phoneNumber}/>)}
+      <ToastContainer />
+      {showNumEmail && (
+        <ChangeNumEmail
+          onChangeContact={onChangeContact}
+          showNumEmail={showNumEmail}
+          setshowNumEmail={setshowNumEmail}
+          email={editProfileDetails?.email}
+          phoneNumber={editProfileDetails?.phoneNumber}
+        />
+      )}
     </section>
   );
 }
