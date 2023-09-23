@@ -197,7 +197,7 @@ const FourthPage = () => {
   return (
     <div>
       <ReviewProgressBar percent={25} />
-      <Container className="ratings" style={{ marginTop: "20px" }}>
+      <Container className="ratings" style={{ marginTop: "20px",marginLeft:"0" }}>
         <Form onSubmit={handleSubmit}>
           <Row className="fourth-row">
             <h1 className="review-four-head" style={{ marginTop: "8%" }}>
@@ -207,7 +207,8 @@ const FourthPage = () => {
             <h5 className="review-four-head-h5" style={{ marginBottom: "3%" }}>
               How would you respond to the following?:
             </h5>
-            <Col md={6} xs="12" className="fourth-left">
+            <div className="qesBox" style={{width:"100%",padding:"0"}}>
+            <Col   className="fourth-left">
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
                    1. I had the flexibility I needed to balance my work and
@@ -234,7 +235,7 @@ const FourthPage = () => {
                 </div>
               </Form.Group>
             </Col>
-            <Col md={6} xs="auto" className="fourth-right">
+            <Col  className="fourth-right">
               <Form.Group className="rating-box fourth-rating-box">
                 <Form.Label className="review-label">
                   4. I have several female co-workers and managers:{" "}
@@ -263,6 +264,7 @@ const FourthPage = () => {
                 </div>
               </Form.Group>
             </Col>
+            </div>
             <Row className="d-flex justify-content-center">
               <Button
                 type="submit"
