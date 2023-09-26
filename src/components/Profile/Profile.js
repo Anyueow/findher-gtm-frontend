@@ -219,7 +219,48 @@ function Profile() {
       console.error("Stack Trace:", error.stack);
     }
   }
+  const [notifCount,setnotifCount] =useState(0);
+  const [notifications,setnotifications]=useState([]);
+  async function getNotifications(params) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      console.error("No token found. Please log in.");
+      return;
+    }
+    try {
+      const response = await fetch(
+        "https://findher-backend.onrender.com/profile/notifications",
+        // "http://localhost:5000/profile/notifications",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include", // Include this line
+        }
+      );
 
+      if (response.ok) {
+        const data = await response.json();
+        setnotifCount(data.notifCount);
+        // setsaveCount(data.saved);
+        setnotifications(data.notifications);
+        console.log("notifications=",notifications);
+      } else {
+        console.log("dammit these errors");
+        const data = await response.json();
+        console.error(`Error: ${response.status} ${response.statusText}`);
+        console.error(data.message); // Print the error message from the backend
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(()=>{
+    getNotifications();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
   useEffect(() => {
     const fetchData = async () => {
       const token = localStorage.getItem("token");
@@ -268,6 +309,7 @@ function Profile() {
             ? editProfileDetails?.profilePic
             : profile
         }
+        notifCount={notifCount}
       />
       <div className="profile-container d-flex justify-content-center">
         <Row
