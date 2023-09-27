@@ -231,8 +231,8 @@ function Profile() {
     }
     try {
       const response = await fetch(
-        // "https://findher-backend.onrender.com/profile/notifications",
-        "http://localhost:5000/profile/notifications",
+        "https://findher-backend.onrender.com/profile/notifications",
+        // "http://localhost:5000/profile/notifications",
         {
           method: "GET",
           headers: {
