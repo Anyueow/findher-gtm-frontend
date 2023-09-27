@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./CSS/Profile.css";
 import ProfileNavBar from "./ProfileNavBar";
 import { Col, Form, Row, Button, Modal } from "react-bootstrap";
@@ -6,6 +6,7 @@ import ChangeNumEmail from "./ChangeNumEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profile from "../../Assets/profile.png";
+import NotifDropdown from "./NotifDropdown";
 
 function Profile() {
   const [profileDetails, setProfileDetails] = useState();
@@ -219,6 +220,7 @@ function Profile() {
       console.error("Stack Trace:", error.stack);
     }
   }
+  // let not=[];
   const [notifCount,setnotifCount] =useState(0);
   const [notifications,setnotifications]=useState([]);
   async function getNotifications(params) {
@@ -229,8 +231,8 @@ function Profile() {
     }
     try {
       const response = await fetch(
-        "https://findher-backend.onrender.com/profile/notifications",
-        // "http://localhost:5000/profile/notifications",
+        // "https://findher-backend.onrender.com/profile/notifications",
+        "http://localhost:5000/profile/notifications",
         {
           method: "GET",
           headers: {
@@ -243,9 +245,12 @@ function Profile() {
 
       if (response.ok) {
         const data = await response.json();
+        console.log("data",data.notifications);
+        setnotifications(data.notifications)
         setnotifCount(data.notifCount);
         // setsaveCount(data.saved);
-        setnotifications(data.notifications);
+        // setnotifications((prevNotifications) => [...prevNotifications, ...data.notifications]);
+
         console.log("notifications=",notifications);
       } else {
         console.log("dammit these errors");
@@ -300,7 +305,26 @@ function Profile() {
     };
     fetchData();
   }, []);
+  const [open, setOpen] = useState(false);
+  const popupRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setOpen(false);
+        // setIsChecked(false)
+      }
+    };
 
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
   return (
     <section>
       <ProfileNavBar
@@ -310,6 +334,8 @@ function Profile() {
             : profile
         }
         notifCount={notifCount}
+        setOpen={setOpen}
+        
       />
       <div className="profile-container d-flex justify-content-center">
         <Row
@@ -603,6 +629,7 @@ function Profile() {
           phoneNumber={editProfileDetails?.phoneNumber}
         />
       )}
+     {open &&  <NotifDropdown setOpen={setOpen} notifications={notifications}/>}
     </section>
   );
 }

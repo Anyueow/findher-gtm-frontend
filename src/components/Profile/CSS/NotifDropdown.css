@@ -1,0 +1,45 @@
+.notifCont{
+    position: absolute;
+    display: flex;
+    background: transparent;
+    background-color: #eeeeb9;
+    flex-direction: column;
+    opacity: 11;
+    width: 34rem;
+    top: 10%;
+    justify-content: center;
+    left: 57%;
+    align-items: center;
+    height: auto;
+    border-radius: 18px;
+}
+.innernotifCont{
+    margin: 20px 7px;
+    /* background: grey; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.notifrow{
+    
+    background: white;
+    border-radius: 8px;
+    padding: 2px 15px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    margin: 7px 2px;
+    justify-content: flex-start;
+
+}
+.notifrow p{
+    align-items: center;
+    display: flex;
+}
+.notifBtn{
+    width: 10rem;
+    font-weight: 100;
+    margin: 15px 0;
+}

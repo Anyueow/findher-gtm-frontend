@@ -6,7 +6,8 @@ import "./CSS/ProfileNavBar.css";
 import { Button } from "react-bootstrap";
 import Badge from "@mui/material/Badge";
 function ProfileNavBar(props) {
-  const {notifCount}=props;
+  const {notifCount,setOpen}=props;
+ 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -50,13 +51,14 @@ function ProfileNavBar(props) {
           </button>
           <img src={logo} alt="brand" className="logo" />
 
-          <Badge badgeContent={notifCount} color="secondary">
+          <Badge badgeContent={notifCount} color="secondary" onClick={()=>setOpen(true)} >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="33"
               height="33"
               viewBox="0 0 33 33"
               fill="none"
+              cursor="pointer"
             >
               <g clip-path="url(#clip0_1335_1621)">
                 <path
