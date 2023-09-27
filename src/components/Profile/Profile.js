@@ -242,6 +242,7 @@ function Profile() {
           credentials: "include", // Include this line
         }
       );
+      
 
       if (response.ok) {
         const data = await response.json();
