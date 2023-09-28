@@ -223,6 +223,7 @@ function Profile() {
   // let not=[];
   const [notifCount,setnotifCount] =useState(0);
   const [notifications,setnotifications]=useState([]);
+  
   async function getNotifications(params) {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -243,16 +244,18 @@ function Profile() {
         }
       );
       
-
       if (response.ok) {
         const data = await response.json();
         console.log("data",data.notifications);
+        // await setNotificationState(data.notifications)
         setnotifications(data.notifications)
+        // console.log(notifications);
         setnotifCount(data.notifCount);
         // setsaveCount(data.saved);
         // setnotifications((prevNotifications) => [...prevNotifications, ...data.notifications]);
-
-        console.log("notifications=",notifications);
+        // await delay(2000);
+        // console.log("Notif count = ", notifCount);
+        // console.log("notifications=",notifications);
       } else {
         console.log("dammit these errors");
         const data = await response.json();
@@ -306,6 +309,12 @@ function Profile() {
     };
     fetchData();
   }, []);
+
+  console.log("notification")
+  console.log(notifications)
+  console.log("notif count")
+  console.log(notifCount)
+
   const [open, setOpen] = useState(false);
   const popupRef = useRef(null);
   useEffect(() => {
@@ -336,6 +345,8 @@ function Profile() {
         }
         notifCount={notifCount}
         setOpen={setOpen}
+        open={open}
+
         
       />
       <div className="profile-container d-flex justify-content-center">
@@ -630,7 +641,7 @@ function Profile() {
           phoneNumber={editProfileDetails?.phoneNumber}
         />
       )}
-     {open &&  <NotifDropdown setOpen={setOpen} notifications={notifications}/>}
+     {open &&  <NotifDropdown setOpen={setOpen} notifications={notifications} open={open} setnotifCount={setnotifCount} />}
     </section>
   );
 }

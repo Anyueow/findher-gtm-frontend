@@ -1,8 +1,9 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
 .notifCont{
     position: absolute;
     display: flex;
     background: transparent;
-    background-color: #eeeeb9;
+    background-color: #eeeeb9d6;
     flex-direction: column;
     opacity: 11;
     width: 34rem;
@@ -12,6 +13,7 @@
     align-items: center;
     height: auto;
     border-radius: 18px;
+    transition: bottom 0.7s ease-in-out;
 }
 .innernotifCont{
     margin: 20px 7px;
@@ -37,6 +39,8 @@
 .notifrow p{
     align-items: center;
     display: flex;
+    margin: 8px 0px;
+    font-family: 'Poppins', sans-serif;
 }
 .notifBtn{
     width: 10rem;
