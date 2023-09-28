@@ -4,9 +4,10 @@ import ReviewProgressBar from "./ReviewProgressBar";
 import {Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from 'react-icons/io';
+import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
 
 function SeventhPage() {
-
+  const fourthPageTime= usePageTimeTracker();
   const navigate = useNavigate(); 
 
   const [firstOne, setFirstOne] = useState([]);
@@ -164,7 +165,7 @@ const handleFirstInputChange = (e) => {
               Authorization: `Bearer ${token}`, // Assuming your token is stored in local storage
             },
             credentials: "include", // Include this line
-            body: JSON.stringify({ reviewId, features }),
+            body: JSON.stringify({ reviewId, features,fourthPageTime }),
           }
         );
 

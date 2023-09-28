@@ -9,6 +9,9 @@
     padding-top: 1%;
     padding-left: 2%;
   }
+  .profile-offcanvas span{
+    width: 10%;
+  }
 
   .profile-offcanvas-body{
     font-size: 20px;
@@ -17,11 +20,24 @@
     line-height: 30px;
   }
 
+  .profile-offcanvas-body svg{
+  width: 12% !important;
+  padding-bottom: 1.5%;
+  }
+  .offcanvas-backdrop.show {
+    opacity: 0;
+}
+
+.profile-picture-nav{
+  clip-path: circle() !important;
+  width: 43%;
+}
+
   @media (min-width:600px) and (max-width:850px) {
     .bell-icon{
       width: 2%;
     }
-    .profile-picture{
+    .profile-picture-nav{
       width: 3% !important;
     }
 }

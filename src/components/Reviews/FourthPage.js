@@ -15,10 +15,12 @@ import "./reviewStyles.css";
 import "./FourthPage.css";
 import { useNavigate } from "react-router-dom";
 import ReviewProgressBar from "./ReviewProgressBar";
+import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
 
 const FourthPage = () => {
   // within your component
-
+  const secondPageTime= usePageTimeTracker();
+  // console.log(secondPageTime);
   const companyName = localStorage.getItem("companyName"); // Placeholder for company name
   const [flexibilityRating, setFlexibilityRating] = useState(0);
   const [managementRating, setManagementRating] = useState(0);
@@ -167,7 +169,7 @@ const FourthPage = () => {
               Authorization: `Bearer ${token}`, // Assuming your token is stored in local storage
             },
             credentials: "include", // Include this line
-            body: JSON.stringify({ reviewId, ratings }),
+            body: JSON.stringify({ reviewId, ratings,secondPageTime }),
           }
         );
 
