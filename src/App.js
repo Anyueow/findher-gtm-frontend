@@ -45,7 +45,7 @@ import SectionFour from "./newDesign/SectionFour/SectionFour";
 import FaqSection from "./newDesign/FaqSection/FaqSection";
 import SectionSix from "./newDesign/SectionSix/SectionSix";
 import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
-import RefPopup from "./components/Reviews/RefPopup";
+import NotifDropdown from "./components/Profile/NotifDropdown";
 // import ExitPopup from "./newDesign/ModalPopup/ExitPopup";
 function MainContent() {
  
@@ -134,7 +134,7 @@ function App() {
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/old" element={<MainContent />} />
-            <Route path="/try" element={<RefPopup/>} />
+            <Route path="/try" element={<NotifDropdown/>} />
 
 
 

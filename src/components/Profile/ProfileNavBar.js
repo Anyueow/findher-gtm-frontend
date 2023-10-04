@@ -4,8 +4,10 @@ import logo from "../../Assets/logo.png";
 import goback from "../../Assets/goback.png";
 import "./CSS/ProfileNavBar.css";
 import { Button } from "react-bootstrap";
-
+import Badge from "@mui/material/Badge";
 function ProfileNavBar(props) {
+  const {notifCount,setOpen,open}=props;
+ 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -48,30 +50,36 @@ function ProfileNavBar(props) {
             </svg>
           </button>
           <img src={logo} alt="brand" className="logo" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="33"
-            height="33"
-            viewBox="0 0 33 33"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_1335_1621)">
-              <path
-                d="M16.1667 30C17.6333 30 18.8333 28.8 18.8333 27.3333H13.5C13.5 28.8 14.7 30 16.1667 30ZM24.1667 22V15.3333C24.1667 11.24 21.9933 7.81333 18.1667 6.90667V6C18.1667 4.89333 17.2733 4 16.1667 4C15.06 4 14.1667 4.89333 14.1667 6V6.90667C10.3533 7.81333 8.16667 11.2267 8.16667 15.3333V22L5.5 24.6667V26H26.8333V24.6667L24.1667 22ZM21.5 23.3333H10.8333V15.3333C10.8333 12.0267 12.8467 9.33333 16.1667 9.33333C19.4867 9.33333 21.5 12.0267 21.5 15.3333V23.3333Z"
-                fill="#3E2CC0"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_1335_1621">
-                <rect
-                  width="32"
-                  height="32"
-                  fill="white"
-                  transform="translate(0.166016 0.666992)"
+
+          <Badge badgeContent={notifCount} color="secondary" onClick={()=>{
+            open ?setOpen(false) :setOpen(true)
+          }} >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              cursor="pointer"
+            >
+              <g clip-path="url(#clip0_1335_1621)">
+                <path
+                  d="M16.1667 30C17.6333 30 18.8333 28.8 18.8333 27.3333H13.5C13.5 28.8 14.7 30 16.1667 30ZM24.1667 22V15.3333C24.1667 11.24 21.9933 7.81333 18.1667 6.90667V6C18.1667 4.89333 17.2733 4 16.1667 4C15.06 4 14.1667 4.89333 14.1667 6V6.90667C10.3533 7.81333 8.16667 11.2267 8.16667 15.3333V22L5.5 24.6667V26H26.8333V24.6667L24.1667 22ZM21.5 23.3333H10.8333V15.3333C10.8333 12.0267 12.8467 9.33333 16.1667 9.33333C19.4867 9.33333 21.5 12.0267 21.5 15.3333V23.3333Z"
+                  fill="#3E2CC0"
                 />
-              </clipPath>
-            </defs>
-          </svg>
+              </g>
+              <defs>
+                <clipPath id="clip0_1335_1621">
+                  <rect
+                    width="32"
+                    height="32"
+                    fill="white"
+                    transform="translate(0.166016 0.666992)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </Badge>
         </div>
         <img
           style={{ width: "2.5%" }}
