@@ -5,12 +5,15 @@ import "./reviewStyles.css";
 // import NavbarContext from "../NavbarContext";
 import { ToastContainer, toast } from "react-toastify";
 import Checkbox from "@mui/material/Checkbox";
-
+import { useCsrfToken } from '../../CsrfTokenProvider';
 import "react-toastify/dist/ReactToastify.css";
 import RefPopup from "./RefPopup";
 
 export const FirstPage = () => {
   // const navbarHeight = React.useContext(NavbarContext);
+
+  const csrfToken = useCsrfToken();
+  console.log(csrfToken)
 
   const [user, setUser] = useState({
     email: "",
@@ -25,11 +28,11 @@ export const FirstPage = () => {
     setIsChecked(event.target.checked);
   };
   const [formErrors, setFormErrors] = useState({
-    email: false,
-    phoneNumber: false,
-    password: false,
-    firstName: false,
-    lastName: false,
+    email: {status:false, message:"Please fill out the field"},
+    phoneNumber: {status:false, message:"Please fill out the field"},
+    password: {status:false, message:"Please fill out the field"},
+    firstName: {status:false, message:"Please fill out the field"},
+    lastName: {status:false, message:"Please fill out the field"},
   });
 
   const [isOtp, setisOtp] = useState({
@@ -52,8 +55,97 @@ export const FirstPage = () => {
   const [refCode,setRefcode] = useState("");
   const handleUserdetailsSubmit = async (e) => {
     e.preventDefault();
+   
     const { email, phoneNumber, password, firstName, lastName } = user;
-    if (email && phoneNumber && password && firstName && lastName) {
+
+    if (!email && !phoneNumber && !password && !firstName && !lastName) {
+      return;
+    }
+
+    setFormErrors({
+      email: { status: false, message: "Please fill out the field" },
+      phoneNumber: { status: false, message: "Please fill out the field" },
+      password: { status: false, message: "Please fill out the field" },
+      firstName: { status: false, message: "Please fill out the field" },
+      lastName: { status: false, message: "Please fill out the field" },
+    });
+   
+    if (!/^[a-zA-Z]+$/.test(firstName)) {
+    setFormErrors((prevErrors) => ({
+      ...prevErrors,
+      firstName: {
+        status: true,
+        message: "Only alphabets are allowed",
+      },
+    }));
+    return;
+  }
+  else if (firstName.length > 15) {
+    setFormErrors((prevErrors) => ({
+      ...prevErrors,
+      firstName: {
+        status: true,
+        message: "Maximum 15 alphabetical characters",
+      },
+    }));
+    return;
+  }
+ 
+  if (!/^[a-zA-Z]+$/.test(lastName)) {
+    setFormErrors((prevErrors) => ({
+      ...prevErrors,
+      lastName: {
+        status: true,
+        message: "Only alphabets are allowed",
+      },
+    }));
+    return;
+  }
+  else if (!/^[a-zA-Z]+$/.test(lastName)) {
+    setFormErrors((prevErrors) => ({
+      ...prevErrors,
+      lastName: {
+        status: true,
+        message: "Maximum 15 alphabetical characters",
+      },
+    }));
+    return;
+  }
+    
+    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/.test(email)) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        email: { status: true, message: "Please enter a valid email" },
+      }));
+      return;
+    }
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        phoneNumber: { status: true, message: "Please enter a valid phone number" },
+      }));
+      return;
+    }
+
+    if(password.length <  8 ||  password.length > 16)
+    {
+      console.log(password.length )
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        password: { status: true, message: "Password length should be 8 to 16 characters" },
+      }));
+      return;
+    }
+
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%*^?&#])[A-Za-z\d@!%*^?&#]{8,16}$/.test(password)) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        password: { status: true, message: "Must contain one uppercase, lowercase, number and special character" },
+      }));
+      return;
+    }
+
       try {
         const response = await fetch(
           "https://findher-backend.onrender.com/verify",
@@ -61,6 +153,7 @@ export const FirstPage = () => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              "X-CSRF-Token" : csrfToken,
             },
             credentials: "include", // Include this line
             body: JSON.stringify({
@@ -93,11 +186,11 @@ export const FirstPage = () => {
           console.error(data.message); // Print the error message from the backend
 
           // Display error messages for duplicate email or phone number
-          setFormErrors({
-            email: data.message === "Email already in use.",
-            phoneNumber: data.message === "Phone number already in use.",
-            password: false,
-          });
+          // setFormErrors({
+          //   email: data.message === "Email already in use.",
+          //   phoneNumber: data.message === "Phone number already in use.",
+          //   password: false,
+          // });
         }
       } catch (error) {
         console.log(error);
@@ -105,16 +198,16 @@ export const FirstPage = () => {
         console.error("Error Message:", error.message);
         console.error("Stack Trace:", error.stack);
       }
-    } else {
-      // Update formErrors to show which fields are missing
-      setFormErrors({
-        email: !email,
-        phoneNumber: !phoneNumber,
-        password: !password,
-        firstName: !firstName,
-        lastName: !lastName,
-      });
-    }
+    // } else {
+    //   // Update formErrors to show which fields are missing
+    //   setFormErrors({
+    //     email: !email,
+    //     phoneNumber: !phoneNumber,
+    //     password: !password,
+    //     firstName: !firstName,
+    //     lastName: !lastName,
+    //   });
+    // }
   };
 
   const handleOTPSubmit = async (e) => {
@@ -130,6 +223,7 @@ export const FirstPage = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "X-CSRF-Token" : csrfToken,
           },
           credentials: "include", // Include this line
           body: JSON.stringify({
@@ -203,7 +297,7 @@ export const FirstPage = () => {
   }, [popOpen]);
   return (
     <section>
-      <Container id="reviews" className="sub sub1" style={{ paddingTop: "4%" }}>
+      <Container id="reviews" className="sub sub1 review-first-con" style={{ paddingTop: "4%" }}>
         <Row className="ROw center-contents">
           <Col md={6} className="align-content-center">
             <div className="design">
@@ -254,11 +348,11 @@ export const FirstPage = () => {
                   </p>
                 </Row>
                 <Row>
-                  <Form className="form-wrapper">
+                  <Form onSubmit={handleUserdetailsSubmit} className="form-wrapper">
                     <Row className="form-grp-name">
                       <Col xs="6" className="pe-0">
                         <Form.Group className="">
-                          <Form.Label>First Name</Form.Label>
+                          <Form.Label className="my-0 mx-1">First Name</Form.Label>
                           <Form.Control
                             name="firstName" // Added name attribute
                             type="text"
@@ -266,11 +360,15 @@ export const FirstPage = () => {
                             onChange={handleInputChange}
                             required
                           />
+                      
+                        <p className={`error-message my-0 mx-1 ${ formErrors.firstName.status? "visibility-visible" : "visibility-hidden" }`}>
+                        {formErrors.firstName.message} 
+                        </p>
                         </Form.Group>
                       </Col>
                       <Col xs="6" className="pe-0">
                         <Form.Group className="">
-                          <Form.Label>Last Name</Form.Label>
+                          <Form.Label  className="my-0 mx-1">Last Name</Form.Label>
                           <Form.Control
                             name="lastName" // Added name attribute
                             type="text"
@@ -278,21 +376,27 @@ export const FirstPage = () => {
                             onChange={handleInputChange}
                             required
                           />
+                        <p className={`error-message my-0 mx-1 ${ formErrors.lastName.status? "visibility-visible" : "visibility-hidden" }`}>
+                        {formErrors.lastName.message} 
+                        </p>
                         </Form.Group>
                       </Col>
                     </Row>
                     <Form.Group className="form-grp">
-                      <Form.Label>Email</Form.Label>
+                      <Form.Label  className="my-0 mx-1">Email</Form.Label>
                       <Form.Control
                         name="email" // Added name attribute
-                        type="email"
+                        // type="email"
                         value={user.email}
                         onChange={handleInputChange}
                         required
                       />
+                     <p className={`error-message my-0 mx-1 ${ formErrors.email.status? "visibility-visible" : "visibility-hidden" }`}>
+                        {formErrors.email.message} 
+                        </p>
                     </Form.Group>
                     <Form.Group className="form-grp">
-                      <Form.Label>Phone Number</Form.Label>
+                      <Form.Label  className="my-0 mx-1">Phone Number</Form.Label>
                       <Form.Control
                         name="phoneNumber" // Added name attribute
                         type="text"
@@ -300,14 +404,12 @@ export const FirstPage = () => {
                         onChange={handleInputChange}
                         required
                       />
-                      {formErrors.phoneNumber && (
-                        <p className="error-message">
-                          Phone Number is required
+                     <p className={`error-message my-0 mx-1 ${ formErrors.phoneNumber.status? "visibility-visible" : "visibility-hidden" }`}>
+                        {formErrors.phoneNumber.message} 
                         </p>
-                      )}
                     </Form.Group>
                     <Form.Group className="form-grp">
-                      <Form.Label>Create Password</Form.Label>
+                      <Form.Label  className="my-0 mx-1">Create Password</Form.Label>
                       <Form.Control
                         name="password" // Added name attribute
                         type="password"
@@ -315,16 +417,16 @@ export const FirstPage = () => {
                         onChange={handleInputChange}
                         required
                       />
-                      {formErrors.password && (
-                        <p className="error-message">Password is required</p>
-                      )}
+                    <p className={`error-message my-0 mx-1 ${ formErrors.password.status? "visibility-visible" : "visibility-hidden" }`}>
+                        {formErrors.password.message} 
+                        </p>
                     </Form.Group>
                     <Form.Group className="otpReferral">
                       <Button
                         className="button-sub reviewbtn"
                         disabled={!isFormValid}
                         style={{ marginBottom: "3%" }}
-                        onClick={handleUserdetailsSubmit}
+                        type="submit"
                       >
                         Send OTP
                       </Button>
@@ -378,7 +480,7 @@ export const FirstPage = () => {
                         required
                       />
                       {isOtp.isError && (
-                        <p className="error-message">Invalid OTP</p>
+                        <p className="error-message ">Invalid OTP</p>
                       )}
                     </Form.Group>
                     <Button

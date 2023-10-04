@@ -5,13 +5,15 @@ import { useState } from "react";
 import OtpInput from "react-otp-input";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 function ChangeNumEmail(props) {
   const [phoneNumber, setPhoneNumber] = useState();
   const [email, setEmail] = useState();
   const [otp, setOtp] = useState();
   const [showOtp, setShowOtp] = useState(false);
+
+  const csrfToken = useCsrfToken();
 
   async function OtpRequest(){
     const token = localStorage.getItem("token");
@@ -26,6 +28,7 @@ function ChangeNumEmail(props) {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
+          "X-CSRF-Token" : csrfToken,
         },
         credentials: "include", // Include this line
         body: JSON.stringify(!props?.onChangeContact.phoneNumber ? { phoneNumber } : { email }),

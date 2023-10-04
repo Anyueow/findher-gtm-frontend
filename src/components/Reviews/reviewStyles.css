@@ -691,7 +691,16 @@ heading-name3{
 }
 
   /* first Page */
-
+  .visibility-hidden {
+    visibility: hidden;
+  }
+  
+  .visibility-visible {
+    visibility: visible;
+  }
+.review-first-con .form-control{
+    height: 32px !important;
+}
 .review-one-head-name{
     font-family: DM Serif Text;
     font-size: 28px;

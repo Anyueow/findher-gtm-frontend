@@ -5,10 +5,13 @@ import {Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from 'react-icons/io';
 import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 function SeventhPage() {
   const fourthPageTime= usePageTimeTracker();
   const navigate = useNavigate(); 
+
+  const csrfToken = useCsrfToken();
 
   const [firstOne, setFirstOne] = useState([]);
   const [setTwo, setsetTwo] = useState([]);
@@ -164,6 +167,7 @@ const handleFirstInputChange = (e) => {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`, // Assuming your token is stored in local storage
+              "X-CSRF-Token" : csrfToken,
             },
             credentials: "include", // Include this line
             body: JSON.stringify({ reviewId, features,fourthPageTime }),

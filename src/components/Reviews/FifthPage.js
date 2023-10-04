@@ -7,6 +7,7 @@ import ReactTooltip from "react-tooltip";
 import ReviewProgressBar from "./ReviewProgressBar";
 import {DropdownBox} from './DropdownBox'
 import { usePageTimeTracker } from '../../ReusableFunctions/usePageTimeTracker';
+import { useCsrfToken } from '../../CsrfTokenProvider';
 const isSafariOrMac = () => {
     const ua = window.navigator.userAgent;
     return /^((?!chrome|android).)*safari/i.test(ua);
@@ -15,6 +16,9 @@ const isSafariOrMac = () => {
 
 
 const FifthPage = () => {
+
+  const csrfToken = useCsrfToken();
+
   const thirdPageTime= usePageTimeTracker();
   const [questionOne, setQuestionOne] = useState({
     question: "",
@@ -98,6 +102,7 @@ const FifthPage = () => {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
+                    "X-CSRF-Token" : csrfToken,
                 },
                 credentials: "include",
                 body: JSON.stringify(payload),

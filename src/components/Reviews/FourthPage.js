@@ -16,6 +16,7 @@ import "./FourthPage.css";
 import { useNavigate } from "react-router-dom";
 import ReviewProgressBar from "./ReviewProgressBar";
 import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 const FourthPage = () => {
   // within your component
@@ -33,6 +34,8 @@ const FourthPage = () => {
     for: "",
     status: false,
   });
+
+  const csrfToken = useCsrfToken();
 
   const createRatingInputGroup = (name, setter) => {
     return (
@@ -167,6 +170,7 @@ const FourthPage = () => {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`, // Assuming your token is stored in local storage
+              "X-CSRF-Token" : csrfToken,
             },
             credentials: "include", // Include this line
             body: JSON.stringify({ reviewId, ratings,secondPageTime }),

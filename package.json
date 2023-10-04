@@ -16,6 +16,7 @@
     "axios": "^0.26.1",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
+    "dompurify": "^3.0.6",
     "dotenv": "^16.3.1",
     "framer-motion": "^5.6.0",
     "lodash": "^4.17.21",

@@ -5,9 +5,12 @@ import "./reviewStyles.css";
 import NavbarContext from "../NavbarContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 export const FirstPage = () => {
   const navbarHeight = React.useContext(NavbarContext);
+
+  const csrfToken = useCsrfToken();
 
   const [user, setUser] = useState({
     email: "",
@@ -44,6 +47,7 @@ export const FirstPage = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-CSRF-Token" : csrfToken,
         },
         credentials: "include", // Include this line
         body: JSON.stringify({

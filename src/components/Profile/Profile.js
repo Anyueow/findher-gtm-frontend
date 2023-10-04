@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profile from "../../Assets/profile.png";
 import NotifDropdown from "./NotifDropdown";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 function Profile() {
   const [profileDetails, setProfileDetails] = useState();
@@ -14,7 +15,8 @@ function Profile() {
   const [showNumEmail, setshowNumEmail] = useState(false);
   const [showModalName, setShowModalName] = useState(false);
   const [showModalWork, setShowModalWork] = useState(false);
-  
+
+  const csrfToken = useCsrfToken();
 
   const [onChangeContact, setOnChangeContact] = useState({
     email: false,
@@ -101,6 +103,7 @@ function Profile() {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "X-CSRF-Token" : csrfToken,
           },
           credentials: "include", // Include this line
           body: JSON.stringify({ profilePic }),
@@ -180,6 +183,7 @@ function Profile() {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "X-CSRF-Token" : csrfToken,
           },
           credentials: "include", // Include this line
           body: JSON.stringify({
@@ -239,6 +243,7 @@ function Profile() {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "X-CSRF-Token" : csrfToken,
           },
           credentials: "include", // Include this line
         }
@@ -284,6 +289,7 @@ function Profile() {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
+              "X-CSRF-Token" : csrfToken,
             },
           }
         );
