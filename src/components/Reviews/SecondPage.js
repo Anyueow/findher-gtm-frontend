@@ -253,6 +253,7 @@ const [jobTitleList, setJobTitleList] = useState([]);
     };
 
     fetchJobTitles();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [jobTitle]);
 
   //for department
@@ -285,6 +286,7 @@ const [depList, setDepList] = useState([]);
     };
 
     fetchDep();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dep]);
   // console.log("finalDep",department);
 

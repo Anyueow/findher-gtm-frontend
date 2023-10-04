@@ -314,6 +314,7 @@ function Profile() {
       }
     };
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   console.log("notification")
