@@ -147,7 +147,7 @@
     }
     .content-hero .hero-h1{
         font-size: 38px !important;
-        width: 300px !important;
+        width: 330px !important;
     }
     .content-hero .hero-h4{
         width: 260px !important;
@@ -233,14 +233,12 @@
 @media (max-width: 809px)  {
     .content-hero .hero-h1{
         font-size: 45px;
-        width: 400px !important;
+        width: 338px !important;
         margin: 1rem auto !important;
         color: #424040;
         letter-spacing: -0.1rem;
-
         line-height: 1.4em;
         font-weight: 700;
-
     }
     .content-hero .hero-h4{
         color: #424040;
@@ -255,15 +253,15 @@
     .hero-header-span{
         position: absolute;
         top: 15% !important;
-        left: 11% !important;
-        width: 47%;
+        left: 8% !important;
+        width: 50%;
     }
     
 }
 @media (width<400px) {
     .content-hero .hero-h1{
         font-size: 32px !important;
-        width: 300px !important;
+        width: 294px !important;
         margin: 1rem auto !important;
         color: #424040;
             letter-spacing: -0.1rem;
