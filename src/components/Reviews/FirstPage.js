@@ -28,11 +28,11 @@ export const FirstPage = () => {
     setIsChecked(event.target.checked);
   };
   const [formErrors, setFormErrors] = useState({
-    email: {status:false, message:"Please fill out the field"},
-    phoneNumber: {status:false, message:"Please fill out the field"},
-    password: {status:false, message:"Please fill out the field"},
-    firstName: {status:false, message:"Please fill out the field"},
-    lastName: {status:false, message:"Please fill out the field"},
+    email: {status:false, message:"message"},
+    phoneNumber: {status:false, message:"message"},
+    password: {status:false, message:"message"},
+    firstName: {status:false, message:"message"},
+    lastName: {status:false, message:"message"},
   });
 
   const [isOtp, setisOtp] = useState({
@@ -63,11 +63,11 @@ export const FirstPage = () => {
     }
 
     setFormErrors({
-      email: { status: false, message: "Please fill out the field" },
-      phoneNumber: { status: false, message: "Please fill out the field" },
-      password: { status: false, message: "Please fill out the field" },
-      firstName: { status: false, message: "Please fill out the field" },
-      lastName: { status: false, message: "Please fill out the field" },
+      email: { status: false, message: "message" },
+      phoneNumber: { status: false, message: "message" },
+      password: { status: false, message: "message" },
+      firstName: { status: false, message: "message" },
+      lastName: { status: false, message: "message" },
     });
    
     if (!/^[a-zA-Z]+$/.test(firstName)) {
