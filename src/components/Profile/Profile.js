@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./CSS/Profile.css";
 import ProfileNavBar from "./ProfileNavBar";
 import { Col, Form, Row, Button, Modal } from "react-bootstrap";
@@ -6,6 +6,8 @@ import ChangeNumEmail from "./ChangeNumEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import profile from "../../Assets/profile.png";
+import NotifDropdown from "./NotifDropdown";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 function Profile() {
   const [profileDetails, setProfileDetails] = useState();
@@ -13,7 +15,8 @@ function Profile() {
   const [showNumEmail, setshowNumEmail] = useState(false);
   const [showModalName, setShowModalName] = useState(false);
   const [showModalWork, setShowModalWork] = useState(false);
-  
+
+  const csrfToken = useCsrfToken();
 
   const [onChangeContact, setOnChangeContact] = useState({
     email: false,
@@ -100,6 +103,7 @@ function Profile() {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "X-CSRF-Token" : csrfToken,
           },
           credentials: "include", // Include this line
           body: JSON.stringify({ profilePic }),
@@ -179,6 +183,7 @@ function Profile() {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "X-CSRF-Token" : csrfToken,
           },
           credentials: "include", // Include this line
           body: JSON.stringify({
@@ -219,7 +224,57 @@ function Profile() {
       console.error("Stack Trace:", error.stack);
     }
   }
-
+  // let not=[];
+  const [notifCount,setnotifCount] =useState(0);
+  const [notifications,setnotifications]=useState([]);
+  
+  async function getNotifications(params) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      console.error("No token found. Please log in.");
+      return;
+    }
+    try {
+      const response = await fetch(
+        "https://findher-backend.onrender.com/profile/notifications",
+        // "http://localhost:5000/profile/notifications",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+            "X-CSRF-Token" : csrfToken,
+          },
+          credentials: "include", // Include this line
+        }
+      );
+      
+      if (response.ok) {
+        const data = await response.json();
+        console.log("data",data.notifications);
+        // await setNotificationState(data.notifications)
+        setnotifications(data.notifications)
+        // console.log(notifications);
+        setnotifCount(data.notifCount);
+        // setsaveCount(data.saved);
+        // setnotifications((prevNotifications) => [...prevNotifications, ...data.notifications]);
+        // await delay(2000);
+        // console.log("Notif count = ", notifCount);
+        // console.log("notifications=",notifications);
+      } else {
+        console.log("dammit these errors");
+        const data = await response.json();
+        console.error(`Error: ${response.status} ${response.statusText}`);
+        console.error(data.message); // Print the error message from the backend
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(()=>{
+    getNotifications();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
   useEffect(() => {
     const fetchData = async () => {
       const token = localStorage.getItem("token");
@@ -234,6 +289,7 @@ function Profile() {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
+              "X-CSRF-Token" : csrfToken,
             },
           }
         );
@@ -258,8 +314,34 @@ function Profile() {
       }
     };
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  console.log("notification")
+  console.log(notifications)
+  console.log("notif count")
+  console.log(notifCount)
+
+  const [open, setOpen] = useState(false);
+  const popupRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setOpen(false);
+        // setIsChecked(false)
+      }
+    };
+
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
   return (
     <section>
       <ProfileNavBar
@@ -268,6 +350,11 @@ function Profile() {
             ? editProfileDetails?.profilePic
             : profile
         }
+        notifCount={notifCount}
+        setOpen={setOpen}
+        open={open}
+
+        
       />
       <div className="profile-container d-flex justify-content-center">
         <Row
@@ -561,6 +648,7 @@ function Profile() {
           phoneNumber={editProfileDetails?.phoneNumber}
         />
       )}
+     {open &&  <NotifDropdown setOpen={setOpen} notifications={notifications} open={open} setnotifCount={setnotifCount} />}
     </section>
   );
 }

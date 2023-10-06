@@ -117,7 +117,6 @@
     .content-hero .header-hero {
         font-size: 32px;
             letter-spacing: -0.2rem;
-;
         line-height: 1.4em;
         width: 95% !important;
         margin-left: 2% !important;
@@ -145,6 +144,13 @@
     .JoinButton-hero:hover {
 
         font-size: 14px;
+    }
+    .content-hero .hero-h1{
+        font-size: 38px !important;
+        width: 330px !important;
+    }
+    .content-hero .hero-h4{
+        width: 260px !important;
     }
 }
 
@@ -227,14 +233,12 @@
 @media (max-width: 809px)  {
     .content-hero .hero-h1{
         font-size: 45px;
-        width: 400px !important;
+        width: 338px !important;
         margin: 1rem auto !important;
         color: #424040;
         letter-spacing: -0.1rem;
-
         line-height: 1.4em;
         font-weight: 700;
-
     }
     .content-hero .hero-h4{
         color: #424040;
@@ -249,15 +253,15 @@
     .hero-header-span{
         position: absolute;
         top: 15% !important;
-        left: 5% !important;
-        width: 55%;
+        left: 8% !important;
+        width: 50%;
     }
     
 }
 @media (width<400px) {
     .content-hero .hero-h1{
-        font-size: 35px;
-        width: 300px !important;
+        font-size: 32px !important;
+        width: 294px !important;
         margin: 1rem auto !important;
         color: #424040;
             letter-spacing: -0.1rem;
@@ -267,7 +271,7 @@
     }
     .content-hero .hero-h4{
         color: #424040;
-        width: 200px !important;
+        width: 260px !important;
         font-size: 13px;
         margin: 0 auto;
         letter-spacing: 0em;
@@ -277,9 +281,9 @@
     }
     .hero-header-span{
         position: absolute;
-        top: 13% !important;
-        left: 21% !important;
-        width: 58%;
+        top: 14% !important;
+        left: 7% !important;
+        width: 51%;
     }
 }
 

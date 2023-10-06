@@ -13,9 +13,11 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from "@mui/material/Autocomplete";
 import GoogleMapsLoader from "./GoogleMapsLoader";
 import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 export const SecondPage = () => {
 
+  const csrfToken = useCsrfToken();
   
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
@@ -111,6 +113,7 @@ export const SecondPage = () => {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
+              "X-CSRF-Token" : csrfToken,
             },
             credentials: "include", // Include this line
             body: JSON.stringify(reviewData),
@@ -233,6 +236,7 @@ const [jobTitleList, setJobTitleList] = useState([]);
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            "X-CSRF-Token" : csrfToken,
           },
           body: JSON.stringify({inputTitle:jobTitle})
         }); // Replace with your API endpoint
@@ -249,6 +253,7 @@ const [jobTitleList, setJobTitleList] = useState([]);
     };
 
     fetchJobTitles();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [jobTitle]);
 
   //for department
@@ -264,6 +269,7 @@ const [depList, setDepList] = useState([]);
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            "X-CSRF-Token" : csrfToken,
           },
           body: JSON.stringify({inputDep:dep})
         });
@@ -280,6 +286,7 @@ const [depList, setDepList] = useState([]);
     };
 
     fetchDep();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dep]);
   // console.log("finalDep",department);
 

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import ModalPopup from "../ModalPopup/ModalPopup";
 // import axios from 'axios';
 import { motion } from "framer-motion";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 export const SectionSeven = (props) => {
   const containerVariants = {
@@ -19,6 +20,8 @@ export const SectionSeven = (props) => {
     transition: { duration: 1, delay: 2 },
   };
 
+  const csrfToken = useCsrfToken();
+  
   const { setBlur } = props;
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -42,6 +45,7 @@ export const SectionSeven = (props) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "X-CSRF-Token" : csrfToken,
           },
           body: JSON.stringify({ email: email }),
         }

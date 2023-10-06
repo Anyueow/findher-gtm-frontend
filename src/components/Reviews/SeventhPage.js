@@ -5,10 +5,13 @@ import {Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from 'react-icons/io';
 import { usePageTimeTracker } from "../../ReusableFunctions/usePageTimeTracker";
+import { useCsrfToken } from '../../CsrfTokenProvider';
 
 function SeventhPage() {
   const fourthPageTime= usePageTimeTracker();
   const navigate = useNavigate(); 
+
+  const csrfToken = useCsrfToken();
 
   const [firstOne, setFirstOne] = useState([]);
   const [setTwo, setsetTwo] = useState([]);
@@ -127,7 +130,7 @@ const handleFirstInputChange = (e) => {
   
     setFilteredSecondOptions(filtered);
   };
-  
+  const [addInfo,setAddinfo]=useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submit");
@@ -151,7 +154,8 @@ const handleFirstInputChange = (e) => {
       // Prepare the ratings object
       const features = {
         firstOne,
-        setTwo
+        setTwo,
+        addInfo
       };
 
       try {
@@ -163,6 +167,7 @@ const handleFirstInputChange = (e) => {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`, // Assuming your token is stored in local storage
+              "X-CSRF-Token" : csrfToken,
             },
             credentials: "include", // Include this line
             body: JSON.stringify({ reviewId, features,fourthPageTime }),
@@ -319,6 +324,16 @@ const handleFirstInputChange = (e) => {
             </Col>
               )}
             </Row>
+            <Col md={12} className="addInfoSec">
+              <p>Is there anything else you'd like us to know?</p>
+                <Form.Control
+                className="addInfo"
+                  name="addInfo" // Added name attribute
+                  type="text"
+                  value={addInfo}
+                  onChange={(e)=>setAddinfo(e.target.value)}
+                />
+            </Col>
             <Button
               type="submit"
               className="button-review-four review-four-sub mt-5"

@@ -30,14 +30,53 @@
     height: fit-content;
 
 }
-
+.refBox{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background: #ede3f4;
+    position: fixed;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.5);
+    left: 35%;
+    right: 0;
+    top: 35%;
+    bottom: 28%;
+    justify-content: center;
+    align-items: center;
+}
 .reviews-box3{
     margin-top: 15%;
     min-width: 80vw;
     height: fit-content;
 
 }
-
+.refCont{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap: 1vh;
+}
+.refCont p{
+    margin-bottom: 0.5vh;
+    margin-left: 3px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.refInput{
+    width: 100%;
+}
+.refBtn{
+    width: 100%;
+}
+.otpReferral{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px
+}
 .design {
     background-color: #DFE077;
     border-radius: 40px;
@@ -448,7 +487,7 @@ heading-name3{
 .pink { color: #ee2c5b}
 
 .error-message{
-    font-family: Montserrat-SemiBold;
+    font-family: poppins;
     margin-top: 1%;
     font-size: 0.7rem;
     color: #ee2c5b;
@@ -652,7 +691,17 @@ heading-name3{
 }
 
   /* first Page */
-
+  .visibility-hidden {
+    /* visibility: hidden; */
+    visibility: visible;
+  }
+  
+  .visibility-visible {
+    visibility: visible;
+  }
+.review-first-con .form-control{
+    height: 32px !important;
+}
 .review-one-head-name{
     font-family: DM Serif Text;
     font-size: 28px;
@@ -736,6 +785,9 @@ heading-name3{
         line-height: 120%; /* 42px */
         margin: 18px 0px;
       }
+      .design {
+        height: 370px;
+    }
   }
 
     
