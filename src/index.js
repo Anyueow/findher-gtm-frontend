@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import  {CsrfTokenProvider}  from './CsrfTokenProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <CsrfTokenProvider>
     <App />
+    </CsrfTokenProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

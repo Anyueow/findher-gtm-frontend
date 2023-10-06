@@ -15,7 +15,7 @@ function ModalPopup(props) {
             <p>Thanks for signing up!</p>
         </div>
         <div className="thanksbody">
-            <p>Your're on the list and you'll soon start receiving emails about new templates and discounts</p>
+            <p>You’re on the list and you will soon start receiving emails about relevant opportunities and trends to support you at work!</p>
         </div>
     </div>
   )

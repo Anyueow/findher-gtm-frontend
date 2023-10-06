@@ -30,7 +30,7 @@ function Footer() {
 
 
 
-                  <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
+                <h4 className=""> <a href="https://www.linkedin.com/company/find-her/"
                 style={{ textDecoration:"none",color:"black" ,cursor:"pointer" }} target="_blank" rel="noopener noreferrer">
                       <img src={linkedinIcon}  alt="" className="footer-icons"
                            style={{width:"12%"}}/>
@@ -38,7 +38,7 @@ function Footer() {
 
                 </a></h4>
 
-                <h4 className=""> <a href="mailto:info@findher.work?subject=Reaching%20out%20for&body=Hi!%20I'm%20%3Center%20name%3E.%20I%20want%20to%20enquire%20about%20%3CEnter%20enquiry%20details%3E.%0A%0AThank%20you.%0ABest,%0A%3CName%3E%0A%3CPhone%20Number%3E"
+                <h4 className=""> <a href="https://www.instagram.com/findher.work/"
                 style={{ textDecoration:"none",color:"black" ,cursor:"pointer" }} target="_blank" rel="noopener noreferrer">
                     <img src={instaIcon} alt="" className="footer-icons"
                          style={{width:"12%"}}/>
