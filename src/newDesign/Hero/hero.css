@@ -54,18 +54,18 @@
 
 .JoinButton-hero:hover {
     font-size: 18px;
-   background-color: rgb(237, 255, 137);  /* or any desired color */
+   background-color: #D0ED75;  /* or any desired color */
    color: #000000;
 }
 
 .JoinButton-hero:active {
-    background-color: rgb(228, 244, 134) !important;
+    background-color: #D0ED75 !important;
     color: #000000 !important;
     border: none !important;
 }
 
 .JoinButton-hero:focus {
-    background-color: rgb(237, 255, 137) !important;
+    background-color: #D0ED75 !important;
     color: rgba(0, 0, 0, 0.42) !important;
     border: none !important;
 }
@@ -196,7 +196,7 @@
     border: none;
 }
 .hero-button:hover {
-   background-color: rgb(255, 213, 90);  
+   background-color: r#D0ED75;  
    color: black;
    transform: scale(1.08);
 }

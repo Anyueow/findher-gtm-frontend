@@ -1,0 +1,30 @@
+.joinbutton-nav {
+    padding: 10px;   /* top/bottom padding and left/right padding */
+    font-size: 17px;
+    font-weight: bold ;
+    color: white;
+    background-color: #e20b3c;  /* or any desired color */
+    border: none;  /* remove default border */
+    border-radius: .85rem;  /* rounded corners, adjust as desired */
+    align-content: center;/* smooth transition for hover effect */
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.joinbutton-nav:hover {
+    font-size: 17px;
+   background-color:#D0ED75;  /* or any desired color */
+   color: #000000;
+}
+
+.joinbutton-nav:active {
+    background-color:#D0ED75 !important;
+    color: #000000 !important;
+    border: none !important;
+}
+
+.joinbutton-nav:focus {
+    background-color: #D0ED75 !important;
+    color: rgba(0, 0, 0, 0.42) !important;
+    border: none !important;
+}

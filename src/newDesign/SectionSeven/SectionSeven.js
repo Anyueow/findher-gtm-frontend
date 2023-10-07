@@ -20,8 +20,7 @@ export const SectionSeven = (props) => {
     transition: { duration: 1, delay: 2 },
   };
 
-  const csrfToken = useCsrfToken();
-  
+
   const { setBlur } = props;
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -30,18 +29,20 @@ export const SectionSeven = (props) => {
     setEmail(e.target.value);
   };
 
+  const csrfToken = useCsrfToken();
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) {
       setMessage("Invalid email format");
       return;
     }
-
-    console.log(email);
     try {
       const response = await fetch(
         "https://findher-backend.onrender.com/newsletter",
         {
+          credentials: "include",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +51,6 @@ export const SectionSeven = (props) => {
           body: JSON.stringify({ email: email }),
         }
       );
-
       if (response.status === 200) {
         setOpenPopup(1);
         setBlur(1);
@@ -60,7 +60,7 @@ export const SectionSeven = (props) => {
       }
     } catch (error) {
       console.error(error);
-      setMessage("Email sending failed. Please try again.");
+      setMessage("Request failed. Please try again.");
     }
   };
 
@@ -99,7 +99,7 @@ export const SectionSeven = (props) => {
           <button type="submit" className="sec-seven-button">
             Sign Up
           </button>
-          {message && <div className="sec-seven-message">{message}</div>}
+          {message && <div className="sec-seven-message px-2">{message}</div>}
         </form>
       </div>
       {openPopup ? (

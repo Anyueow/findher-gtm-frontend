@@ -122,16 +122,16 @@
 }
 
 .AcessButton:hover {
-  background-color: rgb(255, 213, 90); /* slightly darker pink on hover */
+  background-color: #D0ED75; /* slightly darker pink on hover */
   color: #ffffff; /* change text color on hover if needed */
 }
 
 .AcessButton:focus {
-  box-shadow: 0 0 0 0.2rem rgb(255, 213, 90); /* Bootstrap's way to indicate focus, adjust color as needed */
+  box-shadow: none; /* Bootstrap's way to indicate focus, adjust color as needed */
 }
 
 .AcessButton:active {
-  background-color: rgb(255, 213, 90); /* even darker pink on active click */
+  background-color: #D0ED75; /* even darker pink on active click */
 }
 
 .section-three-container {
@@ -352,7 +352,7 @@
   border: none;
 }
 .hero-button:hover {
- background-color: rgb(255, 213, 90);  
+ background-color: #D0ED75;  
  color: black;
  transform: scale(1.08);
 }

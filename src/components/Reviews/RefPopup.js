@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Button, Form} from "react-bootstrap";
+import { Button, Form, Toast} from "react-bootstrap";
 function RefPopup(props) {
   const { setPopopen,setRefcode } = props;
   const [input, setInput] = useState("");
@@ -13,7 +13,7 @@ function RefPopup(props) {
   const popupclose=()=>{
     if(Referral.includes(input)){
       setRefcode(input)
-      setPopopen(0);
+      setPopopen(false);
     }
     else setWarn(true);
   }
@@ -21,8 +21,14 @@ function RefPopup(props) {
     if(input==="") setWarn(false);
   },[input])
   return (
-    <div className="refBox">
-      <div className="refCont">
+     <div className="changeNumEmail-div"> 
+     <Toast className="numemailchange-profile-toast ">
+        <Toast.Body className="">
+        <button
+            type="button"
+            className="btn-close float-right"
+            onClick={() => {props.setPopopen(!props.setPopopen) ; props.setRefcode(!props.setRefcode); setWarn(false) }}
+          ></button>
         <p>Enter Your Referral Code</p>
         <Form.Group className="refInput">
           {/* <Form.Label>First Name</Form.Label> */}
@@ -34,6 +40,7 @@ function RefPopup(props) {
             required
           />
         </Form.Group>
+        <br/>
         <Button
           onClick={popupclose}
           className="JoinButton-hero refBtn"
@@ -41,7 +48,8 @@ function RefPopup(props) {
           Submit
         </Button>
         {warn && <p style={{color:"red",fontWeight:"normal",position:"relative"}}>Invalid Referral Code!</p>}
-      </div>
+        </Toast.Body>
+      </Toast>
     </div>
   );
 }
