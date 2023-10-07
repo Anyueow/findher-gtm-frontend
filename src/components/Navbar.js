@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../Assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import "./Navbar.css"
 
 function NavBar() {
   const [navColor, setNavColor] = useState(false);
@@ -70,19 +71,20 @@ function NavBar() {
               FAQ
             </Link>
           </li>
-          <li className="navItems" style={{margin:"10px",display:"flex",
+          <li className="navItems " style={{margin:"10px",display:"flex",
                 alignItems: "center"}}>
             <strong
+            className="joinbutton-nav"
               style={{
-                color: "white",
-                cursor: "pointer",
-                marginRight: "20px",
-                backgroundColor: "#e20b3c",
-                padding: "10px",
-                borderRadius: ".5rem",
-                display:"flex",
-                alignItems: "center"
-                
+                // color: "white",
+                // cursor: "pointer",
+                // marginRight: "20px",
+                // backgroundColor: "#e20b3c",
+                // padding: "10px",
+                // borderRadius: ".5rem",
+                // display:"flex",
+                // alignItems: "center"
+                cursor: "pointer", 
               }}
               onClick={()=>navigate('/reviews_login')}
             >

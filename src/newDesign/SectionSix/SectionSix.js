@@ -4,8 +4,12 @@ import { Button, Col, Row } from "react-bootstrap";
 import sec6img from "./sec6img.webp";
 import img1 from "./images/download.svg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function SectionSix() {
+
+  const navigate = useNavigate();
+
   const containerVariants = {
     initial: {
       opacity: 0,
@@ -40,7 +44,7 @@ function SectionSix() {
                 information from women who've worked there.
               </p>
             </Col>
-            <Button className="AcessButton secbtn exclusive-btn hero-button-six">
+            <Button className="AcessButton secbtn exclusive-btn hero-button-six"  onClick={()=>navigate('/reviews_login')}>
               Get Exclusive Access
             </Button>
           </Col>

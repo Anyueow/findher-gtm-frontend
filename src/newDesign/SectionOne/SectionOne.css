@@ -56,19 +56,19 @@
 .JoinButtonS:hover {
     width: 13.5% !important;
     font-size: 18px;
-    background-color: rgb(255, 213, 90);  /* slightly darker pink on hover */
+    background-color: #D0ED75;  /* slightly darker pink on hover */
     color: white !important; 
     border: none !important;
 }
 
 .JoinButtonS:focus {
-    box-shadow: 0 0 0 0.2rem rgb(255, 213, 90); /* Bootstrap's way to indicate focus, adjust color as needed */
+    box-shadow: none; /* Bootstrap's way to indicate focus, adjust color as needed */
     color: white !important; 
     border: none !important;
 }
 
 .JoinButtonS:active {
-    background-color: rgb(255, 213, 90); /* even darker  on active click */
+    background-color: #D0ED75; /* even darker  on active click */
     color: white !important; 
     border: none !important;
 }
@@ -347,7 +347,7 @@
     border: none;
 }
 .hero-button:hover {
-   background-color: rgb(255, 213, 90);  
+   background-color:#D0ED75;  
    color: black;
    transform: scale(1.08);
 }

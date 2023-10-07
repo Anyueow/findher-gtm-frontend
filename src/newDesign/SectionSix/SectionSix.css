@@ -156,7 +156,7 @@
     }
   }
   .hero-button-six:hover {
-   background-color: rgb(255, 213, 90);  
+   background-color: #D0ED75;  
    color: black;
    transform: scale(1.08);
   }

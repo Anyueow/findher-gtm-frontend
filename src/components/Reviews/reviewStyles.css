@@ -692,8 +692,8 @@ heading-name3{
 
   /* first Page */
   .visibility-hidden {
-    /* visibility: hidden; */
-    visibility: visible;
+    visibility: hidden;
+    /* visibility: visible; */
   }
   
   .visibility-visible {
@@ -787,9 +787,14 @@ heading-name3{
       }
       .design {
         height: 370px;
+        padding: 89px !important;
     }
   }
-
+  @media (max-width: 400px) {
+    .design {
+        padding: 75px !important;
+    }
+  }
     
 @media (max-width: 600px) {
     .ratings{

@@ -45,7 +45,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100% ;
     height: 100%;
     background: transparent; 
     backdrop-filter: blur(1px)
@@ -99,5 +99,17 @@
   margin-left: 0% !important;
 }
 }
-  
-  
+
+@media (max-width:600px) {
+.changeNumEmail-div {
+  position: fixed;
+  top: -10%;
+  left: -50%;
+  right: -78px;
+  width: 200%;
+  height: 100%;
+  background: transparent;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+}
+}
