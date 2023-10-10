@@ -13,7 +13,7 @@ export const CsrfTokenProvider = ({ children }) => {
   // Function to fetch CSRF token and store it
   const getCsrfToken = async () => {
     try {
-      const response = await fetch('http://localhost:5000/get-csrf-token', {
+      const response = await fetch('https://findher-backend.onrender.com/get-csrf-token', {
         method: 'GET',
         credentials: 'include',
       });
