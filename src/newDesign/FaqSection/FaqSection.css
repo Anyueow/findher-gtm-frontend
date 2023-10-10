@@ -25,6 +25,9 @@
   font-size: 18px;
   color: rgb(78 78 78 / 81%) !important;
 }
+.accordion button{
+  box-shadow: none !important;
+}
 @media (max-width: 600px) {
   .faqInner {
     margin: 21px;

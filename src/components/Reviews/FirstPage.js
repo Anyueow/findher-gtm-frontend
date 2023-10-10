@@ -13,7 +13,6 @@ export const FirstPage = () => {
   // const navbarHeight = React.useContext(NavbarContext);
 
   const csrfToken = useCsrfToken();
-  console.log(csrfToken)
 
   const [user, setUser] = useState({
     email: "",
@@ -112,7 +111,7 @@ export const FirstPage = () => {
     return;
   }
     
-    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/.test(email)) {
+    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/.test(email)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
         email: { status: true, message: "Please enter a valid email" },
@@ -148,7 +147,7 @@ export const FirstPage = () => {
 
       try {
         const response = await fetch(
-          "https://findher-backend.onrender.com/verify",
+          "http://localhost:5000/verify",
           {
             method: "POST",
             headers: {
@@ -271,16 +270,16 @@ export const FirstPage = () => {
     }
   };
   const isFormValid = user.email && user.phoneNumber && user.password;
-  const [popOpen,setPopopen]=useState(0);
+  const [popOpen,setPopopen]=useState(false);
   useEffect(()=>{
-    if(isChecked) setPopopen(1);
+    if(isChecked) setPopopen(true);
   },[isChecked])
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (popupRef.current && !popupRef.current.contains(event.target)) {
         // Clicked outside the popup, so close it
-        setPopopen(0);
+        setPopopen(false);
         setIsChecked(false)
       }
     };
@@ -421,6 +420,8 @@ export const FirstPage = () => {
                         {formErrors.password.message} 
                         </p>
                     </Form.Group>
+                    <Row>
+                      <Col lg="3" md="5" >
                     <Form.Group className="otpReferral">
                       <Button
                         className="button-sub reviewbtn"
@@ -430,7 +431,11 @@ export const FirstPage = () => {
                       >
                         Send OTP
                       </Button>
-                      <label>
+                      </Form.Group>
+                      </Col>
+                      <Col lg="6" md="7" className="d-flex align-items-center">
+                      <Form.Group className="form-grp" style={{width:"100%"}}>
+                      <label >
                         <Checkbox
                             checked={isChecked}
                             onChange={handleCheckboxChange}
@@ -438,7 +443,9 @@ export const FirstPage = () => {
                         />
                         I have a referral code
                       </label>
-                    </Form.Group>
+                      </Form.Group>
+                      </Col>
+                      </Row>
                   </Form>
                 </Row>
                 <Link

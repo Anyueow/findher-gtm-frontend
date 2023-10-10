@@ -6,8 +6,8 @@
     /* top: 50%; */
     bottom: 39%;
     height: 28vh;
-    width: 47vh;
-    left: 38%;
+    width: 31%;
+    left: 34%;
     z-index: 999999999;
     border-radius: 15px;
     box-shadow: 0px 5px 11px 6px rgba(1.1, 1.1, 1.1, 0.2);
@@ -15,7 +15,7 @@
 
 }
 .blur-background {
-    filter: blur(5px);
+    filter: blur(1px);
     pointer-events: none; 
   }
 
@@ -30,7 +30,10 @@
     padding: 10px;
     cursor: pointer;
 }
-.thankspp , .thanksbody{
+.thankspp{
+    color: #ee2c5b;
+}
+ .thanksbody{
     color: black;
 }
 .thanksbody{
