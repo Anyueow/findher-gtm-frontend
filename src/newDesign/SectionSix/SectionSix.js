@@ -4,11 +4,11 @@ import { Button, Col, Row } from "react-bootstrap";
 import sec6img from "./sec6img.webp";
 import img1 from "./images/download.svg";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function SectionSix() {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const containerVariants = {
     initial: {

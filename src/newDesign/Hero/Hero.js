@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./hero.css";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function Hero() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <section className="hero-section d-flex justify-content-center align-items-center">
       <Container className="content-hero hero-container">

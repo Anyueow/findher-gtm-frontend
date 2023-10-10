@@ -10,10 +10,10 @@ import row1img2 from "./row1img2.webp";
 import row2img2 from "./row2img2.webp";
 import row3img1 from "./row3img1.webp";
 import row3img2 from "./row3img2.webp"; 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 function SectionThree() {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <Container className="my-5 section-three-container secOutCont" id="features"> 

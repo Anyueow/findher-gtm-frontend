@@ -7,11 +7,11 @@ import img2 from "./Artboard 1 copy.png";
 import img3 from "./Artboard 1 copy 2.png";
 import img4 from "./Group 181.png";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function SectionOne() {
   
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const containerVariants = {
     initial:{
