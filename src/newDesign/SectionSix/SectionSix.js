@@ -44,7 +44,16 @@ function SectionSix() {
                 information from women who've worked there.
               </p>
             </Col>
-            <Button className="AcessButton secbtn exclusive-btn hero-button-six"  onClick={()=>navigate('/reviews_login')}>
+            <Button className="AcessButton secbtn exclusive-btn hero-button-six"  
+            // onClick={()=>navigate('/reviews_login')}
+            onClick={(e) => {
+              if (e.ctrlKey) {
+                window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+              } else {
+                window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+              }
+            }}
+            >
               Get Exclusive Access
             </Button>
           </Col>

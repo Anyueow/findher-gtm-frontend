@@ -64,7 +64,14 @@ function Hero() {
                     delay: 0.2,
                   },
                 }}
-                onClick={()=>navigate('/reviews_login')}
+                // onClick={()=>navigate('/reviews_login')}
+                onClick={(e) => {
+                  if (e.ctrlKey) {
+                    window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+                  } else {
+                    window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+                  }
+                }}
                 className="JoinButton-hero"
               >
                 Join the Waitlist

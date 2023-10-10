@@ -125,7 +125,16 @@ function SectionOne() {
         </p>
       </Row>
       <div className="my-4 mobBtnsec1" style={{ height: "fit-content" }}>
-        <Button className="hero-button"  onClick={()=>navigate('/reviews_login')}>Sign Me Up</Button>
+        <Button className="hero-button"  
+        // onClick={()=>navigate('/reviews_login')}
+        onClick={(e) => {
+          if (e.ctrlKey) {
+            window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+          } else {
+            window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+          }
+        }}
+        >Sign Me Up</Button>
       </div>
     </div>
   );
