@@ -42,12 +42,12 @@ export const SectionSeven = (props) => {
       const response = await fetch(
         "https://findher-backend.onrender.com/newsletter",
         {
-          credentials: "include",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "X-CSRF-Token" : csrfToken,
           },
+          credentials: "include",
           body: JSON.stringify({ email: email }),
         }
       );
