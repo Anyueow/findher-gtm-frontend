@@ -147,7 +147,7 @@ export const FirstPage = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/verify",
+          "https://findher-backend.onrender.com/verify",
           {
             method: "POST",
             headers: {
