@@ -22,7 +22,7 @@ function ChangeNumEmail(props) {
       return;
     }
     try {
-      const response = await fetch(`https://findher-backend.onrender.com/profile/${!props?.onChangeContact.phoneNumber ?'number' : 'email'}/otp/request`,
+      const response = await fetch(process.env.REACT_APP_URL+`profile/${!props?.onChangeContact.phoneNumber ?'number' : 'email'}/otp/request`,
        {
         method: "POST",
         headers: {
@@ -66,7 +66,7 @@ function ChangeNumEmail(props) {
       return;
     }
     try {
-      const response = await fetch(`https://findher-backend.onrender.com/profile/${!props?.onChangeContact.phoneNumber ?'number' : 'email'}/change`,
+      const response = await fetch(process.env.REACT_APP_URL+`/profile/${!props?.onChangeContact.phoneNumber ?'number' : 'email'}/change`,
        {
         method: "POST",
         headers: {

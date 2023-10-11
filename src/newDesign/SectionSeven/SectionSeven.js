@@ -39,15 +39,14 @@ export const SectionSeven = (props) => {
       return;
     }
     try {
-      const response = await fetch(
-        "https://findher-backend.onrender.com/newsletter",
+      const response = await fetch(process.env.REACT_APP_URL+"newsletter",
         {
-          credentials: "include",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "X-CSRF-Token" : csrfToken,
           },
+          credentials: "include",
           body: JSON.stringify({ email: email }),
         }
       );

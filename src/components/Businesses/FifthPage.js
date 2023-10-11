@@ -49,7 +49,7 @@ const FifthPage = () => {
         };
 
         try {
-            const response = await fetch('https://findher-backend.onrender.com/updateReviewDetails', {
+            const response = await fetch(process.env.REACT_APP_URL+'updateReviewDetails', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

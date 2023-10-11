@@ -96,8 +96,7 @@ function Profile() {
       return;
     }
     try {
-      const response = await fetch(
-        "https://findher-backend.onrender.com/profile/upload",
+      const response = await fetch(process.env.REACT_APP_URL+"profile/upload",
         {
           method: "POST",
           headers: {
@@ -176,8 +175,7 @@ function Profile() {
       }
     }
     try {
-      const response = await fetch(
-        "https://findher-backend.onrender.com/profile/work",
+      const response = await fetch(process.env.REACT_APP_URL+"profile/work",
         {
           method: "POST",
           headers: {
@@ -235,9 +233,7 @@ function Profile() {
       return;
     }
     try {
-      const response = await fetch(
-        "https://findher-backend.onrender.com/profile/notifications",
-        // "http://localhost:5000/profile/notifications",
+      const response = await fetch(process.env.REACT_APP_URL+"profile/notifications",
         {
           method: "GET",
           headers: {
@@ -283,8 +279,7 @@ function Profile() {
         return;
       }
       try {
-        const response = await fetch(
-          "https://findher-backend.onrender.com/profile/view",
+        const response = await fetch(process.env.REACT_APP_URL+"profile/view",
           {
             headers: {
               "Content-Type": "application/json",

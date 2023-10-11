@@ -4,11 +4,11 @@ import { Button, Col, Row } from "react-bootstrap";
 import sec6img from "./sec6img.webp";
 import img1 from "./images/download.svg";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function SectionSix() {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const containerVariants = {
     initial: {
@@ -44,7 +44,16 @@ function SectionSix() {
                 information from women who've worked there.
               </p>
             </Col>
-            <Button className="AcessButton secbtn exclusive-btn hero-button-six"  onClick={()=>navigate('/reviews_login')}>
+            <Button className="AcessButton secbtn exclusive-btn hero-button-six"  
+            // onClick={()=>navigate('/reviews_login')}
+            onClick={(e) => {
+              if (e.ctrlKey) {
+                window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+              } else {
+                window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+              }
+            }}
+            >
               Get Exclusive Access
             </Button>
           </Col>

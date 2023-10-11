@@ -86,7 +86,14 @@ function NavBar() {
                 // alignItems: "center"
                 cursor: "pointer", 
               }}
-              onClick={()=>navigate('/reviews_login')}
+              // onClick={()=>navigate('/reviews_login')}
+              onClick={(e) => {
+                if (e.ctrlKey) {
+                  window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+                } else {
+                  window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+                }
+              }}
             >
               Join the Waitlist
             </strong>

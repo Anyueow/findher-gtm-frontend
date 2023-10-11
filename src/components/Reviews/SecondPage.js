@@ -105,9 +105,7 @@ export const SecondPage = () => {
       };
 
       try {
-        const response = await fetch(
-          // "https://findher-backend.onrender.com/protectedRoute/createReview",
-          "https://findher-backend.onrender.com/protectedRoute/createReview",
+        const response = await fetch(process.env.REACT_APP_URL+"protectedRoute/createReview",
           {
             method: "POST",
             headers: {
@@ -232,7 +230,7 @@ const [jobTitleList, setJobTitleList] = useState([]);
     const fetchJobTitles = async () => {
       // console.log("hiii");
       try {
-        const response = await fetch('https://findher-backend.onrender.com/jobTitleList',{
+        const response = await fetch(process.env.REACT_APP_URL+'jobTitleList',{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -265,7 +263,7 @@ const [depList, setDepList] = useState([]);
     const fetchDep = async () => {
       // console.log("hiii");
       try {
-        const response = await fetch('https://findher-backend.onrender.com/jobDepList',{
+        const response = await fetch(process.env.REACT_APP_URL+'jobDepList',{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
