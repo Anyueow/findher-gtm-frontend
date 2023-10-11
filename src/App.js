@@ -46,6 +46,7 @@ import FaqSection from "./newDesign/FaqSection/FaqSection";
 import SectionSix from "./newDesign/SectionSix/SectionSix";
 import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
 import NotifDropdown from "./components/Profile/NotifDropdown";
+import Sample from "./CompanyPages/sample";
 // import ExitPopup from "./newDesign/ModalPopup/ExitPopup";
 function MainContent() {
  
@@ -132,6 +133,7 @@ function App() {
               <Route path="/signin-phone" element={<PhoneSignIn />} />
             <Route path="/update_details" element={<DetailsOneB2B />} />
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
+            <Route path="/sample" element ={<Sample />} />
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/old" element={<MainContent />} />
             <Route path="/try" element={<NotifDropdown/>} />
