@@ -1,0 +1,52 @@
+.macbook-air {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.div-4 {
+    max-width: 800px; /* reasonable container size */
+    width: 100%;
+    padding: 15px;
+    margin-top: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.Box {
+    padding: 15px;
+    height: 100%;
+    margin-top: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sprintex-inc-is-a {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.flexibility-we-offer,
+.approachable,
+.passion-for,
+.information {
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.text-wrapper-12,
+.text-wrapper-13,
+.p {
+    font-size: 24px;  /* bigger size for headings */
+    font-weight: bold; /* bold headings */
+    text-align: left;
+
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.span {
+    font-weight: bold;
+    margin-right: 5px;
+}
