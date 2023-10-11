@@ -10,10 +10,10 @@ import row1img2 from "./row1img2.webp";
 import row2img2 from "./row2img2.webp";
 import row3img1 from "./row3img1.webp";
 import row3img2 from "./row3img2.webp"; 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 function SectionThree() {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <Container className="my-5 section-three-container secOutCont" id="features"> 
@@ -27,7 +27,16 @@ function SectionThree() {
             control of your path, whether you're just starting or advancing your
             career.
           </p>
-          <Button className="hero-button"  onClick={()=>navigate('/reviews_login')}>Get Access</Button>
+          <Button className="hero-button"  
+          // onClick={()=>navigate('/reviews_login')}
+          onClick={(e) => {
+            if (e.ctrlKey) {
+              window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+            } else {
+              window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+            }
+          }}
+          >Get Access</Button>
         </Col>
         <Col sm={7}  className="no-gutter">
           <div className="decorative-rectangle img-div"></div>
@@ -71,7 +80,16 @@ function SectionThree() {
             culture, work-life balance, and the unspoken aspects that truly
             matter.
           </p>
-          <Button style={{ marginLeft: "6%" }} className=" hero-button"  onClick={()=>navigate('/reviews_login')}>
+          <Button style={{ marginLeft: "6%" }} className=" hero-button"  
+          // onClick={()=>navigate('/reviews_login')}
+          onClick={(e) => {
+            if (e.ctrlKey) {
+              window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+            } else {
+              window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+            }
+          }}
+          >
             Join us now
           </Button>
         </Col>
@@ -87,7 +105,16 @@ function SectionThree() {
             FindHer, you're not just another applicant. Our platform matches you
             with roles that align with YOUR specific needs and ambitions.
           </p>
-          <Button className="hero-button"  onClick={()=>navigate('/reviews_login')}>Take Me There</Button>
+          <Button className="hero-button"  
+          // onClick={()=>navigate('/reviews_login')}
+          onClick={(e) => {
+            if (e.ctrlKey) {
+              window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+            } else {
+              window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+            }
+          }}
+          >Take Me There</Button>
         </Col>
         <Col sm={5} className="no-gutter">
         <div className="decorative-rectangle lstOne img-div"></div>

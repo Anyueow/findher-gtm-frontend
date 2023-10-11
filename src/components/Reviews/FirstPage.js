@@ -146,8 +146,7 @@ export const FirstPage = () => {
     }
 
       try {
-        const response = await fetch(
-          "https://findher-backend.onrender.com/verify",
+        const response = await fetch(process.env.REACT_APP_URL+"verify",
           {
             method: "POST",
             headers: {
@@ -215,9 +214,7 @@ export const FirstPage = () => {
     const { email, phoneNumber, password } = user;
 
     if (email && phoneNumber && password) {
-      // const response = await fetch("https://findher-backend.onrender.com/register",
-      const response = await fetch(
-        "https://findher-backend.onrender.com/register",
+      const response = await fetch(process.env.REACT_APP_URL+"register",
         {
           method: "POST",
           headers: {

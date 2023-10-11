@@ -7,11 +7,11 @@ import img2 from "./Artboard 1 copy.png";
 import img3 from "./Artboard 1 copy 2.png";
 import img4 from "./Group 181.png";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function SectionOne() {
   
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const containerVariants = {
     initial:{
@@ -125,7 +125,16 @@ function SectionOne() {
         </p>
       </Row>
       <div className="my-4 mobBtnsec1" style={{ height: "fit-content" }}>
-        <Button className="hero-button"  onClick={()=>navigate('/reviews_login')}>Sign Me Up</Button>
+        <Button className="hero-button"  
+        // onClick={()=>navigate('/reviews_login')}
+        onClick={(e) => {
+          if (e.ctrlKey) {
+            window.open('https://www.surveymonkey.com/r/NMD3GRV', '_blank');
+          } else {
+            window.location.href = 'https://www.surveymonkey.com/r/NMD3GRV';
+          }
+        }}
+        >Sign Me Up</Button>
       </div>
     </div>
   );
