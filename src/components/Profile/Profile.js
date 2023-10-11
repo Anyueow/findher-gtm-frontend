@@ -5,7 +5,7 @@ import { Col, Form, Row, Button, Modal } from "react-bootstrap";
 import ChangeNumEmail from "./ChangeNumEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import profile from "../../Assets/profile.png";
+import profile from "./profile.png";
 import NotifDropdown from "./NotifDropdown";
 import { useCsrfToken } from '../../CsrfTokenProvider';
 
