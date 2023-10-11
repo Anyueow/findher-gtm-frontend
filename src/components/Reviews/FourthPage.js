@@ -163,8 +163,7 @@ const FourthPage = () => {
 
       try {
         // Make an asynchronous request to the backend API
-        const response = await fetch(
-          "https://findher-backend.onrender.com/updateRatings",
+        const response = await fetch(process.env.REACT_APP_URL+"updateRatings",
           {
             method: "POST",
             headers: {

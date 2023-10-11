@@ -42,8 +42,7 @@ export const FirstPage = () => {
     const { email, phoneNumber, password } = user;
 
     if ((email || phoneNumber) && password) {
-      // const response = await fetch("https://findher-backend.onrender.com/login",
-      const response = await fetch("https://findher-backend.onrender.com/login", {
+      const response = await fetch(process.env.REACT_APP_URL+"login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
