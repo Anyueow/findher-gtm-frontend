@@ -160,7 +160,7 @@ const handleFirstInputChange = (e) => {
 
       try {
         // Make an asynchronous request to the backend API
-        const response = await fetch(process.env.REACT_APP_URL+"/updateFeatures",
+        const response = await fetch(process.env.REACT_APP_URL+"updateFeatures",
           {
             method: "POST",
             headers: {

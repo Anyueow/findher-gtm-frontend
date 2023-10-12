@@ -105,7 +105,7 @@ export const SecondPage = () => {
       };
 
       try {
-        const response = await fetch(process.env.REACT_APP_URL+"protectedRoute/createReview",
+        const response = await fetch(process.env.REACT_APP_URL+"createReview",
           {
             method: "POST",
             headers: {
@@ -236,6 +236,7 @@ const [jobTitleList, setJobTitleList] = useState([]);
             'Content-Type': 'application/json',
             "X-CSRF-Token" : csrfToken,
           },
+          credentials: "include", 
           body: JSON.stringify({inputTitle:jobTitle})
         }); // Replace with your API endpoint
         if (!response.ok) {
@@ -252,7 +253,7 @@ const [jobTitleList, setJobTitleList] = useState([]);
 
     fetchJobTitles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [jobTitle]);
+  }, [jobTitle,csrfToken]);
 
   //for department
 const [dep, setDep] = useState();
@@ -269,6 +270,7 @@ const [depList, setDepList] = useState([]);
             'Content-Type': 'application/json',
             "X-CSRF-Token" : csrfToken,
           },
+          credentials: "include", 
           body: JSON.stringify({inputDep:dep})
         });
         if (!response.ok) {
@@ -497,9 +499,9 @@ const [depList, setDepList] = useState([]);
                 <path
                   d="M23 17L31 24.5L23 32"
                   stroke="#EE2C5B"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
