@@ -175,7 +175,7 @@ function Profile() {
       }
     }
     try {
-      const response = await fetch(process.env.REACT_APP_URL+"profile/work",
+      const response = await fetch(process.env.REACT_APP_URL+"profile/update",
         {
           method: "POST",
           headers: {
