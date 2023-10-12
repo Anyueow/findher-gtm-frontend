@@ -32,12 +32,56 @@
   clip-path: circle() !important;
   width: 43%;
 }
+.uprNavbtn{
+  border: 1px solid #EA394A;
+  border-radius: 25px;
+  width: 9%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all;
+    transition-duration: 500ms;
+}
+.uprNavbtn a{
+  color: #EA394A;
+  font-family: Poppins;
+  font-weight: 800;
+  margin: 6px;
+  font-size: 1.2rem;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+}
+.uprNavbtn:hover {
+  transform: scale(1.05);
+}
+/*
+.uprNavbtn:active {
+  background-color: #efefef !important;
+  border: none !important;
+}
 
+.uprNavbtn:focus {
+  background-color: #efefef !important;
+  border: none !important;
+} */
+.sideLogin{
+  display: none;
+}
+@media (width < 850px){
+  .uprNavbtn{
+    visibility: hidden;
+  }
+  .sideLogin{
+    display: block;
+  }
+}
   @media (min-width:600px) and (max-width:850px) {
+    
     .bell-icon{
       width: 2%;
     }
     .profile-picture-nav{
       width: 3% !important;
     }
+
 }

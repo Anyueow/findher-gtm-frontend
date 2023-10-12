@@ -47,6 +47,7 @@ import SectionSix from "./newDesign/SectionSix/SectionSix";
 import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
 import NotifDropdown from "./components/Profile/NotifDropdown";
 import Sample from "./CompanyPages/sample";
+import ProfileNavbarGuest from "./components/Profile/ProfileNavbarGuest";
 // import ExitPopup from "./newDesign/ModalPopup/ExitPopup";
 function MainContent() {
  
@@ -136,7 +137,7 @@ function App() {
             <Route path="/sample" element ={<Sample />} />
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/old" element={<MainContent />} />
-            <Route path="/try" element={<NotifDropdown/>} />
+            <Route path="/try" element={<ProfileNavbarGuest/> } />
 
 
 
