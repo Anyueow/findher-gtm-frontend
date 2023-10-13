@@ -110,6 +110,12 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+  const [LogedIn,setLogedin]=useState(false);
+  useEffect(()=>{
+    const token = localStorage.getItem("token");
+    if(token) setLogedin(true); 
+    console.log(token,"tokennn");
+  },[])
   return (
       <NavbarProvider value="5%">
       
@@ -119,6 +125,7 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<NewDesign />} />
+            
               <Route path="/reviews_login" element={<FirstPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
@@ -144,6 +151,7 @@ function App() {
 
 
           </Routes>
+          {window.location.pathname !== "/" && (LogedIn ? "": <ProfileNavbarGuest/>)}
           {/* <Footer /> */}
         </div>
       </Router>

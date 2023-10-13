@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import profile from "./profile.png";
 import NotifDropdown from "./NotifDropdown";
 import { useCsrfToken } from '../../CsrfTokenProvider';
-import ProfileNavbarGuest from "./ProfileNavbarGuest";
 
 function Profile() {
   const [profileDetails, setProfileDetails] = useState();
@@ -31,7 +30,7 @@ function Profile() {
   useEffect(()=>{
     const token = localStorage.getItem("token");
     if(token) setLogedin(true);
-    console.log(token,"tokennn");
+    // console.log(token,"tokennn");
   },[])
   const [onChangeWork, setOnChangeWork] = useState(false);
 
@@ -346,7 +345,8 @@ function Profile() {
   return (
     <section>
       
-      {LogedIn ? (<ProfileNavBar
+
+      <ProfileNavBar
         newImage={
           editProfileDetails?.profilePic
             ? editProfileDetails?.profilePic
@@ -357,7 +357,7 @@ function Profile() {
         open={open}
 
         
-      />): <ProfileNavbarGuest/>}
+      />
       <div className="profile-container d-flex justify-content-center">
         <Row
           style={{ width: "90%" }}
