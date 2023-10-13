@@ -95,7 +95,7 @@ const Survey = () => {
               console.log(process.env.REACT_APP_URL+"business/register")
             if (response.ok) {
               const data = await response.json();
-              // console.log(data);
+              console.log(data);
               //navigate("/reviews_three");
             } else {
               // Handle the error response
