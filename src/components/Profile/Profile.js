@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import profile from "./profile.png";
 import NotifDropdown from "./NotifDropdown";
 import { useCsrfToken } from '../../CsrfTokenProvider';
+import ProfileNavbarGuest from "./ProfileNavbarGuest";
 
 function Profile() {
   const [profileDetails, setProfileDetails] = useState();
@@ -15,7 +16,7 @@ function Profile() {
   const [showNumEmail, setshowNumEmail] = useState(false);
   const [showModalName, setShowModalName] = useState(false);
   const [showModalWork, setShowModalWork] = useState(false);
-
+  const [LogedIn,setLogedin]=useState(false);
   const csrfToken = useCsrfToken();
 
   const [onChangeContact, setOnChangeContact] = useState({
@@ -27,7 +28,11 @@ function Profile() {
   const handleCloseModalName = () => {
     setShowModalName(false);
   };
-
+  useEffect(()=>{
+    const token = localStorage.getItem("token");
+    if(token) setLogedin(true);
+    console.log(token,"tokennn");
+  },[])
   const [onChangeWork, setOnChangeWork] = useState(false);
 
   function handleOnChange(e) {
@@ -175,7 +180,7 @@ function Profile() {
       }
     }
     try {
-      const response = await fetch(process.env.REACT_APP_URL+"profile/work",
+      const response = await fetch(process.env.REACT_APP_URL+"profile/update",
         {
           method: "POST",
           headers: {
@@ -337,9 +342,11 @@ function Profile() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [open]);
+  console.log(LogedIn,"loggedinnnn");
   return (
     <section>
-      <ProfileNavBar
+      
+      {LogedIn ? (<ProfileNavBar
         newImage={
           editProfileDetails?.profilePic
             ? editProfileDetails?.profilePic
@@ -350,7 +357,7 @@ function Profile() {
         open={open}
 
         
-      />
+      />): <ProfileNavbarGuest/>}
       <div className="profile-container d-flex justify-content-center">
         <Row
           style={{ width: "90%" }}

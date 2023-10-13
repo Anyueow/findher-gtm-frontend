@@ -5,7 +5,7 @@ import "./reviewStyles.css";
 // import NavbarContext from "../NavbarContext";
 import { ToastContainer, toast } from "react-toastify";
 import Checkbox from "@mui/material/Checkbox";
-import { useCsrfToken } from '../../CsrfTokenProvider';
+import { useCsrfToken } from "../../CsrfTokenProvider";
 import "react-toastify/dist/ReactToastify.css";
 import RefPopup from "./RefPopup";
 
@@ -27,11 +27,11 @@ export const FirstPage = () => {
     setIsChecked(event.target.checked);
   };
   const [formErrors, setFormErrors] = useState({
-    email: {status:false, message:"message"},
-    phoneNumber: {status:false, message:"message"},
-    password: {status:false, message:"message"},
-    firstName: {status:false, message:"message"},
-    lastName: {status:false, message:"message"},
+    email: { status: false, message: "message" },
+    phoneNumber: { status: false, message: "message" },
+    password: { status: false, message: "message" },
+    firstName: { status: false, message: "message" },
+    lastName: { status: false, message: "message" },
   });
 
   const [isOtp, setisOtp] = useState({
@@ -51,10 +51,10 @@ export const FirstPage = () => {
     navigate("/");
   };
   const popupRef = useRef(null);
-  const [refCode,setRefcode] = useState("");
+  const [refCode, setRefcode] = useState("");
   const handleUserdetailsSubmit = async (e) => {
     e.preventDefault();
-   
+
     const { email, phoneNumber, password, firstName, lastName } = user;
 
     if (!email && !phoneNumber && !password && !firstName && !lastName) {
@@ -68,49 +68,47 @@ export const FirstPage = () => {
       firstName: { status: false, message: "message" },
       lastName: { status: false, message: "message" },
     });
-   
+
     if (!/^[a-zA-Z]+$/.test(firstName)) {
-    setFormErrors((prevErrors) => ({
-      ...prevErrors,
-      firstName: {
-        status: true,
-        message: "Only alphabets are allowed",
-      },
-    }));
-    return;
-  }
-  else if (firstName.length > 15) {
-    setFormErrors((prevErrors) => ({
-      ...prevErrors,
-      firstName: {
-        status: true,
-        message: "Maximum 15 alphabetical characters",
-      },
-    }));
-    return;
-  }
- 
-  if (!/^[a-zA-Z]+$/.test(lastName)) {
-    setFormErrors((prevErrors) => ({
-      ...prevErrors,
-      lastName: {
-        status: true,
-        message: "Only alphabets are allowed",
-      },
-    }));
-    return;
-  }
-  else if (!/^[a-zA-Z]+$/.test(lastName)) {
-    setFormErrors((prevErrors) => ({
-      ...prevErrors,
-      lastName: {
-        status: true,
-        message: "Maximum 15 alphabetical characters",
-      },
-    }));
-    return;
-  }
-    
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        firstName: {
+          status: true,
+          message: "Only alphabets are allowed",
+        },
+      }));
+      return;
+    } else if (firstName.length > 15) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        firstName: {
+          status: true,
+          message: "Maximum 15 alphabetical characters",
+        },
+      }));
+      return;
+    }
+
+    if (!/^[a-zA-Z]+$/.test(lastName)) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        lastName: {
+          status: true,
+          message: "Only alphabets are allowed",
+        },
+      }));
+      return;
+    } else if (!/^[a-zA-Z]+$/.test(lastName)) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        lastName: {
+          status: true,
+          message: "Maximum 15 alphabetical characters",
+        },
+      }));
+      return;
+    }
+
     if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/.test(email)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
@@ -122,80 +120,91 @@ export const FirstPage = () => {
     if (!/^\d{10}$/.test(phoneNumber)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
-        phoneNumber: { status: true, message: "Please enter a valid phone number" },
+        phoneNumber: {
+          status: true,
+          message: "Please enter a valid phone number",
+        },
       }));
       return;
     }
 
-    if(password.length <  8 ||  password.length > 16)
-    {
-      console.log(password.length )
+    if (password.length < 8 || password.length > 16) {
+      console.log(password.length);
       setFormErrors((prevErrors) => ({
         ...prevErrors,
-        password: { status: true, message: "Password length should be 8 to 16 characters" },
+        password: {
+          status: true,
+          message: "Password length should be 8 to 16 characters",
+        },
       }));
       return;
     }
 
-    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%*^?&#])[A-Za-z\d@!%*^?&#]{8,16}$/.test(password)) {
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%*^?&#])[A-Za-z\d@!%*^?&#]{8,16}$/.test(
+        password
+      )
+    ) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
-        password: { status: true, message: "Must contain one uppercase, lowercase, number and special character" },
+        password: {
+          status: true,
+          message:
+            "Must contain one uppercase, lowercase, number and special character",
+        },
       }));
       return;
     }
 
-      try {
-        const response = await fetch(process.env.REACT_APP_URL+"verify",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "X-CSRF-Token" : csrfToken,
-            },
-            credentials: "include", // Include this line
-            body: JSON.stringify({
-              email: email,
-              phoneNumber: phoneNumber,
-              password: password,
-              firstName: firstName,
-              lastName: lastName,
-            }),
-          }
-        );
+    try {
+      const response = await fetch(process.env.REACT_APP_URL + "verify", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken,
+        },
+        credentials: "include", // Include this line
+        body: JSON.stringify({
+          email: email,
+          phoneNumber: phoneNumber,
+          password: password,
+          firstName: firstName,
+          lastName: lastName,
+        }),
+      });
 
-        console.log("its been sent");
+      console.log("its been sent");
 
-        if (response.ok) {
-          const data = await response.json();
-          setisOtp((prevState) => ({
-            ...prevState,
-            status: !prevState.status,
-          }));
-          console.log(data); // Print the response data to the console for debugging purp
-        } else {
-          console.log("dammit these errors");
-          // Handle the error response
-          const data = await response.json();
-          toast.error(data.message, {
-            position: toast.POSITION.TOP_RIGHT,
-          });
-          console.error(`Error: ${response.status} ${response.statusText}`);
-          console.error(data.message); // Print the error message from the backend
+      if (response.ok) {
+        const data = await response.json();
+        setisOtp((prevState) => ({
+          ...prevState,
+          status: !prevState.status,
+        }));
+        console.log(data); // Print the response data to the console for debugging purp
+      } else {
+        console.log("dammit these errors");
+        // Handle the error response
+        const data = await response.json();
+        toast.error(data.message, {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+        console.error(`Error: ${response.status} ${response.statusText}`);
+        console.error(data.message); // Print the error message from the backend
 
-          // Display error messages for duplicate email or phone number
-          // setFormErrors({
-          //   email: data.message === "Email already in use.",
-          //   phoneNumber: data.message === "Phone number already in use.",
-          //   password: false,
-          // });
-        }
-      } catch (error) {
-        console.log(error);
-        console.error("Error Name:", error.name);
-        console.error("Error Message:", error.message);
-        console.error("Stack Trace:", error.stack);
+        // Display error messages for duplicate email or phone number
+        // setFormErrors({
+        //   email: data.message === "Email already in use.",
+        //   phoneNumber: data.message === "Phone number already in use.",
+        //   password: false,
+        // });
       }
+    } catch (error) {
+      console.log(error);
+      console.error("Error Name:", error.name);
+      console.error("Error Message:", error.message);
+      console.error("Stack Trace:", error.stack);
+    }
     // } else {
     //   // Update formErrors to show which fields are missing
     //   setFormErrors({
@@ -214,23 +223,21 @@ export const FirstPage = () => {
     const { email, phoneNumber, password } = user;
 
     if (email && phoneNumber && password) {
-      const response = await fetch(process.env.REACT_APP_URL+"register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-Token" : csrfToken,
-          },
-          credentials: "include", // Include this line
-          body: JSON.stringify({
-            email: email,
-            phoneNumber: phoneNumber,
-            password: password,
-            otp: isOtp.value,
-            refCode:refCode
-          }),
-        }
-      );
+      const response = await fetch(process.env.REACT_APP_URL + "register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken,
+        },
+        credentials: "include", // Include this line
+        body: JSON.stringify({
+          email: email,
+          phoneNumber: phoneNumber,
+          password: password,
+          otp: isOtp.value,
+          refCode: refCode,
+        }),
+      });
 
       console.log("its been sent");
 
@@ -267,33 +274,37 @@ export const FirstPage = () => {
     }
   };
   const isFormValid = user.email && user.phoneNumber && user.password;
-  const [popOpen,setPopopen]=useState(false);
-  useEffect(()=>{
-    if(isChecked) setPopopen(true);
-  },[isChecked])
+  const [popOpen, setPopopen] = useState(false);
+  useEffect(() => {
+    if (isChecked) setPopopen(true);
+  }, [isChecked]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (popupRef.current && !popupRef.current.contains(event.target)) {
         // Clicked outside the popup, so close it
         setPopopen(false);
-        setIsChecked(false)
+        setIsChecked(false);
       }
     };
 
     if (popOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [popOpen]);
   return (
     <section>
-      <Container id="reviews" className="sub sub1 review-first-con" style={{ paddingTop: "4%" }}>
+      <Container
+        id="reviews"
+        className="sub sub1 review-first-con"
+        style={{ paddingTop: "4%" }}
+      >
         <Row className="ROw center-contents">
           <Col md={6} className="align-content-center">
             <div className="design">
@@ -344,11 +355,16 @@ export const FirstPage = () => {
                   </p>
                 </Row>
                 <Row>
-                  <Form onSubmit={handleUserdetailsSubmit} className="form-wrapper">
+                  <Form
+                    onSubmit={handleUserdetailsSubmit}
+                    className="form-wrapper"
+                  >
                     <Row className="form-grp-name">
                       <Col xs="6" className="pe-0">
                         <Form.Group className="">
-                          <Form.Label className="my-0 mx-1">First Name</Form.Label>
+                          <Form.Label className="my-0 mx-1">
+                            First Name
+                          </Form.Label>
                           <Form.Control
                             name="firstName" // Added name attribute
                             type="text"
@@ -356,15 +372,23 @@ export const FirstPage = () => {
                             onChange={handleInputChange}
                             required
                           />
-                      
-                        <p className={`error-message my-0 mx-1 ${ formErrors.firstName.status? "visibility-visible" : "visibility-hidden" }`}>
-                        {formErrors.firstName.message} 
-                        </p>
+
+                          <p
+                            className={`error-message my-0 mx-1 ${
+                              formErrors.firstName.status
+                                ? "visibility-visible"
+                                : "visibility-hidden"
+                            }`}
+                          >
+                            {formErrors.firstName.message}
+                          </p>
                         </Form.Group>
                       </Col>
                       <Col xs="6" className="pe-0">
                         <Form.Group className="">
-                          <Form.Label  className="my-0 mx-1">Last Name</Form.Label>
+                          <Form.Label className="my-0 mx-1">
+                            Last Name
+                          </Form.Label>
                           <Form.Control
                             name="lastName" // Added name attribute
                             type="text"
@@ -372,14 +396,20 @@ export const FirstPage = () => {
                             onChange={handleInputChange}
                             required
                           />
-                        <p className={`error-message my-0 mx-1 ${ formErrors.lastName.status? "visibility-visible" : "visibility-hidden" }`}>
-                        {formErrors.lastName.message} 
-                        </p>
+                          <p
+                            className={`error-message my-0 mx-1 ${
+                              formErrors.lastName.status
+                                ? "visibility-visible"
+                                : "visibility-hidden"
+                            }`}
+                          >
+                            {formErrors.lastName.message}
+                          </p>
                         </Form.Group>
                       </Col>
                     </Row>
                     <Form.Group className="form-grp">
-                      <Form.Label  className="my-0 mx-1">Email</Form.Label>
+                      <Form.Label className="my-0 mx-1">Email</Form.Label>
                       <Form.Control
                         name="email" // Added name attribute
                         // type="email"
@@ -387,12 +417,20 @@ export const FirstPage = () => {
                         onChange={handleInputChange}
                         required
                       />
-                     <p className={`error-message my-0 mx-1 ${ formErrors.email.status? "visibility-visible" : "visibility-hidden" }`}>
-                        {formErrors.email.message} 
-                        </p>
+                      <p
+                        className={`error-message my-0 mx-1 ${
+                          formErrors.email.status
+                            ? "visibility-visible"
+                            : "visibility-hidden"
+                        }`}
+                      >
+                        {formErrors.email.message}
+                      </p>
                     </Form.Group>
                     <Form.Group className="form-grp">
-                      <Form.Label  className="my-0 mx-1">Phone Number</Form.Label>
+                      <Form.Label className="my-0 mx-1">
+                        Phone Number
+                      </Form.Label>
                       <Form.Control
                         name="phoneNumber" // Added name attribute
                         type="text"
@@ -400,12 +438,20 @@ export const FirstPage = () => {
                         onChange={handleInputChange}
                         required
                       />
-                     <p className={`error-message my-0 mx-1 ${ formErrors.phoneNumber.status? "visibility-visible" : "visibility-hidden" }`}>
-                        {formErrors.phoneNumber.message} 
-                        </p>
+                      <p
+                        className={`error-message my-0 mx-1 ${
+                          formErrors.phoneNumber.status
+                            ? "visibility-visible"
+                            : "visibility-hidden"
+                        }`}
+                      >
+                        {formErrors.phoneNumber.message}
+                      </p>
                     </Form.Group>
                     <Form.Group className="form-grp">
-                      <Form.Label  className="my-0 mx-1">Create Password</Form.Label>
+                      <Form.Label className="my-0 mx-1">
+                        Create Password
+                      </Form.Label>
                       <Form.Control
                         name="password" // Added name attribute
                         type="password"
@@ -413,36 +459,45 @@ export const FirstPage = () => {
                         onChange={handleInputChange}
                         required
                       />
-                    <p className={`error-message my-0 mx-1 ${ formErrors.password.status? "visibility-visible" : "visibility-hidden" }`}>
-                        {formErrors.password.message} 
-                        </p>
+                      <p
+                        className={`error-message my-0 mx-1 ${
+                          formErrors.password.status
+                            ? "visibility-visible"
+                            : "visibility-hidden"
+                        }`}
+                      >
+                        {formErrors.password.message}
+                      </p>
                     </Form.Group>
                     <Row>
-                      <Col lg="3" md="5" >
-                    <Form.Group className="otpReferral">
-                      <Button
-                        className="button-sub reviewbtn"
-                        disabled={!isFormValid}
-                        style={{ marginBottom: "3%" }}
-                        type="submit"
-                      >
-                        Send OTP
-                      </Button>
-                      </Form.Group>
+                      <Col lg="3" md="5">
+                        <Form.Group className="otpReferral">
+                          <Button
+                            className="button-sub reviewbtn"
+                            disabled={!isFormValid}
+                            style={{ marginBottom: "3%" }}
+                            type="submit"
+                          >
+                            Send OTP
+                          </Button>
+                        </Form.Group>
                       </Col>
                       <Col lg="6" md="7" className="d-flex align-items-center">
-                      <Form.Group className="form-grp" style={{width:"100%"}}>
-                      <label >
-                        <Checkbox
-                            checked={isChecked}
-                            onChange={handleCheckboxChange}
-                          color="primary"
-                        />
-                        I have a referral code
-                      </label>
-                      </Form.Group>
+                        <Form.Group
+                          className="form-grp"
+                          style={{ width: "100%" }}
+                        >
+                          <label>
+                            <Checkbox
+                              checked={isChecked}
+                              onChange={handleCheckboxChange}
+                              color="primary"
+                            />
+                            I have a referral code
+                          </label>
+                        </Form.Group>
                       </Col>
-                      </Row>
+                    </Row>
                   </Form>
                 </Row>
                 <Link
@@ -510,7 +565,11 @@ export const FirstPage = () => {
         </Row>
       </Container>
       <ToastContainer />
-      {popOpen && <div ref={popupRef}><RefPopup setPopopen={setPopopen} setRefcode={setRefcode} /></div>}
+      {popOpen && (
+        <div ref={popupRef}>
+          <RefPopup setPopopen={setPopopen} setRefcode={setRefcode} />
+        </div>
+      )}
     </section>
   );
 };

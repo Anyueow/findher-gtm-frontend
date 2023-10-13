@@ -290,9 +290,9 @@ const FourthPage = () => {
               <path
                 d="M23 17L31 24.5L23 32"
                 stroke="#EE2C5B"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
@@ -316,9 +316,9 @@ const FourthPage = () => {
               <path
                 d="M27 17L19 24.5L27 32"
                 stroke="#EE2C5B"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
