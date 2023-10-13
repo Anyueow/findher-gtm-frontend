@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import {Form, Button, Container, ProgressBar, Row, Col} from 'react-bootstrap';
 import "./survey.css";
+import { useCsrfToken } from '../../CsrfTokenProvider';
+
 const Survey = () => {
+
+    const csrfToken = useCsrfToken();
+
     const [formData, setFormData] = useState({
                                                  companyName: '',
                                                  name: '',
@@ -14,7 +19,6 @@ const Survey = () => {
                                                  overview: '',
                                                  hiring: '',
                                                  culture: '',
-                                                 topChoice: '',
                                                  policies: '',
                                                  addInfo: '',
                                                  more: '',
@@ -73,8 +77,35 @@ const Survey = () => {
                     });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            const response = await fetch(process.env.REACT_APP_URL+"business/register",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer `,
+                  "X-CSRF-Token" : csrfToken,
+                },
+                credentials: "include", // Include this line
+                body: JSON.stringify(formData),
+              }
+            );
+              console.log(process.env.REACT_APP_URL+"business/register")
+            if (response.ok) {
+              const data = await response.json();
+              // console.log(data);
+              //navigate("/reviews_three");
+            } else {
+              // Handle the error response
+              const data = await response.json();
+              console.error(`Error: ${response.status} ${response.statusText}`);
+              console.error(data.message); // Print the error message from the backend
+            }
+          } catch (error) {
+            console.error("Network error:", error);
+          }
         console.log('Form Data Submitted:', formData);
     };
     const ProgressBar = ({ now }) => (
