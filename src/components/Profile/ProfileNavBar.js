@@ -4,6 +4,7 @@ import logo from "../../Assets/logo.png";
 import goback from "../../Assets/goback.png";
 import "./CSS/ProfileNavBar.css";
 import { Button } from "react-bootstrap";
+import { BiHomeAlt } from 'react-icons/bi';
 import Badge from "@mui/material/Badge";
 function ProfileNavBar(props) {
   const {notifCount,setOpen,open}=props;
@@ -113,20 +114,7 @@ function ProfileNavBar(props) {
         <Offcanvas.Body>
           <div className="profile-offcanvas-body my-4">
             <span className="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="none"
-              >
-                <path
-                  d="M13.259 20.7505V20.8505H13.359H21.3745H21.4745V20.7505V9.56218V9.51103L21.433 9.4811L12.0817 2.72989L12.0231 2.68763L11.9646 2.72989L2.61327 9.4811L2.57181 9.51103V9.56218V20.7505V20.8505H2.67181H10.6872H10.7872V20.7505V13.4098H13.259V20.7505ZM0.1 8.957L0.1 8.95692C0.0998714 8.78446 0.142186 8.61394 0.224106 8.45829C0.306049 8.30261 0.425605 8.16568 0.574203 8.05838L11.2614 0.342362L11.2614 0.342357C11.4784 0.185671 11.7464 0.1 12.0231 0.1C12.2998 0.1 12.5679 0.185671 12.7848 0.342357L12.7848 0.342362L23.4721 8.05838C23.6207 8.16568 23.7402 8.30261 23.8222 8.4583C23.9041 8.61393 23.9464 8.78446 23.9463 8.95692V8.957V21.9907C23.9463 22.2905 23.818 22.5798 23.587 22.7943C23.3557 23.009 23.0404 23.1308 22.7104 23.1308H1.3359C1.00582 23.1308 0.690615 23.009 0.459312 22.7943C0.228259 22.5798 0.1 22.2905 0.1 21.9907L0.1 8.957Z"
-                  fill="white"
-                  stroke="black"
-                  stroke-width="0.2"
-                />
-              </svg>
+            <BiHomeAlt style={{fontSize:"1.6rem"}}/>
             </span>{" "}
             Home
           </div>
