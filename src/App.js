@@ -47,9 +47,10 @@ import SectionSix from "./newDesign/SectionSix/SectionSix";
 import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
 import NotifDropdown from "./components/Profile/NotifDropdown";
 import Sample from "./CompanyPages/sample";
+import ProfileCreationInternal from "./components/Businesses/profileCreationInternal";
 // import ExitPopup from "./newDesign/ModalPopup/ExitPopup";
 function MainContent() {
- 
+
 
 
 
@@ -111,7 +112,7 @@ function App() {
   }, []);
   return (
       <NavbarProvider value="5%">
-      
+
       <Router>
         <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
@@ -137,6 +138,7 @@ function App() {
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/old" element={<MainContent />} />
             <Route path="/try" element={<NotifDropdown/>} />
+            <Route path="/createcompany" element={<ProfileCreationInternal />} />
 
 
 

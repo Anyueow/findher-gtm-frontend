@@ -1,0 +1,75 @@
+.screenContain {
+    margin-top: 10%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.box {
+    width: 85vw;
+    background-color: rgba(192, 192, 192, 0.25);
+    border-radius: 40px;  /* Rounded corners */
+    margin-top: 10%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.32);  /* Box shadow */
+}
+
+.cent {
+    display: flex;  /* Enable Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    height: max-content;
+    margin-bottom: 15%;
+}
+
+
+/* Container of the progress bar */
+.progress-bar-container {
+    background-color: rgba(236, 248, 172, 0.68); /* Grey background */
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden; /* Ensures inner bar stays within bounds */
+    align-items: flex-start;
+    width: 75%;
+}
+
+/* The actual progress bar */
+.progress-bar {
+    height: 30px; /* Adjust height as needed */
+    width: 0; /* Initially set to 0, will be updated by JavaScript */
+    background-color: rgb(186, 211, 67); /* Green background */
+    text-align: center; /* Center the label */
+    line-height: 250px; /* Center text vertically */
+    color: rgba(0, 0, 0); /* White text color */
+    border-radius: 25px; /* Rounded corners */
+    transition: width 0.5s; /* Smooth transition */
+}
+
+
+.formgrp {
+    align-content: flex-start;
+    text-align: left;
+    padding: 2.5%;
+    margin-top: 2%;
+    width: 60vw;
+}
+
+.checker{
+    text-align: left;
+    font-size: 1rem;
+    width: 60vw
+}
+
+.submitbutton{
+    width: 50vw;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 2.5%;
+    border-radius: 10px;
+}
