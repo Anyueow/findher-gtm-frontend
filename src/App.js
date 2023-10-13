@@ -47,6 +47,7 @@ import SectionSix from "./newDesign/SectionSix/SectionSix";
 import { SectionSeven } from "./newDesign/SectionSeven/SectionSeven";
 import Sample from "./CompanyPages/sample";
 import ProfileNavbarGuest from "./components/Profile/ProfileNavbarGuest";
+import ProfileCreationInternal from "./components/Businesses/profileCreationInternal";
 // import ExitPopup from "./newDesign/ModalPopup/ExitPopup";
 function MainContent() {
  
@@ -137,6 +138,7 @@ function App() {
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/old" element={<MainContent />} />
             <Route path="/try" element={<ProfileNavbarGuest/> } />
+            <Route path="/createcompany" element={<ProfileCreationInternal/>} />
 
 
 
