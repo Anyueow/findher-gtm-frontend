@@ -1,0 +1,454 @@
+:root {
+    --brand-color: rgba(238, 44, 91, 1);
+    --shadow-color: 2px 4px 25px 0px rgba(0, 0, 0, 0.1);
+    --text-grey: rgba(151, 151, 151, 1);
+}
+
+.infoBoxTwo {
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    align-content: center;
+    display: flex;
+    background-color: rgba(232, 232, 232, 0.34);
+    margin-top: 4%;
+    border-radius: 35px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);  /* Box shadow */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+
+
+
+}
+
+.infoBox {
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    display: flex;
+    background-color: rgba(232, 232, 232, 0.34);
+    margin-top: 4%;
+    padding: 5%;
+    border-radius: 35px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);  /* Box shadow */
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.content {
+    width: 100%;
+    padding: 4%
+    /* Other styles */
+}
+
+.align-bottom {
+    align-self: flex-end;
+}
+.infoCard{
+    justify-content: center;  /* Center horizontally */
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Aligns items to the start of the flex container */
+
+    background-color: rgba(232, 232, 232, 0.34);
+    padding: 5%;
+    margin-top: 4%;
+    border-radius: 35px;
+    border: 1px solid #d5d3d3;
+
+}
+
+
+.header-section {
+    display: flex;
+    align-items: center; /* Vertically aligns the image and h3 */
+}
+
+
+
+.subhead {
+    margin: 0; /* Removes default margin */
+}
+
+.text-section p {
+    margin-top: 10px; /* Adds some space above the paragraph */
+}
+.infoRect{
+    display: flex;  /* Enable Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    align-content: center;
+    background-color: rgba(232, 232, 232, 0.34);
+    padding: 5%;
+    margin-top: 4%;
+    text-align: center;
+    border-radius: 35px;
+    border: 1px solid #d5d3d3;
+}
+
+.testi {
+    display: flex;  /* Enable Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    align-content: center;
+    flex-direction: row;
+    border: 1px solid #d5d3d3;
+    border-radius: 35px;
+    width: fit-content;
+    padding:8%;
+    margin: 5%;
+
+}
+
+
+.GraphCard{
+    display: flex;  /* Enable Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    align-content: center;
+    flex-direction: column;
+    padding: 5%;
+    text-align: center;
+    border-radius: 35px;
+    flex: 2 0.5 200px;
+    margin: 3% 3% 1% 1%;
+    border: 1px solid #d5d3d3;
+}
+
+.parahCen{
+    text-align: center;
+}
+.contt{
+    margin-top:8%;
+    display: flex;  /* Enable Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    align-content: center;
+    height: max-content;
+    margin-bottom: 15%;
+
+}
+.info-group {
+    text-align: left;
+    align-content: center;
+
+}
+
+.company-logo {
+    border-radius: 20px;
+
+}
+
+.Head-text {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section {
+    width: 60vw;
+}
+.sectRow {
+    width: fit-content;
+}
+
+.sub-text {
+    text-align: left;
+    margin:0;
+    width: 100%;
+}
+
+.location-icon,
+.industry-icon,
+.employee-icon {
+    width: 20px;
+    margin:0;
+}
+
+.row {
+    text-align: left;
+    margin-bottom: 1%
+}
+
+.colcont{
+    display: flex;  /* Enable Flexbox */
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+}
+
+
+.testiText {
+    width: 70%
+}
+
+.icon {
+    margin: 5%;
+    width: 30%;
+}
+.icono {
+    width: 40px;
+    margin-right: 5%
+}
+
+.bubble {
+
+    background-color: rgba(203, 227, 50, 0.62);
+    border-radius: 10px;
+    padding: 3%;
+    width: 100%;
+}
+
+.tinyBub {
+
+    background-color: rgb(255, 226, 150);
+    border-radius: 20px;
+    text-align: center;
+    width: 70%;
+    padding:2%
+}
+
+
+.iconttext {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.Rectlong {
+    border: 1px solid #d5d3d3;
+    display: flex;  /* Enable Flexbox */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    border-radius: 15px;
+    height: 200px;
+
+
+}
+
+.colTwo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+
+}
+
+.Rect {
+    border: 1px solid #d5d3d3;
+    display: flex;  /* Enable Flexbox */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    border-radius: 15px;
+    margin: 2%;
+    flex: 0.5 0.5 50px;
+}
+
+.rectBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+@media (max-width: 800px) {
+    .Rectlong {
+
+        display: flex;  /* Enable Flexbox */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+        height: 180px;
+
+
+    }
+    .Rect {
+        height: 150px;
+
+    }
+
+    .icon {
+        margin: 5%;
+        width: 60%
+    }
+}
+
+.pink {
+    background-color: #ee2c5b;
+    color: white;
+    border: 1px solid rgba(187, 6, 47, 0.83);
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+}
+
+.pink:hover {
+    background-color: #ff4d6d; /* Lighter pink on hover */
+    color: #fff; /* Keeping text color white, can be changed if needed */
+    border: 3px solid rgba(255, 174, 192, 0.83); /* Darker border on hover */
+}
+
+.testimonial-content {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:40vw;
+    border: 1px solid rgba(162, 161, 161, 0.65);
+    border-radius: 1.5rem;
+    padding: 2%;
+    flex: 2 0.5 200px;
+    margin: 3% 3% 1% 1%;
+}
+
+p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.header-card{
+    text-align: left;
+    font-weight: 600;
+}
+.tiny {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: #192225;
+    background-color: transparent;
+}
+.tiny:Hover {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: rgba(226, 11, 60, 0.83);
+    background-color: transparent;
+}
+
+.testiBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.frame{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.frame {
+    flex: 1 1 500px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    padding: 20px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 1%;
+    margin: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    font-weight: 500;
+    line-height: 10px;
+    position: relative;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    color: #ee2c5b;
+    width: 0;
+    height: 6px;
+    bottom: -10px;
+    left: 0;
+
+    background-color: rgba(226, 11, 60, 0.83);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+
+
+/* Profile box */
+.profile-box {
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5%;
+
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    margin-right: 8%
+}
+
+.company-logo {
+    width: 110%;
+
+    margin: 5%;
+    object-fit: fill;
+}
+
+.text-info {
+    flex-grow: inherit;
+}
+
+.head-text {
+    font-size: 2rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sub-text {
+    margin: 0;
+    font-size: 1rem;
+}
