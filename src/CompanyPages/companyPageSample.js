@@ -248,7 +248,7 @@ export const CompanyProfileHeader = () => {
   <path fill-rule="evenodd" clip-rule="evenodd" d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z" fill="#F6B5A8" fill-opacity="0.64"/>
   <path d="M29.6222 19C22.68 19 17 24.4929 17 31.2063C17 37.9198 22.68 43.4127 29.6222 43.4127C31.8942 43.4127 34.0399 42.8024 35.9333 41.8259C36.5644 41.4597 36.6906 40.7273 36.4381 40.117C36.0595 39.5066 35.3021 39.3846 34.671 39.6287C29.8746 42.3141 23.6898 40.7273 20.9129 36.0889C18.136 31.4505 19.7769 25.4694 24.5733 22.784C29.3697 20.0986 35.5546 21.6854 38.3315 26.3238C39.215 27.7886 39.7199 29.4974 39.7199 31.2063V32.1828C39.7199 33.4035 38.7101 34.38 37.4479 34.38C36.1857 34.38 35.1759 33.4035 35.1759 32.1828V26.9341C35.1759 26.2017 34.671 25.7135 33.9137 25.7135C33.2826 25.7135 32.7777 26.0797 32.6515 26.69C30.1271 24.9811 26.4666 25.5914 24.6995 28.0327C22.9324 30.474 23.5635 34.0138 26.088 35.7227C28.4862 37.3095 31.6417 36.9433 33.535 34.8682C35.1759 36.8213 38.079 37.1874 40.0986 35.7227C41.2346 34.8682 41.9919 33.5255 41.9919 32.0608V31.2063C42.2443 24.4929 36.5644 19 29.6222 19ZM29.6222 34.2579C27.8551 34.2579 26.4666 32.9152 26.4666 31.2063C26.4666 29.4974 27.8551 28.1548 29.6222 28.1548C31.3893 28.1548 32.7777 29.4974 32.7777 31.2063C32.7777 32.9152 31.3893 34.2579 29.6222 34.2579Z" fill="#FF0000"/>
 </svg>
-                                    <h6 className="iconttext">sprintec.com</h6>
+                                    <h6 className="iconttext" style={{textDecoration:"underline"}}>sprintec.com</h6>
                                 </Col>
                                 <Col xs="2" className="Rect">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
@@ -258,7 +258,7 @@ export const CompanyProfileHeader = () => {
                                     <h6 className="iconttext">Started in 2010</h6>
                                 </Col>
                                 <Col xs="5" className="Rect">
-                                    <div className="d-flex justify-content-center align-items-baseline"><span>✅</span><h6 className="bubble mx-3">Remote Work Opps</h6></div>
+                                    <div className="d-flex justify-content-center align-items-baseline"><span className="greenTick">✅</span><h6 className="bubble mx-3">Remote Work Opps</h6></div>
                                     <div className="d-flex justify-content-center align-items-baseline"><span>✅</span>  <h6 className="bubble mx-3">Retirement Benefits</h6></div>
                                     <div className="d-flex justify-content-center align-items-baseline"><span>✅</span> <h6 className="bubble mx-3">Parental Leaves</h6></div>
                                 </Col>
