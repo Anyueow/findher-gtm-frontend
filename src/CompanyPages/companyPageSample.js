@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import {Container, Row, Col, Image, Button} from "react-bootstrap";
+import {Container, Row, Col, Button} from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./images-4.jpeg";
 import loc from "./imageAssets/map.svg";
 import industry from "./imageAssets/suitcase.svg";
 import employee from "./imageAssets/people.svg";
-import web from "./imageAssets/Group 4392.png";
-import building from "./imageAssets/Group 4393.png";
+// import web from "./imageAssets/Group 4392.png";
+// import building from "./imageAssets/Group 4393.png";
 import flexibility from "./imageAssets/Group 4365.png";
 import graph from "./imageAssets/Group 4394.png";
 import people from "./imageAssets/people.png";
