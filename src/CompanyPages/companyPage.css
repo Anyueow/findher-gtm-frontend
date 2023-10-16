@@ -48,7 +48,8 @@
     align-content: center;
     display: flex;
     flex-direction: column;
-    align-items: start; /* Aligns items to the start of the flex container */
+    align-items: flex-start;
+    /* Aligns items to the start of the flex container */
 
     background-color: rgba(232, 232, 232, 0.34);
     padding: 5%;
@@ -164,10 +165,10 @@
     margin:0;
 }
 
-.row {
+/* .row {
     text-align: left;
     margin-bottom: 1%
-}
+} */
 
 .colcont{
     display: flex;  /* Enable Flexbox */
