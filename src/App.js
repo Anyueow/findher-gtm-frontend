@@ -4,11 +4,7 @@ import Hero from "./components/Hero/Home";
 import SectionOne from "./components/SectionOne/Home2";
 import SectionTwo from "./components/SectionTwo/SectionTwo";
 import Footer from "./components/Footer";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -111,53 +107,50 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  const [LogedIn,setLogedin]=useState(false);
-  useEffect(()=>{
-    const token = localStorage.getItem("token");
-    if(token) setLogedin(true); 
-    console.log(token,"tokennn");
-  },[])
+  // const [LogedIn,setLogedin]=useState(false);
+  // useEffect(()=>{
+  //   const token = localStorage.getItem("token");
+  //   if(token) setLogedin(true); 
+  //   console.log(token,"tokennn");
+  // },[])
+
+  //const location = useLocation();
+  
   return (
-      <NavbarProvider value="5%">
-      
+    <NavbarProvider value="5%">
       <Router>
         <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
+          <Navbar />
+          {/* {location.pathname == "/compsample" && <ProfileNavbarGuest/>} */}
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<NewDesign />} />
-            
-              <Route path="/reviews_login" element={<FirstPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/landingPage" element={<NewDesign />} />
-              <Route path="/reviews_one" element={<SecondPage />}/>
-              <Route path="/reviews_two" element={<ThirdPage />}/>
-              <Route path="/reviews_three" element={<FourthPage />}/>
-              <Route path="/reviews_four" element={<FifthPage />}/>
-              <Route path="/reviews_five" element={<SeventhPage />}/>
-              <Route path="/successUser" element={<SixthPage />}/>
-              <Route path="/business_register" element={<BizReg />} />
-              <Route path="/email_signin" element={<EmailSignIn />} />
-              <Route path="/signin-phone" element={<PhoneSignIn />} />
+            <Route path="/reviews_login" element={<FirstPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/landingPage" element={<NewDesign />} />
+            <Route path="/reviews_one" element={<SecondPage />} />
+            <Route path="/reviews_two" element={<ThirdPage />} />
+            <Route path="/reviews_three" element={<FourthPage />} />
+            <Route path="/reviews_four" element={<FifthPage />} />
+            <Route path="/reviews_five" element={<SeventhPage />} />
+            <Route path="/successUser" element={<SixthPage />} />
+            <Route path="/business_register" element={<BizReg />} />
+            <Route path="/email_signin" element={<EmailSignIn />} />
+            <Route path="/signin-phone" element={<PhoneSignIn />} />
             <Route path="/update_details" element={<DetailsOneB2B />} />
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
-            <Route path="/sample" element ={<Sample />} />
+            <Route path="/sample" element={<Sample />} />
             <Route path="/successBizz" element={<EndPage />} />
             <Route path="/old" element={<MainContent />} />
-            <Route path="/try" element={<ProfileNavbarGuest/> } />
-            <Route path="/createcompany" element={<ProfileCreationInternal/>} />
-
-            <Route path="/compsample" element={<CompanyPageSample />} />
-
-
-
+            <Route path="/try" element={<ProfileNavbarGuest />} />
+            <Route path="/createcompany" element={<ProfileCreationInternal />}/>
+            <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /></>}/>
           </Routes>
-          {window.location.pathname !== "/" && (LogedIn ? "": <ProfileNavbarGuest/>)}
           {/* <Footer /> */}
         </div>
       </Router>
-      </NavbarProvider>
+    </NavbarProvider>
   );
 }
 

@@ -5,7 +5,7 @@ import logo from "./images-4.jpeg";
 import loc from "./imageAssets/map.svg";
 import industry from "./imageAssets/suitcase.svg";
 import employee from "./imageAssets/people.svg";
-// import web from "./imageAssets/Group 4392.png";
+import greentick from "./imageAssets/greentick.svg";
 // import building from "./imageAssets/Group 4393.png";
 import flexibility from "./imageAssets/Group 4365.png";
 import graph from "./imageAssets/Group 4394.png";
@@ -38,8 +38,9 @@ const CircularProgress = ({ progress }) => {
                 strokeDasharray={circumference}
                 strokeDashoffset={offset}
             />
-            <text x="60" y="60" textAnchor="middle" dy=".3em" fontSize="20">
-                {`${progress}%`}
+            <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="20">
+            <tspan dy="0.3em">{`${progress}%`}</tspan>
+        <tspan x="60" dy="1.2em">Agree</tspan>
             </text>
         </svg>
     );
@@ -69,8 +70,9 @@ const CircularProgress2 = ({ progress }) => {
                 strokeDasharray={circumference}
                 strokeDashoffset={offset}
             />
-            <text x="60" y="60" textAnchor="middle" dy=".3em" fontSize="20">
-                {`${progress}%`}
+            <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="20">
+            <tspan dy="0.3em">{`${progress}%`}</tspan>
+        <tspan x="60" dy="1.2em">Agree</tspan>
             </text>
         </svg>
     );
@@ -101,8 +103,9 @@ const CircularProgress3 = ({ progress }) => {
                 strokeDasharray={circumference}
                 strokeDashoffset={offset}
             />
-            <text x="60" y="60" textAnchor="middle" dy=".3em" fontSize="20">
-                {`${progress}%`}
+            <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="20">
+            <tspan dy="0.3em">{`${progress}%`}</tspan>
+        <tspan x="60" dy="1.2em">Agree</tspan>
             </text>
         </svg>
     );
@@ -258,9 +261,9 @@ export const CompanyProfileHeader = () => {
                                     <h6 className="iconttext">Started in 2010</h6>
                                 </Col>
                                 <Col xs="5" className="Rect">
-                                    <div className="d-flex justify-content-center align-items-baseline"><span className="greenTick">✅</span><h6 className="bubble mx-3">Remote Work Opps</h6></div>
-                                    <div className="d-flex justify-content-center align-items-baseline"><span>✅</span>  <h6 className="bubble mx-3">Retirement Benefits</h6></div>
-                                    <div className="d-flex justify-content-center align-items-baseline"><span>✅</span> <h6 className="bubble mx-3">Parental Leaves</h6></div>
+                                    <div className="d-flex justify-content-center align-items-baseline"><span className="greenTick"><img src={greentick} alt="tick"/></span><h6 className="bubble mx-3">Remote Work Opps</h6></div>
+                                    <div className="d-flex justify-content-center align-items-baseline"><span><img src={greentick} alt="tick"/></span>  <h6 className="bubble mx-3">Retirement Benefits</h6></div>
+                                    <div className="d-flex justify-content-center align-items-baseline"><span><img src={greentick} alt="tick"/></span> <h6 className="bubble mx-3">Parental Leaves</h6></div>
                                 </Col>
                             </Row>
                         </div>
