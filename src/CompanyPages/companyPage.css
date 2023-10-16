@@ -165,10 +165,10 @@
     margin:0;
 }
 
-.row {
+/* .row {
     text-align: left;
     margin-bottom: 1%
-}
+} */
 
 .colcont{
     display: flex;  /* Enable Flexbox */
