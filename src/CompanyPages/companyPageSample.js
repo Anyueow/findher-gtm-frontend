@@ -276,7 +276,7 @@ export const CompanyProfileHeader = () => {
                                         <h4 className="header-card">Why work here?</h4>
                                     </Col>
                                     <Col xs={4} className="text-right">
-                                        <Button className="pink px-3 py-2" style={{backgroundColor:"#FCEEBE", color:"#828282"}} onClick={() => setShowMore((prev)=>({...prev, why:!showMore.why}))}>
+                                        <Button className="companyPage-seemore px-4 pt-2 pb-3" style={{backgroundColor:"#FCEEBE"}} onClick={() => setShowMore((prev)=>({...prev, why:!showMore.why}))}>
                                             {showMore.why ? "See Less" : "See More"}
                                         </Button>
                                     </Col>
@@ -323,7 +323,7 @@ export const CompanyProfileHeader = () => {
                                     <h4 className="header-card">What do they look for?</h4>
                                 </Col>
                                 <Col xs={4} className="text-right">
-                                    <Button className="pink" onClick={() => setShowMore((prev)=>({...prev, look:!showMore.look}))}>
+                                    <Button  className="companyPage-seemore px-4 pt-2 pb-3" style={{backgroundColor:"#DAD7FE"}}  onClick={() => setShowMore((prev)=>({...prev, look:!showMore.look}))}>
                                         {showMore.look ? "See Less" : "See More"}
                                     </Button>
                                 </Col>
@@ -379,7 +379,7 @@ export const CompanyProfileHeader = () => {
                                         <h4 className="header-card">What’s it like to work here?</h4>
                                     </Col>
                                     <Col xs={4} className="text-right">
-                                        <Button className="pink" onClick={() => setShowMore((prev)=>({...prev, like:!showMore.like}))}>
+                                        <Button className="companyPage-seemore px-4 pt-2 pb-3" style={{backgroundColor:"#FFE5D3"}} onClick={() => setShowMore((prev)=>({...prev, like:!showMore.like}))}>
                                             {showMore.like ? "See Less" : "See More"}
                                         </Button>
                                     </Col>

@@ -287,22 +287,23 @@ text-decoration-line: underline;
     }
 }
 
-.pink {
-    color: white;
+.companyPage-seemore {
+    color:#828282;
     border: none;
     font-family: DM Sans;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px; /* 150% */
-text-decoration-line: underline;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    text-decoration-line: underline;
     transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
 }
 
-.pink:hover {
-    background-color: #ff4d6d; /* Lighter pink on hover */
+.companyPage-seemore:hover {
     color: #fff; /* Keeping text color white, can be changed if needed */
-    border: 3px solid rgba(255, 174, 192, 0.83); /* Darker border on hover */
+    text-decoration-line: underline;
+    /* border: 3px solid rgba(255, 174, 192, 0.83);  */
+    /* Darker border on hover */
 }
 
 .testimonial-content {
@@ -335,14 +336,15 @@ button {
 
 button:hover {
     background-color: #45a049;
+    box-shadow: none;
 }
 .header-card{
     text-align: left;
     font-weight: 600;
     font-family: DM Sans;
-font-size: 20px;
-font-style: normal;
-line-height: normal;
+    font-size: 28px;
+    font-style: normal;
+    line-height: normal;
 }
 
 .header-card-p{
