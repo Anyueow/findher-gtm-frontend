@@ -193,10 +193,16 @@
 
 .bubble {
 
-    background-color: rgba(203, 227, 50, 0.62);
+    background-color: #FCEEBE;
     border-radius: 10px;
     padding: 3%;
     width: 100%;
+    color: #484848;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
 }
 
 .tinyBub {
@@ -211,7 +217,14 @@
 
 .iconttext {
     margin-top: 5%;
-    text-align: center;
+    color: #000;
+text-align: center;
+font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 14px; /* 120% */
+text-decoration-line: underline;
 }
 
 .Rectlong {
@@ -274,17 +287,23 @@
     }
 }
 
-.pink {
-    background-color: #ee2c5b;
-    color: white;
-    border: 1px solid rgba(187, 6, 47, 0.83);
+.companyPage-seemore {
+    color:#828282;
+    border: none;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    text-decoration-line: underline;
     transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
 }
 
-.pink:hover {
-    background-color: #ff4d6d; /* Lighter pink on hover */
+.companyPage-seemore:hover {
     color: #fff; /* Keeping text color white, can be changed if needed */
-    border: 3px solid rgba(255, 174, 192, 0.83); /* Darker border on hover */
+    text-decoration-line: underline;
+    /* border: 3px solid rgba(255, 174, 192, 0.83);  */
+    /* Darker border on hover */
 }
 
 .testimonial-content {
@@ -317,11 +336,28 @@ button {
 
 button:hover {
     background-color: #45a049;
+    box-shadow: none;
 }
 .header-card{
     text-align: left;
     font-weight: 600;
+    font-family: DM Sans;
+    font-size: 28px;
+    font-style: normal;
+    line-height: normal;
 }
+
+.header-card-p{
+    color: #5B5B5B;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.28px;
+    text-align: left;
+}
+
 .tiny {
     font-size: 0.8rem;
     text-decoration: underline;
@@ -373,9 +409,11 @@ button:hover {
 .navigation a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: 150%;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 500;
-    line-height: 10px;
+    line-height: normal;
     position: relative;
 }
 
@@ -441,6 +479,10 @@ button:hover {
 .info-row {
     display: flex;
     align-items: center;
+    height: 40px;
+}
+.info-row img{
+    height: 20px;
 }
 
 .icon {
@@ -452,4 +494,22 @@ button:hover {
 .sub-text {
     margin: 0;
     font-size: 1rem;
+}
+
+.company-details-page h1{
+    color: #000;
+    font-family: DM Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.company-details-page p{
+    color: #000;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
 }
