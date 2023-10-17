@@ -20,6 +20,7 @@ function ProfileNavbarGuest(props) {
         <div className="container-fluid">
           <button className="navbar-toggle btn btn-white" onClick={handleShow}>
             <svg
+             style={{verticalAlign:"initial"}}
               xmlns="http://www.w3.org/2000/svg"
               width="34"
               height="22"

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Container, Row, Col, Button} from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./images-4.jpeg";
@@ -122,7 +122,12 @@ export const CompanyProfileHeader = () => {
         only:false,
     });
 
-
+    const [isLogedIn,setIsLogedIn]=useState(false);
+    useEffect(()=>{
+      const token = localStorage.getItem("token");
+      if(token) setIsLogedIn(true); 
+      console.log(token,"tokennn");
+    },[])
 
     return (
         <Container className="contt">
@@ -206,7 +211,7 @@ export const CompanyProfileHeader = () => {
                     </Container>
             </Col>
                 </Row>
-
+                {/* <div className={`${isLogedIn? '':'blur-company-details'}`}> */}
                 <div className="frame">
                     <div className="section framer" id="WhyWork">
                         <Container className="infoBox">
@@ -360,14 +365,18 @@ export const CompanyProfileHeader = () => {
                     </div>
 
                 </div>
-
-                <Row className="section" id="WhyWork">
+                <div className="check-blur">
+                    {!isLogedIn && <div className="blur-company-details">
+                    </div>}
+             
+                    <Row className="section" id="WhyWork">
+               
                     <Container className="infoBox">
                         <Row>
                         <h2 className="header-card">
                             What women who work here have to say:</h2>
-
-                            <Col className="GraphCard" >
+                         
+                            <Col className={`GraphCard ${isLogedIn? '':''}`} >
                                 <Row>
                                     <p className="parahCen mb-4"> <i> “My co-workers were friendly and I feel included and welcome
                                         in my team”
@@ -408,17 +417,17 @@ export const CompanyProfileHeader = () => {
                         </Row>
                     </Container>
 
-                </Row>
-                <Row className="section" id="testimonial">
+                     </Row>
+                    <Row className="section" id="testimonial">
                     <Container className="testiBox">
                         {testimonials.map((testimonial, index) => (
                             <Testimonial key={index} testimonial={testimonial} />
                         ))}
                     </Container>
 
-                </Row>
+                 </Row>
 
-                <Row className="section" id="programs">
+                    <Row className="section" id="programs">
                     <Container className="infoBox">
                         <Col>
                             <Row style={{ minWidth: "100%" }}>
@@ -464,10 +473,11 @@ export const CompanyProfileHeader = () => {
                             )}
                         </Col>
                     </Container>
-                </Row>
+                 </Row>
 
-
+                </div>
             </Col>
+            
         </Container>
     );
 };
