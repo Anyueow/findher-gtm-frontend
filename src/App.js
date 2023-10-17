@@ -145,7 +145,7 @@ function App() {
             <Route path="/old" element={<MainContent />} />
             <Route path="/try" element={<ProfileNavbarGuest />} />
             <Route path="/createcompany" element={<ProfileCreationInternal />}/>
-            <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /></>}/>
+            <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /><Footer /></>}/>
           </Routes>
           {/* <Footer /> */}
         </div>
