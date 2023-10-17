@@ -53,7 +53,7 @@ function ProfileNavbarGuest(props) {
           </button>
           <img src={logo} alt="brand" className="logo" />
           <div className="uprNavbtn">
-            <Link to="/login">Login</Link>
+            <Link to="https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6">Login</Link>
           </div>
         </div>
         {/* <img
@@ -92,7 +92,10 @@ function ProfileNavbarGuest(props) {
             </span>{" "}
             Home
           </div>
-          <div className="profile-offcanvas-body my-4">
+          <div className="profile-offcanvas-body my-4" >
+           <Button className="Profile-Canvas-Button">Unlock Jobs </Button>
+          </div>
+          {/* <div className="profile-offcanvas-body my-4">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +128,7 @@ function ProfileNavbarGuest(props) {
               </svg>
             </span>
             Explore Businesses
-          </div>
+          </div> */}
           <div className="profile-offcanvas-body my-4 sideLogin">
             <span>
               <HiLogin style={{fontSize:"1.6rem", }}/>

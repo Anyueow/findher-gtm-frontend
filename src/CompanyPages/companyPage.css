@@ -47,8 +47,8 @@
     justify-content: center;  /* Center horizontally */
     align-content: center;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    /* align-items: flex-start; */
     /* Aligns items to the start of the flex container */
 
     background-color: rgba(232, 232, 232, 0.34);
@@ -56,10 +56,18 @@
     margin-top: 4%;
     border-radius: 35px;
     border: 1px solid #d5d3d3;
+    text-align: left;
 
 }
 
-
+.infoCard p{
+    color: #828282;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 150% */
+}
 .header-section {
     display: flex;
     align-items: center; /* Vertically aligns the image and h3 */
@@ -108,11 +116,13 @@
     align-items: center;  /* Center vertically */
     align-content: center;
     flex-direction: column;
-    padding: 5%;
+    padding: 3%;
+    padding-top: 5%;
+    padding-bottom: 8%;
     text-align: center;
     border-radius: 35px;
     flex: 2 0.5 200px;
-    margin: 3% 3% 1% 1%;
+    margin: 3% 2%;
     border: 1px solid #d5d3d3;
 }
 
@@ -187,8 +197,7 @@
     width: 30%;
 }
 .icono {
-    width: 40px;
-    margin-right: 5%
+    width: 100px;
 }
 
 .bubble {
@@ -216,15 +225,14 @@
 
 
 .iconttext {
-    margin-top: 5%;
+    margin-top: 13px;
     color: #000;
-text-align: center;
-font-family: DM Sans;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 14px; /* 120% */
-text-decoration-line: underline;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 120% */
 }
 
 .Rectlong {
@@ -252,12 +260,15 @@ text-decoration-line: underline;
     display: flex;  /* Enable Flexbox */
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     border-radius: 15px;
-    margin: 2%;
-    flex: 0.5 0.5 50px;
+    margin: 3%;
+    /* flex: 0.5 0.5 50px; */
 }
+
+
 
 .rectBox {
     display: flex;
@@ -338,6 +349,13 @@ button:hover {
     background-color: #45a049;
     box-shadow: none;
 }
+.btn.focus {
+    box-shadow: none;
+}
+.btn:focus-visible{
+    box-shadow: none;
+}
+
 .header-card{
     text-align: left;
     font-weight: 600;
@@ -350,10 +368,10 @@ button:hover {
 .header-card-p{
     color: #5B5B5B;
     font-family: DM Sans;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    line-height: 28px; /* 142.857% */
     letter-spacing: 0.28px;
     text-align: left;
 }
@@ -389,9 +407,9 @@ button:hover {
 /* Navigation */
 .navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
-    width: 80vw;
+    width: 60vw;
     padding: 20px;
 }
 
@@ -403,14 +421,14 @@ button:hover {
 }
 
 .navigation li {
-    margin-right: 20px;
+    margin-right: 74px;
 }
 
 .navigation a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-family: DM Sans;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -512,4 +530,19 @@ button:hover {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+}
+.quickFactinnerRow{
+    width: 100%;
+}
+
+.greenTick{
+    background-color: (232, 232, 232, 0.34);
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off !important;
+/* font-family: DM Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 15px;  */
+border: none;
 }
