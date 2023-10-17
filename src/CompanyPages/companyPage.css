@@ -62,7 +62,7 @@
 
 .infoCard p{
     color: #828282;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -207,7 +207,7 @@
     padding: 3%;
     width: 100%;
     color: #484848;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -228,7 +228,7 @@
     margin-top: 13px;
     color: #000;
     text-align: center;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -301,7 +301,7 @@
 .companyPage-seemore {
     color:#828282;
     border: none;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -347,19 +347,19 @@ button {
 
 button:hover {
     background-color: #45a049;
-    box-shadow: none;
+    box-shadow: none !important;
 }
-.btn.focus {
-    box-shadow: none;
+button:focus {
+    box-shadow: none !important;
 }
 .btn:focus-visible{
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .header-card{
     text-align: left;
     font-weight: 600;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 28px;
     font-style: normal;
     line-height: normal;
@@ -367,7 +367,7 @@ button:hover {
 
 .header-card-p{
     color: #5B5B5B;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -427,8 +427,8 @@ button:hover {
 .navigation a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-family: DM Sans;
-    font-size: 24px;
+    font-family: Poppins;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -497,16 +497,16 @@ button:hover {
 .info-row {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 30px;
 }
-.info-row img{
-    height: 20px;
-}
+/* .info-row img{
+    height: 15px;
+} */
 
 .icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    height: 15px;
+    width: 25px;
+    margin: 0;
 }
 
 .sub-text {
@@ -514,18 +514,22 @@ button:hover {
     font-size: 1rem;
 }
 
+.company-details-page{
+    text-align: left !important;
+}
 .company-details-page h1{
     color: #000;
-    font-family: DM Sans;
-    font-size: 35px;
+    font-family: Poppins;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin: 0 !important;
 }
 
 .company-details-page p{
     color: #000;
-    font-family: DM Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -534,15 +538,147 @@ button:hover {
 .quickFactinnerRow{
     width: 100%;
 }
+.check-blur{
+    overflow: hidden;
+}
+.blur-company-details{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: transparent; 
+    backdrop-filter: blur(10px);
+    z-index: 60;
+}
 
-.greenTick{
-    background-color: (232, 232, 232, 0.34);
-text-align: center;
-font-feature-settings: 'clig' off, 'liga' off !important;
-/* font-family: DM Sans;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 15px;  */
-border: none;
+@media (min-width:601px) and (max-width:830px) {
+    .contt{
+        margin-top:20%;
+        display: flex;  /* Enable Flexbox */
+        justify-content: center;  /* Center horizontally */
+        align-items: center;  /* Center vertically */
+        align-content: center;
+        height: max-content;
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width:600px){
+    .contt{
+        margin-top:15%;
+    }
+    .navigation {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 90vw;
+        padding: 10px;
+    }
+    
+    .navigation ul {
+        list-style-type: none;
+        padding: 1%;
+        margin: 0;
+        display: flex;
+    }
+    
+    .navigation li {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    
+    .navigation a {
+        font-size: 75%;
+    }
+
+    .infoBox {
+        justify-content: center;  /* Center horizontally */
+        align-items: center;  /* Center vertically */
+        display: flex;
+        background-color: rgba(232, 232, 232, 0.34);
+        margin-top: 0%;
+        padding: 5%;
+
+    }
+
+    .colTwo {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90vw;
+    
+    }
+    .section{
+        width: 90vw;
+        margin-top: 10%;
+    }
+
+    .Rect-mobile{
+        margin: 4% 2% 4% 6%  !important;
+    }
+    .header-card{
+        text-align: left;
+        font-weight: 600;
+        font-family: Poppins;
+        font-size: 100%;
+        font-style: normal;
+        line-height: normal;
+    }
+    
+    .header-card-p{
+        color: #5B5B5B;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 142.857% */
+        letter-spacing: 0.28px;
+        text-align: left;
+    }
+    .companyPage-seemore {
+        font-size: 14px;
+        padding: 5px 10px 10px 10px !important;
+    }
+    .infoCard{
+        align-items: self-start;
+    }
+    .subhead{
+        margin-top: 10px;
+    }
+    .header-section {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+    .icono {
+        width: 40px;
+    }
+    .company-details-page h1{
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    .company-details-page p{
+        font-size: 10px;
+        line-height: 15px;
+        margin: 0;
+    }
+    .infoCard p{
+        font-size: 14px;
+        position: relative;
+        width: 133%;
+        left: -57px;
+        top: 17px;
+    }
+    .blur-company-details{
+
+        height: 54%;
+    }
+}
+
+@media (max-width:400px){
+    .companyPage-seemore {
+        font-size: 12px;
+        padding: 5px 10px 10px 10px !important;
+    }
 }

@@ -20,6 +20,7 @@ function ProfileNavbarGuest(props) {
         <div className="container-fluid">
           <button className="navbar-toggle btn btn-white" onClick={handleShow}>
             <svg
+             style={{verticalAlign:"initial"}}
               xmlns="http://www.w3.org/2000/svg"
               width="34"
               height="22"
@@ -92,9 +93,6 @@ function ProfileNavbarGuest(props) {
             </span>{" "}
             Home
           </div>
-          <div className="profile-offcanvas-body my-4" >
-           <Button className="Profile-Canvas-Button">Unlock Jobs </Button>
-          </div>
           {/* <div className="profile-offcanvas-body my-4">
             <span>
               <svg
@@ -130,10 +128,21 @@ function ProfileNavbarGuest(props) {
             Explore Businesses
           </div> */}
           <div className="profile-offcanvas-body my-4 sideLogin">
-            <span>
-              <HiLogin style={{fontSize:"1.6rem", }}/>
+            <span className="">
+              <HiLogin style={{fontSize:"1.6rem",padding:"0" }}/>
             </span>
             <Link to="/login" style={{color:"#EA394A",margin:"0",display:"inline-block",textDecoration:"none"}}>Login</Link>
+          </div>
+          <div className="profile-offcanvas-body my-4" >
+           <Button className="Profile-Canvas-Button" 
+             onClick={(e) => {
+              if (e.ctrlKey) {
+                window.open('https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6', '_blank');
+              } else {
+                window.location.href = 'https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6';
+              }
+            }}
+           >Unlock Jobs </Button>
           </div>
         </Offcanvas.Body>
       </Offcanvas>

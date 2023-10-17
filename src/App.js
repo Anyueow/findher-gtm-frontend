@@ -125,8 +125,8 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<NewDesign />} />
-            <Route path="/reviews_login" element={<FirstPage />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/reviews_login" element={<><FirstPage /> <Footer /></>} />
+            <Route path="/login" element={<><Login /> <Footer /></>} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/landingPage" element={<NewDesign />} />
             <Route path="/reviews_one" element={<SecondPage />} />
@@ -145,7 +145,7 @@ function App() {
             <Route path="/old" element={<MainContent />} />
             <Route path="/try" element={<ProfileNavbarGuest />} />
             <Route path="/createcompany" element={<ProfileCreationInternal />}/>
-            <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /></>}/>
+            <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /><Footer /></>}/>
           </Routes>
           {/* <Footer /> */}
         </div>
