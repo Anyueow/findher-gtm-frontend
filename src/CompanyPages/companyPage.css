@@ -506,8 +506,6 @@ button:focus {
 .icon {
     height: 15px;
     width: 25px;
-   margin-right: 10px !important;
-    /*  margin-left: -22px; */
     margin: 0;
 }
 
@@ -653,8 +651,12 @@ button:focus {
         line-height: 15px;
         margin: 0;
     }
-    .icon{
-
+    .infoCard p{
+        font-size: 14px;
+        position: relative;
+        width: 133%;
+        left: -57px;
+        top: 17px;
     }
 }
 
