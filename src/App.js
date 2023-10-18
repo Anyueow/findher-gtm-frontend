@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero/Home";
-import SectionOne from "./components/SectionOne/Home2";
-import SectionTwo from "./components/SectionTwo/SectionTwo";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -20,9 +17,7 @@ import SeventhPage from "./components/Reviews/SeventhPage";
 
 import Profile from "./components/Profile/Profile";
 
-import { NavbarProvider } from './components/NavbarContext';
-import SectionThree from "./components/SectionThree/SectionThree";
-import Testimonial from "./components/Testimonial/Testimonial";
+import { NavbarProvider } from "./components/NavbarContext";
 import Login from "./components/Reviews/login";
 import BizReg from "./components/Businesses/b2b_first";
 import EmailSignIn from "./components/Businesses/EmailSignIn";
@@ -30,7 +25,6 @@ import PhoneSignIn from "./components/Businesses/PhoneSignIn";
 import DetailsOneB2B from "./components/Businesses/DetailsOneB2B";
 import DetailsTwoB2B from "./components/Businesses/DetailsTwoB2B";
 import EndPage from "./components/Businesses/endPage";
-import SecTwo2mob from "./components/SectionTwo/SecTwo2mob";
 
 import HeroFinal from "./newDesign/Hero/Hero";
 import SectOneF from "./newDesign/SectionOne/SectionOne";
@@ -45,44 +39,24 @@ import Sample from "./CompanyPages/sample";
 import ProfileNavbarGuest from "./components/Profile/ProfileNavbarGuest";
 import ProfileCreationInternal from "./components/Businesses/profileCreationInternal";
 import CompanyPageSample from "./CompanyPages/companyPageSample";
-// import ExitPopup from "./newDesign/ModalPopup/ExitPopup";
-function MainContent() {
- 
-
-
-
-  return (
-      <>
-      
-        <Hero />
-        <SectionOne />
-          <SectionTwo/>
-          <SecTwo2mob/>
-        <SectionThree />
-        <Testimonial />
-        <Footer/>
-
-      </>
-  );
-}
 
 function NewDesign() {
-  const [blur,setBlur]=useState(0);
+  const [blur, setBlur] = useState(0);
   return (
-      <>
-      <div className={blur ?"blur-background " :""}>
-      <HeroFinal />
-  <SectOneF />
-  <SectTwoF />
-  <SectThreeF />
-  <SectionFour/>
-  <TestF />
-  <FaqSection/>
-  <SectionSix/>
-  </div>
-  <SectionSeven setBlur={setBlur}/>
-  <Footer/>
-      </>
+    <>
+      <div className={blur ? "blur-background " : ""}>
+        <HeroFinal />
+        <SectOneF />
+        <SectTwoF />
+        <SectThreeF />
+        <SectionFour />
+        <TestF />
+        <FaqSection />
+        <SectionSix />
+      </div>
+      <SectionSeven setBlur={setBlur} />
+      <Footer />
+    </>
   );
 }
 
@@ -110,23 +84,36 @@ function App() {
   // const [LogedIn,setLogedin]=useState(false);
   // useEffect(()=>{
   //   const token = localStorage.getItem("token");
-  //   if(token) setLogedin(true); 
+  //   if(token) setLogedin(true);
   //   console.log(token,"tokennn");
   // },[])
 
   //const location = useLocation();
-  
+
   return (
     <NavbarProvider value="5%">
       <Router>
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <Navbar />
-          {/* {location.pathname == "/compsample" && <ProfileNavbarGuest/>} */}
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<NewDesign />} />
-            <Route path="/reviews_login" element={<><FirstPage /> <Footer /></>} />
-            <Route path="/login" element={<><Login /> <Footer /></>} />
+            <Route
+              path="/reviews_login"
+              element={
+                <>
+                  <FirstPage /> <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <>
+                  <Login /> <Footer />
+                </>
+              }
+            />
             <Route path="/profile" element={<Profile />} />
             <Route path="/landingPage" element={<NewDesign />} />
             <Route path="/reviews_one" element={<SecondPage />} />
@@ -142,17 +129,26 @@ function App() {
             <Route path="/update_details_two" element={<DetailsTwoB2B />} />
             <Route path="/sample" element={<Sample />} />
             <Route path="/successBizz" element={<EndPage />} />
-            <Route path="/old" element={<MainContent />} />
             <Route path="/try" element={<ProfileNavbarGuest />} />
-            <Route path="/createcompany" element={<ProfileCreationInternal />}/>
-            <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /><Footer /></>}/>
+            <Route
+              path="/createcompany"
+              element={<ProfileCreationInternal />}
+            />
+            <Route
+              path="/compsample"
+              element={
+                <>
+                  {" "}
+                  <ProfileNavbarGuest /> <CompanyPageSample />
+                  <Footer />
+                </>
+              }
+            />
           </Routes>
-          {/* <Footer /> */}
         </div>
       </Router>
     </NavbarProvider>
   );
 }
-
 
 export default App;
