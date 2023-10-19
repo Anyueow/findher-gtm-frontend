@@ -1,0 +1,150 @@
+.infoBox {
+    border-radius: 15px;
+    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    background: var(--white-100, #FFF);
+    margin: 2%;
+    text-align: left;
+    padding: 2%;
+    min-height: 180px;
+}
+
+.infoBox h2{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: system-ui;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.infoBox p{
+    color: #5B5B5B;
+    font-family: system-ui;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.28px;
+}
+
+.infoBoxTwo {
+    justify-content: center;  /* Center horizontally */
+    display: flex;
+    background: var(--white-100, #FFF);
+    border-radius: 15px;
+    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    padding-bottom: 3%;
+    margin: 2%;
+    text-align: left;
+}
+
+.infoBoxTwo h2{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: system-ui;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.rectBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.Rect {
+    border: 0.1px solid var(--Subtle-grey, #979797) ;
+    display: flex;  /* Enable Flexbox */
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 15px;
+    margin: 1%;
+}
+
+.greenTick{
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: system-ui;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 75% */
+}
+
+.bubble{
+    color: #484848;
+    font-family: system-ui;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+.Rect h6{
+    color: #484848;
+    font-family: system-ui;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+
+.companyPage-seemore{
+    color: var(--Subtle-grey, #979797);
+    font-family: system-ui;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    border: none;
+    line-height: 18px; /* 150% */
+}
+
+.infoBoxThree{
+    border-radius: 15px;
+    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    background: var(--white-100, #FFF);
+    text-align: left;
+    padding: 2%; 
+}
+
+.company-page-flexibility{
+    border-radius: 15px;
+    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    background: var(--white-100, #FFF);
+    width: 32%;
+    padding: 0;
+}
+
+.company-page-flexibility-header{
+   min-height: 70px;
+   overflow: hidden;
+    border-radius: 15px 15px 0px 0px;
+    background: conic-gradient(from -16deg at 50% 50%, rgba(246, 181, 168, 0.37) 0deg, rgba(226, 197, 235, 0.37) 198.74999284744263deg, rgba(67, 57, 242, 0.07) 359.9639940261841deg);
+}
+
+.company-page-flexibility-header h2{
+    color: #000;
+    font-family: system-ui;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.company-page-flexibility p{
+    color: #828282;
+    font-family:  system-ui;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
