@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {  Row, Col } from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./images-4.jpeg";
@@ -7,8 +7,8 @@ import industry from "./imageAssets/suitcase.svg";
 import employee from "./imageAssets/people.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useCsrfToken } from "../CsrfTokenProvider";
-import { ToastContainer, toast } from "react-toastify";
+// import { useCsrfToken } from "../CsrfTokenProvider";
+// import { ToastContainer, toast } from "react-toastify";
 import Overview from './Components/Overview';
 import TestimonialSec from './Components/TestimonialSec';
 import Programs from './Components/Programs';
@@ -333,7 +333,7 @@ export const CompanyProfileHeader = () => {
             )}
         </Row>
         </Col>
-        <ToastContainer/>
+        {/* <ToastContainer/> */}
       </Row>
     // </Container>
   );
