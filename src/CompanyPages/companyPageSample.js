@@ -277,7 +277,7 @@ export const CompanyProfileHeader = () => {
               </div>
               <div className="info-row d-flex align-items-center my-2">
                 <img className="icon" alt="Employee Icon" src={employee} />
-                <a className="sub-text  mx-2">https://findher.work/</a>
+                <a className="sub-text  mx-2" href="https://findher.work/">https://findher.work/</a>
               </div>
             </Col>
             <Col md="12" className="mt-4">
