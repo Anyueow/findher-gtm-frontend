@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CSS/Overview.css";
 import greentick from "../imageAssets/greentick.svg";
-import { Container, Row, Col, Button, Toast, Form } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 function Overview() {
   const [showMore, setShowMore] = useState(false);
@@ -117,7 +117,7 @@ function Overview() {
             <Button
               className="companyPage-seemore"
               style={{ backgroundColor: "#F8E7EC" }}
-              // onClick={() => handleShowMore("why")}
+               onClick={() => setShowMore(!showMore)}
             >
               {showMore ? "See Less" : "See More"}
             </Button>
