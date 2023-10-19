@@ -137,6 +137,7 @@
     align-content: center;
     height: max-content;
     margin-bottom: 15%;
+    padding: 0;
 
 }
 .info-group {
@@ -551,6 +552,60 @@ button:focus {
     z-index: 60;
 }
 
+.guest-profile-login-toast{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 28% !important;
+    font-weight: 400;
+    border-radius: 10px !important;
+    text-align: left;
+    width: 40% !important;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    border: 0.5px solid #828282;
+}
+.numemailchange-profile-toast  .toast-body {
+    background-color: #FAFAFA;; 
+    text-align: center;
+  }
+
+  .form-wrapper-guest-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+.form-wrapper-guest-profile p{
+    font-family: poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    color: #000 !important;
+}
+.form-wrapper-guest-profile span{
+    color: #EE2C5B;
+}
+  .submitGuest{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: 80%;
+}
+
+.submitGuest button{
+    padding: 10px;
+    width: 100%;
+    font-family: "Montserrat-SemiBold";
+    font-size: 1rem;
+    background-color: #ee2c5b;
+    border: none;
+}
+
 @media (min-width:601px) and (max-width:830px) {
     .contt{
         margin-top:20%;
@@ -561,6 +616,65 @@ button:focus {
         height: max-content;
         margin-bottom: 15%;
     }
+    .guest-profile-login-toast{
+        width: 75% !important;
+    }
+    .section{
+        width: 70vw;
+        margin-top: 10%;
+    }
+.infoBox{
+    width: 60vw;
+}
+.icono {
+    width: 60px;
+}
+.header-card{
+    font-size: 140%;
+}
+.info-group {
+    text-align: left;
+    align-content: center;
+
+}
+/* .logo-container {
+    margin-right: 10%;
+} */
+.company-logo {
+    width: 150%;
+    
+}
+.company-details-page{
+    width: 35%;
+    margin-left: 5%;
+}
+.navigation {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 90vw;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 1%;
+    margin: 0;
+}
+
+.navigation li {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.navigation a {
+    font-size: 110%;
+}
+.infoBox{
+    width: 70%;
+}
 }
 
 @media (max-width:600px){
@@ -673,6 +787,13 @@ button:focus {
     .blur-company-details{
 
         height: 54%;
+    }
+    .guest-profile-login-toast{
+     
+        width: 85% !important;
+    }
+    .form-wrapper-guest-profile p{
+        font-size: 100%;
     }
 }
 
