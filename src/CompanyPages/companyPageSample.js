@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import {  Row, Col, Button, Toast, Form } from "react-bootstrap";
+import {  Row, Col } from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./images-4.jpeg";
 import loc from "./imageAssets/map.svg";
 import industry from "./imageAssets/suitcase.svg";
 import employee from "./imageAssets/people.svg";
-import flexibility from "./imageAssets/Group 4365.png";
-import graph from "./imageAssets/Group 4394.png";
-import people from "./imageAssets/people.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useCsrfToken } from "../CsrfTokenProvider";
@@ -25,109 +22,109 @@ import "swiper/css/autoplay";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 SwiperCore.use([Pagination, Autoplay]);
 
-const CircularProgress = ({ progress, circleColor, percentageColor }) => {
-  const radius = 50;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (progress / 100) * circumference;
+// const CircularProgress = ({ progress, circleColor, percentageColor }) => {
+//   const radius = 50;
+//   const circumference = 2 * Math.PI * radius;
+//   const offset = circumference - (progress / 100) * circumference;
 
-  return (
-    <svg width="120" height="120">
-      <circle
-        cx="60"
-        cy="60"
-        r={radius}
-        stroke={circleColor}
-        strokeWidth="20"
-        fill={circleColor}
-      />
-      <circle
-        cx="60"
-        cy="60"
-        r={radius}
-        stroke={percentageColor}
-        strokeWidth="20"
-        fill="none"
-        strokeDasharray={circumference}
-        strokeDashoffset={offset}
-      />
-      <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="20">
-        <tspan dy="0.3em">{`${progress}%`}</tspan>
-        <tspan x="60" dy="1.2em">
-          Agree
-        </tspan>
-      </text>
-    </svg>
-  );
-};
+//   return (
+//     <svg width="120" height="120">
+//       <circle
+//         cx="60"
+//         cy="60"
+//         r={radius}
+//         stroke={circleColor}
+//         strokeWidth="20"
+//         fill={circleColor}
+//       />
+//       <circle
+//         cx="60"
+//         cy="60"
+//         r={radius}
+//         stroke={percentageColor}
+//         strokeWidth="20"
+//         fill="none"
+//         strokeDasharray={circumference}
+//         strokeDashoffset={offset}
+//       />
+//       <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="20">
+//         <tspan dy="0.3em">{`${progress}%`}</tspan>
+//         <tspan x="60" dy="1.2em">
+//           Agree
+//         </tspan>
+//       </text>
+//     </svg>
+//   );
+// };
 
-const testimonials = [
-  {
-    type: "Flexibility",
-    comment:
-      "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
-    rating: 4,
-  },
-  {
-    type: "Diversity",
-    comment:
-      "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
-    rating: 5,
-  },
-  {
-    type: "Security",
-    comment:
-      "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
-    rating: 5,
-  },
-  {
-    type: "TechCorp",
-    comment:
-      "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
-    rating: 5,
-  },
-];
+// const testimonials = [
+//   {
+//     type: "Flexibility",
+//     comment:
+//       "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
+//     rating: 4,
+//   },
+//   {
+//     type: "Diversity",
+//     comment:
+//       "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
+//     rating: 5,
+//   },
+//   {
+//     type: "Security",
+//     comment:
+//       "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
+//     rating: 5,
+//   },
+//   {
+//     type: "TechCorp",
+//     comment:
+//       "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
+//     rating: 5,
+//   },
+// ];
 
-const StarRating = ({ rating }) => {
-  const filledStars = "★".repeat(rating);
-  const emptyStars = "☆".repeat(5 - rating);
+// const StarRating = ({ rating }) => {
+//   const filledStars = "★".repeat(rating);
+//   const emptyStars = "☆".repeat(5 - rating);
 
-  return (
-    <p
-      style={{
-        fontSize: "24px",
-        margin: "0",
-        color: "yellowgreen",
-        borderRadius: "5px",
-      }}
-    >
-      {filledStars}
-      {emptyStars}
-    </p>
-  );
-};
+//   return (
+//     <p
+//       style={{
+//         fontSize: "24px",
+//         margin: "0",
+//         color: "yellowgreen",
+//         borderRadius: "5px",
+//       }}
+//     >
+//       {filledStars}
+//       {emptyStars}
+//     </p>
+//   );
+// };
 
-const Testimonial = ({ testimonial }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const truncatedComment = testimonial.comment.slice(0, 100);
-  const shouldTruncate = testimonial.comment.length > 100;
+// const Testimonial = ({ testimonial }) => {
+//   const [isExpanded, setIsExpanded] = useState(false);
+//   const truncatedComment = testimonial.comment.slice(0, 100);
+//   const shouldTruncate = testimonial.comment.length > 100;
 
-  return (
-    <div className="testimonial-content">
-      <p className="testiText">
-        {isExpanded || !shouldTruncate
-          ? testimonial.comment
-          : `${truncatedComment}...`}
-      </p>
-      {shouldTruncate && (
-        <button className="tiny" onClick={() => setIsExpanded(!isExpanded)}>
-          {isExpanded ? "See Less" : "See More"}
-        </button>
-      )}
-      <p className="tinyBub">{testimonial.type}</p>
-      <StarRating rating={testimonial.rating} />
-    </div>
-  );
-};
+//   return (
+//     <div className="testimonial-content">
+//       <p className="testiText">
+//         {isExpanded || !shouldTruncate
+//           ? testimonial.comment
+//           : `${truncatedComment}...`}
+//       </p>
+//       {shouldTruncate && (
+//         <button className="tiny" onClick={() => setIsExpanded(!isExpanded)}>
+//           {isExpanded ? "See Less" : "See More"}
+//         </button>
+//       )}
+//       <p className="tinyBub">{testimonial.type}</p>
+//       <StarRating rating={testimonial.rating} />
+//     </div>
+//   );
+// };
 
 const Navigation = (props) => {
   return (
@@ -156,107 +153,107 @@ const Navigation = (props) => {
 };
 
 export const CompanyProfileHeader = () => {
-  const csrfToken = useCsrfToken();
+//   const csrfToken = useCsrfToken();
 
-  const [isLogedIn, setIsLogedIn] = useState(false);
-  const [isGuest, setIsGuest] = useState(false);
+//   const [isLogedIn, setIsLogedIn] = useState(false);
+//   const [isGuest, setIsGuest] = useState(false);
   const [navbarvalue, setNavbarvalue] = useState('overview')
 
-  useEffect(() => {
-    const isGuestValue = localStorage.getItem("isGuest");
-    if (isGuestValue === "true") {
-      setIsGuest(true);
-    } else {
-      setIsGuest(false);
-    }
-  }, []);
+//   useEffect(() => {
+//     const isGuestValue = localStorage.getItem("isGuest");
+//     if (isGuestValue === "true") {
+//       setIsGuest(true);
+//     } else {
+//       setIsGuest(false);
+//     }
+//   }, []);
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) setIsLogedIn(true);
-    console.log(token, "tokennn");
-  }, []);
+//   useEffect(() => {
+//     const token = localStorage.getItem("token");
+//     if (token) setIsLogedIn(true);
+//     console.log(token, "tokennn");
+//   }, []);
 
-  const [showMore, setShowMore] = useState({
-    why: false,
-    look: false,
-    like: false,
-    only: false,
-  });
+//   const [showMore, setShowMore] = useState({
+//     why: false,
+//     look: false,
+//     like: false,
+//     only: false,
+//   });
 
-  const [guestProfile, setGuestProfile] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    linkedinProfile: "",
-  });
+//   const [guestProfile, setGuestProfile] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     phoneNumber: "",
+//     linkedinProfile: "",
+//   });
 
-  const handleInputChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setGuestProfile({ ...guestProfile, [name]: value });
-  };
+//   const handleInputChange = (e) => {
+//     const name = e.target.name;
+//     const value = e.target.value;
+//     setGuestProfile({ ...guestProfile, [name]: value });
+//   };
 
-  const handleShowMore = (name) => {
-    if (!isLogedIn && !isGuest) {
-      const element = document.getElementById("guest-profile-login-toast-id");
-      element.scrollIntoView({ behavior: "smooth" });
-      return;
-    }
-    setShowMore({ ...showMore, [name]: !showMore[name] });
-  };
+//   const handleShowMore = (name) => {
+//     if (!isLogedIn && !isGuest) {
+//       const element = document.getElementById("guest-profile-login-toast-id");
+//       element.scrollIntoView({ behavior: "smooth" });
+//       return;
+//     }
+//     setShowMore({ ...showMore, [name]: !showMore[name] });
+//   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const { email, phoneNumber, firstName, lastName, linkedinProfile } =
-      guestProfile;
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     const { email, phoneNumber, firstName, lastName, linkedinProfile } =
+//       guestProfile;
 
-    if (!email && !phoneNumber && !firstName && !lastName) {
-      return;
-    }
-    console.log(guestProfile);
-    try {
-      const response = await fetch(process.env.REACT_APP_URL + "guestProfile", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-CSRF-Token": csrfToken,
-        },
-        credentials: "include", // Include this line
-        body: JSON.stringify({
-          email: email,
-          phoneNumber: phoneNumber,
-          firstName: firstName,
-          lastName: lastName,
-          linkedinProfile: linkedinProfile,
-        }),
-      });
+//     if (!email && !phoneNumber && !firstName && !lastName) {
+//       return;
+//     }
+//     console.log(guestProfile);
+//     try {
+//       const response = await fetch(process.env.REACT_APP_URL + "guestProfile", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "X-CSRF-Token": csrfToken,
+//         },
+//         credentials: "include", // Include this line
+//         body: JSON.stringify({
+//           email: email,
+//           phoneNumber: phoneNumber,
+//           firstName: firstName,
+//           lastName: lastName,
+//           linkedinProfile: linkedinProfile,
+//         }),
+//       });
 
-      console.log("its been sent");
+//       console.log("its been sent");
 
-      if (response.ok) {
-        const data = await response.json();
-        setIsGuest(true);
-        localStorage.setItem("isGuest", "true");
-        console.log(data); // Print the response data to the console for debugging purp
-      } else {
-        console.log("dammit these errors");
-        // Handle the error response
-        const data = await response.json();
-        toast.error(data.message, {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        console.error(`Error: ${response.status} ${response.statusText}`);
-        console.error(data.message); // Print the error message from the backend
-      }
-    } catch (error) {
-      console.log(error);
-      console.error("Error Name:", error.name);
-      console.error("Error Message:", error.message);
-      console.error("Stack Trace:", error.stack);
-    }
-  };
+//       if (response.ok) {
+//         const data = await response.json();
+//         setIsGuest(true);
+//         localStorage.setItem("isGuest", "true");
+//         console.log(data); // Print the response data to the console for debugging purp
+//       } else {
+//         console.log("dammit these errors");
+//         // Handle the error response
+//         const data = await response.json();
+//         toast.error(data.message, {
+//           position: toast.POSITION.TOP_RIGHT,
+//         });
+//         console.error(`Error: ${response.status} ${response.statusText}`);
+//         console.error(data.message); // Print the error message from the backend
+//       }
+//     } catch (error) {
+//       console.log(error);
+//       console.error("Error Name:", error.name);
+//       console.error("Error Message:", error.message);
+//       console.error("Stack Trace:", error.stack);
+//     }
+//   };
 
   return (
     // <Container className=" mt-5">
