@@ -1,7 +1,7 @@
 import React from "react";
 import "./CSS/Programs.css";
 import people from "../imageAssets/people.png";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 function Programs() {
   return (
