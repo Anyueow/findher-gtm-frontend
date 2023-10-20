@@ -71,7 +71,7 @@
 .sideLogin{
   display: none;
 }
-@media (width < 850px){
+@media (width < 940px){
   .uprNavbtn{
     visibility: hidden;
     height: 20px;
@@ -124,6 +124,7 @@
 }
 
 .profile-navbar-guest{
-  opacity: 1 !important;
-  background: var(--diamond-navbar, linear-gradient(to bottom right, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 50%) top right / 50% 50% no-repeat);
+  max-height: 60px;
+  opacity: 0.8 !important;
+  background: var(--diamond-navbar, linear-gradient(to bottom right, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 0%) bottom right / 55% 55% no-repeat, linear-gradient(to bottom left, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 0%) bottom left / 55% 55% no-repeat, linear-gradient(to top left, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 50%) top left / 100% 100% no-repeat, linear-gradient(to top right, rgba(67, 57, 242, 0.15) 0%, rgba(226, 197, 235, 0.80) 0%) top right / 100% 50% no-repeat);
 }

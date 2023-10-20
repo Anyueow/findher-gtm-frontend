@@ -15,7 +15,7 @@ function ProfileNavbarGuest(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="">
+    <div className="" style={{marginBottom:"60px"}}>
       <nav className="navbar fixed-top navbar-expand-sm  profile-navbar-guest">
         <div className="container-fluid">
           <button className="navbar-toggle btn btn-white" onClick={handleShow}>

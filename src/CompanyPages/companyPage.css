@@ -137,3 +137,104 @@
     width: 100%;
 }
 
+@media (min-width:641px) and (max-width:940px) {
+    .company-logo{
+        display: flex;
+        border: 1px solid gray;
+        border-radius: 50%; 
+        overflow: hidden;
+        width: 150px;
+        aspect-ratio: 1/1; 
+        justify-content: center;
+        margin-top: 4%;
+    }
+    
+    .company-details-info h1{
+        font-size: 22px;
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+    .company-details-info p{
+        margin-bottom: 3%;
+        color: #7A7A7A;
+        font-family: DM Sans;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .company-detaisl-swiper-container {
+        height: 140px !important;
+    }
+    .company-page-photo img{
+        border-radius: 10px;
+        width: 150px;
+    }
+    .icon{
+        height: 16px;
+    }  
+}
+
+
+@media  (max-width:640px) {
+.company-page-left-row{
+    justify-content: center;
+    margin-top: 5%;
+}
+.company-logo{
+    width: 100% ;
+}
+.company-details-info{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 0%;
+}
+.company-details-info h1{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.company-details-info p{
+    font-size: 13px;
+}
+.company-detaisl-swiper-container {
+    height: 280px !important;
+}
+.company-page-photo img{
+    border-radius: 10px;
+    width: 90%;
+}
+.company-page-photo {
+   margin-left: 10%;
+}
+.company-page-photo .swiper-pagination{
+    margin-left: 36%;
+}
+.navigation-div{
+    padding-top: 10px;
+    background-color: white;
+}
+.navigation a {
+    font-size: 16px;
+}
+.navigation ul {
+    margin-bottom: 10px;
+}
+.navigation li {
+    margin-right: 0px;
+    margin-left: 36px;
+}
+.isMobile{
+    display: block !important;
+}
+.isDesktop{
+    display: none !important;
+}
+
+}
+.isMobile{
+    display: none;
+}
+.isDesktop{
+    display: block;
+}

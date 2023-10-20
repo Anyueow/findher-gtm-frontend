@@ -7,18 +7,18 @@ function Overview() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <Row>
-      <Col md={12}>
-        <Row>
-          <Col className="infoBox">
+    <Row className="ms-1">
+      <Col md={12} className="">
+        <Row className="d-flex justify-content-between align-items-center infoBox-row">
+          <Col xs={11} md={5} className="infoBox">
             <h2 className="header-card">About</h2>
             <p className="header-card-p">
             Sprintex Inc. is a leading Information Technology consulting firm. We specialize in providing expert guidance and innovative solutions to businesses seeking to harness the full potential of technology. 
             </p>
           </Col>
-          <Col className="infoBoxTwo">
+          <Col  xs={11} md={6} className="infoBoxTwo">
             <div className="rectBox">
-              <Row>
+              <Row className="d-flex justify-content-center align-items-center">
                 <Col xs={12}>
                   <h2 className="header-card">Quick Facts</h2>
                 </Col>
@@ -82,7 +82,7 @@ function Overview() {
                   </svg>
                   <h6 className="iconttext">Started in 2010</h6>
                 </Col>
-                <Col xs="12" md="12" lg="6" className="Rect m-0">
+                <Col xs="10" md="10" lg="6" className="Rect m-0 px-3 py-2 justify-content-start">
                   <div className="d-flex  align-items-baseline">
                     <span className="greenTick">
                       <img src={greentick} alt="tick" />
@@ -123,26 +123,25 @@ function Overview() {
             </Button>
           </Col>
           <Col>
-            <Row className="d-flex justify-content-between mt-2">
+            <Row className="d-flex justify-content-between mt-2 company-page-flexibility-row">
               <Col
                 md={3}
                 className="company-page-flexibility "
               >
-                  <Col className="d-flex align-items-center company-page-flexibility-header">
+                  <Col className="d-flex align-items-center company-page-flexibility-header px-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
                       height="22"
                       viewBox="0 0 19 20"
                       fill="none"
-                      className="mx-4"
                     >
                       <path
                         d="M16.1079 2H14.2128V1C14.2128 0.734784 14.113 0.48043 13.9353 0.292893C13.7576 0.105357 13.5166 0 13.2653 0C13.014 0 12.773 0.105357 12.5953 0.292893C12.4176 0.48043 12.3178 0.734784 12.3178 1V2H6.63265V1C6.63265 0.734784 6.53283 0.48043 6.35513 0.292893C6.17744 0.105357 5.93643 0 5.68513 0C5.43383 0 5.19283 0.105357 5.01513 0.292893C4.83744 0.48043 4.73761 0.734784 4.73761 1V2H2.84257C2.08867 2 1.36565 2.31607 0.832568 2.87868C0.299484 3.44129 0 4.20435 0 5V17C0 17.7957 0.299484 18.5587 0.832568 19.1213C1.36565 19.6839 2.08867 20 2.84257 20H16.1079C16.8618 20 17.5848 19.6839 18.1179 19.1213C18.651 18.5587 18.9504 17.7957 18.9504 17V5C18.9504 4.20435 18.651 3.44129 18.1179 2.87868C17.5848 2.31607 16.8618 2 16.1079 2ZM17.0554 17C17.0554 17.2652 16.9556 17.5196 16.7779 17.7071C16.6002 17.8946 16.3592 18 16.1079 18H2.84257C2.59127 18 2.35026 17.8946 2.17257 17.7071C1.99487 17.5196 1.89504 17.2652 1.89504 17V10H17.0554V17ZM17.0554 8H1.89504V5C1.89504 4.73478 1.99487 4.48043 2.17257 4.29289C2.35026 4.10536 2.59127 4 2.84257 4H4.73761V5C4.73761 5.26522 4.83744 5.51957 5.01513 5.70711C5.19283 5.89464 5.43383 6 5.68513 6C5.93643 6 6.17744 5.89464 6.35513 5.70711C6.53283 5.51957 6.63265 5.26522 6.63265 5V4H12.3178V5C12.3178 5.26522 12.4176 5.51957 12.5953 5.70711C12.773 5.89464 13.014 6 13.2653 6C13.5166 6 13.7576 5.89464 13.9353 5.70711C14.113 5.51957 14.2128 5.26522 14.2128 5V4H16.1079C16.3592 4 16.6002 4.10536 16.7779 4.29289C16.9556 4.48043 17.0554 4.73478 17.0554 5V8Z"
                         fill="black"
                       />
                     </svg>
-                    <h2 className="mx-2 my-0">Flexibility</h2>
+                    <h2 className="mx-4 my-0">Flexibility</h2>
                   </Col>
                   <Col>
                     <p className="pt-2 px-1">
@@ -153,24 +152,24 @@ function Overview() {
                   </Col>
               </Col>
               <Col
+                 xs={12}
                 md={3}
                 className="company-page-flexibility "
               >
-                  <Col className="d-flex align-items-center company-page-flexibility-header">
+                  <Col className="d-flex align-items-center company-page-flexibility-header px-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
                       height="22"
                       viewBox="0 0 19 20"
                       fill="none"
-                      className="mx-4"
                     >
                       <path
                         d="M16.1079 2H14.2128V1C14.2128 0.734784 14.113 0.48043 13.9353 0.292893C13.7576 0.105357 13.5166 0 13.2653 0C13.014 0 12.773 0.105357 12.5953 0.292893C12.4176 0.48043 12.3178 0.734784 12.3178 1V2H6.63265V1C6.63265 0.734784 6.53283 0.48043 6.35513 0.292893C6.17744 0.105357 5.93643 0 5.68513 0C5.43383 0 5.19283 0.105357 5.01513 0.292893C4.83744 0.48043 4.73761 0.734784 4.73761 1V2H2.84257C2.08867 2 1.36565 2.31607 0.832568 2.87868C0.299484 3.44129 0 4.20435 0 5V17C0 17.7957 0.299484 18.5587 0.832568 19.1213C1.36565 19.6839 2.08867 20 2.84257 20H16.1079C16.8618 20 17.5848 19.6839 18.1179 19.1213C18.651 18.5587 18.9504 17.7957 18.9504 17V5C18.9504 4.20435 18.651 3.44129 18.1179 2.87868C17.5848 2.31607 16.8618 2 16.1079 2ZM17.0554 17C17.0554 17.2652 16.9556 17.5196 16.7779 17.7071C16.6002 17.8946 16.3592 18 16.1079 18H2.84257C2.59127 18 2.35026 17.8946 2.17257 17.7071C1.99487 17.5196 1.89504 17.2652 1.89504 17V10H17.0554V17ZM17.0554 8H1.89504V5C1.89504 4.73478 1.99487 4.48043 2.17257 4.29289C2.35026 4.10536 2.59127 4 2.84257 4H4.73761V5C4.73761 5.26522 4.83744 5.51957 5.01513 5.70711C5.19283 5.89464 5.43383 6 5.68513 6C5.93643 6 6.17744 5.89464 6.35513 5.70711C6.53283 5.51957 6.63265 5.26522 6.63265 5V4H12.3178V5C12.3178 5.26522 12.4176 5.51957 12.5953 5.70711C12.773 5.89464 13.014 6 13.2653 6C13.5166 6 13.7576 5.89464 13.9353 5.70711C14.113 5.51957 14.2128 5.26522 14.2128 5V4H16.1079C16.3592 4 16.6002 4.10536 16.7779 4.29289C16.9556 4.48043 17.0554 4.73478 17.0554 5V8Z"
                         fill="black"
                       />
                     </svg>
-                    <h2 className="mx-2 my-0">Flexibility</h2>
+                    <h2 className="mx-4 my-0">Flexibility</h2>
                   </Col>
                   <Col>
                     <p className="pt-2 px-1">
@@ -181,24 +180,24 @@ function Overview() {
                   </Col>
               </Col>
               <Col
+              xs={12}
                 md={3}
                 className="company-page-flexibility "
               >
-                  <Col className="d-flex align-items-center company-page-flexibility-header">
+                  <Col className="d-flex align-items-center company-page-flexibility-header px-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
                       height="22"
                       viewBox="0 0 19 20"
                       fill="none"
-                      className="mx-4"
                     >
                       <path
                         d="M16.1079 2H14.2128V1C14.2128 0.734784 14.113 0.48043 13.9353 0.292893C13.7576 0.105357 13.5166 0 13.2653 0C13.014 0 12.773 0.105357 12.5953 0.292893C12.4176 0.48043 12.3178 0.734784 12.3178 1V2H6.63265V1C6.63265 0.734784 6.53283 0.48043 6.35513 0.292893C6.17744 0.105357 5.93643 0 5.68513 0C5.43383 0 5.19283 0.105357 5.01513 0.292893C4.83744 0.48043 4.73761 0.734784 4.73761 1V2H2.84257C2.08867 2 1.36565 2.31607 0.832568 2.87868C0.299484 3.44129 0 4.20435 0 5V17C0 17.7957 0.299484 18.5587 0.832568 19.1213C1.36565 19.6839 2.08867 20 2.84257 20H16.1079C16.8618 20 17.5848 19.6839 18.1179 19.1213C18.651 18.5587 18.9504 17.7957 18.9504 17V5C18.9504 4.20435 18.651 3.44129 18.1179 2.87868C17.5848 2.31607 16.8618 2 16.1079 2ZM17.0554 17C17.0554 17.2652 16.9556 17.5196 16.7779 17.7071C16.6002 17.8946 16.3592 18 16.1079 18H2.84257C2.59127 18 2.35026 17.8946 2.17257 17.7071C1.99487 17.5196 1.89504 17.2652 1.89504 17V10H17.0554V17ZM17.0554 8H1.89504V5C1.89504 4.73478 1.99487 4.48043 2.17257 4.29289C2.35026 4.10536 2.59127 4 2.84257 4H4.73761V5C4.73761 5.26522 4.83744 5.51957 5.01513 5.70711C5.19283 5.89464 5.43383 6 5.68513 6C5.93643 6 6.17744 5.89464 6.35513 5.70711C6.53283 5.51957 6.63265 5.26522 6.63265 5V4H12.3178V5C12.3178 5.26522 12.4176 5.51957 12.5953 5.70711C12.773 5.89464 13.014 6 13.2653 6C13.5166 6 13.7576 5.89464 13.9353 5.70711C14.113 5.51957 14.2128 5.26522 14.2128 5V4H16.1079C16.3592 4 16.6002 4.10536 16.7779 4.29289C16.9556 4.48043 17.0554 4.73478 17.0554 5V8Z"
                         fill="black"
                       />
                     </svg>
-                    <h2 className="mx-2 my-0">Flexibility</h2>
+                    <h2 className="mx-4 my-0">Flexibility</h2>
                   </Col>
                   <Col style={{minHeight:"140px"}}>
                     <p className="pt-2 px-1">
