@@ -44,8 +44,11 @@
     line-height: normal;
 }
 
-.company-page-left-row{
-   border-right: 1px solid rgba(217, 217, 217, 0.37);
+/* .company-page-left-row{
+    border-right: 1px solid rgba(217, 217, 217, 0.37);
+} */
+.company-page-right-row{
+    border-left: 1px solid rgba(217, 217, 217, 0.37);
 }
 
 .company-page-photo{
@@ -64,7 +67,7 @@
 
 .company-page-photo img{
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
 }
 
 .company-page-photo .swiper-slide{
@@ -215,7 +218,7 @@
     background-color: white;
 }
 .navigation a {
-    font-size: 16px;
+    font-size: 90%;
 }
 .navigation ul {
     margin-bottom: 10px;

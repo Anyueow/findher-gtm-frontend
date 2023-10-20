@@ -1,0 +1,7 @@
+.infoBoxProgram {
+    background: var(--white-100, #FFF);
+    text-align: left;
+    padding: 3%;
+    min-height: 200px;
+    width: 48%;
+}

@@ -1,11 +1,11 @@
 .infoBox {
     border-radius: 15px;
-    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
     background: var(--white-100, #FFF);
-    margin: 2%;
     text-align: left;
     padding: 2%;
     min-height: 200px;
+    width: 48%;
 }
 
 .infoBox h2{
@@ -33,14 +33,15 @@
     display: flex;
     background: var(--white-100, #FFF);
     border-radius: 15px;
-    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
     display: flex;
     flex-wrap: wrap;
-    padding: 2%;
-    padding-bottom: 3%;
+    padding:1%;
+    padding-bottom: 2%;
     margin: 2%;
     text-align: left;
-    min-height: 190px;
+    min-height: 200px;
+    width: 48%;
 }
 
 .infoBoxTwo h2{
@@ -60,7 +61,7 @@
 }
 
 .Rect {
-    border: 0.1px solid var(--Subtle-grey, #979797) ;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
     display: flex;  /* Enable Flexbox */
     flex-direction: column;
     justify-content: center;
@@ -69,6 +70,7 @@
     padding-bottom: 1%;
     border-radius: 15px;
     margin: 1%;
+    min-height: 120px;
 }
 
 .greenTick{
@@ -111,15 +113,17 @@
 
 .infoBoxThree{
     border-radius: 15px;
-    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
     background: var(--white-100, #FFF);
     text-align: left;
     padding: 2%; 
+    height: 300px; /* Set a fixed height or any other size you prefer */
+    overflow: auto; /* Make the div scrollable */
 }
 
 .company-page-flexibility{
     border-radius: 15px;
-    border: 0.1px solid var(--Subtle-grey, #979797) !important;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
     background: var(--white-100, #FFF);
     width: 32%;
     padding: 0;
@@ -135,7 +139,7 @@
 .company-page-flexibility-header h2{
     color: #000;
     font-family: system-ui;
-    font-size: 19px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: 27px;
@@ -147,7 +151,7 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 150% */
+    line-height: 20px; /* 150% */
 }
 
 button:hover {
@@ -158,6 +162,10 @@ button:focus {
 }
 .btn:focus-visible{
     box-shadow: none !important;
+}
+
+.iconttext{
+    min-height: 30px;
 }
 
 @media (min-width:641px) and (max-width:940px) {
@@ -176,7 +184,11 @@ button:focus {
         margin-left: 10px !important;
     }
     .infoBox{
-        min-height: 250px;
+        min-height: 330px;
+        margin-left: 3% !important;
+    }
+    .infoBoxTwo{
+        min-height: 330px;
     }
 }
 
@@ -195,13 +207,16 @@ button:focus {
         margin-top: 8%;
         margin-bottom: 4%;
         min-height: fit-content;
+        width: 95%;
     }
     .infoBoxTwo{
         margin: 0;
         margin-top: 4%;
         margin-bottom: 8%;
+        width: 95%;
     }
     .infoBox-row{
+        display: flex;
         justify-content: center !important;
     }
 }
