@@ -1,417 +1,107 @@
-:root {
-    --brand-color: rgba(238, 44, 91, 1);
-    --shadow-color: 2px 4px 25px 0px rgba(0, 0, 0, 0.1);
-    --text-grey: rgba(151, 151, 151, 1);
-}
-
-.infoBoxTwo {
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    align-content: center;
+.company-logo{
     display: flex;
-    background-color: rgba(232, 232, 232, 0.34);
-    margin-top: 4%;
-    border-radius: 35px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);  /* Box shadow */
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
-
-
-
+    border: 1px solid gray;
+    border-radius: 50%; 
+    overflow: hidden;
+    width: 50%;
+    aspect-ratio: 1/1; 
+    justify-content: center;
 }
 
-.infoBox {
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    display: flex;
-    background-color: rgba(232, 232, 232, 0.34);
-    margin-top: 4%;
-    padding: 5%;
-    border-radius: 35px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);  /* Box shadow */
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.content {
-    width: 100%;
-    padding: 4%
-    /* Other styles */
-}
-
-.align-bottom {
-    align-self: flex-end;
-}
-.infoCard{
-    justify-content: center;  /* Center horizontally */
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    /* align-items: flex-start; */
-    /* Aligns items to the start of the flex container */
-
-    background-color: rgba(232, 232, 232, 0.34);
-    padding: 5%;
-    margin-top: 4%;
-    border-radius: 35px;
-    border: 1px solid #d5d3d3;
-    text-align: left;
-
-}
-
-.infoCard p{
-    color: #828282;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px; /* 150% */
-}
-.header-section {
-    display: flex;
-    align-items: center; /* Vertically aligns the image and h3 */
-}
-
-
-
-.subhead {
-    margin: 0; /* Removes default margin */
-}
-
-.text-section p {
-    margin-top: 10px; /* Adds some space above the paragraph */
-}
-.infoRect{
-    display: flex;  /* Enable Flexbox */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    align-content: center;
-    background-color: rgba(232, 232, 232, 0.34);
-    padding: 5%;
-    margin-top: 4%;
-    text-align: center;
-    border-radius: 35px;
-    border: 1px solid #d5d3d3;
-}
-
-.testi {
-    display: flex;  /* Enable Flexbox */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    align-content: center;
-    flex-direction: row;
-    border: 1px solid #d5d3d3;
-    border-radius: 35px;
-    width: fit-content;
-    padding:8%;
-    margin: 5%;
-
-}
-
-
-.GraphCard{
-    display: flex;  /* Enable Flexbox */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    align-content: center;
-    flex-direction: column;
-    padding: 3%;
-    padding-top: 5%;
-    padding-bottom: 8%;
-    text-align: center;
-    border-radius: 35px;
-    flex: 2 0.5 200px;
-    margin: 3% 2%;
-    border: 1px solid #d5d3d3;
-}
-
-.parahCen{
-    text-align: center;
-}
-.contt{
-    margin-top:8%;
-    display: flex;  /* Enable Flexbox */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    align-content: center;
-    height: max-content;
-    margin-bottom: 15%;
-    padding: 0;
-
-}
-.info-group {
-    text-align: left;
-    align-content: center;
-
-}
-
-.company-logo {
-    border-radius: 20px;
-
-}
-
-.Head-text {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.section {
-    width: 60vw;
-}
-.sectRow {
-    width: fit-content;
-}
-
-.sub-text {
-    text-align: left;
-    margin:0;
-    width: 100%;
-}
-
-.location-icon,
-.industry-icon,
-.employee-icon {
-    width: 20px;
-    margin:0;
-}
-
-/* .row {
-    text-align: left;
-    margin-bottom: 1%
-} */
-
-.colcont{
-    display: flex;  /* Enable Flexbox */
-    flex-direction: column;
-    align-items: center;
-    width: 90vw;
-}
-
-
-.testiText {
-    width: 70%
-}
-
-.icon {
-    margin: 5%;
-    width: 30%;
-}
-.icono {
-    width: 100px;
-}
-
-.bubble {
-
-    background-color: #FCEEBE;
-    border-radius: 10px;
-    padding: 3%;
-    width: 100%;
-    color: #484848;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-.tinyBub {
-
-    background-color: rgb(255, 226, 150);
-    border-radius: 20px;
-    text-align: center;
-    width: 70%;
-    padding:2%
-}
-
-
-.iconttext {
-    margin-top: 13px;
+.company-details-info h1{
     color: #000;
-    text-align: center;
-    font-family: Poppins;
+    font-family: DM Sans;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 5%;
+}
+
+.company-details-info{
+    text-align: left;
+    margin-left: 15%;
+    margin-top: 7%;
+}
+
+.company-details-info p{
+    margin-bottom: 0%;
+    color: #7A7A7A;
+    font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 14px; /* 120% */
-}
-
-.Rectlong {
-    border: 1px solid #d5d3d3;
-    display: flex;  /* Enable Flexbox */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8%;
-    border-radius: 15px;
-    height: 200px;
-
-
-}
-
-.colTwo {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60vw;
-
-}
-
-.Rect {
-    border: 1px solid #d5d3d3;
-    display: flex;  /* Enable Flexbox */
-    flex-direction: column;
-    justify-content: center;
-    padding: 4%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    border-radius: 15px;
-    margin: 3%;
-    /* flex: 0.5 0.5 50px; */
-}
-
-
-
-.rectBox {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%
-}
-@media (max-width: 800px) {
-    .Rectlong {
-
-        display: flex;  /* Enable Flexbox */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1%;
-        height: 180px;
-
-
-    }
-    .Rect {
-        height: 150px;
-
-    }
-
-    .icon {
-        margin: 5%;
-        width: 60%
-    }
-}
-
-.companyPage-seemore {
-    color:#828282;
-    border: none;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 150% */
-    text-decoration-line: underline;
-    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
-}
-
-.companyPage-seemore:hover {
-    color: #fff; /* Keeping text color white, can be changed if needed */
-    text-decoration-line: underline;
-    /* border: 3px solid rgba(255, 174, 192, 0.83);  */
-    /* Darker border on hover */
-}
-
-.testimonial-content {
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:40vw;
-    border: 1px solid rgba(162, 161, 161, 0.65);
-    border-radius: 1.5rem;
-    padding: 2%;
-    flex: 2 0.5 200px;
-    margin: 3% 3% 1% 1%;
-}
-
-p {
-    margin: 10px 0;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-    box-shadow: none !important;
-}
-button:focus {
-    box-shadow: none !important;
-}
-.btn:focus-visible{
-    box-shadow: none !important;
-}
-
-.header-card{
-    text-align: left;
-    font-weight: 600;
-    font-family: Poppins;
-    font-size: 28px;
-    font-style: normal;
     line-height: normal;
 }
 
-.header-card-p{
-    color: #5B5B5B;
-    font-family: Poppins;
-    font-size: 18px;
+.company-details-info a{
+    margin-bottom: 0%;
+    color: #7A7A7A;
+    font-family: DM Sans;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; /* 142.857% */
-    letter-spacing: 0.28px;
+    line-height: normal;
+}
+
+/* .company-page-left-row{
+    border-right: 1px solid rgba(217, 217, 217, 0.37);
+} */
+.company-page-right-row{
+    border-left: 1px solid rgba(217, 217, 217, 0.37);
+}
+
+.company-page-photo{
+    margin-left: 15%;
+}
+.company-page-photo h1{
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     text-align: left;
 }
 
-.tiny {
-    font-size: 0.8rem;
-    text-decoration: underline;
-    color: #192225;
-    background-color: transparent;
-}
-.tiny:Hover {
-    font-size: 0.8rem;
-    text-decoration: underline;
-    color: rgba(226, 11, 60, 0.83);
-    background-color: transparent;
+.company-page-photo img{
+    border-radius: 10px;
+    width: 90%;
 }
 
-.testiBox {
+.company-page-photo .swiper-slide{
     display: flex;
-    flex-wrap: wrap;
+    align-items: self-start;
 }
 
-.frame{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.company-page-photo .swiper-pagination{
+    background-color: white;
+    width: fit-content !important;
+    border-radius: 25px;
+    margin-left: 26%;
+}
+.company-detaisl-swiper-container .swiper-pagination-bullet{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    opacity: 0.5 ;
 }
 
-.frame {
-    flex: 1 1 500px;
+.company-detaisl-swiper-container .swiper-pagination-bullet-active{
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Navigation */
+.company-detaisl-swiper-container{ 
+    height: 30vh !important;  
+}
+
 .navigation {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 60vw;
-    padding: 20px;
+    width: 100vw;
+    padding: 0px;
+    margin: 20px;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.37);
 }
 
 .navigation ul {
@@ -422,7 +112,8 @@ button:focus {
 }
 
 .navigation li {
-    margin-right: 74px;
+    margin-right: 36px;
+    margin-left: 36px;
 }
 
 .navigation a {
@@ -436,370 +127,117 @@ button:focus {
     position: relative;
 }
 
-.navigation a::before {
+.navigationActive::before {
     content: "";
     position: absolute;
     color: #ee2c5b;
     width: 0;
-    height: 6px;
-    bottom: -10px;
+    height: 4px;
+    bottom: -6px;
     left: 0;
-
     background-color: rgba(226, 11, 60, 0.83);
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-}
-
-.navigation a:hover::before {
     visibility: visible;
     width: 100%;
 }
 
-
-
-/* Profile box */
-.profile-box {
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100vw;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 5%;
-
-}
-
-.info-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-container {
-    margin-right: 8%
-}
-
-.company-logo {
-    width: 110%;
-
-    margin: 5%;
-    object-fit: fill;
-}
-
-.text-info {
-    flex-grow: inherit;
-}
-
-.head-text {
-    font-size: 2rem;
-}
-
-.info-row {
-    display: flex;
-    align-items: center;
-    height: 30px;
-}
-/* .info-row img{
-    height: 15px;
-} */
-
-.icon {
-    height: 15px;
-    width: 25px;
-    margin: 0;
-}
-
-.sub-text {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.company-details-page{
-    text-align: left !important;
-}
-.company-details-page h1{
-    color: #000;
-    font-family: Poppins;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0 !important;
-}
-
-.company-details-page p{
-    color: #000;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-}
-.quickFactinnerRow{
-    width: 100%;
-}
-.check-blur{
-    overflow: hidden;
-}
-.blur-company-details{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 45%;
-    background: transparent; 
-    backdrop-filter: blur(10px);
-    z-index: 60;
-}
-
-.guest-profile-login-toast{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 28% !important;
-    font-weight: 400;
-    border-radius: 10px !important;
-    text-align: left;
-    width: 40% !important;
-    background-color: #FAFAFA;
-    border-radius: 20px;
-    border: 0.5px solid #828282;
-}
-.numemailchange-profile-toast  .toast-body {
-    background-color: #FAFAFA;; 
-    text-align: center;
-  }
-
-  .form-wrapper-guest-profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-.form-wrapper-guest-profile p{
-    font-family: poppins;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    color: #000 !important;
-}
-.form-wrapper-guest-profile span{
-    color: #EE2C5B;
-}
-  .submitGuest{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    width: 80%;
-}
-
-.submitGuest button{
-    padding: 10px;
-    width: 100%;
-    font-family: "Montserrat-SemiBold";
-    font-size: 1rem;
-    background-color: #ee2c5b;
-    border: none;
-}
-
-@media (min-width:601px) and (max-width:830px) {
-    .contt{
-        margin-top:20%;
-        display: flex;  /* Enable Flexbox */
-        justify-content: center;  /* Center horizontally */
-        align-items: center;  /* Center vertically */
-        align-content: center;
-        height: max-content;
-        margin-bottom: 15%;
+@media (min-width:641px) and (max-width:940px) {
+    .company-logo{
+        display: flex;
+        border: 1px solid gray;
+        border-radius: 50%; 
+        overflow: hidden;
+        width: 150px;
+        aspect-ratio: 1/1; 
+        justify-content: center;
+        margin-top: 4%;
     }
-    .guest-profile-login-toast{
-        width: 75% !important;
-    }
-    .section{
-        width: 70vw;
+    
+    .company-details-info h1{
+        font-size: 22px;
         margin-top: 10%;
+        margin-bottom: 7%;
     }
-.infoBox{
-    width: 60vw;
-}
-.icono {
-    width: 60px;
-}
-.header-card{
-    font-size: 140%;
-}
-.info-group {
-    text-align: left;
-    align-content: center;
-
-}
-/* .logo-container {
-    margin-right: 10%;
-} */
-.company-logo {
-    width: 150%;
-    
-}
-.company-details-page{
-    width: 35%;
-    margin-left: 5%;
-}
-.navigation {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 90vw;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.navigation ul {
-    list-style-type: none;
-    padding: 1%;
-    margin: 0;
-}
-
-.navigation li {
-    margin-right: 8px;
-    margin-left: 8px;
-}
-
-.navigation a {
-    font-size: 110%;
-}
-.infoBox{
-    width: 70%;
-}
-}
-
-@media (max-width:600px){
-    .contt{
-        margin-top:15%;
-    }
-    .navigation {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        width: 90vw;
-        padding: 10px;
-    }
-    
-    .navigation ul {
-        list-style-type: none;
-        padding: 1%;
-        margin: 0;
-        display: flex;
-    }
-    
-    .navigation li {
-        margin-right: 8px;
-        margin-left: 8px;
-    }
-    
-    .navigation a {
-        font-size: 75%;
-    }
-
-    .infoBox {
-        justify-content: center;  /* Center horizontally */
-        align-items: center;  /* Center vertically */
-        display: flex;
-        background-color: rgba(232, 232, 232, 0.34);
-        margin-top: 0%;
-        padding: 5%;
-
-    }
-
-    .colTwo {
-        display: flex;
-        flex-wrap: wrap;
-        width: 90vw;
-    
-    }
-    .section{
-        width: 90vw;
-        margin-top: 10%;
-    }
-
-    .Rect-mobile{
-        margin: 4% 2% 4% 6%  !important;
-    }
-    .header-card{
-        text-align: left;
-        font-weight: 600;
-        font-family: Poppins;
-        font-size: 100%;
-        font-style: normal;
-        line-height: normal;
-    }
-    
-    .header-card-p{
-        color: #5B5B5B;
-        font-family: Poppins;
-        font-size: 14px;
+    .company-details-info p{
+        margin-bottom: 3%;
+        color: #7A7A7A;
+        font-family: DM Sans;
+        font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: 28px; /* 142.857% */
-        letter-spacing: 0.28px;
-        text-align: left;
+        line-height: normal;
     }
-    .companyPage-seemore {
-        font-size: 14px;
-        padding: 5px 10px 10px 10px !important;
+    .company-detaisl-swiper-container {
+        height: 140px !important;
     }
-    .infoCard{
-        align-items: self-start;
+    .company-page-photo img{
+        border-radius: 10px;
+        width: 150px;
     }
-    .subhead{
-        margin-top: 10px;
-    }
-    .header-section {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-    }
-    .icono {
-        width: 40px;
-    }
-    .company-details-page h1{
-        font-size: 14px;
-        font-weight: 700;
-        margin: 0;
-    }
-    
-    .company-details-page p{
-        font-size: 10px;
-        line-height: 15px;
-        margin: 0;
-    }
-    .infoCard p{
-        font-size: 14px;
-        position: relative;
-        width: 133%;
-        left: -57px;
-        top: 17px;
-    }
-    .blur-company-details{
-
-        height: 54%;
-    }
-    .guest-profile-login-toast{
-     
-        width: 85% !important;
-    }
-    .form-wrapper-guest-profile p{
-        font-size: 100%;
-    }
+    .icon{
+        height: 16px;
+    }  
 }
 
-@media (max-width:400px){
-    .companyPage-seemore {
-        font-size: 12px;
-        padding: 5px 10px 10px 10px !important;
-    }
+
+@media  (max-width:640px) {
+.company-page-left-row{
+    justify-content: center;
+    margin-top: 5%;
+}
+.company-logo{
+    width: 100% ;
+}
+.company-details-info{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 0%;
+}
+.company-details-info h1{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.company-details-info p{
+    font-size: 13px;
+}
+.company-detaisl-swiper-container {
+    height: 280px !important;
+}
+.company-page-photo img{
+    border-radius: 10px;
+    width: 90%;
+}
+.company-page-photo {
+   margin-left: 10%;
+}
+.company-page-photo .swiper-pagination{
+    margin-left: 36%;
+}
+.navigation-div{
+    padding-top: 10px;
+    background-color: white;
+}
+.navigation a {
+    font-size: 90%;
+}
+.navigation ul {
+    margin-bottom: 10px;
+}
+.navigation li {
+    margin-right: 0px;
+    margin-left: 36px;
+}
+.isMobile{
+    display: block !important;
+}
+.isDesktop{
+    display: none !important;
+}
+
+}
+.isMobile{
+    display: none;
+}
+.isDesktop{
+    display: block;
 }

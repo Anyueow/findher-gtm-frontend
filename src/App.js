@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -27,7 +26,6 @@ function App() {
     <NavbarProvider value="5%">
       <Router>
         <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar />
           <ScrollToTop />
           <RoutesPage/>
         </div>

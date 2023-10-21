@@ -1,0 +1,38 @@
+.infoBoxProgram {
+    background: var(--white-100, #FFF);
+    text-align: left;
+    padding: 3%;
+    min-height: 200px;
+    width: 48%;
+}
+
+@media (min-width:641px) and (max-width:940px) {
+    .infoBoxProgram {
+        padding: 10%;
+    }
+    .infoBoxProgram h2{
+        font-size: 20px;
+    }
+    .infoBoxProgram h3{
+        font-size: 18px;
+    }
+    .infoBoxProgram p{
+        font-size: 14px;
+    }
+}
+
+
+@media  (max-width:640px) {
+    .infoBoxProgram {
+        padding: 10%;
+    }
+    .infoBoxProgram h2{
+        font-size: 20px;
+    }
+    .infoBoxProgram h3{
+        font-size: 18px;
+    }
+    .infoBoxProgram p{
+        font-size: 14px;
+    }
+}

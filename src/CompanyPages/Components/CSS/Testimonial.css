@@ -1,0 +1,47 @@
+.GraphCard{
+    border-radius: 15px;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
+    background: var(--white-100, #FFF);
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width:40vw; */
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
+    background: var(--white-100, #FFF);
+    border-radius: 1.5rem;
+    padding: 2%;
+    margin: 3% 3% 1% 1%;
+}
+
+.tiny {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: #192225;
+    background-color: transparent;
+    border: none;
+}
+.tiny:Hover {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: rgba(226, 11, 60, 0.83);
+    background-color: transparent;
+}
+
+.tinyBub {
+
+    background-color: rgb(255, 226, 150);
+    border-radius: 20px;
+    text-align: center;
+    width: 70%;
+    padding:2%
+}
+
+.testiText {
+    width: 70%
+}

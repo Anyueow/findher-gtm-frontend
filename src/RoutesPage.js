@@ -29,6 +29,7 @@ import ProfileCreationInternal from "./components/Businesses/profileCreationInte
 import CompanyPageSample from "./CompanyPages/companyPageSample";
 import Footer from "./components/Footer";
 import {Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function NewDesign() {
     const [blur, setBlur] = useState(0);
@@ -53,11 +54,11 @@ function NewDesign() {
 function RoutesPage() {
   return (
     <Routes>
-    <Route path="/" element={<NewDesign />} />
-    <Route path="/reviews_login" element={<> <FirstPage /> <Footer /></>}/>
-    <Route path="/login" element={<> <Login /> <Footer />  </>} />
+    <Route path="/" element={<><Navbar /><NewDesign /></>} />
+    <Route path="/reviews_login" element={<><Navbar /> <FirstPage /> <Footer /></>}/>
+    <Route path="/login" element={<> <Navbar /><Login /> <Footer />  </>} />
     <Route path="/profile" element={<Profile />} />
-    <Route path="/landingPage" element={<NewDesign />} />
+    <Route path="/landingPage" element={<><Navbar /><NewDesign /></>} />
     <Route path="/reviews_one" element={<SecondPage />} />
     <Route path="/reviews_two" element={<ThirdPage />} />
     <Route path="/reviews_three" element={<FourthPage />} />

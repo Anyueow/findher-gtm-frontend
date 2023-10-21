@@ -15,8 +15,8 @@ function ProfileNavbarGuest(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
-      <nav className="navbar fixed-top navbar-expand-sm navbar-white bg-white">
+    <div className="" style={{marginBottom:"60px"}}>
+      <nav className="navbar fixed-top navbar-expand-sm  profile-navbar-guest">
         <div className="container-fluid">
           <button className="navbar-toggle btn btn-white" onClick={handleShow}>
             <svg
@@ -54,7 +54,7 @@ function ProfileNavbarGuest(props) {
           </button>
           <img src={logo} alt="brand" className="logo" />
           <div className="uprNavbtn">
-            <Link to="https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6">Login</Link>
+            <Link to="https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6">Find Your Next Job</Link>
           </div>
         </div>
         {/* <img
@@ -142,7 +142,7 @@ function ProfileNavbarGuest(props) {
                 window.location.href = 'https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6';
               }
             }}
-           >Unlock Jobs </Button>
+           >Find Your Next Job</Button>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
