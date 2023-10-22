@@ -1,0 +1,715 @@
+.animateBg {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    background: repeating-linear-gradient(
+    to right, rgb(255, 142, 165),
+    rgba(141, 198, 255, 0.96), rgb(212, 170, 255), rgb(237, 255, 137));
+    background-size: 500% 400% ;
+    animation: animate-background 10s infinite ease-in-out;
+
+    z-index: -100;
+
+}
+
+
+.trusted{
+    text-align: left;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+.marquee {
+    position: fixed;
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to the left side */
+    right: 0; /* Align to the right side */
+    width: 100%; /* Full width */
+    height: 14vh;
+    overflow: hidden; /* Prevent overflow */
+    white-space: nowrap; /* Keep inline content on the same line */
+    box-sizing: border-box; /* Better border handling */
+    z-index: 1000; /* High z-index to keep it above other elements */
+    padding: 0% 0% 3% 3%;
+}
+
+.marquee-content {
+    left: 0; /* Align to the right side */
+    margin-left: -3%;
+    display: flex; /* Changed to inline-flex */
+    animation: marquee 5s;
+    width: 100vw; /* Ensures the container's width is as wide as it needs to be */
+
+}
+
+.marquee-logo{
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.marquee-logo img {
+    flex: content-box;
+    /* Grayscale filter */
+    filter: grayscale(100%) saturate(0%) contrast(100%) brightness(150%) opacity(50%);
+
+    padding: 5%;
+    /* Transition effect for the filter property, changeable to your preferred timing */
+    transition: filter 0.5s ease-in-out;
+    width: auto; /* Ensuring the logo images stay within the bounds */
+    max-height: 5%; /* Maintaining aspect ratio */
+}
+
+/* On hover, the image will transition to full color */
+.marquee-logo img:hover {
+    filter: grayscale(0%);
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.subsies {
+    margin-top: 3%;
+    width: 50vw;
+    font-size: 2.8rem;
+    font-family: Poppins;
+    font-weight: 600;
+}
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50% ;
+
+    }
+    100% {
+        background-position: 0% 50% ;
+    }
+
+}
+.typing-animation {
+    border-right: 2px solid #000; /* this is your cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: Poppins;
+    text-align: left;
+    margin:1% 0% 0% -2%;
+    /* Adjust the animation duration to make it faster, and set iteration to infinite */
+    animation: typing 4s infinite forwards, blink-caret 0.75s step-end infinite;
+    animation-delay: 0s, 15s;
+    z-index: 1;
+}
+
+/* Adjust the keyframes for the typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+        width: 90%; /* it should end at 100% width */
+    }
+}
+
+
+/* Keyframes for the blinking cursor */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #000;
+    }
+}
+
+
+
+.vcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* This can be adjusted depending on other content */
+}
+
+
+.RectBox {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3rem;
+    z-index: 0;
+    height: 4rem;
+    width: 35vw;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+    border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+
+.TinyBox {
+    background-color: rgba(236, 236, 236, 0.4);
+    border-radius: 3rem;
+    z-index: 3;
+    height: 4rem;
+    width: 8vw;
+    left: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* subtle shadow */
+}
+.SearchIcon {
+    z-index: 7;
+    width: 2.5rem;
+    align-self: center;
+}
+
+.centeredBox {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+
+}
+
+.centercolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.buttonrow {
+    padding: 1%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.searchrow{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.buttonforrow {
+    /* Typography */
+    font-family: Poppins; /* This font is often considered visually appealing */
+    font-size: 1.1rem;
+    padding: 1.1rem;
+    color: rgb(255, 255, 255); /* Choosing a high contrast text color for readability */
+
+    margin: 0% 1% 1% 1% ;
+    width: 15%;
+    font-weight: 600;
+
+    /* Sizing and Spacing */
+    /* Background and Border */
+    background-color: rgba(226, 11, 60, 0.93); /* A pleasant green shade; you can choose any color that fits your design */
+    border: none; /* Removes the default border */
+    border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+    /* Shadow and Effects */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+    transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+    /* Cursor */
+    align-self: center;
+    cursor: pointer; /* Indicates an action can be taken */
+}
+
+.buttonforrow:hover {
+    background-color: #edff89; /* A shade darker than the original color, common choice for a hover state */
+    /* Transform effect on hover adds a nice interactive feel */
+    color: black; /* Choosing a high contrast text color for readability */
+    transform: translateY(-5px); /* Moves the button slightly up when hovered */
+}
+
+.buttonforrow:active {
+    background-color: rgba(255, 103, 138, 0.83); /* Even darker shade for the click (active) state */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
+    transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
+}
+
+/* Standard styles (for larger screens) go here */
+/* ... your regular CSS ... */
+
+/* Styles for screen width of 534px and below */
+@media (max-width: 658px) {
+    /* Modify or add classes as needed for smaller screens */
+
+
+
+    .SearchIcon {
+        z-index: 7;
+        width: 2rem;
+        align-self: center;
+    }
+
+    .typing-animation {
+        border-right: 2px solid #000; /* this is your cursor */
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+        font-family: Poppins;
+        text-align: left;
+        font-size: 1.5rem;
+        margin:1% 0% 0% -5%;
+        /* Adjust the animation duration to make it faster, and set iteration to infinite */
+        animation: typing 2s infinite forwards, blink-caret 0.75s step-end infinite;
+        animation-delay: 0s, 15s;
+        z-index: 1;
+    }
+
+    .RectBox {
+        background-color: rgb(255, 255, 255);
+        border-radius: 3rem;
+        z-index: 0;
+        height: 4rem;
+        width: 50vw;
+        align-content: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    }
+
+
+    .TinyBox {
+        background-color: rgba(236, 236, 236, 0.4);
+        border-radius: 3rem;
+        z-index: 3;
+        height: 4rem;
+        width: 15vw;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* subtle shadow */
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 80%;
+        }
+    }
+
+
+    .buttonrow {
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 0.9rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 22%;
+        font-weight: 600;
+        /* Sizing and Spacing */
+        padding: 1rem; /* Good padding ensures text isn't too cramped */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+
+    .subsies{
+        margin-top: 5%;
+        font-size: 1.5rem;
+        width: 70vw;
+    }
+
+}
+
+@media (min-width: 658px) and (max-width: 774px) {
+
+    .subsies{
+        margin-top: 5%;
+        font-size: 2rem;
+        width: 70vw;
+    }
+
+    /* Adjust the keyframes for the typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 95%;
+        }
+    }
+
+
+
+    .RectBox {
+        background-color: rgb(255, 255, 255);
+        border-radius: 3rem;
+        z-index: 0;
+        height: 4rem;
+        width: 48vw;
+        align-content: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    }
+
+
+    .TinyBox {
+        background-color: rgba(236, 236, 236, 0.4);
+        border-radius: 3rem;
+        z-index: 3;
+        height: 4rem;
+        width: 15vw;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* subtle shadow */
+    }
+    .SearchIcon {
+        z-index: 7;
+        width: 2.5rem;
+        align-self: center;
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 1rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 20%;
+        font-weight: 600;
+        padding: 1rem;
+        /* Sizing and Spacing */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+}
+
+/* Styles for screen width of 1086px and below */
+@media (min-width: 1034px) and (max-width: 1068px) {
+    /* Modify or add classes as needed for smaller screens */
+
+    .subsies{
+        margin-top: 3%;
+        font-size: 2.8rem;
+        width: 70vw;
+    }
+
+    .typing-animation {
+        border-right: 2px solid #000; /* this is your cursor */
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+        font-family: Poppins;
+        text-align: left;
+        margin:0% 0% 0% 1%;
+        /* Adjust the animation duration to make it faster, and set iteration to infinite */
+        animation: typing 2.5s infinite forwards, blink-caret 0.75s step-end infinite;
+        animation-delay: 0s, 10s;
+        z-index: 1;
+    }
+
+    /* Adjust the keyframes for the typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 83%; /* it should end at 100% width */
+
+        }
+    }
+
+
+    /* Keyframes for the blinking cursor */
+    @keyframes blink-caret {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #000;
+        }
+    }
+
+
+    .RectBox {
+        background-color: rgb(255, 255, 255);
+        border-radius: 3rem;
+        z-index: 0;
+        height: 4rem;
+        width: 40vw;
+        align-content: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    }
+
+
+    .TinyBox {
+        background-color: rgba(236, 236, 236, 0.4);
+        border-radius: 3rem;
+        z-index: 3;
+        height: 4rem;
+        width: 10vw;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* subtle shadow */
+    }
+    .SearchIcon {
+        z-index: 7;
+        width: 2.5rem;
+        align-self: center;
+    }
+
+    .buttonrow {
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 1rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 18%;
+        font-weight: 600;
+        /* Sizing and Spacing */
+        padding: 1.1rem; /* Good padding ensures text isn't too cramped */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+
+}
+
+
+/* Styles for screen width of 1086px and below */
+@media (min-width: 774px) and (max-width: 1034px) {
+    /* Modify or add classes as needed for smaller screens */
+
+    .subsies{
+        margin-top: 4%;
+        font-size: 2.5rem;
+        width: 75vw;
+    }
+    .typing-animation {
+        border-right: 2px solid #000; /* this is your cursor */
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+        font-family: Poppins;
+        text-align: left;
+        margin:1% 0% 0% 1%;
+        /* Adjust the animation duration to make it faster, and set iteration to infinite */
+        animation: typing 2.5s infinite forwards, blink-caret 0.75s step-end infinite;
+        animation-delay: 0s, 10s;
+        z-index: 1;
+    }
+
+    /* Adjust the keyframes for the typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 90%; /* it should end at 100% width */
+
+        }
+    }
+
+
+    /* Keyframes for the blinking cursor */
+    @keyframes blink-caret {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #000;
+        }
+    }
+
+
+    .RectBox {
+        background-color: rgb(255, 255, 255);
+        border-radius: 3rem;
+        z-index: 0;
+        height: 4rem;
+        width: 43vw;
+        align-content: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    }
+
+
+    .TinyBox {
+        background-color: rgba(236, 236, 236, 0.4);
+        border-radius: 3rem;
+        z-index: 3;
+        height: 4rem;
+        width: 10vw;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* subtle shadow */
+    }
+    .SearchIcon {
+        z-index: 7;
+        width: 2.5rem;
+        align-self: center;
+    }
+
+    .buttonrow {
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 1rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 18%;
+        font-weight: 600;
+        /* Sizing and Spacing */
+        padding: 1.1rem; /* Good padding ensures text isn't too cramped */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+
+}
+
+@media (min-width: 1068px) and (max-width: 2000px) {
+    /* Adjust the keyframes for the typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 80%; /* it should end at 100% width */
+
+        }
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 1.2rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 15%;
+        font-weight: 600;
+        /* Sizing and Spacing */
+        padding: 1.3rem; /* Good padding ensures text isn't too cramped */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+
+    .subsies{
+        margin-top: 3%;
+        font-size: 2.5rem;
+        width: 75vw;
+    }
+}

@@ -30,6 +30,7 @@ import CompanyPageSample from "./CompanyPages/companyPageSample";
 import Footer from "./components/Footer";
 import {Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import MainPage from "./LandingPage/MainPage";
 
 function NewDesign() {
     const [blur, setBlur] = useState(0);
@@ -54,28 +55,31 @@ function NewDesign() {
 function RoutesPage() {
   return (
     <Routes>
-    <Route path="/" element={<><Navbar /><NewDesign /></>} />
-    <Route path="/reviews_login" element={<><Navbar /> <FirstPage /> <Footer /></>}/>
-    <Route path="/login" element={<> <Navbar /><Login /> <Footer />  </>} />
-    <Route path="/profile" element={<Profile />} />
-    <Route path="/landingPage" element={<><Navbar /><NewDesign /></>} />
-    <Route path="/reviews_one" element={<SecondPage />} />
-    <Route path="/reviews_two" element={<ThirdPage />} />
-    <Route path="/reviews_three" element={<FourthPage />} />
-    <Route path="/reviews_four" element={<FifthPage />} />
-    <Route path="/reviews_five" element={<SeventhPage />} />
-    <Route path="/successUser" element={<SixthPage />} />
-    <Route path="/business_register" element={<BizReg />} />
-    <Route path="/email_signin" element={<EmailSignIn />} />
-    <Route path="/signin-phone" element={<PhoneSignIn />} />
-    <Route path="/update_details" element={<DetailsOneB2B />} />
-    <Route path="/update_details_two" element={<DetailsTwoB2B />} />
-    <Route path="/sample" element={<Sample />} />
-    <Route path="/successBizz" element={<EndPage />} />
-    <Route path="/try" element={<ProfileNavbarGuest />} />
-    <Route path="/createcompany" element={<ProfileCreationInternal />} />
-    <Route path="/compsample"element={<> <ProfileNavbarGuest /> <CompanyPageSample /><Footer /> </>} />
-  </Routes>
+      <Route path="/mainpage" element={<MainPage />} />
+
+      <Route path="/" element={<><Navbar /><NewDesign /></>} />
+      <Route path="/reviews_login" element={<><Navbar /> <FirstPage /> <Footer /></>}/>
+      <Route path="/login" element={<> <Navbar /><Login /> <Footer />  </>} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/landingPage" element={<><Navbar /><NewDesign /></>} />
+      <Route path="/reviews_one" element={<SecondPage />} />
+      <Route path="/reviews_two" element={<ThirdPage />} />
+      <Route path="/reviews_three" element={<FourthPage />} />
+      <Route path="/reviews_four" element={<FifthPage />} />
+      <Route path="/reviews_five" element={<SeventhPage />} />
+      <Route path="/successUser" element={<SixthPage />} />
+      <Route path="/business_register" element={<BizReg />} />
+      <Route path="/email_signin" element={<EmailSignIn />} />
+      <Route path="/signin-phone" element={<PhoneSignIn />} />
+      <Route path="/update_details" element={<DetailsOneB2B />} />
+      <Route path="/update_details_two" element={<DetailsTwoB2B />} />
+      <Route path="/sample" element={<Sample />} />
+      <Route path="/successBizz" element={<EndPage />} />
+      <Route path="/try" element={<ProfileNavbarGuest />} />
+      <Route path="/createcompany" element={<ProfileCreationInternal />} />
+      <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /><Footer /> </>} />
+
+    </Routes>
   )
 }
 
