@@ -116,7 +116,7 @@ function Programs(props) {
       </Row>
       <Row>
         <Col xs={12} md={6}>
-      <Row className="infoCard-for-women mt-4 mb-2">
+      <Row className="infoCard-for-women mt-4 mb-2 pt-3">
         <Col xs="2" md="3" lg="2" className="header-section pe-0">
           <img src={people} alt="flex" className="icono" />
         </Col>
@@ -133,7 +133,7 @@ function Programs(props) {
       </Row>
       </Col>
       <Col xs={12} md={6}>
-      <Row className="infoCard-for-women mt-4 mb-2">
+      <Row className="infoCard-for-women mt-4 mb-2 pt-3">
         <Col xs="2"  md="3" lg="2" className="header-section pe-0">
           <img src={people} alt="flex" className="icono" />
         </Col>
@@ -151,7 +151,7 @@ function Programs(props) {
       </Row>
       </Col>
       <Col xs={12} md={6}>
-      <Row className="infoCard-for-women mt-4 mb-2">
+      <Row className="infoCard-for-women mt-4 mb-2 pt-3">
         <Col xs="2"  md="3" lg="2" className="header-section pe-0">
           <img src={people} alt="flex" className="icono" />
         </Col>
