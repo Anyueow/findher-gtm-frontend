@@ -6,6 +6,23 @@
     width: 48%;
 }
 
+.guest-profile-login-toast-program{
+    top: 41%;
+}
+.infoCard-for-women {
+    background: var(--white-100, #FFF);
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
+    text-align: left;
+    padding: 2%;
+    min-height: 200px;
+    margin: 2%;
+}
+.infoCard-for-women img{
+    width: 40px;
+}
+.infoCard-for-women h3{
+   text-align: left;
+}
 @media (min-width:641px) and (max-width:940px) {
     .infoBoxProgram {
         padding: 10%;
