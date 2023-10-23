@@ -115,16 +115,16 @@ function Programs(props) {
         </Col>
       </Row>
       <Row>
-        <Col xs={6}>
+        <Col xs={12} md={6}>
       <Row className="infoCard-for-women mt-4 mb-2">
-        <Col xs="2" className="header-section pe-0">
+        <Col xs="2" md="3" lg="2" className="header-section pe-0">
           <img src={people} alt="flex" className="icono" />
         </Col>
         <Col xs="9"  className="header-section ps-0">
         <h3 className="subhead">WellWom Wellness</h3>
         </Col>
         <Col className="text-section mt-2 ps-3">
-          <p>
+        <p className="mt-2">
             the WellWom Program offers resources and support for physical,
             emotional, and mental well-being. From on-site yoga and meditation
             sessions to workshops on women's health issues,...
@@ -132,16 +132,16 @@ function Programs(props) {
         </Col>
       </Row>
       </Col>
-      <Col xs={6}>
+      <Col xs={12} md={6}>
       <Row className="infoCard-for-women mt-4 mb-2">
-        <Col xs="2" className="header-section pe-0">
+        <Col xs="2"  md="3" lg="2" className="header-section pe-0">
           <img src={people} alt="flex" className="icono" />
         </Col>
         <Col xs="9"  className="header-section ps-0">
         <h3 className="subhead">Passion for Technology</h3>
         </Col>
         <Col className="text-section">
-          <p>
+        <p className="mt-3">
             We seek individuals who are genuinely enthusiastic about technology
             and its transformative potential. A deep interest in staying updated
             with industry trends and a hunger for continuous learning are highly
@@ -150,16 +150,16 @@ function Programs(props) {
         </Col>
       </Row>
       </Col>
-      <Col xs={6}>
+      <Col xs={12} md={6}>
       <Row className="infoCard-for-women mt-4 mb-2">
-        <Col xs="2" className="header-section pe-0">
+        <Col xs="2"  md="3" lg="2" className="header-section pe-0">
           <img src={people} alt="flex" className="icono" />
         </Col>
         <Col xs="9"  className="header-section ps-0">
         <h3 className="subhead">Continuous Learning</h3>
         </Col>
         <Col xs="12" className="text-section px-3">
-          <p>
+          <p className="mt-3">
             We foster an environment that encourages continuous learning and
             development. Our team members are motivated to explore new
             technologies, methodologies, and approaches to enhance their skills

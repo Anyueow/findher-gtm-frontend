@@ -105,3 +105,12 @@
     background-color: #ee2c5b;
     border: none;
 }
+.infobox-tetimonial{
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
+    border-radius: 15px;
+}
+@media (min-width:641px) and (max-width:940px) {
+    .GraphCard{
+        width: 30% !important;
+    }   
+}

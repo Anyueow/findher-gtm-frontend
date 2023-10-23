@@ -250,7 +250,7 @@ export const CompanyProfileHeader = () => {
         </Row>
       </Col>
       <Col>
-        <Row className="company-page-right-row px-0">
+        <Row className="company-page-right-row px-0 d-flex justify-content-center">
           <Col xs={12} className="px-0  isDesktop">
             <Navigation
               navbarvalue={navbarvalue}

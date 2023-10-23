@@ -2,7 +2,7 @@
     background: var(--white-100, #FFF);
     text-align: left;
     padding: 3%;
-    min-height: 200px;
+    min-height: 250px;
     width: 48%;
 }
 
@@ -12,10 +12,14 @@
 .infoCard-for-women {
     background: var(--white-100, #FFF);
     border: 0.1px solid rgba(151, 151, 151, 0.2);
+    border-radius: 15px;
     text-align: left;
     padding: 2%;
     min-height: 200px;
     margin: 2%;
+}
+.infoCard-for-women {
+    min-height: 230px;
 }
 .infoCard-for-women img{
     width: 40px;
@@ -23,6 +27,14 @@
 .infoCard-for-women h3{
    text-align: left;
 }
+.infoBoxProgram h2{
+    font-size: 24px;
+}
+.infoBoxProgram h3{
+    font-size: 20px;
+    margin-top: 2%;
+}
+
 @media (min-width:641px) and (max-width:940px) {
     .infoBoxProgram {
         padding: 10%;
@@ -34,7 +46,17 @@
         font-size: 18px;
     }
     .infoBoxProgram p{
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .infoCard-for-women h3{
+        text-align: left;
+        font-size: 70%;
+        margin: 10px;
+        margin-left: 5px;
+        font-weight: 700;
+     }
+     .infoCard-for-women img{
+        width: 30px;
     }
 }
 
@@ -52,4 +74,11 @@
     .infoBoxProgram p{
         font-size: 14px;
     }
+    .infoCard-for-women h3{
+        text-align: left;
+        font-size: 14px;
+        margin-top: 4%;
+        margin-left: 10px;
+        font-weight: 700;
+     }
 }

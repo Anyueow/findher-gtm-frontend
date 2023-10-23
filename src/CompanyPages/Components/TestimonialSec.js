@@ -52,7 +52,7 @@ const Testimonial = ({ testimonial }) => {
   const shouldTruncate = testimonial.comment.length > 100;
 
   return (
-      <div className="testimonial-content">
+      <Col className="testimonial-content" xs={10} md={5} lg={3}>
           <p className="testiText">
               {isExpanded || !shouldTruncate ? testimonial.comment : `${truncatedComment}...`}
           </p>
@@ -63,7 +63,7 @@ const Testimonial = ({ testimonial }) => {
           )}
           <p className="tinyBub">{testimonial.type}</p>
           <StarRating rating={testimonial.rating} />
-      </div>
+      </Col>
   );
 };
 
@@ -185,12 +185,12 @@ function TestimonialSec(props) {
       </div>
                     </div>}
                     </div>
-    <Row className="ms-3 my-4" style={{width:"95%"}} >
-    <Container className="infoBox">
+    <Row className=" my-4 px-0" style={{width:"95%"}} >
+    <Container className="infobox-tetimonial ">
     <Row className='d-flex justify-content-around'>
-    <h2 className="header-card">
+    <h2 className="header-card mt-3 ms-5 text-left ">
         What women who work here have to say:</h2>
-     <Col  className="GraphCard" xs={3}>
+     <Col  className="GraphCard" xs={9} md={4} lg={3}>
             <Col className='my-3'>
                 <p className="parahCen mb-4"> <i> “My co-workers were friendly and I feel included and welcome
                     in my team”
@@ -200,7 +200,7 @@ function TestimonialSec(props) {
                 <CircularProgress progress={80} circleColor="#ffb9c6" percentageColor="#ee2c5b"/>
             </Col>
      </Col>
-        <Col    className="GraphCard" xs={3}>
+        <Col    className="GraphCard" xs={9} md={4} lg={3}>
             <Col className='my-3'>
                 <p className="parahCen mb-4"> <i> “My co-workers were friendly and I feel included and welcome
                     in my team”
@@ -212,7 +212,7 @@ function TestimonialSec(props) {
             </Col>
         </Col>
 
-        <Col    className="GraphCard" xs={3} >
+        <Col    className="GraphCard" xs={9} md={4} lg={3} >
             <Col className='my-3'>
                 <p className="parahCen mb-4 my-3"> <i> “My co-workers were friendly and I feel included and welcome
                     in my team”
@@ -233,14 +233,14 @@ function TestimonialSec(props) {
 
     {/* Second div */}
 
-    <Row className="section ms-3 mb-5"  style={{width:"95%"}}>
-                    <Container className="infoBox" style={{width:"80%"}}>
+    {/* <Row className="section ms-3 mb-5"  style={{width:"95%"}}> */}
+                    <Row className="infoBox d-flex justify-content-center" style={{width:"95%"}}>
                         {testimonials.map((testimonial, index) => (
                             <Testimonial key={index} testimonial={testimonial} />
                         ))}
-                    </Container>
+                    </Row>
 
-                 </Row>
+                 {/* </Row> */}
  </>
   )
 }
