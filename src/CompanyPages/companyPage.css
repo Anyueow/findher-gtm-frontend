@@ -91,7 +91,7 @@
 
 .navigation ul {
     list-style-type: none;
-    padding: 1.5% 1%;
+    padding: 25px 1%;
     margin: 0;
     display: flex;
 }
@@ -126,6 +126,9 @@
 }
 
 @media (min-width:641px) and (max-width:940px) {
+    .company-details-info{
+        margin-left: 6%;
+    }
     .company-logo{
         display: flex;
         border: 1px solid gray;
@@ -182,7 +185,7 @@
     .company-details-title{
         color: #000;
         font-family: poppins;
-        font-size: 20px;
+        font-size: 100%;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -201,7 +204,7 @@
         margin-bottom: 0%;
         color: #7A7A7A;
         font-family: poppins;
-        font-size: 14px;
+        font-size: 12.5px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -216,7 +219,7 @@
 .company-details-info{
     text-align: left;
     margin-left: 5%;
-    margin-top: 0%;
+    margin-top: 4%;
 }
 
 .company-detaisl-swiper-container {
@@ -252,11 +255,50 @@
 .isDesktop{
     display: none !important;
 }
-
+.icon{
+    height: 14px;
+} 
 }
 .isMobile{
     display: none;
 }
 .isDesktop{
     display: block;
+}
+
+@media (min-width:641px) and (max-width:767px) {
+    .company-page-left-row{
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .company-logo{
+        width: 100% ;
+    }
+    .company-details-info{
+        text-align: left;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    .company-detaisl-swiper-container {
+        height: 330px !important;
+    }
+    .company-page-photo img{
+        border-radius: 10px;
+        width: 70%;
+    }
+    .company-page-photo {
+       margin-left: 20%;
+       margin-top: 5% !important;
+    }
+    .company-page-photo .swiper-pagination{
+        margin-left: 25%;
+    }
+}
+
+@media  (max-width:380px) {
+.company-details-info{
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 2%;
+}
 }

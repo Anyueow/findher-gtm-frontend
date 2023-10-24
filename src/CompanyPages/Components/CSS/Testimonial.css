@@ -50,7 +50,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 88%;
     background: transparent; 
     backdrop-filter: blur(5px);
     z-index: 60;
@@ -58,7 +58,7 @@
 
 .guest-profile-login-toast{
     position: absolute;
-    top: 27%;
+    top: 23%;
     left: 45%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -110,6 +110,11 @@
     border-radius: 15px;
 }
 @media (min-width:641px) and (max-width:940px) {
+    .guest-profile-login-toast{
+        width: 65% !important;
+        top: 20%;
+        left: 50%;
+    }
     .GraphCard{
         width: 30% !important;
     }   
@@ -123,6 +128,11 @@
 }
 
 @media  (max-width:640px) {
+    .guest-profile-login-toast{
+        width: 85% !important;
+        top: 15%;
+        left: 50%;
+    }
     .infobox-tetimonial{
        width: 95% !important;
     }

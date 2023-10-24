@@ -157,6 +157,7 @@ button:focus {
         margin-top: 8%;
         margin-bottom: 4%;
         width: 95%;
+        padding: 2% 2%;
     }
     .infoBoxTwo{
         margin-left: 5% !important;

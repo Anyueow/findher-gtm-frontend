@@ -7,7 +7,7 @@
 }
 
 .guest-profile-login-toast-program{
-    top: 41%;
+    top: 42%;
 }
 .infoCard-for-women {
     background: var(--white-100, #FFF);
@@ -36,6 +36,9 @@
 }
 
 @media (min-width:641px) and (max-width:940px) {
+    .guest-profile-login-toast-program{
+        top: 27%;
+    }
     .infoBoxProgram {
         padding: 10%;
     }

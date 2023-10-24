@@ -108,9 +108,9 @@ function Overview() {
           </Col>
         </Row>
       </Col>
-      <Col md={12} className="ps-0">
+      <Col md={12} className="ps-0" >
         <Row
-          style={{ width: "99%", marginLeft: "1%" }}
+          style={{ width: "99%",margin:"1%"}}
           className="infoBoxThree scrollable-div "
         >
           <Col md={12} className="d-flex justify-content-between ">
