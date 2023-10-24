@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, } from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./images-4.jpeg";
@@ -7,8 +7,8 @@ import industry from "./imageAssets/suitcase.svg";
 import employee from "./imageAssets/people.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { useCsrfToken } from "../CsrfTokenProvider";
-// import { ToastContainer, toast } from "react-toastify";
+import { useCsrfToken } from "../CsrfTokenProvider";
+import { ToastContainer, toast } from "react-toastify";
 import Overview from "./Components/Overview";
 import TestimonialSec from "./Components/TestimonialSec";
 import Programs from "./Components/Programs";
@@ -67,26 +67,34 @@ const Navigation = (props) => {
 };
 
 export const CompanyProfileHeader = () => {
-  //   const csrfToken = useCsrfToken();
+    const csrfToken = useCsrfToken();
 
-  //   const [isLogedIn, setIsLogedIn] = useState(false);
-  //   const [isGuest, setIsGuest] = useState(false);
+    const [isLogedIn, setIsLogedIn] = useState(false);
+    const [isGuest, setIsGuest] = useState(false);
   const [navbarvalue, setNavbarvalue] = useState("overview");
 
-  //   useEffect(() => {
-  //     const isGuestValue = localStorage.getItem("isGuest");
-  //     if (isGuestValue === "true") {
-  //       setIsGuest(true);
-  //     } else {
-  //       setIsGuest(false);
-  //     }
-  //   }, []);
+    useEffect(() => {
+      const isGuestValue = localStorage.getItem("isGuest");
+      if (isGuestValue === "true") {
+        setIsGuest(true);
+      } else {
+        setIsGuest(false);
+      }
+    }, []);
 
-  //   useEffect(() => {
-  //     const token = localStorage.getItem("token");
-  //     if (token) setIsLogedIn(true);
-  //     console.log(token, "tokennn");
-  //   }, []);
+    useEffect(() => {
+      const token = localStorage.getItem("token");
+      if (token) setIsLogedIn(true);
+      console.log(token, "tokennn");
+    }, []);
+
+    const [guestProfile, setGuestProfile] = useState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      linkedinProfile: "",
+    });
 
   //   const [showMore, setShowMore] = useState({
   //     why: false,
@@ -95,19 +103,13 @@ export const CompanyProfileHeader = () => {
   //     only: false,
   //   });
 
-  //   const [guestProfile, setGuestProfile] = useState({
-  //     firstName: "",
-  //     lastName: "",
-  //     email: "",
-  //     phoneNumber: "",
-  //     linkedinProfile: "",
-  //   });
+ 
 
-  //   const handleInputChange = (e) => {
-  //     const name = e.target.name;
-  //     const value = e.target.value;
-  //     setGuestProfile({ ...guestProfile, [name]: value });
-  //   };
+    const handleInputChange = (e) => {
+      const name = e.target.name;
+      const value = e.target.value;
+      setGuestProfile({ ...guestProfile, [name]: value });
+    };
 
   //   const handleShowMore = (name) => {
   //     if (!isLogedIn && !isGuest) {
@@ -118,56 +120,56 @@ export const CompanyProfileHeader = () => {
   //     setShowMore({ ...showMore, [name]: !showMore[name] });
   //   };
 
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-  //     const { email, phoneNumber, firstName, lastName, linkedinProfile } =
-  //       guestProfile;
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      const { email, phoneNumber, firstName, lastName, linkedinProfile } =
+        guestProfile;
 
-  //     if (!email && !phoneNumber && !firstName && !lastName) {
-  //       return;
-  //     }
-  //     console.log(guestProfile);
-  //     try {
-  //       const response = await fetch(process.env.REACT_APP_URL + "guestProfile", {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           "X-CSRF-Token": csrfToken,
-  //         },
-  //         credentials: "include", // Include this line
-  //         body: JSON.stringify({
-  //           email: email,
-  //           phoneNumber: phoneNumber,
-  //           firstName: firstName,
-  //           lastName: lastName,
-  //           linkedinProfile: linkedinProfile,
-  //         }),
-  //       });
+      if (!email && !phoneNumber && !firstName && !lastName) {
+        return;
+      }
+      console.log(guestProfile);
+      try {
+        const response = await fetch(process.env.REACT_APP_URL + "guestProfile", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-Token": csrfToken,
+          },
+          credentials: "include", // Include this line
+          body: JSON.stringify({
+            email: email,
+            phoneNumber: phoneNumber,
+            firstName: firstName,
+            lastName: lastName,
+            linkedinProfile: linkedinProfile,
+          }),
+        });
 
-  //       console.log("its been sent");
+        console.log("its been sent");
 
-  //       if (response.ok) {
-  //         const data = await response.json();
-  //         setIsGuest(true);
-  //         localStorage.setItem("isGuest", "true");
-  //         console.log(data); // Print the response data to the console for debugging purp
-  //       } else {
-  //         console.log("dammit these errors");
-  //         // Handle the error response
-  //         const data = await response.json();
-  //         toast.error(data.message, {
-  //           position: toast.POSITION.TOP_RIGHT,
-  //         });
-  //         console.error(`Error: ${response.status} ${response.statusText}`);
-  //         console.error(data.message); // Print the error message from the backend
-  //       }
-  //     } catch (error) {
-  //       console.log(error);
-  //       console.error("Error Name:", error.name);
-  //       console.error("Error Message:", error.message);
-  //       console.error("Stack Trace:", error.stack);
-  //     }
-  //   };
+        if (response.ok) {
+          const data = await response.json();
+          setIsGuest(true);
+          localStorage.setItem("isGuest", "true");
+          console.log(data); // Print the response data to the console for debugging purp
+        } else {
+          console.log("dammit these errors");
+          // Handle the error response
+          const data = await response.json();
+          toast.error(data.message, {
+            position: toast.POSITION.TOP_RIGHT,
+          });
+          console.error(`Error: ${response.status} ${response.statusText}`);
+          console.error(data.message); // Print the error message from the backend
+        }
+      } catch (error) {
+        console.log(error);
+        console.error("Error Name:", error.name);
+        console.error("Error Message:", error.message);
+        console.error("Stack Trace:", error.stack);
+      }
+    };
 
   return (
     <>
@@ -248,19 +250,19 @@ export const CompanyProfileHeader = () => {
         </Row>
       </Col>
       <Col>
-        <Row className="company-page-right-row px-0">
+        <Row className="company-page-right-row px-0 d-flex justify-content-center">
           <Col xs={12} className="px-0  isDesktop">
             <Navigation
               navbarvalue={navbarvalue}
               setNavbarvalue={setNavbarvalue}
             />
           </Col>
-          {navbarvalue === "overview" && <Overview />}
-          {navbarvalue === "testimonial" && <TestimonialSec />}
-          {navbarvalue === "programs" && <Programs />}
+          {navbarvalue === "overview" && <Overview isLogedIn={isLogedIn} isGuest={isGuest} handleSubmit={handleSubmit} guestProfile={guestProfile} setGuestProfile={setGuestProfile} handleInputChange={handleInputChange}/>}
+          {navbarvalue === "testimonial" && <TestimonialSec isLogedIn={isLogedIn} isGuest={isGuest} handleSubmit={handleSubmit} guestProfile={guestProfile} setGuestProfile={setGuestProfile} handleInputChange={handleInputChange}/>}
+          {navbarvalue === "programs" && <Programs isLogedIn={isLogedIn} isGuest={isGuest} handleSubmit={handleSubmit} guestProfile={guestProfile} setGuestProfile={setGuestProfile} handleInputChange={handleInputChange}/>}
         </Row>
       </Col>
-      {/* <ToastContainer/> */}
+      <ToastContainer/>
     </Row>
     </>
   );
