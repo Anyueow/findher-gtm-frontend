@@ -27,7 +27,7 @@ const CircularProgress = ({ progress, circleColor, percentageColor }) => {
               strokeDasharray={circumference}
               strokeDashoffset={offset}
           />
-          <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="20">
+          <text x="60" y="50" textAnchor="middle" dy=".3em" fontSize="18">
           <tspan dy="0.3em">{`${progress}%`}</tspan>
       <tspan x="60" dy="1.2em">Agree</tspan>
           </text>
