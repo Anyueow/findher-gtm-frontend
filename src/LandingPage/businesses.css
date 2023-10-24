@@ -1,0 +1,68 @@
+.box-container {
+    background: repeating-linear-gradient(
+            to right, rgba(255, 142, 165, 0.24),
+            rgba(141, 198, 255, 0.2), rgba(212, 170, 255, 0.2), rgba(237, 255, 137, 0.2));
+    background-size: 400% 400% ;
+    animation: animate-background 10s infinite ease-in-out;
+
+    transition: opacity 1s ease-in-out; /* Smooth transition for the fade effect */
+    z-index: -1;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+}
+
+.boxedup {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+    /* Full height of the viewport */
+
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    color: #000000;
+    font-family: Poppins;
+    font-size:3rem;
+    width: 40vw;
+    font-weight: 700;
+    margin-bottom: 2%; /* Space between title and line */
+}
+
+.line-separator {
+    border: 0;
+    border-top: 1px solid #000; /* Adjust color as needed */
+    width: 30vw;/* Adjust width as needed */
+    margin: 0% auto 2%; /* Center the line and add space below */
+}
+
+.description {
+    color: #595959;
+    font-family: Poppins;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 550;
+    margin-bottom: 2%; /* Space between description and button */
+}
+
+.join-btn {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Poppins;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    padding: 0.5% 2% 0.5% 2%; /* Larger padding for a bigger button */
+    width: 15vw;
+}

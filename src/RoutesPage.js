@@ -31,6 +31,7 @@ import Footer from "./components/Footer";
 import {Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MainPage from "./LandingPage/MainPage";
+import ForBusiness from "./LandingPage/forBusiness";
 
 function NewDesign() {
     const [blur, setBlur] = useState(0);
@@ -56,8 +57,9 @@ function RoutesPage() {
   return (
     <Routes>
       <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/forbusiness" element={<ForBusiness />} />
 
-      <Route path="/" element={<><Navbar /><NewDesign /></>} />
+        <Route path="/" element={<><Navbar /><NewDesign /></>} />
       <Route path="/reviews_login" element={<><Navbar /> <FirstPage /> <Footer /></>}/>
       <Route path="/login" element={<> <Navbar /><Login /> <Footer />  </>} />
       <Route path="/profile" element={<Profile />} />

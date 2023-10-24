@@ -117,7 +117,7 @@
         width: 0;
     }
     50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
-        width: 90%; /* it should end at 100% width */
+        width: 80%; /* it should end at 100% width */
     }
 }
 
@@ -268,7 +268,7 @@
         font-weight: bold;
         font-family: Poppins;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin:1% 0% 0% -5%;
         /* Adjust the animation duration to make it faster, and set iteration to infinite */
         animation: typing 2s infinite forwards, blink-caret 0.75s step-end infinite;
@@ -281,7 +281,7 @@
         border-radius: 3rem;
         z-index: 0;
         height: 4rem;
-        width: 50vw;
+        width: 55vw;
         align-content: flex-start;
         align-items: center;
         justify-content: flex-start;
@@ -308,7 +308,7 @@
             width: 0;
         }
         50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
-            width: 80%;
+            width: 90%;
         }
     }
 
@@ -582,7 +582,7 @@
             width: 0;
         }
         50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
-            width: 90%; /* it should end at 100% width */
+            width: 85%; /* it should end at 100% width */
 
         }
     }
@@ -668,14 +668,108 @@
 
 }
 
-@media (min-width: 1068px) and (max-width: 2000px) {
+@media (min-width: 1200px) and (max-width: 1300px) {
     /* Adjust the keyframes for the typing effect */
     @keyframes typing {
         from {
             width: 0;
         }
         50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
-            width: 80%; /* it should end at 100% width */
+            width: 83%; /* it should end at 100% width */
+
+        }
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 1.2rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 15%;
+        font-weight: 600;
+        /* Sizing and Spacing */
+        padding: 1.3rem; /* Good padding ensures text isn't too cramped */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+
+    .subsies{
+        margin-top: 3%;
+        font-size: 2.5rem;
+        width: 75vw;
+    }
+}
+
+
+@media (min-width: 1068px) and (max-width: 1200px) {
+    /* Adjust the keyframes for the typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 92%; /* it should end at 100% width */
+
+        }
+    }
+
+
+    .buttonforrow {
+        /* Typography */
+        font-family: Poppins; /* This font is often considered visually appealing */
+        font-size: 1.2rem;
+        color: white; /* Choosing a high contrast text color for readability */
+
+        margin: 0% 0% 1% 1%;
+        width: 15%;
+        font-weight: 600;
+        /* Sizing and Spacing */
+        padding: 1.3rem; /* Good padding ensures text isn't too cramped */
+
+        /* Background and Border */
+        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
+        border: none; /* Removes the default border */
+        border-radius: 1.5rem; /* Rounded corners make the button look softer */
+
+        /* Shadow and Effects */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
+        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
+
+        /* Cursor */
+        align-self: center;
+        cursor: pointer; /* Indicates an action can be taken */
+    }
+
+    .subsies{
+        margin-top: 3%;
+        font-size: 2.5rem;
+        width: 75vw;
+    }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+    /* Adjust the keyframes for the typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
+            width: 70%; /* it should end at 100% width */
 
         }
     }
