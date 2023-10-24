@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, } from "react-bootstrap";
+import { Row, Col, Carousel } from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./images-4.jpeg";
 import loc from "./imageAssets/map.svg";
@@ -71,6 +71,7 @@ export const CompanyProfileHeader = () => {
 
     const [isLogedIn, setIsLogedIn] = useState(false);
     const [isGuest, setIsGuest] = useState(false);
+    const [showCarousel, setShowCarousel] = useState(false);
   const [navbarvalue, setNavbarvalue] = useState("overview");
 
     useEffect(() => {
@@ -229,6 +230,7 @@ export const CompanyProfileHeader = () => {
                   depth: 100,
                   modifier: 1,
                 }}
+                onClick={()=>setShowCarousel(!showCarousel)}
               >
                 <SwiperSlide>
                   <img alt="Company Logo" src={logo} />
@@ -263,6 +265,51 @@ export const CompanyProfileHeader = () => {
         </Row>
       </Col>
       <ToastContainer/>
+      { showCarousel &&
+        <div className="company-details-carousel-div">
+              <button 
+        className="btn-close company-details-carousel-btn "
+        onClick={()=>setShowCarousel(!showCarousel)}
+        >
+        </button>
+                <Carousel
+                wrap={true}
+                slide={false}
+                fade
+                interval={null}
+                 className="company-details-carousel">
+      
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={logo}
+                    alt="Los Angeles"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={logo}
+                    alt="Chicago"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={logo}
+                    alt="New York"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={logo}
+                    alt="New York"
+                  />
+                </Carousel.Item>
+              </Carousel>
+            </div>
+      }
     </Row>
     </>
   );
