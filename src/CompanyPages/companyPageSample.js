@@ -192,28 +192,28 @@ export const CompanyProfileHeader = () => {
             </div>
           </Col>
           <Col xs="5" md="12" className="company-details-info">
-            <h1 className="">Spring Tech Inc</h1>
+            <h1 className="company-details-title">Spring Tech Inc</h1>
             <div className="info-row d-flex align-items-center my-2">
               <img className="icon" alt="Location Icon" src={loc} />
-              <p className="sub-text  ms-2">Mumbai, India</p>
+              <p className="company-details-para  ms-2">Mumbai, India</p>
             </div>
             <div className="info-row d-flex align-items-center my-2">
               <img className="icon" alt="Industry Icon" src={industry} />
-              <p className="sub-text ms-2">Information Technology</p>
+              <p className="company-details-para ms-2">Information Technology</p>
             </div>
             <div className="info-row d-flex align-items-center my-2">
               <img className="icon" alt="Employee Icon" src={employee} />
-              <a className="sub-text  ms-2" href="https://findher.work/">
+              <a className="company-details-para  ms-2" href="https://findher.work/">
                 https://findher.work/
               </a>
             </div>
           </Col>
-          <Col md="12" className="mt-4">
+          <Col md="12" className="mt-3">
             <div
               className="company-page-photo"
               style={{ overflowX: "hidden", marginTop: "0%" }}
             >
-              <h1 className="">Photos</h1>
+              <h1 className="company-details-title text-left">Photos</h1>
               <Swiper
                 className="company-detaisl-swiper-container"
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -249,8 +249,8 @@ export const CompanyProfileHeader = () => {
           </Col>
         </Row>
       </Col>
-      <Col>
-        <Row className="company-page-right-row px-0 d-flex justify-content-center">
+      <Col className="company-page-right-row">
+        <Row className=" px-0 d-flex justify-content-center mb-5">
           <Col xs={12} className="px-0  isDesktop">
             <Navigation
               navbarvalue={navbarvalue}

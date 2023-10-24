@@ -11,8 +11,8 @@ function Overview() {
       <Col md={12} className="">
         <Row className="d-flex justify-content-between align-items-center infoBox-row" style={{width:"101%"}}>
           <Col xs={11} md={6} className="infoBox me-0 ms-2 ">
-            <h2 className="header-card">About</h2>
-            <p className="header-card-p">
+            <h2 className="company-details-sub-title">About</h2>
+            <p className="company-details-para">
             Sprintex Inc. is a leading Information Technology consulting firm. We specialize in providing expert guidance and innovative solutions to businesses seeking to harness the full potential of technology. 
             </p>
           </Col>
@@ -20,7 +20,7 @@ function Overview() {
             <div className="rectBox">
               <Row className="d-flex justify-content-center align-items-center">
                 <Col xs={12}>
-                  <h2 className="header-card">Quick Facts</h2>
+                  <h2 className="company-details-sub-title ps-3">Quick Facts</h2>
                 </Col>
                 <Col
                   xs="5"
@@ -50,7 +50,7 @@ function Overview() {
                     />
                   </svg>
                   <h6
-                    className="iconttext"
+                    className="iconttext company-details-para"
                     style={{ textDecoration: "underline" }}
                   >
                     sprintec.com
@@ -81,7 +81,7 @@ function Overview() {
                       fill="#FF0000"
                     />
                   </svg>
-                  <h6 className="iconttext">Started in 2010</h6>
+                  <h6 className="iconttext company-details-para">Started in 2010</h6>
                 </Col>
                 <Col xs="10" md="10" lg="6" className="Rect ms-2 mt-2 px-3 py-2 pt-3 justify-content-start">
                   <div className="d-flex  align-items-baseline">
@@ -114,7 +114,7 @@ function Overview() {
           className="infoBoxThree scrollable-div "
         >
           <Col md={12} className="d-flex justify-content-between ">
-            <h4 className="header-card">Why work here?</h4>
+            <h4 className="company-details-title">Why work here?</h4>
             <Button
               className="companyPage-seemore"
               style={{ backgroundColor: "#F8E7EC" }}
@@ -142,10 +142,10 @@ function Overview() {
                         fill="black"
                       />
                     </svg>
-                    <h2 className="ms-3 me-0 my-0">Flexibility</h2>
+                    <h2 className="ms-3 me-0 my-0 company-details-sub-title">Flexibility</h2>
                   </Col>
                   <Col>
-                    <p className="pt-2 px-1">
+                    <p className="pt-2 px-1 company-details-para">
                       We offer flexible work arrangements, including options..
                       We offer flexible work arrangements, including options..
                       We offer flexible work arrangements, including options..
@@ -170,10 +170,10 @@ function Overview() {
                         fill="black"
                       />
                     </svg>
-                    <h2 className="ms-3 me-0 me-0 my-0">Flexibility</h2>
+                    <h2 className="ms-3 me-0 me-0 my-0 company-details-sub-title">Flexibility</h2>
                   </Col>
                   <Col>
-                    <p className="pt-2 px-1">
+                    <p className="pt-2 px-1 company-details-para">
                       We offer flexible work arrangements, including options..
                       We offer flexible work arrangements, including options..
                       We offer flexible work arrangements, including options..
@@ -198,10 +198,10 @@ function Overview() {
                         fill="black"
                       />
                     </svg>
-                    <h2 className="ms-3 me-0 my-0">Flexibility</h2>
+                    <h2 className="ms-3 me-0 my-0 company-details-sub-title">Flexibility</h2>
                   </Col>
                   <Col style={{minHeight:"140px"}}>
-                    <p className="pt-2 px-1">
+                    <p className="pt-2 px-1 company-details-para">
                       We offer flexible work arrangements, including options..
                       We offer flexible work arrangements, including options..
                       We offer flexible work arrangements, including options..
@@ -211,7 +211,7 @@ function Overview() {
             </Row>
           </Col>
           {/* second one */}
-          <Col md={12} className="d-flex justify-content-between mt-5">
+          {/* <Col md={12} className="d-flex justify-content-between mt-5">
             <h4 className="header-card">What do they look for?</h4>
             <Button
               className="companyPage-seemore"
@@ -307,9 +307,9 @@ function Overview() {
                   </Col>
               </Col>
             </Row>
-          </Col>
+          </Col> */}
             {/* Third one */}
-          <Col md={12} className="d-flex justify-content-between mt-5">
+          {/* <Col md={12} className="d-flex justify-content-between mt-5">
             <h4 className="header-card">What’s it like to work here?</h4>
             <Button
               className="companyPage-seemore"
@@ -404,8 +404,8 @@ function Overview() {
                     </p>
                   </Col>
               </Col>
-            </Row>
-          </Col>
+            </Row> 
+          </Col>*/}
         </Row>
       </Col>
     </Row>

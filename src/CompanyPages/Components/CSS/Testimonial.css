@@ -34,12 +34,12 @@
 }
 
 .tinyBub {
-
     background-color: rgb(255, 226, 150);
     border-radius: 20px;
     text-align: center;
     width: 70%;
-    padding:2%
+    padding:2%;
+    font-family: poppins;
 }
 
 .testiText {
@@ -113,4 +113,20 @@
     .GraphCard{
         width: 30% !important;
     }   
+    .infoBox-rating-sec{
+        margin: 0% !important;
+        padding: 0 !important;
+    }
+    .testimonial-content {
+        margin: 5% 2%;
+    }
+}
+
+@media  (max-width:640px) {
+    .infobox-tetimonial{
+       width: 95% !important;
+    }
+    .testimonial-content {
+        margin: 8% 2%;
+    }
 }

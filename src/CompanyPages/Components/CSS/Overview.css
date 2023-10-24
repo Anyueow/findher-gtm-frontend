@@ -3,30 +3,12 @@
     border: 0.1px solid rgba(151, 151, 151, 0.2);
     background: var(--white-100, #FFF);
     text-align: left;
-    padding: 2%;
+    padding: 1% 2%;
     min-height: 200px;
     width: 48%;
 }
 
-.infoBox h2{
-    color: #000;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: system-ui;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
 
-.infoBox p{
-    color: #5B5B5B;
-    font-family: system-ui;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.28px;
-}
 
 .infoBoxTwo {
     justify-content: center;  /* Center horizontally */
@@ -42,16 +24,6 @@
     text-align: left;
     min-height: 200px;
     width: 48%;
-}
-
-.infoBoxTwo h2{
-    color: #000;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: system-ui;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
 }
 
 .rectBox {
@@ -77,7 +49,7 @@
     color: #000;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: system-ui;
+    font-family: poppins;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -86,7 +58,7 @@
 
 .bubble{
     color: #484848;
-    font-family: system-ui;
+    font-family: poppins;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -94,7 +66,7 @@
 }
 .Rect h6{
     color: #484848;
-    font-family: system-ui;
+    font-family: poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -103,7 +75,7 @@
 
 .companyPage-seemore{
     color: var(--Subtle-grey, #979797);
-    font-family: system-ui;
+    font-family: poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -117,8 +89,9 @@
     background: var(--white-100, #FFF);
     text-align: left;
     padding: 2%; 
+    display: inline-table;
     height: 300px; /* Set a fixed height or any other size you prefer */
-    overflow: auto; /* Make the div scrollable */
+    /* overflow: auto;  */
 }
 
 .company-page-flexibility{
@@ -127,6 +100,7 @@
     background: var(--white-100, #FFF);
     width: 32%;
     padding: 0;
+    min-height: 200px;
 }
 
 .company-page-flexibility-header{
@@ -134,24 +108,6 @@
    overflow: hidden;
     border-radius: 15px 15px 0px 0px;
     background: conic-gradient(from -16deg at 50% 50%, rgba(246, 181, 168, 0.37) 0deg, rgba(226, 197, 235, 0.37) 198.74999284744263deg, rgba(67, 57, 242, 0.07) 359.9639940261841deg);
-}
-
-.company-page-flexibility-header h2{
-    color: #000;
-    font-family: system-ui;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 27px;
-}
-
-.company-page-flexibility p{
-    color: #828282;
-    font-family:  system-ui;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 150% */
 }
 
 button:hover {
@@ -169,14 +125,7 @@ button:focus {
 }
 
 @media (min-width:641px) and (max-width:940px) {
-    .company-page-flexibility p{
-        color: #828282;
-        font-family:  system-ui;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 18px; /* 150% */
-    }
+  
     .company-page-flexibility-header{
         padding:20px !important;
     }
@@ -186,6 +135,7 @@ button:focus {
     .infoBox{
         min-height: 330px;
         margin-left: 3% !important;
+        padding: 2% 3%;
     }
     .infoBoxTwo{
         min-height: 330px;
@@ -203,17 +153,20 @@ button:focus {
     }
 
     .infoBox {
-        margin: 0;
+        margin-left: 5% !important;
         margin-top: 8%;
         margin-bottom: 4%;
-        min-height: fit-content;
         width: 95%;
     }
     .infoBoxTwo{
-        margin: 0;
+        margin-left: 5% !important;
         margin-top: 4%;
         margin-bottom: 8%;
         width: 95%;
+    }
+    .infoBoxThree{
+        width: 95% !important;
+        margin-left: 2% !important;
     }
     .infoBox-row{
         display: flex;
