@@ -242,6 +242,17 @@
 }
 
 .buttonforrow:active {
+    background-color: rgba(255, 103, 138, 0.83) !important; /* Even darker shade for the click (active) state */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
+    transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
+}
+
+.buttonforrow:focus {
+    background-color: rgba(255, 103, 138, 0.83); /* Even darker shade for the click (active) state */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
+    transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
+}
+.buttonforrow:focus-visible {
     background-color: rgba(255, 103, 138, 0.83); /* Even darker shade for the click (active) state */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
     transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
