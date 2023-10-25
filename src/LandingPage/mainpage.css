@@ -281,7 +281,7 @@
         border-radius: 3rem;
         z-index: 0;
         height: 4rem;
-        width: 80vw ;
+        width: 75vw ;
         align-content: flex-start;
         align-items: center;
         justify-content: flex-start;
@@ -313,21 +313,21 @@
     }
 
 
-    .buttonrow {
+    /* .buttonrow {
         display: flex;
         align-content: center;
         align-items: center;
         justify-content: center;
-    }
+    } */
 
 
     .buttonforrow {
         /* Typography */
         font-family: Poppins; /* This font is often considered visually appealing */
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         color: white; /* Choosing a high contrast text color for readability */
         width: auto;
-        margin: 0% 0% 1% 1%;
+        margin: 0% 0% 1% 2%;
         font-weight: 600;
         /* Sizing and Spacing */
         padding: 1rem; /* Good padding ensures text isn't too cramped */
@@ -514,13 +514,13 @@
         width: 2.5rem;
         align-self: center;
     }
-
+/* 
     .buttonrow {
         align-content: center;
         align-items: center;
         justify-content: center;
 
-    }
+    } */
 
 
     .buttonforrow {
@@ -631,12 +631,12 @@
         align-self: center;
     }
 
-    .buttonrow {
+    /* .buttonrow {
         align-content: center;
         align-items: center;
         justify-content: center;
 
-    }
+    } */
 
 
     .buttonforrow {
