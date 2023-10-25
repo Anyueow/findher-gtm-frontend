@@ -76,7 +76,7 @@ const Box = () => {
                             </Col>
                     <Col className="contentrow">
                     
-                        <Row className="section">
+                        <Row className="section-forbusiness">
                            
                             <Col md={4} className="contentcoltext">
 
@@ -88,7 +88,7 @@ const Box = () => {
                                         setPopupVisible(true);
                                     }}
                                     variant="danger"
-                                    className="learnmore-forbusiness">Learn How</Button>
+                                    className="learnmore-forbusiness isDesktop">Learn How</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
@@ -103,9 +103,16 @@ const Box = () => {
                                     compatibility to provide not just applicants, but perfect fits,
                                     every time.</p>
                             </Col>
+                            <Button
+                                    onClick={() => {
+                                        console.log("Button clicked!");
+                                        setPopupVisible(true);
+                                    }}
+                                    variant="danger"
+                                    className="learnmore-forbusiness isMobile">Learn How</Button>
                         </Row>
 
-                        <Row className="section">
+                        <Row className="section-forbusiness">
                             {/* <Col md={1}>
                                 <div className="line-vert-separator-forbusiness"></div>
                             </Col> */}
@@ -117,7 +124,7 @@ const Box = () => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
                                 }}
-                                         className="learnmore-forbusiness">Get Access</Button>
+                                         className="learnmore-forbusiness isDesktop">Get Access</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
@@ -131,9 +138,14 @@ const Box = () => {
                                     potential female employees, positioning you as a top choice
                                     and ensuring you secure the industry's best.</p>
                             </Col>
+                            <Button  onClick={() => {
+                                    console.log("Button clicked!");
+                                    setPopupVisible(true);
+                                }}
+                                         className="learnmore-forbusiness isMobile">Get Access</Button>
                         </Row>
 
-                        <Row className="section">
+                        <Row className="section-forbusiness">
                             {/* <Col md={1}>
                                 <div className="line-vert-separator-forbusiness"></div>
                             </Col> */}
@@ -145,7 +157,7 @@ const Box = () => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
                                 }}
-                                         className="learnmore-forbusiness">Join Now</Button>
+                                         className="learnmore-forbusiness isDesktop">Join Now</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
@@ -159,6 +171,11 @@ const Box = () => {
                                     guiding efficient improvements. The result? Higher retention,
                                     increased productivity, and accelerated growth.</p>
                             </Col>
+                            <Button onClick={() => {
+                                    console.log("Button clicked!");
+                                    setPopupVisible(true);
+                                }}
+                                         className="learnmore-forbusiness isMobile">Join Now</Button>
                         </Row>
 
                     </Col>
@@ -167,7 +184,7 @@ const Box = () => {
             </Col>
         </Container>
             <Container className="withFAQS">
-                <h2 className="titleTwo"> Change the face of work in your organization. <u>Speak
+                <h2 className="titleTwo-forbusiness"> Change the face of work in your organization. <u>Speak
                     with us today.</u> </h2>
                 <FaqSection/>
             </Container>

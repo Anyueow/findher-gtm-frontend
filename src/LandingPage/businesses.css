@@ -141,7 +141,7 @@ you should provide alternative styles to indicate focus state */
 
 .line-vert-separator-forbusiness {
     border-left: 1px solid #000; /* This creates the line */
-    height: 260vh; 
+    height: 100%; 
     margin: 0;
     width: 0;
     /* Your existing styles for the vertical line */
@@ -187,7 +187,8 @@ you should provide alternative styles to indicate focus state */
     padding: 7% 0% 3% 0%;
     text-align: left;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
 }
 
@@ -217,14 +218,14 @@ you should provide alternative styles to indicate focus state */
 .proto {
     width: 70%;
     height: auto;
-    align-self: flex-end;
+    /* align-self: flex-end; */
      /* This aligns itself vertically at the end, if needed */
 
 }
 
 .paratext {
     font-family: Poppins;
-    align-self: flex-end;
+    /* align-self: flex-end; */
     width: 70%;
     margin-top: 5%;
 
@@ -241,7 +242,7 @@ you should provide alternative styles to indicate focus state */
 
 }
 
-.titleTwo {
+.titleTwo-forbusiness {
     color: #000000;
     font-family: Poppins;
     font-size:2rem;
@@ -305,15 +306,48 @@ you should provide alternative styles to indicate focus state */
     }
     .titlehead-forbusiness {
         font-family: Poppins;
-        font-size: 1.5rem;
+        font-size: 120%;
         font-weight: 600;
         text-align: left;
         width: 100%;
         margin: 7% 0% 3% 0%;
     }
+    .titleTwo-forbusiness {
+        color: #000000;
+        font-family: Poppins;
+        font-size:1rem;
+        width: 80vw;
+        line-height: 2rem;
+        font-weight: 700;
+        margin-bottom: 2%; /* Space between title and line */
+    }
+    .contentcol {
+        /* margin: 7% 0% 3% 0%; */
+        padding: 7% 0% 3% 0%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .proto {
+        width: 95%;
+        height: auto;
+        /* align-self: flex-end; */
+         /* This aligns itself vertically at the end, if needed */
+    
+    }
+    .paratext {
+        font-family: Poppins;
+        /* align-self: flex-end; */
+        width: 85%;
+        margin-top: 5%;
+    }
+    .section-forbusiness{
+        justify-content: center;
+    }
 }
 
-@media (min-width: 659px) and (max-width: 774px) {
+@media (min-width: 659px) and (max-width: 677px) {
     .info-section-forBusiness  h1 {
         font-size:2.5rem;
         width: 60vw;
@@ -330,18 +364,27 @@ you should provide alternative styles to indicate focus state */
     }
     .titlehead-forbusiness {
         font-family: Poppins;
+        font-size: 1.5rem;
         font-weight: 600;
         text-align: left;
         width: 85%;
         margin: 7% 0% 3% 0%;
     }
     .line-vert-separator-forbusiness {
-        height: 130vh; 
+        height: 100%;
     }
-  
+    .titleTwo-forbusiness {
+        color: #000000;
+        font-family: Poppins;
+        font-size:2rem;
+        width: 60vw;
+        line-height: 3rem;
+        font-weight: 700;
+        margin-bottom: 2%; /* Space between title and line */
+    }
 }
 
-@media (min-width: 774px) and (max-width: 1034px) {
+@media (min-width: 768px) and (max-width: 1034px) {
     .info-section-forBusiness  h1 {
         font-size:2.5rem;
         width: 55vw;
@@ -356,11 +399,20 @@ you should provide alternative styles to indicate focus state */
         font-family: Poppins;
         font-weight: 600;
         text-align: left;
-        width: 80%;
+        width: 100%;
         margin: 7% 0% 3% 0%;
     }
     .line-vert-separator-forbusiness {
-        height: 102vh; 
+        height: 100%; 
+    }
+    .titleTwo-forbusiness {
+        color: #000000;
+        font-family: Poppins;
+        font-size:2rem;
+        width: 70vw;
+        line-height: 3rem;
+        font-weight: 700;
+        margin-bottom: 2%; /* Space between title and line */
     }
 }
 
