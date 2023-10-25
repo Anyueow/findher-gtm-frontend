@@ -142,7 +142,7 @@
 }
 
 
-.RectBox {
+.RectBox-Landing-Page {
     background-color: rgb(255, 255, 255);
     border-radius: 3rem;
     z-index: 0;
@@ -173,6 +173,7 @@
     z-index: 7;
     width: 2.5rem;
     align-self: center;
+    cursor: pointer;
 }
 
 .centeredBox {
@@ -254,7 +255,6 @@
     /* Modify or add classes as needed for smaller screens */
 
 
-
     .SearchIcon {
         z-index: 7;
         width: 2rem;
@@ -276,12 +276,12 @@
         z-index: 1;
     }
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
         height: 4rem;
-        width: 55vw;
+        width: 80vw ;
         align-content: flex-start;
         align-items: center;
         justify-content: flex-start;
@@ -314,10 +314,10 @@
 
 
     .buttonrow {
+        display: flex;
         align-content: center;
         align-items: center;
         justify-content: center;
-
     }
 
 
@@ -326,9 +326,8 @@
         font-family: Poppins; /* This font is often considered visually appealing */
         font-size: 0.9rem;
         color: white; /* Choosing a high contrast text color for readability */
-
+        width: auto;
         margin: 0% 0% 1% 1%;
-        width: 22%;
         font-weight: 600;
         /* Sizing and Spacing */
         padding: 1rem; /* Good padding ensures text isn't too cramped */
@@ -375,7 +374,7 @@
 
 
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
@@ -483,7 +482,7 @@
     }
 
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
@@ -599,7 +598,7 @@
     }
 
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;

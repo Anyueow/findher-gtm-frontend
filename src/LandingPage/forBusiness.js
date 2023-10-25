@@ -42,27 +42,16 @@ const Box = () => {
 
 
     return (
-        <div className="circle-background"> {/* Apply the circle background class here */}
-            {/* Add your circle elements */}
-            <div className="circle circle1"></div>
-            <div className="circle tinycirc1"></div>
-            <div className="circle tinycirc2"></div>
-            <div className="circle tinycirc3"></div>
-            <div className="circle tinycirc4"></div>
-
-            <div className="circle circle2"></div>
-            <div className="circle circle3"></div>
-            <div className="circle circle4"></div>
-            <div className="circle circle5"></div>
+        <>
         <Container fluid className="box-container">
             <Col className="boxedup content-inside-box">
-                <Row className="info-section">
+                <Row className="info-section-forBusiness">
                     <h1 className="title">
                         Attract, Hire & Retain Top Female Talent</h1>
-                </Row><Row className="info-section">
+                </Row><Row className="info-section-forBusiness">
                     <hr className="line-separator" />
-            </Row> <Row className="info-section">
-                    <p className="description">
+            </Row> <Row className="info-section-forBusiness">
+                    <p>
                         Diversity isn’t just beneficial - it’s vital.
                         <br />
                         FindHer’s AI-driven platform helps you unlock access to India's top
@@ -79,22 +68,19 @@ const Box = () => {
         </Container>
         <Container className="forafter">
             <Col>
-                <Row><h3 className="toggle"> What We Do For You  ▼</h3>
-
+                <Row><h3 className="toggle-forbusiness"> What We Do For You  ▼</h3>
                 </Row>
-
                 <Row>
-
-
-                    <Col className="contentrow">
-
-                        <Row className="section">
-                            <Col md={1}>
-                                <div className="line-vert-separator"></div>
+                <Col md={1}>
+                                <div className="line-vert-separator-forbusiness"></div>
                             </Col>
+                    <Col className="contentrow">
+                    
+                        <Row className="section">
+                           
                             <Col md={4} className="contentcoltext">
 
-                                <h2 className="titlehead">Elevate Your
+                                <h2 className="titlehead-forbusiness">Elevate Your
                                     Talent Brand</h2>
                                 <Button
                                     onClick={() => {
@@ -102,10 +88,14 @@ const Box = () => {
                                         setPopupVisible(true);
                                     }}
                                     variant="danger"
-                                    className="learnmore">Learn How</Button>
+                                    className="learnmore-forbusiness">Learn How</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
+                                <div className="circle tinycirc1"></div>
+                                <div className="circle tinycirc2"></div>
+                                <div className="circle tinycirc3"></div>
+                                <div className="circle tinycirc4"></div>
                                 <Image src={img1} className="proto" alt="description"/>
                                 <p className="paratext">Rather than just mass-sending profiles
                                     your way, FindHer uses advanced AI to curate the top female
@@ -116,22 +106,26 @@ const Box = () => {
                         </Row>
 
                         <Row className="section">
-                            <Col md={1}>
-                                <div className="line-vert-separator"></div>
-                            </Col>
+                            {/* <Col md={1}>
+                                <div className="line-vert-separator-forbusiness"></div>
+                            </Col> */}
                             <Col md={4} className="contentcoltext">
 
-                                <h2 className="titlehead">Find Best-Fit
+                                <h2 className="titlehead-forbusiness">Find Best-Fit
                                     Matches</h2>
                                 <Button  onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
                                 }}
-                                         className="learnmore">Get Access</Button>
+                                         className="learnmore-forbusiness">Get Access</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
                                 <Image src={img2} className="proto" alt="description"/>
+                                    <div className="circle tinycirc1"></div>
+                                    <div className="circle tinycirc2"></div>
+                                    <div className="circle tinycirc3"></div>
+                                    <div className="circle tinycirc4"></div>
                                 <p className="paratext"> In today's fierce job market, your talent brand defines you.
                                     With FindHer, you can effectively communicate your value to
                                     potential female employees, positioning you as a top choice
@@ -140,22 +134,26 @@ const Box = () => {
                         </Row>
 
                         <Row className="section">
-                            <Col md={1}>
-                                <div className="line-vert-separator"></div>
-                            </Col>
+                            {/* <Col md={1}>
+                                <div className="line-vert-separator-forbusiness"></div>
+                            </Col> */}
                             <Col md={4} className="contentcoltext">
 
-                                <h2 className="titlehead"
+                                <h2 className="titlehead-forbusiness"
                                 style={{minWidth:"80%"}}>Optimize Employee Satisfaction</h2>
                                 <Button onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
                                 }}
-                                         className="learnmore">Join Now</Button>
+                                         className="learnmore-forbusiness">Join Now</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
                                 <Image src={img3} className="proto" alt="description"/>
+                                    <div className="circle tinycirc1"></div>
+                                    <div className="circle tinycirc2"></div>
+                                    <div className="circle tinycirc3"></div>
+                                    <div className="circle tinycirc4"></div>
                                 <p className="paratext"> We provide businesses with data-driven
                                     insights on existing female employee experiences,
                                     guiding efficient improvements. The result? Higher retention,
@@ -182,7 +180,7 @@ const Box = () => {
 
 
             />
-        </div>
+            </>
     );
 };
 

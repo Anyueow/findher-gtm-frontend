@@ -9,70 +9,15 @@
 .circle {
     position: absolute;
     border-radius: 50%;
-    /* Other common styles */
+}
+/* Apply animation to the circles */
+.circle {
+    animation: float 6s ease-in-out infinite;
+    /* Other styles for your circle */
 }
 
 
-.circle-background {
-    position: relative;
-    z-index: 0;
-    overflow: hidden; /* Ensures the circles don't overflow the container */
-}
 
-
-
-/* Define specific circles with colors, sizes, and positions */
-.circle1 {
-    background: rgba(237, 255, 137, 0.23); /* Adjust color and opacity */
-    width: 400px; /* Adjust size */
-    height: 300px;
-    filter: blur(80px); /* Apply blur effect */
-
-    top: 30%; /* Adjust position */
-    left: 80%;
-}
-
-.circle3 {
-    background: rgba(212, 170, 255, 0.38); /* Adjust color and opacity */
-    width: 250px; /* Adjust size */
-    height: 250px;
-    filter: blur(100px); /* Apply blur effect */
-
-    top: 26%; /* Adjust position */
-    left: 20%;
-}
-
-.circle2 {
-    background: rgba(245, 196, 255, 0.27); /* Adjust color and opacity */
-    width: 400px; /* Adjust size */
-    height: 400px;
-    filter: blur(100px); /* Apply blur effect */
-
-    top: 42%; /* Adjust position */
-    left: 35%;
-}
-
-.circle4 {
-    background: rgba(87, 189, 253, 0.2); /* Adjust color and opacity */
-    width: 200px; /* Adjust size */
-    height: 200px;
-    filter: blur(100px); /* Apply blur effect */
-
-    top: 60%; /* Adjust position */
-    left: 20%;
-}
-
-.circle5 {
-    background: rgba(237, 255, 137, 0.32); /* Adjust color and opacity */
-    width: 500px; /* Adjust size */
-    height: 300px;
-    filter: blur(100px); /* Apply blur effect */
-
-    bottom: 22%; /* Adjust position */
-    left: 86%;
-}
-
-/* Add more circles as needed, changing positions, colors, and sizes */
 
 .tinycirc1 {
     animation-duration: 6s;
@@ -81,8 +26,8 @@
     background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
     width: 40px; /* Adjust size */
     height: 40px;
-    top: 34%; /* Adjust position */
-    left: 58%;
+    top: 20% !important; /* Adjust position */
+    left: 28%;
     border-radius: 50%; /* Makes the shape a circle */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
 }
@@ -95,8 +40,8 @@
     background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
     width: 20px; /* Adjust size */
     height: 20px;
-    top: 33%; /* Adjust position */
-    left: 57%;
+    top: 13%; /* Adjust position */
+    left: 26%;
     border-radius: 50%; /* Makes the shape a circle */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
 }
@@ -108,8 +53,8 @@
     background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
     width: 13px; /* Adjust size */
     height: 13px;
-    top: 34%; /* Adjust position */
-    left: 55%;
+    top: 20%; /* Adjust position */
+    left: 22%;
     border-radius: 50%; /* Makes the shape a circle */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
 }
@@ -121,57 +66,13 @@
     background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
     width: 22px; /* Adjust size */
     height: 22px;
-    top: 33%; /* Adjust position */
-    left: 53%;
+    top: 12%; /* Adjust position */
+    left: 17%;
     border-radius: 50%; /* Makes the shape a circle */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
 }
 
-.tinycirc5 {
-    z-index: 2000;
-    background: rgb(255, 224, 26); /* Adjust color and opacity */
-    width: 40px; /* Adjust size */
-    height: 40px;
-    top: 34%; /* Adjust position */
-    left: 58%;
-    border-radius: 50%; /* Makes the shape a circle */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
-}
 
-.tinycirc6 {
-    z-index: 2000;
-
-    background: rgb(255, 224, 26); /* Adjust color and opacity */
-    width: 20px; /* Adjust size */
-    height: 20px;
-    top: 33%; /* Adjust position */
-    left: 57%;
-    border-radius: 50%; /* Makes the shape a circle */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
-}
-
-.tinycirc7 {
-    z-index: 2000;
-
-    background: rgb(255, 224, 26); /* Adjust color and opacity */
-    width: 13px; /* Adjust size */
-    height: 13px;
-    top: 34%; /* Adjust position */
-    left: 55%;
-    border-radius: 50%; /* Makes the shape a circle */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
-}
-
-.tinycirc8 {
-    z-index: 2000;
-    background: rgb(255, 224, 26); /* Adjust color and opacity */
-    width: 22px; /* Adjust size */
-    height: 22px;
-    top: 33%; /* Adjust position */
-    left: 53%;
-    border-radius: 50%; /* Makes the shape a circle */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
-}
 
 @keyframes float {
     0% {
@@ -185,8 +86,4 @@
     }
 }
 
-/* Apply animation to the circles */
-.circle {
-    animation: float 6s ease-in-out infinite;
-    /* Other styles for your circle */
-}
+
