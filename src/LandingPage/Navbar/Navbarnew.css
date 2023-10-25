@@ -1,0 +1,106 @@
+.styled-navbar {
+    background: rgba(255, 255, 255, 0.29); /* semi-transparent white */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.12);
+    /* Add the following properties */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px);
+
+}
+.navbar-new {
+    background: rgba(255, 255, 255, 0.01); /* semi-transparent white */
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.nav-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand .nav-logo {
+    display: flex;
+    justify-content: center; /* centers the logo horizontally */
+
+    height: 40px; /* or as required */
+}
+
+.menu-toggler {
+    background: none;
+    border: none;
+    color: gainsboro;
+    font-size: 30px;
+}
+
+.menu-collapse {
+    display: none;
+}
+
+.menu-collapse.active {
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex; /* making sure this is a flex container */
+    justify-content: center; /* horizontal alignment */
+    align-items: center; /* vertical alignment */
+    padding-top: 10px; /* removing default padding */
+}
+
+.nav-list .nav-item {
+    font-family: Poppins;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Optional: for smooth color transition */
+    text-decoration: none;
+    color: black; /* or another suitable color */
+    padding: 10px 10px; /* or as required */
+    position: relative; /* will help with placement of the pseudo-element */
+    display: inline-block; /* to allow for padding */
+}
+/* New hover state style for .nav-item */
+.nav-list .nav-item:hover {
+    color: rgba(226, 11, 60, 0.83); /* maroon color */
+    cursor: pointer; /* changes the mouse cursor on hover */
+}
+/* Add a pseudo-element to create the custom underline */
+.nav-list .nav-item:hover::after {
+    content: ''; /* necessary for the pseudo-element */
+    position: absolute;
+    bottom: -10px; /* Adjust vertical position of the underline */
+    left: 0;
+    right: 0;
+    height: 4px; /* thickness of the underline */
+    background-color: rgba(226, 11, 60, 0.83); /* same as your hover color */
+}
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .menu-toggler {
+        display: none;
+    }
+
+    .menu-collapse {
+        display: flex;
+    }
+
+    .nav-list {
+        display: flex;
+        gap: 15px; /* or as required */
+    }
+}

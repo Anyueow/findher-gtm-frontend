@@ -1,7 +1,3 @@
-.faq-container {
-  margin-top: 5%;
-  width: 85vw;
-}
 .faqInner {
   display: flex;
   flex-direction: column;
@@ -11,7 +7,6 @@
   /* display: flex; */
   text-align: left;
 }
-
 .accordion-button,
 .collapsed,
 .faqItems {
@@ -80,9 +75,51 @@
   }
 }
 
-.tinytitle {
-  font-family: Poppins;
-  text-align: center;
+
+
+
+.succStory{
   font-size: 1.5rem;
-  color: #4d5154;
+  color: #757272;
+  width:55%;
+  text-align: center;
+  margin-top: 0%!important;
+  margin-bottom: 2%!important;
+}
+.newMsg1{
+  font-size: 3rem;
+  width: 63%;
+  font-weight: bold;
+}
+@media (min-width:600px) and (max-width:830px) {
+  .sec-two-sub{
+    width: 70%;
+    font-weight: 600;
+  }
+}
+@media (max-width:600px) {
+  .sec-two-head{
+    font-size: 1.3rem;
+    width:80%;
+    font-weight: 400;
+    margin-bottom: 5%;
+    margin-top: 12%;
+  }
+  .sec-two-sub{
+    width: 95%;
+    font-weight: 600;
+    margin-left: 7%;
+  }
+  .job-search-section {
+    padding: 4%;
+  }
+  .newMsg1{
+    width: 110%;
+    font-size: 25px !important;
+  }
+  /* .sec-two-container{
+      border-top:1px #888 solid;
+      border-bottom:1px #888 solid;
+  } */
+
 }

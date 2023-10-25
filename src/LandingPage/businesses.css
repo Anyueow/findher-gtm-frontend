@@ -11,6 +11,33 @@
     width: 100%;
 }
 
+/* CSS */
+.box-container {
+    position: relative; /* Updated */
+    overflow: hidden; /* Hide the excess of the pseudo-element */
+    /* your existing styles */
+    background-attachment: fixed; /* This creates a simple parallax effect */
+}
+
+/* Pseudo-element for the blur effect */
+.box-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* or the height of your choice */
+    background: linear-gradient(transparent, white); /* Gradient from transparent to the background color */
+    z-index: 2; /* Above the container's content */
+}
+
+/* If you have text or other content in .box-container, you might need to position it appropriately */
+.content-inside-box {
+    position: relative; /* if not already positioned */
+    z-index: 1; /* Below the pseudo-element */
+}
+
+
 .boxedup {
     display: flex;
     justify-content: center;
@@ -65,4 +92,186 @@
     border-radius: 1.5rem;
     padding: 0.5% 2% 0.5% 2%; /* Larger padding for a bigger button */
     width: 15vw;
+}
+
+.forafter {
+    width: 100%;
+    height: max-content;
+    padding: 3% 3% 5% 5%;
+
+}
+
+.toggle {
+     width: 30vw;
+     text-align: left;
+     padding: 1%;
+     font-weight: 600;
+     font-size: 1.5rem;
+     font-family: Poppins, sans-serif; /* It's good practice to have a fallback */
+     border: none; /* Remove the border */
+     background-color: rgb(255, 255, 255); /* Light grey background, you can change this */
+     color: black;
+    box-shadow: none !important; /* 'none' for no shadow, and '!important' to ensure override */
+
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+ }
+
+.toggle:hover {
+    cursor: pointer; /* Optional: show a hand cursor when hovering */
+
+    background-color: rgb(255, 255, 255); /* Slightly darker grey on hover */
+    color: black; /* No need to repeat other styles; they are inherited from the non-hover state */
+}
+
+/* If you want to remove the default outline on focus for accessibility reasons,
+you should provide alternative styles to indicate focus state */
+.toggle:focus {
+    outline: none !important; /* Remove the outline */
+    box-shadow: none !important; /* Remove the blue focus shadow */
+    outline: none;
+    background-color: rgb(255, 255, 255); /* Slightly darker grey on hover */
+    color: black;
+}
+
+/* Ensure no active or focus styles are applied by Bootstrap */
+.toggle:active, .toggle:focus {
+    /* Override any specific ":active" or ":focus" styles applied by Bootstrap */
+    box-shadow: none !important; /* Remove the blue focus shadow */
+}
+
+.line-vert-separator {
+    border-left: 1px solid #000; /* This creates the line */
+    height: 50vw; /* This controls the height of the line */
+    margin: 0;
+    width: 0;
+    /* Your existing styles for the vertical line */
+    flex-shrink: 0; /* Prevents the line from shrinking if the content needs more space */
+    margin-right: 10px;/* This ensures the div is only as wide as the border */
+}
+/* YourStylesheet.css */
+
+.combined-column {
+    display: flex;
+    align-items: center; /* if you want to align the items vertically centered */
+}
+
+.line-and-content {
+    display: flex;
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack the title and button vertically */
+}
+
+
+.contentrow {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    z-index: 1;
+    height: max-content;
+}
+.contentcoltext {
+
+    margin: 7% 0% 3% -3%;
+    text-align: left;
+}
+
+.contentcol {
+    margin: 7% 0% 3% 0%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.titlehead {
+
+    font-family: Poppins;
+    font-weight: 600;
+    text-align: left;
+    width: 70%;
+    margin: 7% 0% 3% 0%;
+
+
+}
+
+.learnmore{
+
+    z-index: 2000;
+    background-color: rgba(226, 11, 60, 0.83);
+    border: rgba(226, 11, 60, 0.83) 1px solid;
+    margin-top: 2%;
+    font-family: Poppins;
+    width: 30%;
+    font-weight: 600;
+}
+
+.learnmore:hover {
+    background-color: rgba(94, 6, 26, 0.83);
+
+}
+.proto {
+    width: 70%;
+    height: auto;
+    align-self: flex-end;
+     /* This aligns itself vertically at the end, if needed */
+
+}
+
+.paratext {
+    font-family: Poppins;
+    align-self: flex-end;
+    width: 70%;
+    margin-top: 5%;
+
+
+}
+
+.withFAQS{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+
+}
+
+.titleTwo {
+    color: #000000;
+    font-family: Poppins;
+    font-size:2rem;
+    width: 40vw;
+    line-height: 3rem;
+    font-weight: 700;
+    margin-bottom: 2%; /* Space between title and line */
+}
+
+/* CSS for Parallax */
+.parallax-section {
+    /* Set a general height for all parallax sections */
+    height: 500px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This is important for the parallax effect */
+}
+
+
+
+/* Content style */
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* Add other stylings as needed */
 }

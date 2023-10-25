@@ -32,6 +32,8 @@ import {Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MainPage from "./LandingPage/MainPage";
 import ForBusiness from "./LandingPage/forBusiness";
+import NavbarnewUser from "./LandingPage/Navbar/NavbarnewUser";
+import NavbarnewMain from "./LandingPage/Navbar/NavbarnewMain";
 
 function NewDesign() {
     const [blur, setBlur] = useState(0);
@@ -56,10 +58,10 @@ function NewDesign() {
 function RoutesPage() {
   return (
     <Routes>
-      <Route path="/mainpage" element={<MainPage />} />
-        <Route path="/forbusiness" element={<ForBusiness />} />
+      <Route path="/" element={<> <NavbarnewMain/> <MainPage /> </>} />
+        <Route path="/forbusiness" element={<> <NavbarnewUser /> <ForBusiness /> <Footer /> </>} />
 
-        <Route path="/" element={<><Navbar /><NewDesign /></>} />
+        <Route path="/oldnav" element={<><Navbar /><NewDesign /></>} />
       <Route path="/reviews_login" element={<><Navbar /> <FirstPage /> <Footer /></>}/>
       <Route path="/login" element={<> <Navbar /><Login /> <Footer />  </>} />
       <Route path="/profile" element={<Profile />} />

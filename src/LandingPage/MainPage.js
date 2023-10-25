@@ -7,10 +7,18 @@ import fin from "./logos/50fin.png";
 import supu from "./logos/superu.png";
 import enter from "./logos/enterpilogo.png";
 import junglee from "./logos/social.png";
+import {useNavigate} from 'react-router-dom';
+
 
 
 const logos = [ hrh, supu, fin, enter, junglee];
 export const MainPage = () => {
+
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/forbusiness');
+    };
 
 
     return (
@@ -35,10 +43,10 @@ export const MainPage = () => {
 
                      <Row className="buttonrow full-width">
                       <Button className="buttonforrow"> Find Your Next Job </Button>
-                       <Button className="buttonforrow"> Find Your Next Hire </Button>
+
+                       <Button className="buttonforrow" onClick={handleButtonClick}> Find Your Next Hire </Button>
+
                      </Row>
-
-
 
 
                      <Container fluid className="marquee">
