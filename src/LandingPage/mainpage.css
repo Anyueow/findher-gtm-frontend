@@ -335,26 +335,10 @@
     .buttonforrow {
         /* Typography */
         font-family: Poppins; /* This font is often considered visually appealing */
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         color: white; /* Choosing a high contrast text color for readability */
         width: auto;
-        margin: 0% 0% 1% 2%;
-        font-weight: 600;
-        /* Sizing and Spacing */
-        padding: 1rem; /* Good padding ensures text isn't too cramped */
-
-        /* Background and Border */
-        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
-        border: none; /* Removes the default border */
-        border-radius: 1.5rem; /* Rounded corners make the button look softer */
-
-        /* Shadow and Effects */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
-        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
-
-        /* Cursor */
-        align-self: center;
-        cursor: pointer; /* Indicates an action can be taken */
+        margin: 1% 100%;
     }
 
     .subsies{
