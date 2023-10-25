@@ -101,17 +101,7 @@ function Programs(props) {
     <Col className="infoBoxProgram" style={{ width: "60%", height: "85vh" }}>
       <Row>
         <Col xs={8}>
-          <h2 className="header-card">Women’s-Only Programs</h2>
-        </Col>
-        <Col xs={4} className="text-right">
-          <Button
-            className="companyPage-seemore px-4 pt-2 pb-2"
-            style={{ backgroundColor: "#F6B5A8" }}
-            //  onClick={() => handleShowMore("only")}
-          >
-            See More
-            {/* {showMore ? "See Less" : "See More"} */}
-          </Button>
+          <h2 className="company-details-title">Women’s-Only Programs</h2>
         </Col>
       </Row>
       <Row>
@@ -121,10 +111,10 @@ function Programs(props) {
           <img src={people} alt="flex" className="icono" />
         </Col>
         <Col xs="9"  className="header-section ps-0">
-        <h3 className="subhead">WellWom Wellness</h3>
+        <h3 className="company-details-sub-title">WellWom Wellness</h3>
         </Col>
         <Col className="text-section mt-2 ps-3">
-        <p className="mt-2">
+        <p className="company-details-para">
             the WellWom Program offers resources and support for physical,
             emotional, and mental well-being. From on-site yoga and meditation
             sessions to workshops on women's health issues,...
@@ -138,10 +128,10 @@ function Programs(props) {
           <img src={people} alt="flex" className="icono" />
         </Col>
         <Col xs="9"  className="header-section ps-0">
-        <h3 className="subhead">Passion for Technology</h3>
+        <h3 className="company-details-sub-title">Passion for Technology</h3>
         </Col>
         <Col className="text-section">
-        <p className="mt-3">
+        <p className="company-details-para">
             We seek individuals who are genuinely enthusiastic about technology
             and its transformative potential. A deep interest in staying updated
             with industry trends and a hunger for continuous learning are highly
@@ -156,10 +146,10 @@ function Programs(props) {
           <img src={people} alt="flex" className="icono" />
         </Col>
         <Col xs="9"  className="header-section ps-0">
-        <h3 className="subhead">Continuous Learning</h3>
+        <h3 className="company-details-sub-title">Continuous Learning</h3>
         </Col>
         <Col xs="12" className="text-section px-3">
-          <p className="mt-3">
+          <p className="company-details-para">
             We foster an environment that encourages continuous learning and
             development. Our team members are motivated to explore new
             technologies, methodologies, and approaches to enhance their skills
