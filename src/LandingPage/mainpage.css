@@ -142,7 +142,7 @@
 }
 
 
-.RectBox {
+.RectBox-Landing-Page {
     background-color: rgb(255, 255, 255);
     border-radius: 3rem;
     z-index: 0;
@@ -173,6 +173,7 @@
     z-index: 7;
     width: 2.5rem;
     align-self: center;
+    cursor: pointer;
 }
 
 .centeredBox {
@@ -241,6 +242,17 @@
 }
 
 .buttonforrow:active {
+    background-color: rgba(255, 103, 138, 0.83) !important; /* Even darker shade for the click (active) state */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
+    transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
+}
+
+.buttonforrow:focus {
+    background-color: rgba(255, 103, 138, 0.83); /* Even darker shade for the click (active) state */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
+    transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
+}
+.buttonforrow:focus-visible {
     background-color: rgba(255, 103, 138, 0.83); /* Even darker shade for the click (active) state */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle 'pressing' effect */
     transform: translateY(-2px); /* Slight move to simulate a real button being pressed */
@@ -252,7 +264,6 @@
 /* Styles for screen width of 534px and below */
 @media (max-width: 658px) {
     /* Modify or add classes as needed for smaller screens */
-
 
 
     .SearchIcon {
@@ -276,12 +287,12 @@
         z-index: 1;
     }
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
         height: 4rem;
-        width: 55vw;
+        width: 75vw ;
         align-content: flex-start;
         align-items: center;
         justify-content: flex-start;
@@ -313,12 +324,12 @@
     }
 
 
-    .buttonrow {
+    /* .buttonrow {
+        display: flex;
         align-content: center;
         align-items: center;
         justify-content: center;
-
-    }
+    } */
 
 
     .buttonforrow {
@@ -326,25 +337,8 @@
         font-family: Poppins; /* This font is often considered visually appealing */
         font-size: 0.9rem;
         color: white; /* Choosing a high contrast text color for readability */
-
-        margin: 0% 0% 1% 1%;
-        width: 22%;
-        font-weight: 600;
-        /* Sizing and Spacing */
-        padding: 1rem; /* Good padding ensures text isn't too cramped */
-
-        /* Background and Border */
-        background-color: rgba(226, 11, 60, 0.83); /* A pleasant green shade; you can choose any color that fits your design */
-        border: none; /* Removes the default border */
-        border-radius: 1.5rem; /* Rounded corners make the button look softer */
-
-        /* Shadow and Effects */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the button */
-        transition: all 0.3s ease 0s; /* Makes sure changes like hover color transition smoothly */
-
-        /* Cursor */
-        align-self: center;
-        cursor: pointer; /* Indicates an action can be taken */
+        width: auto;
+        margin: 1% 100%;
     }
 
     .subsies{
@@ -375,7 +369,7 @@
 
 
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
@@ -483,7 +477,7 @@
     }
 
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
@@ -515,13 +509,13 @@
         width: 2.5rem;
         align-self: center;
     }
-
+/* 
     .buttonrow {
         align-content: center;
         align-items: center;
         justify-content: center;
 
-    }
+    } */
 
 
     .buttonforrow {
@@ -599,7 +593,7 @@
     }
 
 
-    .RectBox {
+    .RectBox-Landing-Page {
         background-color: rgb(255, 255, 255);
         border-radius: 3rem;
         z-index: 0;
@@ -632,12 +626,12 @@
         align-self: center;
     }
 
-    .buttonrow {
+    /* .buttonrow {
         align-content: center;
         align-items: center;
         justify-content: center;
 
-    }
+    } */
 
 
     .buttonforrow {

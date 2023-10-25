@@ -26,7 +26,7 @@ export const MainPage = () => {
              <Container className="centeredBox">
                  <Col className="centercolumn">
                      <Row className="full-width searchrow">
-                     <div className="RectBox
+                     <div className="RectBox-Landing-Page
                       vcc">
 
                         <Col className="TinyBox" md={4}>
@@ -42,10 +42,10 @@ export const MainPage = () => {
                      </Row>
 
                      <Row className="buttonrow full-width">
-                      <Button className="buttonforrow"> Find Your Next Job </Button>
-
-                       <Button className="buttonforrow" onClick={handleButtonClick}> Find Your Next Hire </Button>
-
+                      <Button className="buttonforrow   mt-2"> Find Your Next Job </Button>
+                     
+                       <Button className="buttonforrow  mt-2" onClick={handleButtonClick}> Find Your Next Hire </Button>
+                
                      </Row>
 
 

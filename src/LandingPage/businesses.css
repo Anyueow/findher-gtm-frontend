@@ -50,7 +50,7 @@
 
 }
 
-.info-section {
+.info-section-forBusiness {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -58,7 +58,7 @@
     width: 100%;
 }
 
-.title {
+.info-section-forBusiness  h1 {
     color: #000000;
     font-family: Poppins;
     font-size:3rem;
@@ -74,7 +74,7 @@
     margin: 0% auto 2%; /* Center the line and add space below */
 }
 
-.description {
+.info-section-forBusiness p{
     color: #595959;
     font-family: Poppins;
     font-size: 1.3rem;
@@ -84,14 +84,14 @@
     margin-bottom: 2%; /* Space between description and button */
 }
 
-.join-btn {
+.info-section-forBusiness button {
     text-align: center;
     font-size: 1.5rem;
     font-family: Poppins;
     font-weight: 600;
     border-radius: 1.5rem;
     padding: 0.5% 2% 0.5% 2%; /* Larger padding for a bigger button */
-    width: 15vw;
+    width: auto;
 }
 
 .forafter {
@@ -101,8 +101,8 @@
 
 }
 
-.toggle {
-     width: 30vw;
+.toggle-forbusiness {
+     width: 100vw;
      text-align: left;
      padding: 1%;
      font-weight: 600;
@@ -116,7 +116,7 @@
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
  }
 
-.toggle:hover {
+.toggle-forbusiness:hover {
     cursor: pointer; /* Optional: show a hand cursor when hovering */
 
     background-color: rgb(255, 255, 255); /* Slightly darker grey on hover */
@@ -125,7 +125,7 @@
 
 /* If you want to remove the default outline on focus for accessibility reasons,
 you should provide alternative styles to indicate focus state */
-.toggle:focus {
+.toggle-forbusiness:focus {
     outline: none !important; /* Remove the outline */
     box-shadow: none !important; /* Remove the blue focus shadow */
     outline: none;
@@ -134,14 +134,14 @@ you should provide alternative styles to indicate focus state */
 }
 
 /* Ensure no active or focus styles are applied by Bootstrap */
-.toggle:active, .toggle:focus {
+.toggle-forbusiness:active, .toggle-forbusiness:focus {
     /* Override any specific ":active" or ":focus" styles applied by Bootstrap */
     box-shadow: none !important; /* Remove the blue focus shadow */
 }
 
-.line-vert-separator {
+.line-vert-separator-forbusiness {
     border-left: 1px solid #000; /* This creates the line */
-    height: 50vw; /* This controls the height of the line */
+    height: 100%; 
     margin: 0;
     width: 0;
     /* Your existing styles for the vertical line */
@@ -183,50 +183,49 @@ you should provide alternative styles to indicate focus state */
 }
 
 .contentcol {
-    margin: 7% 0% 3% 0%;
+    /* margin: 7% 0% 3% 0%; */
+    padding: 7% 0% 3% 0%;
     text-align: left;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
 }
 
-.titlehead {
-
+.titlehead-forbusiness {
     font-family: Poppins;
     font-weight: 600;
     text-align: left;
-    width: 70%;
+    width: 75%;
     margin: 7% 0% 3% 0%;
-
-
 }
 
-.learnmore{
+.learnmore-forbusiness{
 
     z-index: 2000;
     background-color: rgba(226, 11, 60, 0.83);
     border: rgba(226, 11, 60, 0.83) 1px solid;
     margin-top: 2%;
     font-family: Poppins;
-    width: 30%;
+    width: auto;
     font-weight: 600;
 }
 
-.learnmore:hover {
+.learnmore-forbusiness:hover {
     background-color: rgba(94, 6, 26, 0.83);
 
 }
 .proto {
     width: 70%;
     height: auto;
-    align-self: flex-end;
+    /* align-self: flex-end; */
      /* This aligns itself vertically at the end, if needed */
 
 }
 
 .paratext {
     font-family: Poppins;
-    align-self: flex-end;
+    /* align-self: flex-end; */
     width: 70%;
     margin-top: 5%;
 
@@ -243,7 +242,7 @@ you should provide alternative styles to indicate focus state */
 
 }
 
-.titleTwo {
+.titleTwo-forbusiness {
     color: #000000;
     font-family: Poppins;
     font-size:2rem;
@@ -274,4 +273,179 @@ you should provide alternative styles to indicate focus state */
     transform: translate(-50%, -50%);
     color: white;
     /* Add other stylings as needed */
+}
+
+
+@media (max-width: 658px) {
+    .info-section-forBusiness  h1 {
+        font-size:1.5rem;
+        width: 65vw;
+        margin-bottom: 5%;
+    }
+    .info-section-forBusiness p {
+        color: #595959;
+        font-family: Poppins;
+        font-size: 63%;
+        padding: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: 550;
+        margin-bottom: 7%; /* Space between description and button */
+    }
+    .info-section-forBusiness button {
+        font-size: 1rem;
+        padding: 2% 5%; /* Larger padding for a bigger button */
+        width: auto;
+    }
+    .line-separator {
+        width: 45vw;/* Adjust width as needed */
+        margin: 0% 5% 5% 5%; /* Center the line and add space below */
+    }
+    .line-vert-separator-forbusiness {
+       display: none;
+    }
+    .titlehead-forbusiness {
+        font-family: Poppins;
+        font-size: 120%;
+        font-weight: 600;
+        text-align: left;
+        width: 100%;
+        margin: 7% 0% 3% 0%;
+    }
+    .titleTwo-forbusiness {
+        color: #000000;
+        font-family: Poppins;
+        font-size:1rem;
+        width: 80vw;
+        line-height: 2rem;
+        font-weight: 700;
+        margin-bottom: 2%; /* Space between title and line */
+    }
+    .contentcol {
+        /* margin: 7% 0% 3% 0%; */
+        padding: 7% 0% 3% 0%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .proto {
+        width: 95%;
+        height: auto;
+        /* align-self: flex-end; */
+         /* This aligns itself vertically at the end, if needed */
+    
+    }
+    .paratext {
+        font-family: Poppins;
+        /* align-self: flex-end; */
+        width: 85%;
+        margin-top: 5%;
+    }
+    .section-forbusiness{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 659px) and (max-width: 767px) {
+
+    .section-forbusiness{
+        justify-content: center;
+    }
+    
+    .info-section-forBusiness  h1 {
+        font-size:2rem;
+        width: 60vw;
+    }
+
+    .info-section-forBusiness p {
+        color: #595959;
+        font-family: Poppins;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        font-weight: 550;
+        margin-bottom: 3%; /* Space between description and button */
+    }
+
+    .info-section-forBusiness button {
+        text-align: center;
+        font-size: 1rem;
+        font-family: Poppins;
+        font-weight: 600;
+        border-radius: 1.5rem;
+        padding: 0.5% 2% 0.5% 2%; /* Larger padding for a bigger button */
+        width: auto;
+    }
+
+    .titlehead-forbusiness {
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: left;
+        width: 85%;
+        margin: 7% 0% 3% 0%;
+    }
+    .line-vert-separator-forbusiness {
+        height: 100%;
+    }
+    .titleTwo-forbusiness {
+        color: #000000;
+        font-family: Poppins;
+        font-size:2rem;
+        width: 60vw;
+        line-height: 3rem;
+        font-weight: 700;
+        margin-bottom: 2%; /* Space between title and line */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1034px) {
+    .info-section-forBusiness  h1 {
+        font-size:2.5rem;
+        width: 55vw;
+    }
+    .line-separator {
+        border: 0;
+        border-top: 1px solid #000; /* Adjust color as needed */
+        width: 45vw;/* Adjust width as needed */
+        margin: 0% auto 2%; /* Center the line and add space below */
+    }
+    .titlehead-forbusiness {
+        font-family: Poppins;
+        font-weight: 600;
+        text-align: left;
+        width: 100%;
+        margin: 7% 0% 3% 0%;
+    }
+    .line-vert-separator-forbusiness {
+        height: 100%; 
+    }
+    .titleTwo-forbusiness {
+        color: #000000;
+        font-family: Poppins;
+        font-size:2rem;
+        width: 70vw;
+        line-height: 3rem;
+        font-weight: 700;
+        margin-bottom: 2%; /* Space between title and line */
+    }
+}
+
+@media (max-width: 390px) {
+    .info-section-forBusiness p {
+        color: #595959;
+        font-family: Poppins;
+        font-size: 60%;
+        padding: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: 550;
+        margin-bottom: 7%; /* Space between description and button */
+    }   
+    .info-section-forBusiness  h1 {
+        font-size:1.3rem;
+        width: 65vw;
+        margin-bottom: 5%;
+    }
 }
