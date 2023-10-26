@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./CSS/Programs.css";
-import people from "../imageAssets/people.png";
-import {Row, Col, Toast, Form, Button, Container, Modal} from "react-bootstrap";
-import { useSwipeable, Swipeable } from 'react-swipeable';
+// import people from "../imageAssets/people.png";
+import {Row, Col, Toast, Form, Button} from "react-bootstrap";
+// import { useSwipeable, Swipeable } from 'react-swipeable';
 import Jobmorepopup from "./jobmorepopup"; // for swipe functionality
 
 function Programs(props) {
@@ -30,8 +30,8 @@ function Programs(props) {
 
   // code for job listings expanded
   // State to manage modal visibility
-  const [show, setShow] = useState(false);
-  const [currentJob, setCurrentJob] = useState(null); // To keep track of the selected job
+  // const [show, setShow] = useState(false);
+  // const [currentJob, setCurrentJob] = useState(null); // To keep track of the selected job
 
   // Job data could be fetched from an API and stored in state. For simplicity, we're using a static list.
 

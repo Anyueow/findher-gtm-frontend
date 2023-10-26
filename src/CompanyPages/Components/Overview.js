@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CSS/Overview.css";
 import greentick from "../imageAssets/greentick.svg";
-import {Row, Col, Button, Container, Card, Image} from "react-bootstrap";
+import {Row, Col, Button, Container} from "react-bootstrap";
 import { FaLaptop, FaUsers, FaMapMarkerAlt, FaRegClock, FaCity } from 'react-icons/fa';
 
 function Overview() {

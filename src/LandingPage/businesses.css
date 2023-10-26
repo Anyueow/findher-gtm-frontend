@@ -49,7 +49,10 @@
     /* Full height of the viewport */
 
 }
-
+.text-underline-titleTwo-forbusiness{
+    border-bottom: 2px solid #000000cf;
+    margin-left: 10px; 
+}
 .circle1 {
     background: rgba(237, 255, 137, 0.23); /* Adjust color and opacity */
     width: 400px; /* Adjust size */
@@ -330,8 +333,7 @@ you should provide alternative styles to indicate focus state */
     .info-section-forBusiness  h1 {
         font-size:2rem;
         width: 85vw;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
     .info-section-forBusiness p {
         color: #595959;
@@ -361,7 +363,7 @@ you should provide alternative styles to indicate focus state */
         font-weight: 600;
         text-align: center;
         width: 100%;
-        margin: 5% 0% 2% 0%;
+        margin: 7% 0% 0% 0%;
     }
     .titleTwo-forbusiness {
         color: #000000;
@@ -396,9 +398,11 @@ you should provide alternative styles to indicate focus state */
     }
     .section-forbusiness{
         justify-content: center;
+        border-bottom: 1px solid gainsboro; /* Add a top border line */
+        padding-bottom: 15px; /* Adjust the padding as needed */
     }
     .boxedup{
-        height: 70vh;
+        height: 65vh;
     }
     .box-container{
         height: auto;
