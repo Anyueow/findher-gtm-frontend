@@ -23,10 +23,14 @@
 .faqbodyPP {
   border-radius: 21px !important;
   font-size: 18px;
+  font-family: Poppins;
   color: rgb(78 78 78 / 81%) !important;
 }
 .accordion button{
   box-shadow: none !important;
+}
+.faqbodyHeader button{
+  font-family: Poppins;
 }
 @media (max-width: 600px) {
   .faqInner {
@@ -121,5 +125,10 @@
       border-top:1px #888 solid;
       border-bottom:1px #888 solid;
   } */
-
+  .faqbodyPP{
+    font-size: 0.8rem;
+  }
+  .faqbodyHeader button{
+    font-size: 0.8rem;
+  }
 }

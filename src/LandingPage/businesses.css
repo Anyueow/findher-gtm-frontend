@@ -343,7 +343,7 @@ you should provide alternative styles to indicate focus state */
         margin-bottom: 7%; /* Space between description and button */
     }
     .info-section-forBusiness button {
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 2% 5%; /* Larger padding for a bigger button */
         width: auto;
     }
@@ -397,7 +397,7 @@ you should provide alternative styles to indicate focus state */
         justify-content: center;
     }
     .boxedup{
-        height: 90vh;
+        height: 55vh;
     }
     .box-container{
         height: auto;
@@ -489,7 +489,7 @@ you should provide alternative styles to indicate focus state */
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
@@ -504,5 +504,8 @@ you should provide alternative styles to indicate focus state */
         font-size:1.5rem;
         width: 85vw;
         margin-bottom: 5%;
+    }
+    .boxedup{
+        height: 60vh;
     }
 }
