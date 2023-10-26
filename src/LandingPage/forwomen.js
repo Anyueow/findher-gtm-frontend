@@ -48,15 +48,15 @@ const Box = () => {
             <Col className="boxedup content-inside-box">
                 <Row className="info-section-forBusiness">
                     <h1 className="title">
-                        Attract, Hire & Retain Top Female Talent</h1>
+                    Find Work That Works For You</h1>
                 </Row><Row className="info-section-forBusiness">
                     <hr className="line-separator" />
             </Row> <Row className="info-section-forBusiness">
                     <p>
-                        Diversity isn’t just beneficial - it’s vital.
+                    Progress isn't just about moving up - it's about fitting right.
                         <br />
-                        FindHer’s AI-driven platform helps you unlock access to India's top
-                        <br /> female professionals and build a better future for your organization.
+                        FindHer’s lets you find relevant information and discover roles at
+                        <br /> India's best companies for women. A search tailored just for you.
                     </p>
                     <Button
                         onClick={() => {
@@ -84,15 +84,14 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
             <div className="circle circle5"></div>
-                                <h2 className="titlehead-forbusiness">Elevate Your
-                                    Talent Brand</h2>
+                                <h2 className="titlehead-forbusiness">Unveil Exclusive Company Insights</h2>
                                 <Button
                                     onClick={() => {
                                         console.log("Button clicked!");
                                         setPopupVisible(true);
                                     }}
                                     variant="danger"
-                                    className="learnmore-forbusiness isDesktop">Learn How</Button>
+                                    className="learnmore-forbusiness isDesktop">Get Access</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
@@ -101,11 +100,7 @@ const Box = () => {
                                 <div className="circle tinycirc3"></div>
                                 <div className="circle tinycirc4"></div>
                                 <Image src={img1} className="proto" alt="description"/>
-                                <p className="paratext">Rather than just mass-sending profiles
-                                    your way, FindHer uses advanced AI to curate the top female
-                                    candidates for your specific roles. We dive into the nuances of
-                                    compatibility to provide not just applicants, but perfect fits,
-                                    every time.</p>
+                                <p className="paratext">Women experience the workplace differently, but job postings lack information on factors important to them. FindHer offers exclusive and reliable insights into different workplaces so you learn what it’s like to work somewhere before you apply - all in one click.</p>
                             </Col>
                             <Button
                                     onClick={() => {
@@ -125,13 +120,12 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
             <div className="circle circle5"></div>
-                                <h2 className="titlehead-forbusiness">Find Best-Fit
-                                    Matches</h2>
+                                <h2 className="titlehead-forbusiness">Access Handpicked Job Opportunities</h2>
                                 <Button  onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
                                 }}
-                                         className="learnmore-forbusiness isDesktop">Get Access</Button>
+                                         className="learnmore-forbusiness isDesktop">Sign-Up</Button>
                             </Col>
 
                             <Col md={7} className="contentcol">
@@ -141,10 +135,7 @@ const Box = () => {
                                     <div className="circle tinycirc3 tinycirc23"></div>
                                     <div className="circle tinycirc4 tinycirc24"></div>
             <div className="circle circle5"></div>
-                                <p className="paratext"> In today's fierce job market, your talent brand defines you.
-                                    With FindHer, you can effectively communicate your value to
-                                    potential female employees, positioning you as a top choice
-                                    and ensuring you secure the industry's best.</p>
+                                <p className="paratext"> We curate and send you open roles suited to your skills, values, and aspirations, straight into your inbox. Navigate the job market confidently, knowing each opportunity has been meticulously handpicked for you. Find the best fit, faster and smarter.</p>
                             </Col>
                             <Button  onClick={() => {
                                     console.log("Button clicked!");
@@ -163,7 +154,7 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
                                 <h2 className="titlehead-forbusiness"
-                                style={{minWidth:"80%"}}>Optimize Employee Satisfaction</h2>
+                                style={{minWidth:"80%"}}>Discover Latest Career Information Easily</h2>
                                 <Button onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
@@ -177,10 +168,7 @@ const Box = () => {
                                     <div className="circle tinycirc2 tinycirc32"></div>
                                     <div className="circle tinycirc3 tinycirc33"></div>
                                     <div className="circle tinycirc4 tinycirc34"></div>
-                                <p className="paratext"> We provide businesses with data-driven
-                                    insights on existing female employee experiences,
-                                    guiding efficient improvements. The result? Higher retention,
-                                    increased productivity, and accelerated growth.</p>
+                                <p className="paratext">In a world buzzing with information, it's easy to miss out on what truly matters. With FindHer's social channels and newsletters, we sift through the noise to bring you the most relevant career updates, advice, and company profiles - updated daily.</p>
                             </Col>
                             <Button onClick={() => {
                                     console.log("Button clicked!");
@@ -195,8 +183,8 @@ const Box = () => {
             </Col>
         </Container>
             <Container className="withFAQS">
-                <h2 className="titleTwo-forbusiness"> Change the face of work in your organization. {" "}
-                <span className='text-underline-titleTwo-forbusiness'>Speak with us today.</span> </h2>
+                <h2 className="titleTwo-forbusiness"> We’re not just rooting for your success, we’re making it happen. {" "}
+                <span className='text-underline-titleTwo-forbusiness'>Join Us.</span> </h2>
                 <FaqSection/>
             </Container>
 

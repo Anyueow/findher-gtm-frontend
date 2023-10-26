@@ -32,6 +32,7 @@ import {Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MainPage from "./LandingPage/MainPage";
 import ForBusiness from "./LandingPage/forBusiness";
+import ForWomen from "./LandingPage/forwomen";
 import NavbarnewUser from "./LandingPage/Navbar/NavbarnewUser";
 import NavbarnewMain from "./LandingPage/Navbar/NavbarnewMain";
 
@@ -60,6 +61,7 @@ function RoutesPage() {
     <Routes>
       <Route path="/" element={<> <NavbarnewMain/> <MainPage /> </>} />
         <Route path="/forbusiness" element={<> <NavbarnewUser /> <ForBusiness /> <Footer /> </>} />
+        <Route path="/forwomen" element={<> <NavbarnewUser /> <ForWomen /> <Footer /> </>} />
 
         <Route path="/oldnav" element={<><Navbar /><NewDesign /></>} />
       <Route path="/reviews_login" element={<><Navbar /> <FirstPage /> <Footer /></>}/>

@@ -1,39 +1,52 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import logo from "../logos/findherlogo.png";
-import "./Navbarnew.css"; // Renamed for clarity
+import { Link, useNavigate } from "react-router-dom";
+import "./Navbarnew.css"
 
-const StyledNavbar = () => {
-    const [menuActive, setMenuActive] = useState(false);
+function NavBar() {
+  const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate(); 
 
-    return (
-        <nav className="styled-navbar">
-            <div className="nav-container">
-                <Link className="nav-brand" to="/">
-                    <img src={logo} alt="brand" className="nav-logo" />
-                </Link>
 
-                <button className="menu-toggler" onClick={() => setMenuActive(!menuActive)}>
-                    ☰
-                </button>
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    navigate("/");
+    setTimeout(() => {
+      const contactSection = document.getElementById(sectionId);
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+  return (
+    <div className={`custom-navbar styled-navbar `}>
+      <div className="container">
+        <Link className="nav-brand" to="/">
+          <img src={logo} alt="brand" className="nav-logo" />
+        </Link>
 
-                <div className={`menu-collapse ${menuActive ? "active" : ""}`}>
-                    <ul className="nav-list">
-                        <li>
-                            <Link to="/forbusiness" className="nav-item">
-                                For Businesses
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/forwomen" className="nav-item">
-                                For Women
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
-};
+        <button
+          className="navbar-toggler"
+          onClick={() => setShowMenu(!showMenu)}
+          style={{ fontSize: "30px", color: "gainsboro" }}
+        >
+          ☰
+        </button>
+        <ul className={`navbar-menu navbar-menu-background ${showMenu ? "show" : ""}`}>
+          <li className="navItems nav-list">
+          <Link to="/forbusiness" onClick={(e) => scrollToSection(e, 'features')}>
+          For Businesses
+            </Link>
+          </li>
+          <li className="navItems nav-list">
+          <Link to="/forwomen" onClick={(e) => scrollToSection(e, 'testimonial')}>
+          For Women
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
 
-export default StyledNavbar;
+export default NavBar;
