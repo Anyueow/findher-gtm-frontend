@@ -34,12 +34,12 @@ function NavBar() {
         </button>
         <ul className={`navbar-menu navbar-menu-background ${showMenu ? "show" : ""}`}>
           <li className="navItems nav-list">
-          <Link to="/forbusiness" onClick={(e) => scrollToSection(e, 'features')}>
+          <Link to="/forbusiness" >
           For Businesses
             </Link>
           </li>
           <li className="navItems nav-list">
-          <Link to="/forwomen" onClick={(e) => scrollToSection(e, 'testimonial')}>
+          <Link to="/forwomen" >
           For Women
             </Link>
           </li>
