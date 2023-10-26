@@ -7,6 +7,7 @@ import img3 from "./prototype/prototypeThree.png";
 import FaqSection from "./FaqsSection/FaqSection";
 import PopupForm from "./Forms/businessforms";
 import "./background.css";
+import { ToastContainer } from "react-toastify";
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -197,6 +198,7 @@ const Box = () => {
 
 
             />
+            <ToastContainer/>
             </>
     );
 };
