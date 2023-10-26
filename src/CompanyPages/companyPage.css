@@ -351,6 +351,12 @@
         background: transparent; 
         backdrop-filter: blur(5px);
     }
+    .isMobile{
+        display: block !important;
+    }
+    .isDesktop{
+        display: none !important;
+    }
 }
 
 @media  (max-width:380px) {

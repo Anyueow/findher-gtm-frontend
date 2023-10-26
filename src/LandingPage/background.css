@@ -26,7 +26,7 @@
     background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
     width: 40px; /* Adjust size */
     height: 40px;
-    top: 20% !important; /* Adjust position */
+    top: 20% ; /* Adjust position */
     left: 28%;
     border-radius: 50%; /* Makes the shape a circle */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
@@ -72,6 +72,49 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
 }
 
+/* Second Animation Circle  */
+.tinycirc21 {
+    top: 20% ; /* Adjust position */
+    left: 93%;
+}
+
+.tinycirc22 {
+    top: 13%; /* Adjust position */
+    left: 108%;
+}
+
+.tinycirc23 {
+    top: 20%; /* Adjust position */
+    left: 105%;
+}
+
+.tinycirc24 {
+
+    top: 12%; /* Adjust position */
+    left: 100%;
+}
+
+/* Third Animation circle  */
+.tinycirc31 {
+    top: 65% ; /* Adjust position */
+    left: 28%;
+}
+
+.tinycirc32 {
+    top: 55%; /* Adjust position */
+    left: 26%;
+}
+
+.tinycirc33 {
+    top: 65%; /* Adjust position */
+    left: 22%;
+}
+
+.tinycirc34 {
+    top: 55%; /* Adjust position */
+    left: 17%;
+}
+
 
 
 @keyframes float {
@@ -89,55 +132,18 @@
 
 @media (max-width: 658px) {
     .tinycirc1 {
-        animation-duration: 6s;
-        animation-delay: 1s; /* Starts the animation 1 second later */
-        z-index: 2000;
-        background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
-        width: 40px; /* Adjust size */
-        height: 40px;
-        top: 5% !important; /* Adjust position */
-        left: 18%;
-        border-radius: 50%; /* Makes the shape a circle */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
+       display: none;
     }
     
     .tinycirc2 {
-        z-index: 2000;
-    
-        animation-duration: 5s; /* Faster animation */
-        animation-delay: 0s; /* Starts immediately */
-        background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
-        width: 20px; /* Adjust size */
-        height: 20px;
-        top: 0%; /* Adjust position */
-        left: 16%;
-        border-radius: 50%; /* Makes the shape a circle */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
+        display: none;
     }
     
     .tinycirc3 {
-        z-index: 2000;
-        animation-duration: 6s; /* Faster animation */
-        animation-delay: 2s; /* Starts immediately */
-        background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
-        width: 13px; /* Adjust size */
-        height: 13px;
-        top: 5%; /* Adjust position */
-        left: 12%;
-        border-radius: 50%; /* Makes the shape a circle */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
+        display: none;
     }
     
     .tinycirc4 {
-        z-index: 2000;
-        animation-duration: 3s; /* Faster animation */
-        animation-delay: 2s; /* Starts immediately */
-        background: rgba(226, 11, 60, 0.83); /* Adjust color and opacity */
-        width: 22px; /* Adjust size */
-        height: 22px;
-        top: 0%; /* Adjust position */
-        left: 7%;
-        border-radius: 50%; /* Makes the shape a circle */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Creates a shadow effect for depth */
+        display: none;
     }
 }

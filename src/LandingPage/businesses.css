@@ -278,14 +278,14 @@ you should provide alternative styles to indicate focus state */
 
 @media (max-width: 658px) {
     .info-section-forBusiness  h1 {
-        font-size:1.5rem;
-        width: 65vw;
+        font-size:2rem;
+        width: 85vw;
         margin-bottom: 5%;
     }
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 63%;
+        font-size: 1rem;
         padding: 0%;
         width: 100%;
         text-align: center;
@@ -293,12 +293,12 @@ you should provide alternative styles to indicate focus state */
         margin-bottom: 7%; /* Space between description and button */
     }
     .info-section-forBusiness button {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 2% 5%; /* Larger padding for a bigger button */
         width: auto;
     }
     .line-separator {
-        width: 45vw;/* Adjust width as needed */
+        width: 65vw;/* Adjust width as needed */
         margin: 0% 5% 5% 5%; /* Center the line and add space below */
     }
     .line-vert-separator-forbusiness {
@@ -315,8 +315,8 @@ you should provide alternative styles to indicate focus state */
     .titleTwo-forbusiness {
         color: #000000;
         font-family: Poppins;
-        font-size:1rem;
-        width: 80vw;
+        font-size:1.2rem;
+        width: 90vw;
         line-height: 2rem;
         font-weight: 700;
         margin-bottom: 2%; /* Space between title and line */
@@ -338,12 +338,19 @@ you should provide alternative styles to indicate focus state */
     }
     .paratext {
         font-family: Poppins;
-        /* align-self: flex-end; */
+        text-align: center;
         width: 85%;
         margin-top: 5%;
+        font-size: 0.8rem;
     }
     .section-forbusiness{
         justify-content: center;
+    }
+    .boxedup{
+        height: 90vh;
+    }
+    .box-container{
+        height: auto;
     }
 }
 
@@ -436,16 +443,16 @@ you should provide alternative styles to indicate focus state */
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 60%;
+        font-size: 1rem;
         padding: 0%;
         width: 100%;
         text-align: center;
         font-weight: 550;
-        margin-bottom: 7%; /* Space between description and button */
+        margin-bottom: 7%; 
     }   
     .info-section-forBusiness  h1 {
-        font-size:1.3rem;
-        width: 65vw;
+        font-size:1.5rem;
+        width: 85vw;
         margin-bottom: 5%;
     }
 }

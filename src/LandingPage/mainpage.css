@@ -292,7 +292,7 @@
         border-radius: 3rem;
         z-index: 0;
         height: 4rem;
-        width: 75vw ;
+        width: 85vw ;
         align-content: flex-start;
         align-items: center;
         justify-content: flex-start;
@@ -337,14 +337,14 @@
         font-family: Poppins; /* This font is often considered visually appealing */
         font-size: 0.9rem;
         color: white; /* Choosing a high contrast text color for readability */
-        width: auto;
+        width: 50% !important;
         margin: 1% 100%;
     }
 
     .subsies{
         margin-top: 5%;
-        font-size: 1.5rem;
-        width: 70vw;
+        font-size: 1.3rem;
+        width: 80vw;
     }
 
 }
