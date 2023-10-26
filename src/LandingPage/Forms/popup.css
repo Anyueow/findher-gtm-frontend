@@ -47,10 +47,14 @@
 
 .btn-primary {
     background-color: rgba(226, 11, 60, 0.83); /* A shade of blue */
+    border: 1px solid #bb2d3b;
 }
 
 .btn-primary:hover {
-    background-color: rgba(237, 255, 137, 0.65); /* Darker red on hover */
+    background-color: rgb(181, 210, 32); /* Darker red on hover */
+    color: black;
+    border: 1px solid #bad343;
+
 }
 
 .btn-secondary {

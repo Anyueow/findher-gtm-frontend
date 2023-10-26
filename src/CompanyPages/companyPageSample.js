@@ -40,6 +40,17 @@ const Navigation = (props) => {
           </li>
           <li>
             <a
+                href="#programs"
+                className={`${
+                    props.navbarvalue === "programs" ? "navigationActive" : ""
+                }`}
+                onClick={() => props.setNavbarvalue("programs")}
+            >
+              Applying Here
+            </a>
+          </li>
+          <li>
+            <a
               href="#testimonial"
               className={`${
                 props.navbarvalue === "testimonial" ? "navigationActive" : ""
@@ -49,17 +60,7 @@ const Navigation = (props) => {
               Testimonials
             </a>
           </li>
-          <li>
-            <a
-              href="#programs"
-              className={`${
-                props.navbarvalue === "programs" ? "navigationActive" : ""
-              }`}
-              onClick={() => props.setNavbarvalue("programs")}
-            >
-              For Women
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>

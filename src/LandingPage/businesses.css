@@ -330,7 +330,8 @@ you should provide alternative styles to indicate focus state */
     .info-section-forBusiness  h1 {
         font-size:2rem;
         width: 85vw;
-        margin-bottom: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
     .info-section-forBusiness p {
         color: #595959;
@@ -356,11 +357,11 @@ you should provide alternative styles to indicate focus state */
     }
     .titlehead-forbusiness {
         font-family: Poppins;
-        font-size: 120%;
+        font-size: 150%;
         font-weight: 600;
-        text-align: left;
+        text-align: center;
         width: 100%;
-        margin: 7% 0% 3% 0%;
+        margin: 5% 0% 2% 0%;
     }
     .titleTwo-forbusiness {
         color: #000000;
@@ -397,7 +398,7 @@ you should provide alternative styles to indicate focus state */
         justify-content: center;
     }
     .boxedup{
-        height: 65vh;
+        height: 70vh;
     }
     .box-container{
         height: auto;

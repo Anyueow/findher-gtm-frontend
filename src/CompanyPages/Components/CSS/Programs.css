@@ -5,7 +5,155 @@
     min-height: 250px;
     width: 48%;
 }
+.ApplyHereBox {
+    border-radius: 15px;
+    border: 0.1px solid rgba(151, 151, 151, 0.2);
+    background: var(--white-100, #FFF);
+    text-align: left;
+    justify-content: center;
+    padding: 2% 2%;
+    margin: 1% 1% 2% 1%;
 
+}
+.modalcss {
+    padding: 2% 5%;
+}
+
+.seemorebox {
+    border-radius: 15px;
+    border: 1px solid rgba(59, 59, 59, 0.56);
+    background: var(--white-100, #FFF);
+    text-align: left;
+    justify-content: center;
+    padding: 3% 3%;
+
+    max-width: 300px;
+    margin: 1% 1% 2% 1%;
+
+}
+.jobtitlecard{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.othertitlecard{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 2%;
+}
+.SubJobtitle {
+    color: #a1a1a1;
+    font-family: Poppins;
+    font-weight: 700;
+    padding-top: 2%;
+    font-size: 1.2rem;
+
+}
+.highlightskills{
+    background-color: #DFE077;
+    padding: 0.5% 2%;
+    border-radius: 10px;
+
+}
+.informationaboutjob p{
+    font-size: 1rem;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #656565;
+    line-height: 1.8rem;
+    padding: 1% 2%;
+}
+.BubbleHolderRow {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 4%;
+}
+
+.bubbleHighlight {
+    font-family: Poppins;
+    font-weight: 700;
+    background-color: rgba(223, 224, 119, 0.79);
+    border-radius: 30px;
+    padding: 2px 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    width: max-content;
+    color: black;
+    margin: 1% 2%;
+
+}
+
+.bubblerow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.colbubble {
+    margin: -2%;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.learnmorebutton{
+    background-color: rgba(223, 224, 119, 0.79);
+    border-radius: 20px;
+    border: 1px solid black;
+    color: black;
+    padding: 1.5% 4%;
+    align-self: flex-end;
+    font-size: 75%;
+    margin-top: 10%;
+}
+
+.JobExpandedCol{
+    background-color: white;
+    text-align: left;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 70%;
+    padding: 4% 4%;
+    max-width: 95%;
+    border: 0.7px solid #4d5154;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+
+    border-radius: 25px;
+    z-index: 100;
+    margin: 1% 1% 2% 1%;
+}
+
+.line-separator-job-box{
+    width: 60%;
+    align-self: flex-start;
+    margin: 0.5% 0% 0.5% 1.5%;
+}
+
+.btn-outline-success {
+    color: #b367ff;
+    border: 1px rgba(82, 0, 168, 0.83) solid;
+}
+
+.btn-outline-success:hover {
+    color: #000000;
+    border: 1px #D4AAFF33 solid;
+    background-color: #D4AAFF33;
+}
+
+.btn-outline-info {
+    color: #b367ff;
+    border: 1px rgba(82, 0, 168, 0.83) solid;
+}
+
+.btn-outline-info:hover {
+    color: #000000;
+    border: 1px #D4AAFF33 solid;
+    background-color: #D4AAFF33;
+}
+{/* Praveen CSS */}
 .guest-profile-login-toast-program{
     top: 42%;
 }
