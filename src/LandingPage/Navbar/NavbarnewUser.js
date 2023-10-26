@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import logo from "../logos/findherlogo.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbarnew.css"
 
 function NavBar() {
   const [menuActive, setMenuActive] = useState(false);
-  const navigate = useNavigate(); 
 
 
   // const scrollToSection = (event, sectionId) => {
