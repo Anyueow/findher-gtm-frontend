@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Carousel } from "react-bootstrap";
 import "./companyPage.css";
-import logo from "./images-4.jpeg";
+import logo from "./imageAssets/1906bd2d4805affd0e087b30ee9ce4e3.jpeg";
+import office from "./imageAssets/random-office.jpg";
 import loc from "./imageAssets/map.svg";
 import industry from "./imageAssets/suitcase.svg";
 import employee from "./imageAssets/people.svg";
@@ -181,8 +182,8 @@ export const CompanyProfileHeader = () => {
               setNavbarvalue={setNavbarvalue}
             />
           </Col>
-    <Row className="comapany-page-main-container">
-      <Col md="3" className="">
+    <Row className="">
+      <Col md="3" className="profileBox">
         <Row className="company-page-left-row pt-3">
           <Col
             xs="5"
@@ -234,16 +235,16 @@ export const CompanyProfileHeader = () => {
                 onClick={()=>setShowCarousel(!showCarousel)}
               >
                 <SwiperSlide>
-                  <img alt="Company Logo" src={logo} />
+                  <img alt="Company Logo" src={office} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img alt="Company Logo" src={logo} />
+                  <img alt="Company Logo" src={office} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img alt="Company Logo" src={logo} />
+                  <img alt="Company Logo" src={office} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img alt="Company Logo" src={logo} />
+                  <img alt="Company Logo" src={office} />
                 </SwiperSlide>
 
                 {/* Add more testimonials as needed */}
@@ -252,14 +253,18 @@ export const CompanyProfileHeader = () => {
           </Col>
         </Row>
       </Col>
-      <Col className="company-page-right-row">
-        <Row className=" px-0 d-flex justify-content-center mb-5">
-          <Col xs={12} className="px-0  isDesktop">
-            <Navigation
+      <Col className="company-page-right-row backgroundgrey">
+        <Col xs={12} className="px-0  isDesktop"
+        style={{zIndex:"900", backgroundColor:"white"}}>
+          <Navigation
               navbarvalue={navbarvalue}
               setNavbarvalue={setNavbarvalue}
-            />
-          </Col>
+          />
+        </Col>
+        <Row className=" px-0 d-flex justify-content-center mb-5"
+        >
+
+
           {navbarvalue === "overview" && <Overview isLogedIn={isLogedIn} isGuest={isGuest} handleSubmit={handleSubmit} guestProfile={guestProfile} setGuestProfile={setGuestProfile} handleInputChange={handleInputChange}/>}
           {navbarvalue === "testimonial" && <TestimonialSec isLogedIn={isLogedIn} isGuest={isGuest} handleSubmit={handleSubmit} guestProfile={guestProfile} setGuestProfile={setGuestProfile} handleInputChange={handleInputChange}/>}
           {navbarvalue === "programs" && <Programs isLogedIn={isLogedIn} isGuest={isGuest} handleSubmit={handleSubmit} guestProfile={guestProfile} setGuestProfile={setGuestProfile} handleInputChange={handleInputChange}/>}
@@ -278,33 +283,34 @@ export const CompanyProfileHeader = () => {
                 slide={false}
                 fade
                 interval={null}
-                 className="company-details-carousel">
+                 className="company-details-carousel"
+                style={{zIndex:"3000"}}>
       
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={logo}
+                    src={office}
                     alt="Los Angeles"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={logo}
+                    src={office}
                     alt="Chicago"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={logo}
+                    src={office}
                     alt="New York"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={logo}
+                    src={office}
                     alt="New York"
                   />
                 </Carousel.Item>

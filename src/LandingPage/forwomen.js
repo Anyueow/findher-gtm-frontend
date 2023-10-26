@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import './businesses.css';
 import img1 from "./prototype/prototypeOne.png";
-import img2 from "./prototype/forwomentwo.png";
-import img3 from "./prototype/forwomenthree.png";
+import img2 from "./prototype/mathces.png";
+import img3 from "./prototype/resources.png";
 import FaqSection from "./FaqsSection/FaqSection";
 import PopupForm from "./Forms/businessforms";
 import "./background.css";
@@ -84,7 +84,9 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
             <div className="circle circle5"></div>
-                                <h2 className="titlehead-forbusiness">Unveil Exclusive Company Insights</h2>
+                                <h2 className="titlehead-forbusiness"
+                                    style={{width:"90%"}}>
+                                Unveil Exclusive Company Insights</h2>
                                 <Button
                                     onClick={() => {
                                         console.log("Button clicked!");
@@ -95,10 +97,7 @@ const Box = () => {
                             </Col>
 
                             <Col md={7} className="contentcol">
-                                <div className="circle tinycirc1"></div>
-                                <div className="circle tinycirc2"></div>
-                                <div className="circle tinycirc3"></div>
-                                <div className="circle tinycirc4"></div>
+
                                 <Image src={img1} className="proto" alt="description"/>
                                 <p className="paratext">Women experience the workplace differently, but job postings lack information on factors important to them. FindHer offers exclusive and reliable insights into different workplaces so you learn what it’s like to work somewhere before you apply - all in one click.</p>
                             </Col>
@@ -120,7 +119,9 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
             <div className="circle circle5"></div>
-                                <h2 className="titlehead-forbusiness">Access Handpicked Job Opportunities</h2>
+                                <h2 className="titlehead-forbusiness"
+                                    style={{width:"90%"}}
+                                >Access Handpicked Job Opportunities</h2>
                                 <Button  onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
@@ -130,11 +131,7 @@ const Box = () => {
 
                             <Col md={7} className="contentcol">
                                 <Image src={img2} className="proto" alt="description"/>
-                                    <div className="circle tinycirc1 tinycirc21"></div>
-                                    <div className="circle tinycirc2 tinycirc22"></div>
-                                    <div className="circle tinycirc3 tinycirc23"></div>
-                                    <div className="circle tinycirc4 tinycirc24"></div>
-            <div className="circle circle5"></div>
+
                                 <p className="paratext"> We curate and send you open roles suited to your skills, values, and aspirations, straight into your inbox. Navigate the job market confidently, knowing each opportunity has been meticulously handpicked for you. Find the best fit, faster and smarter.</p>
                             </Col>
                             <Button  onClick={() => {
@@ -154,7 +151,7 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
                                 <h2 className="titlehead-forbusiness"
-                                style={{minWidth:"80%"}}>Discover Latest Career Information Easily</h2>
+                                    style={{width:"90%"}}>Discover Latest Career Information Easily</h2>
                                 <Button onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
@@ -164,10 +161,7 @@ const Box = () => {
 
                             <Col md={7} className="contentcol">
                                 <Image src={img3} className="proto" alt="description"/>
-                                    <div className="circle tinycirc1 tinycirc31"></div>
-                                    <div className="circle tinycirc2 tinycirc32"></div>
-                                    <div className="circle tinycirc3 tinycirc33"></div>
-                                    <div className="circle tinycirc4 tinycirc34"></div>
+
                                 <p className="paratext">In a world buzzing with information, it's easy to miss out on what truly matters. With FindHer's social channels and newsletters, we sift through the noise to bring you the most relevant career updates, advice, and company profiles - updated daily.</p>
                             </Col>
                             <Button onClick={() => {

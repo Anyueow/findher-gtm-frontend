@@ -812,3 +812,15 @@
     }
 }
 
+.iconslist{
+
+    position: fixed;
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to the left side */
+    right: 0; /* Align to the right side */
+    width: 100%; /* Full width */
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+

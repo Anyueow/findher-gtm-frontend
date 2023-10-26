@@ -6,17 +6,21 @@
     margin-bottom: 3%;
 }
 
+.some-title{
+    font-weight: 800;
+    font-family: Poppins;
+    font-size: 1.3rem;
+}
 .testimonial-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width:40vw; */
     border: 0.1px solid rgba(151, 151, 151, 0.2);
     background: var(--white-100, #FFF);
     border-radius: 1.5rem;
-    padding: 2%;
-    margin: 3% 3% 1% 1%;
+    padding: 5% 2% 0% 2%;
+    margin: 1%;
 }
 
 .tiny {
@@ -35,11 +39,14 @@
 
 .tinyBub {
     background-color: rgb(255, 226, 150);
-    border-radius: 20px;
+    border-radius: 10px;
+    border: 0.6px solid black;
     text-align: center;
-    width: 70%;
-    padding:2%;
+    padding:2% 2%;
+    margin-left: 5%;
+    margin-top: 4%;
     font-family: poppins;
+    align-self: flex-start;
 }
 
 .testiText {
@@ -123,7 +130,7 @@
         padding: 0 !important;
     }
     .testimonial-content {
-        margin: 5% 2%;
+        margin: 1%;
     }
 }
 
@@ -137,6 +144,6 @@
        width: 95% !important;
     }
     .testimonial-content {
-        margin: 8% 2%;
+        margin: 2%;
     }
 }

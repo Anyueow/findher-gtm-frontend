@@ -7,12 +7,20 @@ import Jobmorepopup from "./jobmorepopup"; // for swipe functionality
 
 function Programs(props) {
 
-  // State to keep track of visibility
+  // State to keep track of visibility of jobs
   const [seeMore, setSeeMore] = useState(false);
 
   // Function to toggle visibility
   const toggleColumns = () => {
     setSeeMore(!seeMore);
+  };
+
+  // State to keep track of visibility of Resources
+  const [seeMoreResources, setSeeMoreResources] = useState(false);
+
+  // Function to toggle visibility
+  const toggleColumnsResources = () => {
+    setSeeMoreResources(!seeMoreResources);
   };
   // State to keep track of the collapsed status
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -166,10 +174,53 @@ function Programs(props) {
     ));
   };
 
+  const resources = [
+    {
+      title: 'Hacking Tech Interview',
+      categories: ['Article', '5 min read', 'NY times'],
+      link: "https://www.findher.work"
+
+    },
+
+    {
+      title: 'Hacking Tech Interview',
+      categories: ['Article', '5 min read', 'NY times'],
+      link: "https://www.findher.work"
+
+    },
+    {
+      title: 'Hacking Tech Interview',
+      categories: ['Article', '5 min read', 'NY times'],
+      link: "https://www.findher.work"
+
+    },
+  ]
+  const renderAppResources = (resourcesToRender) => {
+    return resourcesToRender.map((resource, index) => (
+        <Col key={index} className="seemorebox" style={{ width: "37.5%" }}>
+          <h2 className="company-details-sub-title">{resource.title}</h2>
+          <Row className="bubblerow">
+            {resource.categories.slice(0, 3).map((category, catIndex) => (
+
+                  <p className="bubbleHighlight">{category}</p>
+
+            ))}
+          </Row>
+          <Button variant="outline-primary"
+                  className="learnmorebutton" onClick={() =>
+              window.open(resource.link,'_blank')}> {/* Pass index here */}
+            Access
+          </Button>
+
+        </Col>
+    ));
+  };
+
   return (
     <>
       {/* Blur div with pop up*/}
-      <div className="check-blur">
+      <div className="check-blur"
+      style={{marginTop:"-15%"}}>
                     {!props.isLogedIn && !props.isGuest  && <div className="blur-company-details" id="guest-profile-login-toast-id">
                         <div className="mt-5"><Toast className="guest-profile-login-toast guest-profile-login-toast-program" >
         <Toast.Body className="">
@@ -261,9 +312,10 @@ function Programs(props) {
       </div>
                     </div>}
                     </div>
-  <Col className="backgroundgrey" style={{justifyContent:"center",
+  <Col className="" style={{justifyContent:"center",
   alignItems:"center", alignContent:"center", display:"flex",
-  flexDirection:"column"}}> {/* for background */}
+  flexDirection:"column", paddingLeft:"3%", paddingRight:"3%"}}
+  > {/* for background */}
 
 
     {/* For the rest of the elements
@@ -276,7 +328,7 @@ function Programs(props) {
            style={{width:"95.5%", padding:"2%", flexDirection:"row", marginTop:"5%"}}>
         <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
           <Col>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">What They Look For</h2>
           </Col>
           <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
             height: '100%' /* or any specific height as per your layout */ }}>
@@ -292,20 +344,21 @@ function Programs(props) {
           </Col>
         </Row>
         <Col className="seemorebox" style={{width:"37.5%"}}>
-          <h2 className="company-details-sub-title">What They Do</h2>
+          <h2 className="company-details-sub-title">Passion for Technology</h2>
           <p className="company-details-para">
             {displayText}
           </p>
         </Col>
 
         <Col className="seemorebox" style={{width:"37.5%"}}>
-          <h2 className="company-details-sub-title">What They Do</h2>
+          <h2 className="company-details-sub-title"> Problem  -Solving
+            Skills  </h2>
           <p className="company-details-para">
             {displayText}
           </p>
         </Col>
         <Col className="seemorebox" style={{width:"37.5%"}}>
-          <h2 className="company-details-sub-title">What They Do</h2>
+          <h2 className="company-details-sub-title">First-Principles Thinker</h2>
           <p className="company-details-para">
             {displayText}
           </p>
@@ -319,26 +372,60 @@ function Programs(props) {
           <h2 className="company-details-sub-title">Open Jobs</h2>
         </Col>
         <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', height: '100%' }}>
-          <Button
-              variant="danger"
-              style={{ padding: "1%", width: "100px" }}
-              onClick={toggleColumns}
-              className="see-more-button"
-          >
-            {seeMore ? "See Less" : "See More"}
-          </Button>
+          {jobs.length > 3 && ( // Only render the button if there are more than 3 jobs
+              <Button
+                  variant="danger"
+                  style={{ padding: "1%", width: "100px" }}
+                  onClick={toggleColumns}
+                  className="see-more-button"
+              >
+                {seeMore ? "See Less" : "See More"}
+              </Button>
+          )}
         </Col>
       </Row>
 
       {/* Render the first three job cards */}
       <Row>
-        {renderJobCards(jobs.slice(0, 3))}
+        {renderJobCards(jobs.slice(0, seeMore ? jobs.length : 3))}
       </Row>
 
       {/* If seeMore is true, render the rest of the job cards in a new row */}
       {seeMore && (
           <Row>
             {renderJobCards(jobs.slice(3))}
+          </Row>
+      )}
+    </Row>
+
+    <Row className="ApplyHereBox" style={{ width: "95.5%", padding: "2%" }}>
+      <Row style={{ padding: "1%", width: "100%", paddingBottom: '2%' }}>
+        <Col>
+          <h2 className="company-details-sub-title">Application Resources</h2>
+        </Col>
+        <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', height: '100%' }}>
+          {resources.length > 3 && ( // Only render the button if there are more than 3 resources
+              <Button
+                  variant="danger"
+                  style={{ padding: "1%", width: "100px" }}
+                  onClick={toggleColumnsResources}
+                  className="see-more-button"
+              >
+                {seeMoreResources ? "See Less" : "See More"}
+              </Button>
+          )}
+        </Col>
+      </Row>
+
+      {/* Render the first three job cards */}
+      <Row>
+        {renderAppResources(resources.slice(0, seeMoreResources ? resources.length : 3))}
+      </Row>
+
+      {/* If seeMore is true, render the rest of the job cards in a new row */}
+      {seeMoreResources && (
+          <Row>
+            {renderAppResources(resources.slice(3))}
           </Row>
       )}
     </Row>

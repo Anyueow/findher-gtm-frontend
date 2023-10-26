@@ -83,7 +83,7 @@ function RoutesPage() {
       <Route path="/successBizz" element={<EndPage />} />
       <Route path="/try" element={<ProfileNavbarGuest />} />
       <Route path="/createcompany" element={<ProfileCreationInternal />} />
-      <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /><Footer /> </>} />
+      <Route path="/compsample" element={<> <ProfileNavbarGuest /> <CompanyPageSample /> </>} />
 
     </Routes>
   )

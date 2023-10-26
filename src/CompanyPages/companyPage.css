@@ -1,3 +1,19 @@
+.profileBox {
+    position: fixed; /* Fixed positioning */
+    top: 0; /* 0px from the top */
+    left: 0; /* 0px from the left */
+    width: 27%; /* Specify a width */
+    height: 100vh; /* Full height */
+    z-index: 1000; /* High z-index so it's on top of other content */
+    background-color: white; /* Or any other background color */
+    padding-top: 7%;
+    margin-left: -2%;
+    margin-bottom: 600px; /* Equal to or greater than footer's height */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
 .company-details-title{
     color: #000;
     font-family: poppins;
@@ -6,6 +22,7 @@
     font-weight: 600;
     line-height: normal;
 }
+
 .company-details-sub-title{
     color: #000;
     font-feature-settings: 'clig' off, 'liga' off;
@@ -20,9 +37,9 @@
     margin-bottom: 0%;
     color: #7A7A7A;
     font-family: poppins;
-    font-size: 14px;
-    font-style: normal;
+    font-size: 0.8rem;
     font-weight: 400;
+    text-align: left;
     line-height: normal;
 }
 
@@ -44,6 +61,8 @@
 
 .company-page-right-row{
     border-left: 1px solid rgba(217, 217, 217, 0.37);
+    margin-left: 24%;
+
 }
 
 .company-page-photo{
@@ -244,9 +263,7 @@
         line-height: normal;
     }
 .company-page-left-row{
-    justify-content: center;
-    margin-top: 5%;
-}
+justify-content: center}
 .company-logo{
     width: 100% ;
 }

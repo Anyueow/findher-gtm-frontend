@@ -16,8 +16,12 @@ export const MainPage = () => {
 
     const navigate = useNavigate();
 
-    const handleButtonClick = () => {
+    const handleButtonClickB = () => {
         navigate('/forbusiness');
+    };
+
+    const handleButtonClickC = () => {
+        navigate('/forwomen');
     };
 
 
@@ -42,37 +46,14 @@ export const MainPage = () => {
                      </Row>
 
                      <Row className="buttonrow full-width">
-                      <Button className="buttonforrow   mt-2"> Find Your Next Job </Button>
+                      <Button className="buttonforrow   mt-2" onClick={handleButtonClickC}> Find Your Next Job </Button>
                      
-                       <Button className="buttonforrow  mt-2" onClick={handleButtonClick}> Find Your Next Hire </Button>
+                       <Button className="buttonforrow  mt-2" onClick={handleButtonClickB}> Find Your Next Hire </Button>
                 
                      </Row>
 
 
-                     <Container fluid className="marquee">
-                         <Col>
-                             <Row>
-                                 <h3 className="trusted"> Trusted by</h3>
-                             </Row>
-                         <Row>
-                             <div className="marquee-content">
-                                 {/* Render the first set of logos */}
-                                 {logos.map((logo, index) => (
-                                     <Col className="marquee-logo" key={index}>
-                                         <img src={logo} alt={`logo-${index + 1}`} />
-                                     </Col>
-                                 ))}
-                                 {/* Duplicate: Render the second set of logos immediately after the first */}
-                                 {logos.map((logo, index) => (
-                                     <Col className="marquee-logo" key={`duplicate-${index}`}>
-                                         <img src={logo} alt={`logo-duplicate-${index + 1}`} />
-                                     </Col>
-                                 ))}
-                             </div>
-                         </Row>
-                         </Col>
-                     </Container>
-                     <Container fluid className="marquee-mobile isMobile">
+                     <Container fluid className="marquee isDesktop">
                          <Col>
                              <Row>
                                  <h3 className="trusted"> Trusted by</h3>

@@ -22,7 +22,7 @@ function Overview() {
 
 
   return (
-      <Container className="backgroundgrey">
+      <Container style={{paddingLeft:"3%"}}>
     <Row className="ms-0 me-1 px-2">
 
 
@@ -128,7 +128,7 @@ function Overview() {
         style={{width:"97.5%", padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
             <Col>
-          <h2 className="company-details-sub-title">What They Do</h2>
+          <h2 className="company-details-sub-title">Why work here</h2>
             </Col>
             <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
               height: '100%' /* or any specific height as per your layout */ }}>
@@ -143,20 +143,22 @@ function Overview() {
             </Col>
           </Row>
           <Col className="infomorebox" style={{width:"37.5%"}}>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">Approachable Leadership</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
 
           <Col className="infomorebox" style={{width:"37.5%"}}>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">Innovative & Growth
+              Mindset</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
           <Col className="infomorebox" style={{width:"37.5%"}}>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">Inclusive
+              Environment</h2>
             <p className="company-details-para">
               {displayText}
             </p>
@@ -170,7 +172,7 @@ function Overview() {
              style={{width:"97.5%", padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
             <Col>
-              <h2 className="company-details-sub-title">What They Do</h2>
+              <h2 className="company-details-sub-title">Programs for Women</h2>
             </Col>
             <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
               height: '100%' /* or any specific height as per your layout */ }}>
@@ -185,20 +187,20 @@ function Overview() {
             </Col>
           </Row>
           <Col className="infomorebox" style={{width:"37.5%"}}>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">Period Leaves</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
 
           <Col className="infomorebox" style={{width:"37.5%"}}>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">Maternity Benefits</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
           <Col className="infomorebox" style={{width:"37.5%"}}>
-            <h2 className="company-details-sub-title">What They Do</h2>
+            <h2 className="company-details-sub-title">Caregiver Facility</h2>
             <p className="company-details-para">
               {displayText}
             </p>
