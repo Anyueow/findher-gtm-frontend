@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import {Modal, Button, Form, Col, Row} from 'react-bootstrap';
 import './popup.css'; // Importing the separate CSS file
+import { useCsrfToken } from '../../CsrfTokenProvider';
+import { toast } from "react-toastify";
 
 const PopupForm = ({ isVisible, onClose }) => {
+
+    const csrfToken = useCsrfToken();
+
     const [formData, setFormData] = useState({ name: '', companyName: '', email: '' });
 
     const handleChange = (e) => {
@@ -10,10 +15,55 @@ const PopupForm = ({ isVisible, onClose }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Form data:', formData);
         alert('A submission was made. Check the console for details.');
+        e.preventDefault();
+
+        const { email, companyName, name } = formData;
+    
+        if (email && companyName && name) {
+          const response = await fetch(process.env.REACT_APP_URL+"business/joinnow", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token" : csrfToken,
+            },
+            credentials: "include", // Include this line
+            body: JSON.stringify({
+              email: formData.email,
+              companyName: formData.companyName,
+              name: formData.name,
+            }),
+          });
+          console.log(
+            "how can you hate from outside the club you cant even get inp"
+          );
+    
+          if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            toast.success("Form submitted successfully", {
+                position: toast.POSITION.TOP_RIGHT,
+              });
+          } else {
+            console.log("dammit these errors");
+            // Handle the error response
+            const data = await response.json();
+            toast.error("Internal server error", {
+              position: toast.POSITION.TOP_RIGHT,
+            });
+            console.error(`Error: ${response.status} ${response.statusText}`);
+            console.error(data.message); // Print the error message from the backend
+    
+          }
+        } else {
+          // Update formErrors to show which fields are missing
+          toast.error("Please fill out all the fields", {
+            position: toast.POSITION.TOP_RIGHT,
+          });
+        }
         onClose();
     };
 

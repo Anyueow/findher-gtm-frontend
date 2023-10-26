@@ -7,6 +7,7 @@ import img3 from "./prototype/prototypeThree.png";
 import FaqSection from "./FaqsSection/FaqSection";
 import PopupForm from "./Forms/businessforms";
 import "./background.css";
+import { ToastContainer } from "react-toastify";
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -79,7 +80,10 @@ const Box = () => {
                         <Row className="section-forbusiness">
                            
                             <Col md={4} className="contentcoltext">
-
+                            <div className="circle circle2"></div>
+            <div className="circle circle3"></div>
+            <div className="circle circle4"></div>
+            <div className="circle circle5"></div>
                                 <h2 className="titlehead-forbusiness">Elevate Your
                                     Talent Brand</h2>
                                 <Button
@@ -117,7 +121,10 @@ const Box = () => {
                                 <div className="line-vert-separator-forbusiness"></div>
                             </Col> */}
                             <Col md={4} className="contentcoltext">
-
+                            <div className="circle circle2"></div>
+            <div className="circle circle3"></div>
+            <div className="circle circle4"></div>
+            <div className="circle circle5"></div>
                                 <h2 className="titlehead-forbusiness">Find Best-Fit
                                     Matches</h2>
                                 <Button  onClick={() => {
@@ -129,10 +136,11 @@ const Box = () => {
 
                             <Col md={7} className="contentcol">
                                 <Image src={img2} className="proto" alt="description"/>
-                                    <div className="circle tinycirc1"></div>
-                                    <div className="circle tinycirc2"></div>
-                                    <div className="circle tinycirc3"></div>
-                                    <div className="circle tinycirc4"></div>
+                                    <div className="circle tinycirc1 tinycirc21"></div>
+                                    <div className="circle tinycirc2 tinycirc22"></div>
+                                    <div className="circle tinycirc3 tinycirc23"></div>
+                                    <div className="circle tinycirc4 tinycirc24"></div>
+            <div className="circle circle5"></div>
                                 <p className="paratext"> In today's fierce job market, your talent brand defines you.
                                     With FindHer, you can effectively communicate your value to
                                     potential female employees, positioning you as a top choice
@@ -150,7 +158,10 @@ const Box = () => {
                                 <div className="line-vert-separator-forbusiness"></div>
                             </Col> */}
                             <Col md={4} className="contentcoltext">
-
+                                
+                            <div className="circle circle2"></div>
+            <div className="circle circle3"></div>
+            <div className="circle circle4"></div>
                                 <h2 className="titlehead-forbusiness"
                                 style={{minWidth:"80%"}}>Optimize Employee Satisfaction</h2>
                                 <Button onClick={() => {
@@ -162,10 +173,10 @@ const Box = () => {
 
                             <Col md={7} className="contentcol">
                                 <Image src={img3} className="proto" alt="description"/>
-                                    <div className="circle tinycirc1"></div>
-                                    <div className="circle tinycirc2"></div>
-                                    <div className="circle tinycirc3"></div>
-                                    <div className="circle tinycirc4"></div>
+                                    <div className="circle tinycirc1 tinycirc31"></div>
+                                    <div className="circle tinycirc2 tinycirc32"></div>
+                                    <div className="circle tinycirc3 tinycirc33"></div>
+                                    <div className="circle tinycirc4 tinycirc34"></div>
                                 <p className="paratext"> We provide businesses with data-driven
                                     insights on existing female employee experiences,
                                     guiding efficient improvements. The result? Higher retention,
@@ -197,6 +208,7 @@ const Box = () => {
 
 
             />
+            <ToastContainer/>
             </>
     );
 };

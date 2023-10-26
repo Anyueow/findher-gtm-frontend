@@ -35,6 +35,19 @@
     z-index: 1000; /* High z-index to keep it above other elements */
     padding: 0% 0% 3% 3%;
 }
+.marquee-mobile {
+    position: fixed;
+    bottom: 12%; /* Stick to the bottom */
+    left: 0; /* Align to the left side */
+    right: 0; /* Align to the right side */
+    width: 100%; /* Full width */
+    height: 14vh;
+    overflow: hidden; /* Prevent overflow */
+    white-space: nowrap; /* Keep inline content on the same line */
+    box-sizing: border-box; /* Better border handling */
+    z-index: 1000; /* High z-index to keep it above other elements */
+    padding: 0% 0% 3% 3%;
+}
 
 .marquee-content {
     left: 0; /* Align to the right side */
@@ -264,8 +277,6 @@
 /* Styles for screen width of 534px and below */
 @media (max-width: 658px) {
     /* Modify or add classes as needed for smaller screens */
-
-
     .SearchIcon {
         z-index: 7;
         width: 2rem;
@@ -292,7 +303,7 @@
         border-radius: 3rem;
         z-index: 0;
         height: 4rem;
-        width: 75vw ;
+        width: 85vw ;
         align-content: flex-start;
         align-items: center;
         justify-content: flex-start;
@@ -337,16 +348,15 @@
         font-family: Poppins; /* This font is often considered visually appealing */
         font-size: 0.9rem;
         color: white; /* Choosing a high contrast text color for readability */
-        width: auto;
+        width: 50% !important;
         margin: 1% 100%;
     }
 
     .subsies{
         margin-top: 5%;
-        font-size: 1.5rem;
-        width: 70vw;
+        font-size: 1.3rem;
+        width: 80vw;
     }
-
 }
 
 @media (min-width: 658px) and (max-width: 774px) {
@@ -801,3 +811,4 @@
         width: 75vw;
     }
 }
+

@@ -155,6 +155,9 @@
         width: 95%;
         overflow: clip;
     }
+    .footer-icons {
+        width: 5% !important;
+    }
 }
 
 @media (max-width: 600px) {

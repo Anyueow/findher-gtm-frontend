@@ -76,3 +76,20 @@
     opacity: 0.75 !important; /* This controls the opacity of the background */
     background-color: #000; /* This sets the background color to black (you can choose any color) */
 }
+
+@media (max-width:550px) {
+    .buttclass{
+        padding: 10px 10%; /* Top/bottom padding */
+        font-size: 100%; /* Slightly larger font size */
+    }
+    .modal-title {
+        font-size: 1.2em; /* Larger font size for the title */
+    }
+}
+
+@media (max-width:400px) {
+    .buttclass{
+        padding: 10px 10%; /* Top/bottom padding */
+        font-size: 0.8em; /* Slightly larger font size */
+    }
+}

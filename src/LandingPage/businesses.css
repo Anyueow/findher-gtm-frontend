@@ -6,7 +6,7 @@
     animation: animate-background 10s infinite ease-in-out;
 
     transition: opacity 1s ease-in-out; /* Smooth transition for the fade effect */
-    z-index: -1;
+    z-index: 0;
     height: 100vh; /* Full height of the viewport */
     width: 100%;
 }
@@ -48,6 +48,56 @@
 
     /* Full height of the viewport */
 
+}
+
+.circle1 {
+    background: rgba(237, 255, 137, 0.23); /* Adjust color and opacity */
+    width: 400px; /* Adjust size */
+    height: 300px;
+    filter: blur(80px); /* Apply blur effect */
+
+    top: 30%; /* Adjust position */
+    left: 80%;
+}
+
+.circle3 {
+    background: rgba(212, 170, 255, 0.38); /* Adjust color and opacity */
+    width: 250px; /* Adjust size */
+    height: 250px;
+    filter: blur(100px); /* Apply blur effect */
+
+    top: 26%; /* Adjust position */
+    left: 20%;
+}
+
+.circle2 {
+    background: rgba(245, 196, 255, 0.27); /* Adjust color and opacity */
+    width: 400px; /* Adjust size */
+    height: 400px;
+    filter: blur(100px); /* Apply blur effect */
+
+    top: 42%; /* Adjust position */
+    left: 35%;
+}
+
+.circle4 {
+    background: rgba(87, 189, 253, 0.2); /* Adjust color and opacity */
+    width: 200px; /* Adjust size */
+    height: 200px;
+    filter: blur(100px); /* Apply blur effect */
+
+    top: 60%; /* Adjust position */
+    left: 20%;
+}
+
+.circle5 {
+    background: rgba(237, 255, 137, 0.32); /* Adjust color and opacity */
+    width: 500px; /* Adjust size */
+    height: 300px;
+    filter: blur(100px); /* Apply blur effect */
+
+    bottom: 22%; /* Adjust position */
+    left: 86%;
 }
 
 .info-section-forBusiness {
@@ -278,14 +328,14 @@ you should provide alternative styles to indicate focus state */
 
 @media (max-width: 658px) {
     .info-section-forBusiness  h1 {
-        font-size:1.5rem;
-        width: 65vw;
+        font-size:2rem;
+        width: 85vw;
         margin-bottom: 5%;
     }
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 63%;
+        font-size: 1rem;
         padding: 0%;
         width: 100%;
         text-align: center;
@@ -298,7 +348,7 @@ you should provide alternative styles to indicate focus state */
         width: auto;
     }
     .line-separator {
-        width: 45vw;/* Adjust width as needed */
+        width: 65vw;/* Adjust width as needed */
         margin: 0% 5% 5% 5%; /* Center the line and add space below */
     }
     .line-vert-separator-forbusiness {
@@ -315,8 +365,8 @@ you should provide alternative styles to indicate focus state */
     .titleTwo-forbusiness {
         color: #000000;
         font-family: Poppins;
-        font-size:1rem;
-        width: 80vw;
+        font-size:1.2rem;
+        width: 90vw;
         line-height: 2rem;
         font-weight: 700;
         margin-bottom: 2%; /* Space between title and line */
@@ -338,12 +388,19 @@ you should provide alternative styles to indicate focus state */
     }
     .paratext {
         font-family: Poppins;
-        /* align-self: flex-end; */
+        text-align: center;
         width: 85%;
         margin-top: 5%;
+        font-size: 0.8rem;
     }
     .section-forbusiness{
         justify-content: center;
+    }
+    .boxedup{
+        height: 65vh;
+    }
+    .box-container{
+        height: auto;
     }
 }
 
@@ -432,20 +489,23 @@ you should provide alternative styles to indicate focus state */
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 60%;
+        font-size: 1rem;
         padding: 0%;
         width: 100%;
         text-align: center;
         font-weight: 550;
-        margin-bottom: 7%; /* Space between description and button */
+        margin-bottom: 7%; 
     }   
     .info-section-forBusiness  h1 {
-        font-size:1.3rem;
-        width: 65vw;
+        font-size:1.5rem;
+        width: 85vw;
         margin-bottom: 5%;
+    }
+    .boxedup{
+        height: 65vh;
     }
 }

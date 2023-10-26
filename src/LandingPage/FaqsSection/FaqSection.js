@@ -34,7 +34,7 @@ function FaqSection() {
       <div className="faqBox faq-container">
         <Accordion className="faqInner" style={{ borderRadius: "21px" }}>
           <Accordion.Item eventKey="0" className="faqItems">
-            <Accordion.Header>Who is FindHer for?</Accordion.Header>
+            <Accordion.Header className="faqbodyHeader">Who is FindHer for?</Accordion.Header>
             <Accordion.Body>
               <p className="faqbodyPP">
                 FindHer is designed for professional women of all backgrounds
@@ -47,7 +47,7 @@ function FaqSection() {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1" className="faqItems">
-            <Accordion.Header>
+            <Accordion.Header className="faqbodyHeader">
               What kind of information will I find?
             </Accordion.Header>
             <Accordion.Body>
@@ -64,7 +64,7 @@ function FaqSection() {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2" className="faqItems">
-            <Accordion.Header>
+            <Accordion.Header className="faqbodyHeader">
               Are reviews collected anonymously?
             </Accordion.Header>
             <Accordion.Body>
@@ -78,7 +78,7 @@ function FaqSection() {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3" className="faqItems">
-            <Accordion.Header>How do I join the waitlist?</Accordion.Header>
+            <Accordion.Header className="faqbodyHeader">How do I join the waitlist?</Accordion.Header>
             <Accordion.Body>
               <p className="faqbodyPP">
                 Just click the "Join Now" button, and you'll be directed to a
@@ -90,7 +90,7 @@ function FaqSection() {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4" className="faqItems">
-            <Accordion.Header>What is FindHer’s mission?</Accordion.Header>
+            <Accordion.Header className="faqbodyHeader">What is FindHer’s mission?</Accordion.Header>
             <Accordion.Body className="innerBodyfaq">
               <p className="faqbodyPP">
                 FindHer aims to revolutionize how women find jobs in India. We
