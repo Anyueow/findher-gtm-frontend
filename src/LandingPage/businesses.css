@@ -6,7 +6,7 @@
     animation: animate-background 10s infinite ease-in-out;
 
     transition: opacity 1s ease-in-out; /* Smooth transition for the fade effect */
-    z-index: -1;
+    z-index: 0;
     height: 100vh; /* Full height of the viewport */
     width: 100%;
 }
