@@ -99,7 +99,7 @@ function Overview() {
               Top Reasons To Work Here</h2>
           </Row>
           <Row style={{paddingTop:"0%"}} className="smallerRow">
-            <Col xs="11" md="11" lg="11"
+            <Col xs="12" md="11" lg="12"
                  className="Rect columnpens">
               <Col className="d-flex  align-items-baseline groupbox">
                     <span className="greenTick">
