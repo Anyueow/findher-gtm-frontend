@@ -129,10 +129,11 @@
 }
 
 .columnpens{
-    height: 15vh;
+    height: 30vh;
     column-count: 2; /* number of columns */
     column-gap: 12px; /* space between columns */
     flex: 1 0 50px;
+    display: block;
 }
 .groupbox{
     padding: 0% 0% 1% 0%;

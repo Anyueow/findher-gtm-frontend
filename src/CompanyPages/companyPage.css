@@ -71,7 +71,8 @@
 
 .company-page-photo img{
     border-radius: 10px;
-    width: 95%;
+    width: 90%;
+    height: 85%;
 }
 
 .company-page-photo .swiper-slide{
@@ -95,7 +96,7 @@
 }
 
 .company-detaisl-swiper-container{ 
-    height: 31vh !important;  
+    height: 27vh !important;  
 }
 
 .navigation {
@@ -168,26 +169,29 @@
     float: right;
     margin-right: 10%;
     margin-top: 2%;
-    background-color: #ee2c5b !important;
+    /* background-color: #ee2c5b !important; */
     color: white;
+    opacity: 1;
   }
 
 
 .company-details-carousel .carousel-control-next-icon{
     background-color: #ee2c5b;
-    border-radius: 20%;
+    border-radius: 50%;
 }
 .company-details-carousel .carousel-control-next{
    right: -15%;
+   opacity: 1;
 }
 
 .company-details-carousel .carousel-control-prev-icon{
     background-color: #ee2c5b;
-    border-radius: 20%;
+    border-radius: 50%;
 }
 
 .company-details-carousel .carousel-control-prev{
     left: -15%;
+    opacity: 1;
 }
 
 @media (min-width:641px) and (max-width:940px) {

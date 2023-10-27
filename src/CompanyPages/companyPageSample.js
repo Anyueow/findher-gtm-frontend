@@ -184,7 +184,7 @@ export const CompanyProfileHeader = () => {
           </Col>
     <Row className="">
       <Col md="3" className="profileBox">
-        <Row className="company-page-left-row pt-3">
+        <Row className="company-page-left-row">
           <Col
             xs="5"
             md="12"

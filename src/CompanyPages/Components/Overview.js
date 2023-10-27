@@ -101,30 +101,30 @@ function Overview() {
           <Row style={{paddingTop:"0%"}} className="smallerRow">
             <Col xs="11" md="11" lg="11"
                  className="Rect columnpens">
-              <div className="d-flex  align-items-baseline groupbox">
+              <Col className="d-flex  align-items-baseline groupbox">
                     <span className="greenTick">
                       <img src={greentick} alt="tick" />
                     </span>
                 <h6 className="bubble mx-3">Remote Work Opps</h6>
-              </div>
-              <div className="d-flex  align-items-baseline groupbox">
+              </Col>
+              <Col className="d-flex  align-items-baseline groupbox">
                     <span>
                       <img src={greentick} alt="tick" />
                     </span>{" "}
                 <h6 className="bubble mx-3">Retirement Benefits</h6>
-              </div>
-              <div className="d-flex  align-items-baseline groupbox">
+              </Col>
+              <Col className="d-flex  align-items-baseline groupbox">
                     <span>
                       <img src={greentick} alt="tick" />
                     </span>{" "}
                 <h6 className="bubble mx-3">Parental Leaves</h6>
-              </div>
-              <div className="d-flex  align-items-baseline groupbox">
+              </Col>
+              <Col className="d-flex  align-items-baseline groupbox">
                     <span>
                       <img src={greentick} alt="tick" />
                     </span>{" "}
                 <h6 className="bubble mx-3">Parental Leaves</h6>
-              </div>
+              </Col>
             </Col>
 
           </Row>
