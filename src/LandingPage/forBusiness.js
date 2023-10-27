@@ -98,11 +98,12 @@ const Box = () => {
                             <Col md={7} className="contentcol">
 
                                 <Image src={img1} className="proto" alt="description"/>
-                                <p className="paratext">Rather than just mass-sending profiles
-                                    your way, FindHer uses advanced AI to curate the top female
-                                    candidates for your specific roles. We dive into the nuances of
-                                    compatibility to provide not just applicants, but perfect fits,
-                                    every time.</p>
+                                <p className="paratext">
+                                    In today's fierce job market, your talent brand defines you.
+                                    With FindHer, you can effectively communicate your value to
+                                    potential female employees, positioning you as a top choice
+                                    and ensuring you secure the industry's best.
+                                </p>
                             </Col>
                             <Button
                                     onClick={() => {
@@ -134,10 +135,11 @@ const Box = () => {
                             <Col md={7} className="contentcol">
                                 <Image src={img2} className="proto" alt="description"/>
 
-                                <p className="paratext"> In today's fierce job market, your talent brand defines you.
-                                    With FindHer, you can effectively communicate your value to
-                                    potential female employees, positioning you as a top choice
-                                    and ensuring you secure the industry's best.</p>
+                                <p className="paratext">Rather than just mass-sending profiles
+                                    your way, FindHer uses advanced AI to curate the top female
+                                    candidates for your specific roles. We dive into the nuances of
+                                    compatibility to provide not just applicants, but perfect fits,
+                                    every time.</p>
                             </Col>
                             <Button  onClick={() => {
                                     console.log("Button clicked!");

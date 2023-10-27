@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import {Modal, Button, Form, Col, Row} from 'react-bootstrap';
-import './popup.css'; // Importing the separate CSS file
-import { useCsrfToken } from '../../CsrfTokenProvider';
+import { Modal, Button, Form, Col, Row } from 'react-bootstrap';
+import './popup.css'; // Make sure this path is correct
+import { useCsrfToken } from '../../CsrfTokenProvider'; // Make sure this path is correct
 import { toast } from "react-toastify";
 
 const PopupForm = ({ isVisible, onClose }) => {
-
     const csrfToken = useCsrfToken();
-
     const [formData, setFormData] = useState({ name: '', companyName: '', email: '' });
 
     const handleChange = (e) => {
@@ -15,70 +13,64 @@ const PopupForm = ({ isVisible, onClose }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log('Form data:', formData);
-        alert('A submission was made. Check the console for details.');
+    const handleSubmit = async (e, action) => {
         e.preventDefault();
 
         const { email, companyName, name } = formData;
-    
-        if (email && companyName && name) {
-          const response = await fetch(process.env.REACT_APP_URL+"business/joinnow", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "X-CSRF-Token" : csrfToken,
-            },
-            credentials: "include", // Include this line
-            body: JSON.stringify({
-              email: formData.email,
-              companyName: formData.companyName,
-              name: formData.name,
-            }),
-          });
-          console.log(
-            "how can you hate from outside the club you cant even get inp"
-          );
-    
-          if (response.ok) {
-            const data = await response.json();
-            console.log(data);
-            toast.success("Form submitted successfully", {
-                position: toast.POSITION.TOP_RIGHT,
-              });
-          } else {
-            console.log("dammit these errors");
-            // Handle the error response
-            const data = await response.json();
-            toast.error("Internal server error", {
-              position: toast.POSITION.TOP_RIGHT,
-            });
-            console.error(`Error: ${response.status} ${response.statusText}`);
-            console.error(data.message); // Print the error message from the backend
-    
-          }
-        } else {
-          // Update formErrors to show which fields are missing
-          toast.error("Please fill out all the fields", {
-            position: toast.POSITION.TOP_RIGHT,
-          });
-        }
-        onClose();
-    };
 
-    const handleSchedule = () => {
-        alert('Schedule a call with us.');
+        if (!email || !companyName || !name) {
+            toast.error("Please fill out all the fields", {
+                position: toast.POSITION.TOP_CENTER,
+            });
+            return;
+        }
+
+        try {
+            const response = await fetch(process.env.REACT_APP_URL + "business/joinnow", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-Token": csrfToken,
+                },
+                credentials: "include",
+                body: JSON.stringify({
+                                         email: formData.email,
+                                         companyName: formData.companyName,
+                                         name: formData.name,
+                                     }),
+            });
+
+            if (response.ok) {
+                const message = action === 'info'
+                                ? "We just sent you an email, check your inbox for details :)"
+                                : "Redirecting you to schedule a call...";
+                toast.success(message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                });
+
+                if (action === 'schedule') {
+                    window.open('https://calendly.com/asurana/chat-with-anjali?month=2023-10', '_blank');
+                }
+            } else {
+                throw new Error('Server responded with an error');
+            }
+        } catch (error) {
+            toast.error("Internal server error", {
+                position: toast.POSITION.TOP_RIGHT,
+            });
+            console.error('Submission error:', error);
+        }
+
+        onClose(); // Close the modal
     };
 
     return (
         <Modal show={isVisible} onHide={onClose} centered>
             <Modal.Header closeButton>
-                <Modal.Title>Want to hire <strong style={{fontWeight:"800"}}> better & faster?</strong>
-                    </Modal.Title>
+                <Modal.Title>Want to hire <strong style={{fontWeight:"800"}}>better & faster?</strong></Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form onSubmit={handleSubmit}>
+                <Form>
                     <Form.Group controlId="formName">
                         <Form.Control
                             type="text"
@@ -111,13 +103,23 @@ const PopupForm = ({ isVisible, onClose }) => {
                     </Form.Group>
                     <Row>
                         <Col>
-                    <Button variant="primary" className="buttclass" type="submit">
-                        Get More Info
-                    </Button></Col>
+                            <Button
+                                variant="primary"
+                                className="buttclass"
+                                onClick={(e) => handleSubmit(e, 'info')}
+                            >
+                                Get More Info
+                            </Button>
+                        </Col>
                         <Col>
-                    <Button variant="secondary" className="buttclass" onClick={handleSchedule}>
-                        Schedule a Call
-                    </Button> </Col>
+                            <Button
+                                variant="secondary"
+                                className="buttclass"
+                                onClick={(e) => handleSubmit(e, 'schedule')}
+                            >
+                                Schedule a Call
+                            </Button>
+                        </Col>
                     </Row>
                 </Form>
             </Modal.Body>
