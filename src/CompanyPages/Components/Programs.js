@@ -365,7 +365,6 @@ function Programs(props) {
         </Col>
       </Row>
 
-
     <Row className="ApplyHereBox" style={{ width: "95.5%", padding: "2%" }}>
       <Row style={{ padding: "1%", width: "100%", paddingBottom: '2%' }}>
         <Col>
