@@ -4,7 +4,7 @@
     left: 0; /* 0px from the left */
     width: 27%; /* Specify a width */
     height: 100vh; /* Full height */
-    z-index: 1000; /* High z-index so it's on top of other content */
+    z-index: 2; /* High z-index so it's on top of other content */
     background-color: white; /* Or any other background color */
     padding-top: 7%;
     margin-left: -2%;
@@ -71,7 +71,8 @@
 
 .company-page-photo img{
     border-radius: 10px;
-    width: 95%;
+    width: 90%;
+    height: 85%;
 }
 
 .company-page-photo .swiper-slide{
@@ -95,7 +96,7 @@
 }
 
 .company-detaisl-swiper-container{ 
-    height: 31vh !important;  
+    height: 27vh !important;  
 }
 
 .navigation {
@@ -148,7 +149,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 61;
+    z-index: 3;
     background: transparent; 
     backdrop-filter: blur(5px);
 }
@@ -157,7 +158,7 @@
     top: 10%;
     left: 25%;
     width: 50%;
-    z-index: 61;
+    z-index: 3;
     background: transparent; 
     backdrop-filter: blur(5px);
 }
@@ -168,6 +169,29 @@
     float: right;
     margin-right: 10%;
     margin-top: 2%;
+    /* background-color: #ee2c5b !important; */
+    color: white;
+    opacity: 1;
+  }
+
+
+.company-details-carousel .carousel-control-next-icon{
+    background-color: #ee2c5b;
+    border-radius: 50%;
+}
+.company-details-carousel .carousel-control-next{
+   right: -15%;
+   opacity: 1;
+}
+
+.company-details-carousel .carousel-control-prev-icon{
+    background-color: #ee2c5b;
+    border-radius: 50%;
+}
+
+.company-details-carousel .carousel-control-prev{
+    left: -15%;
+    opacity: 1;
 }
 
 @media (min-width:641px) and (max-width:940px) {
@@ -227,7 +251,7 @@
         top: 6%;
         left: 15%;
         width: 65%;
-        z-index: 61;
+        z-index: 3;
         background: transparent; 
         backdrop-filter: blur(5px);
     }
@@ -314,7 +338,7 @@ justify-content: center}
     top: 6%;
     left: 5%;
     width: 95%;
-    z-index: 61;
+    z-index: 3;
     background: transparent; 
     backdrop-filter: blur(5px);
 }
@@ -364,7 +388,7 @@ justify-content: center}
         top: 15%;
         left: 10%;
         width: 85%;
-        z-index: 61;
+        z-index: 3;
         background: transparent; 
         backdrop-filter: blur(5px);
     }

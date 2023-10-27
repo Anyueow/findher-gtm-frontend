@@ -186,7 +186,7 @@ function TestimonialSec(props) {
     <h2 className="some-title mt-3 ms-5 text-left ">
         How their female employees feel about working here:</h2>
 
-     <Col  className="GraphCard" xs={9} md={4} lg={3}>
+     <Col  className="GraphCard" xs={10} md={5} lg={3}>
             <Col className='my-3'>
                 <p className="company-details-para mb-4"
                    style={{fontStyle:"italic"}}> <i> “My co-workers were friendly and I feel included and welcome
@@ -197,7 +197,7 @@ function TestimonialSec(props) {
                 <CircularProgress progress={80} circleColor="#ffb9c6" percentageColor="#ee2c5b"/>
             </Col>
      </Col>
-        <Col    className="GraphCard" xs={9} md={4} lg={3}>
+        <Col    className="GraphCard" xs={10} md={5} lg={3}>
             <Col className='my-3'>
                 <p className="company-details-para mb-4" style={{fontStyle:"italic"}}> <i> “My co-workers were friendly and I feel included and welcome
                     in my team”
@@ -209,7 +209,7 @@ function TestimonialSec(props) {
             </Col>
         </Col>
 
-        <Col    className="GraphCard" xs={9} md={4} lg={3} >
+        <Col    className="GraphCard" xs={10} md={5} lg={3} >
             <Col className='my-3'>
                 <p className="company-details-para mb-4 my-3"
                    style={{fontStyle:"italic"}}> <i> “My co-workers were friendly and I feel included and welcome

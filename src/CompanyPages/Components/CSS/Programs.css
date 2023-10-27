@@ -27,7 +27,7 @@
     justify-content: center;
     padding: 3% 3%;
 
-    max-width: 300px;
+    max-width: 270px;
     margin: 1% 1% 2% 1%;
 
 }
@@ -155,7 +155,7 @@
 }
 {/* Praveen CSS */}
 .guest-profile-login-toast-program{
-    top: 42%;
+    top: 22.5%;
 }
 .infoCard-for-women {
     background: var(--white-100, #FFF);

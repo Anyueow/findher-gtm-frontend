@@ -155,7 +155,7 @@ function Programs(props) {
   // Helper function to render job cards
   const renderJobCards = (jobsToRender) => {
     return jobsToRender.map((job, index) => (
-        <Col key={index} className="seemorebox" style={{ width: "37.5%" }}>
+        <Col md={4} xs={12} key={index} className="seemorebox">
           <h2 className="company-details-sub-title">{job.title}</h2>
           <p className="SubJobtitle">{job.type} • {job.location}</p>
           <Row className="bubblerow">
@@ -219,8 +219,7 @@ function Programs(props) {
   return (
     <>
       {/* Blur div with pop up*/}
-      <div className="check-blur"
-      style={{marginTop:"-15%"}}>
+      <div className="check-blur">
                     {!props.isLogedIn && !props.isGuest  && <div className="blur-company-details" id="guest-profile-login-toast-id">
                         <div className="mt-5"><Toast className="guest-profile-login-toast guest-profile-login-toast-program" >
         <Toast.Body className="">
@@ -389,12 +388,6 @@ function Programs(props) {
         {renderJobCards(jobs.slice(0, seeMore ? jobs.length : 3))}
       </Row>
 
-      {/* If seeMore is true, render the rest of the job cards in a new row */}
-      {seeMore && (
-          <Row>
-            {renderJobCards(jobs.slice(3))}
-          </Row>
-      )}
     </Row>
 
     <Row className="ApplyHereBox" style={{ width: "95.5%", padding: "2%" }}>
