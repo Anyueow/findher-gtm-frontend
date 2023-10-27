@@ -219,8 +219,7 @@ function Programs(props) {
   return (
     <>
       {/* Blur div with pop up*/}
-      <div className="check-blur"
-      style={{marginTop:"-15%"}}>
+      <div className="check-blur">
                     {!props.isLogedIn && !props.isGuest  && <div className="blur-company-details" id="guest-profile-login-toast-id">
                         <div className="mt-5"><Toast className="guest-profile-login-toast guest-profile-login-toast-program" >
         <Toast.Body className="">
