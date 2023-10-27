@@ -4,7 +4,7 @@ import './businesses.css';
 import img1 from "./prototype/prototypeOne.png";
 import img2 from "./prototype/mathces.png";
 import img3 from "./prototype/resources.png";
-import FaqSection from "./FaqsSection/FaqSection";
+import FaqSectionConsumer from "./FaqsSection/FaqSectionConsumer";
 import PopupForm from "./Forms/businessforms";
 import "./background.css";
 import { ToastContainer } from "react-toastify";
@@ -48,7 +48,7 @@ const Box = () => {
             <Col className="boxedup content-inside-box">
                 <Row className="info-section-forBusiness">
                     <h1 className="title">
-                    Find Work That Works For You</h1>
+                    Find Work <br/> That Works For You</h1>
                 </Row><Row className="info-section-forBusiness">
                     <hr className="line-separator" />
             </Row> <Row className="info-section-forBusiness">
@@ -179,7 +179,7 @@ const Box = () => {
             <Container className="withFAQS">
                 <h2 className="titleTwo-forbusiness"> We’re not just rooting for your success, we’re making it happen. {" "}
                 <span className='text-underline-titleTwo-forbusiness'>Join Us.</span> </h2>
-                <FaqSection/>
+                <FaqSectionConsumer/>
             </Container>
 
             {/* Popup form */}

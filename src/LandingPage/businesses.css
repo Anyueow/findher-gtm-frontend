@@ -115,7 +115,7 @@
     color: #000000;
     font-family: Poppins;
     font-size:3rem;
-    width: 40vw;
+    width: 48vw;
     font-weight: 700;
     margin-bottom: 2%; /* Space between title and line */
 }
@@ -329,10 +329,10 @@ you should provide alternative styles to indicate focus state */
 }
 
 
-@media (max-width: 658px) {
+@media (min-width: 500px) and (max-width: 658px) {
     .info-section-forBusiness  h1 {
-        font-size:2rem;
-        width: 85vw;
+        font-size:1.9rem !important;;
+        width: 85vw !important;;
         margin-bottom: 5%;
     }
     .info-section-forBusiness p {
@@ -416,8 +416,8 @@ you should provide alternative styles to indicate focus state */
     }
     
     .info-section-forBusiness  h1 {
-        font-size:2rem;
-        width: 60vw;
+        font-size:2.5rem !important;
+        width: 65vw !important;
     }
 
     .info-section-forBusiness p {
@@ -465,7 +465,7 @@ you should provide alternative styles to indicate focus state */
 @media (min-width: 768px) and (max-width: 1034px) {
     .info-section-forBusiness  h1 {
         font-size:2.5rem;
-        width: 55vw;
+        width: 65vw !important;
     }
     .line-separator {
         border: 0;
@@ -494,23 +494,39 @@ you should provide alternative styles to indicate focus state */
     }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 400px) and (max-width: 500px){
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 0%;
-        width: 100%;
+        width: 95%;
         text-align: center;
         font-weight: 550;
-        margin-bottom: 7%; 
-    }   
+        margin-bottom: 4%;
+    }
+    .line-separator{
+        width: 45%;
+        margin-bottom: 2%;
+    }
     .info-section-forBusiness  h1 {
-        font-size:1.5rem;
-        width: 85vw;
+        font-size:1.5rem !important;
+        width: 55vw !important;
         margin-bottom: 5%;
     }
     .boxedup{
         height: 65vh;
     }
+}
+
+@media (max-width: 1050px) and (min-width: 1034px) {
+    
+}
+.info-section-forBusiness  h1 {
+    color: #000000;
+    font-family: Poppins;
+    font-size:3rem;
+    width: 55vw;
+    font-weight: 700;
+    margin-bottom: 2%; /* Space between title and line */
 }

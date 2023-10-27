@@ -29,6 +29,10 @@
 .accordion button{
   box-shadow: none !important;
 }
+.faqbodyHeader{
+  line-height: 1.5rem;
+  width: 95%;
+}
 .faqbodyHeader button{
   font-family: Poppins;
 }
@@ -131,4 +135,9 @@
   .faqbodyHeader button{
     font-size: 0.8rem;
   }
+}
+
+/* A tag links clas */
+.linkeda {
+  color: black;
 }

@@ -3,7 +3,7 @@ import "./FaqSection.css";
 import Accordion from "react-bootstrap/Accordion";
 import { motion } from "framer-motion";
 
-function FaqSection() {
+function FaqSectionBusiness() {
   const containerVariants = {
     initial: {
       opacity: 0,
@@ -108,4 +108,4 @@ function FaqSection() {
   );
 }
 
-export default FaqSection;
+export default FaqSectionBusiness;

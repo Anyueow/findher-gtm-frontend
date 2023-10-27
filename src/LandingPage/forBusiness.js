@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import './businesses.css';
-import img1 from "./prototype/prototypeOne.png";
-import img2 from "./prototype/prototypeTwo.png";
-import img3 from "./prototype/prototypeThree.png";
-import FaqSection from "./FaqsSection/FaqSection";
+import img1 from "./prototype/Proto1.png";
+import img2 from "./prototype/proto2.png";
+import img3 from "./prototype/proto3.png";
+import FaqSectionBusiness from "./FaqsSection/FaqSectionBusiness";
 import PopupForm from "./Forms/businessforms";
 import "./background.css";
 import { ToastContainer } from "react-toastify";
@@ -187,7 +187,7 @@ const Box = () => {
             <Container className="withFAQS">
                 <h2 className="titleTwo-forbusiness"> Change the face of work in your organization. {" "}
                 <span className='text-underline-titleTwo-forbusiness'>Speak with us today.</span> </h2>
-                <FaqSection/>
+                <FaqSectionBusiness/>
             </Container>
 
             {/* Popup form */}

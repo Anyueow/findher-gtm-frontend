@@ -41,7 +41,7 @@ export const MainPage = () => {
                              className="typing-animation"> Job Search </h1></Col>
 
                      </div>
-                         <h1 className="subsies"> made <i> for</i> Indian Women</h1>
+                         <h1 className="subsies"> made for Indian Women</h1>
 
                      </Row>
 
