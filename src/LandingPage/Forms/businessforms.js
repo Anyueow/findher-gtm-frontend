@@ -49,7 +49,8 @@ const PopupForm = ({ isVisible, onClose }) => {
                 });
 
                 if (action === 'schedule') {
-                    window.open('https://calendly.com/asurana/chat-with-anjali?month=2023-10', '_blank');
+                    window.open('https://calendly.com/asurana/chat-with-anjali?month=2023-10',
+                                '_blank');
                 }
             } else {
                 throw new Error('Server responded with an error');
