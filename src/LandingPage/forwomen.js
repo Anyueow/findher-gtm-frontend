@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import './businesses.css';
-import img1 from "./prototype/prototypeOne.png";
-import img2 from "./prototype/mathces.png";
-import img3 from "./prototype/resources.png";
+import img1 from "./prototype/Proto1.png";
+import img2 from "./prototype/proto5.png";
+import img3 from "./prototype/proto6.png";
 import FaqSectionConsumer from "./FaqsSection/FaqSectionConsumer";
-import PopupForm from "./Forms/businessforms";
+import PopupForm from "./Forms/consumerpopup";
 import "./background.css";
 import { ToastContainer } from "react-toastify";
 
@@ -151,7 +151,7 @@ const Box = () => {
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
                                 <h2 className="titlehead-forbusiness"
-                                    style={{width:"90%"}}>Discover Latest Career Information Easily</h2>
+                                    style={{width:"95%"}}>Discover Latest Career Information Easily</h2>
                                 <Button onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
@@ -162,7 +162,8 @@ const Box = () => {
                             <Col md={7} className="contentcol">
                                 <Image src={img3} className="proto" alt="description"/>
 
-                                <p className="paratext">In a world buzzing with information, it's easy to miss out on what truly matters. With FindHer's social channels and newsletters, we sift through the noise to bring you the most relevant career updates, advice, and company profiles - updated daily.</p>
+                                <p className="paratext"
+                                > In a world buzzing with information, it's easy to miss out on what truly matters. With FindHer's social channels and newsletters, we sift through the noise to bring you the most relevant career updates, advice, and company profiles - updated daily.</p>
                             </Col>
                             <Button onClick={() => {
                                     console.log("Button clicked!");
@@ -177,8 +178,15 @@ const Box = () => {
             </Col>
         </Container>
             <Container className="withFAQS">
-                <h2 className="titleTwo-forbusiness"> We’re not just rooting for your success, we’re making it happen. {" "}
-                <span className='text-underline-titleTwo-forbusiness'>Join Us.</span> </h2>
+                <h2 className="titleTwo-forbusiness" style={{width:"45%"}}> We’re not just rooting for your success,
+                    we’re making it happen.
+                    <br/>  <br/>
+                    If you want to start receiving job matches, take 5 minutes to fill out <br/>
+
+                    <a className="linkeda" style={{color:"rgba(226,11,60,0.83)"}}
+
+                       href={"https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6"}>
+                this form.</a> </h2>
                 <FaqSectionConsumer/>
             </Container>
 

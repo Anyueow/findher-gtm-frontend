@@ -73,7 +73,7 @@ function FaqSectionBusiness() {
               How can I get started on FindHer?</Accordion.Header>
             <Accordion.Body>
               <p className="faqbodyPP">
-                t's simple! Just fill out  <a className="linkeda"
+                It's simple! Just fill out  <a className="linkeda"
 
                                               href={"https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6"}>
                 this form,</a> and we'll start sending you the perfect job opportunities in your inbox.
