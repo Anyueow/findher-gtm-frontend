@@ -35,19 +35,6 @@
     z-index: 1000; /* High z-index to keep it above other elements */
     padding: 0% 0% 3% 3%;
 }
-.marquee-mobile {
-    position: fixed;
-    bottom: 12%; /* Stick to the bottom */
-    left: 0; /* Align to the left side */
-    right: 0; /* Align to the right side */
-    width: 100%; /* Full width */
-    height: 14vh;
-    overflow: hidden; /* Prevent overflow */
-    white-space: nowrap; /* Keep inline content on the same line */
-    box-sizing: border-box; /* Better border handling */
-    z-index: 1000; /* High z-index to keep it above other elements */
-    padding: 0% 0% 3% 3%;
-}
 
 .marquee-content {
     left: 0; /* Align to the right side */
@@ -88,6 +75,10 @@
     100% {
         transform: translateX(-20%);
     }
+}
+
+.isDesktop{
+    display: block;
 }
 
 .subsies {
