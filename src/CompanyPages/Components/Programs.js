@@ -155,7 +155,7 @@ function Programs(props) {
   // Helper function to render job cards
   const renderJobCards = (jobsToRender) => {
     return jobsToRender.map((job, index) => (
-        <Col key={index} className="seemorebox" style={{ width: "37.5%" }}>
+        <Col md={4} xs={12} key={index} className="seemorebox">
           <h2 className="company-details-sub-title">{job.title}</h2>
           <p className="SubJobtitle">{job.type} • {job.location}</p>
           <Row className="bubblerow">

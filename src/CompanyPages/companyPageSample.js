@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Carousel } from "react-bootstrap";
+import { Row, Col, Carousel, CloseButton  } from "react-bootstrap";
 import "./companyPage.css";
 import logo from "./imageAssets/1906bd2d4805affd0e087b30ee9ce4e3.jpeg";
 import office from "./imageAssets/random-office.jpg";
@@ -255,7 +255,7 @@ export const CompanyProfileHeader = () => {
       </Col>
       <Col className="company-page-right-row backgroundgrey">
         <Col xs={12} className="px-0  isDesktop"
-        style={{zIndex:"900", backgroundColor:"white"}}>
+        style={{ backgroundColor:"white"}}>
           <Navigation
               navbarvalue={navbarvalue}
               setNavbarvalue={setNavbarvalue}
@@ -273,11 +273,12 @@ export const CompanyProfileHeader = () => {
       <ToastContainer/>
       { showCarousel &&
         <div className="company-details-carousel-div">
-              <button 
-        className="btn-close company-details-carousel-btn "
+              <CloseButton  
+        className=" company-details-carousel-btn "
+        style={{ color: 'white' }} 
         onClick={()=>setShowCarousel(!showCarousel)}
         >
-        </button>
+        </CloseButton >
                 <Carousel
                 wrap={true}
                 slide={false}

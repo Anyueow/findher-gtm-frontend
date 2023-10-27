@@ -7,17 +7,26 @@ import { FaLaptop, FaUsers, FaMapMarkerAlt, FaRegClock, FaCity } from 'react-ico
 function Overview() {
 
   // State to keep track of the collapsed status
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState({
+    why:false,
+    program:false,
+  });
 
   // The full text that you want to display
   const fullText = "At Sprintex, we envision a world where businesses seamlessly integrate technology into their core processes, fostering growth, efficiency, and success. Our mission is to guide organizations through the evolving digital landscape, ensuring they leverage the most effective and innovative tech solutions to meet their unique challenges and goals.";
 
-  // The text that will be displayed when the content is collapsed
-  const displayText = isCollapsed ? `${fullText.substring(0, 150)}...` : fullText;
+  // The text that will be displayed when the content is collapsed for why work here
+  const displayText = isCollapsed.why ?  fullText :`${fullText.substring(0, 150)}...`;
+
+  // The text that will be displayed when the content is collapsed for program for women
+  const displayTextProgram = isCollapsed.program ? fullText :  `${fullText.substring(0, 150)}...`;
 
   // Function to handle the "See More" button click
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
+  const toggleCollapse = (name) => {
+  
+    setIsCollapsed((prev) => ({
+      ...prev,[name]: !prev[name]}
+    ));
   };
 
 
@@ -26,7 +35,7 @@ function Overview() {
     <Row className="ms-0 me-1 px-2">
 
 
-          <Row style={{justifyContent:"center", marginTop:"5%"}}>
+          <Row style={{ marginTop:"5%"}} className="OverviewRow">
             <Col md={6} xs={11} className="smollbox"
                  style={{marginBottom:"3%"}}>
             <h2 className="company-details-sub-title">Mission</h2>
@@ -135,7 +144,7 @@ function Overview() {
               <Button
                   variant="danger"
                   style={{ padding: "1%", width: "100px" }}
-                  onClick={toggleCollapse}
+                  onClick={()=>toggleCollapse("why")}
                   className="see-more-button"
               >
                 {isCollapsed ? "See More" : "See Less"}
@@ -179,7 +188,7 @@ function Overview() {
               <Button
                   variant="danger"
                   style={{ padding: "1%", width: "100px" }}
-                  onClick={toggleCollapse}
+                  onClick={()=>toggleCollapse("program")}
                   className="see-more-button"
               >
                 {isCollapsed ? "See More" : "See Less"}
@@ -189,20 +198,20 @@ function Overview() {
           <Col className="infomorebox" style={{width:"37.5%"}}>
             <h2 className="company-details-sub-title">Period Leaves</h2>
             <p className="company-details-para">
-              {displayText}
+              {displayTextProgram}
             </p>
           </Col>
 
           <Col className="infomorebox" style={{width:"37.5%"}}>
             <h2 className="company-details-sub-title">Maternity Benefits</h2>
             <p className="company-details-para">
-              {displayText}
+            {displayTextProgram}
             </p>
           </Col>
           <Col className="infomorebox" style={{width:"37.5%"}}>
             <h2 className="company-details-sub-title">Caregiver Facility</h2>
             <p className="company-details-para">
-              {displayText}
+            {displayTextProgram}
             </p>
           </Col>
         </Row>
