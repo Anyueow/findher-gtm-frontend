@@ -5,8 +5,8 @@
     display: flex;
     height: 100vh;
     background: repeating-linear-gradient(
-    to right, rgb(255, 142, 165),
-    rgba(141, 198, 255, 0.96), rgb(212, 170, 255), rgb(237, 255, 137));
+    to right, rgba(255, 142, 165, 0.45),
+    rgba(141, 198, 255, 0.4), rgba(212, 170, 255, 0.37), rgba(237, 255, 137, 0.48));
     background-size: 500% 400% ;
     animation: animate-background 10s infinite ease-in-out;
 
@@ -25,19 +25,6 @@
 .marquee {
     position: fixed;
     bottom: 0; /* Stick to the bottom */
-    left: 0; /* Align to the left side */
-    right: 0; /* Align to the right side */
-    width: 100%; /* Full width */
-    height: 14vh;
-    overflow: hidden; /* Prevent overflow */
-    white-space: nowrap; /* Keep inline content on the same line */
-    box-sizing: border-box; /* Better border handling */
-    z-index: 1000; /* High z-index to keep it above other elements */
-    padding: 0% 0% 3% 3%;
-}
-.marquee-mobile {
-    position: fixed;
-    bottom: 12%; /* Stick to the bottom */
     left: 0; /* Align to the left side */
     right: 0; /* Align to the right side */
     width: 100%; /* Full width */
@@ -90,10 +77,14 @@
     }
 }
 
+.isDesktop{
+    display: block;
+}
+
 .subsies {
-    margin-top: 3%;
+    margin-top: 4%;
     width: 50vw;
-    font-size: 2.8rem;
+    font-size: 2.9rem;
     font-family: Poppins;
     font-weight: 600;
 }
@@ -165,7 +156,7 @@
     align-items: center;
     justify-content: flex-start;
     border: 0.01rem solid rgba(129, 128, 128, 0.1); /* subtle border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    box-shadow: 0 0px 13px rgba(0, 0, 0, 0.3); /* subtle shadow */
 }
 
 
