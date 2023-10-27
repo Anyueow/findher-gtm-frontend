@@ -389,12 +389,6 @@ function Programs(props) {
         {renderJobCards(jobs.slice(0, seeMore ? jobs.length : 3))}
       </Row>
 
-      {/* If seeMore is true, render the rest of the job cards in a new row */}
-      {seeMore && (
-          <Row>
-            {renderJobCards(jobs.slice(3))}
-          </Row>
-      )}
     </Row>
 
     <Row className="ApplyHereBox" style={{ width: "95.5%", padding: "2%" }}>
