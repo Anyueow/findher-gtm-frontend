@@ -56,7 +56,7 @@ const PopupForm = ({ isVisible, onClose }) => {
                 throw new Error('Server responded with an error');
             }
         } catch (error) {
-            toast.error("Internal server error", {
+            toast.error("Oops that didnt work!", {
                 position: toast.POSITION.TOP_RIGHT,
             });
             console.error('Submission error:', error);
