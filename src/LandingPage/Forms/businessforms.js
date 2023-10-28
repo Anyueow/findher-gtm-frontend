@@ -91,7 +91,7 @@ const PopupForm = ({ isVisible, onClose }) => {
 
         try {
             // Send the form data to the server-side route that handles email sending
-            const response = await fetch('/send-alert-email', {
+            const response = await fetch(process.env.REACT_APP_URL+ 'send-alert-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
