@@ -54,6 +54,8 @@ const PopupForm = ({ isVisible, onClose }) => {
                 }
             } else {
                 throw new Error('Server responded with an error');
+                console.log(Error);
+
             }
         } catch (error) {
             toast.error("Oops that didnt work!", {
