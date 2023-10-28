@@ -53,18 +53,22 @@ const PopupForm = ({ isVisible, onClose }) => {
                                 '_blank');
                 }
             } else {
-                throw new Error('Server responded with an error');
-                console.log(Error);
+                // Assuming the server responds with a JSON payload in case of an error
+                const serverResponse = await response.json();
 
+                // Constructing an error message based on server response or a default message
+                const errorMessage = serverResponse.message || 'Server responded with an error';
+                throw new Error(errorMessage);
             }
-        } catch (error) {
-            toast.error("Oops that didnt work!", {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-            console.error('Submission error:', error);
-        }
+        }   catch (error) {
+        toast.error("Oops that didn't work!", {
+            position: toast.POSITION.TOP_RIGHT,
+        });
+        console.error('Submission error:', error);
+    }
 
-        onClose(); // Close the modal
+
+    onClose(); // Close the modal
     };
 
     return (
