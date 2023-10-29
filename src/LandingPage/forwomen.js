@@ -178,7 +178,8 @@ const Box = () => {
             </Col>
         </Container>
             <Container className="withFAQS">
-                <h2 className="titleTwo-forbusiness" style={{width:"45%"}}> We’re not just rooting for your success,
+                <h2 className="titleTwo-forbusiness phonewidth">
+                    We’re not just rooting for your success,
                     we’re making it happen.
                     <br/>  <br/>
                     If you want to start receiving job matches, take 5 minutes to fill out <br/>

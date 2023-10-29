@@ -335,6 +335,9 @@ you should provide alternative styles to indicate focus state */
         width: 85vw;
         margin-bottom: 5%;
     }
+    .phonewidth {
+        width: 85% !important;
+    }
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
@@ -411,6 +414,9 @@ you should provide alternative styles to indicate focus state */
 
 @media (min-width: 659px) and (max-width: 767px) {
 
+    .phonewidth {
+        width: 65%;
+    }
     .section-forbusiness{
         justify-content: center;
     }
@@ -505,6 +511,9 @@ you should provide alternative styles to indicate focus state */
         font-weight: 550;
         margin-bottom: 7%;
     }
+    .phonewidth {
+        width: 85%;
+    }
     .info-section-forBusiness  h1 {
         font-size:1.5rem;
         width: 85vw;
@@ -513,4 +522,10 @@ you should provide alternative styles to indicate focus state */
     .boxedup{
         height: 65vh;
     }
+}
+
+/* Width for phone elements*/
+
+.phonewidth {
+    width: 45%;
 }
