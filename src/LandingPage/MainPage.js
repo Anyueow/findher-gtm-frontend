@@ -14,6 +14,11 @@ import {useNavigate} from 'react-router-dom';
 const logos = [ hrh, supu, fin, enter, junglee];
 export const MainPage = () => {
 
+    console.log(logos);
+
+    if (!logos || logos.length === 0) {
+        <div>Loading...</div>; // Or some loading indication
+    }
     const navigate = useNavigate();
 
     const handleButtonClickB = () => {
@@ -53,7 +58,7 @@ export const MainPage = () => {
                      </Row>
 
 
-                     <Container fluid className="marquee isDesktop">
+                     <Container fluid className="marquee">
                          <Col>
                              <Row>
                                  <h3 className="trusted"> Trusted by</h3>
@@ -72,6 +77,8 @@ export const MainPage = () => {
                                          <img src={logo} alt={`logo-duplicate-${index + 1}`} />
                                      </Col>
                                  ))}
+
+
                              </div>
                          </Row>
                          </Col>

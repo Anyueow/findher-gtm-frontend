@@ -346,6 +346,10 @@ you should provide alternative styles to indicate focus state */
 
 
 @media (max-width: 658px) {
+
+    .learnmore-forbusiness{
+        margin-bottom: 20%;
+    }
     .mobile-hide {
         display: none;
     }
@@ -428,7 +432,7 @@ you should provide alternative styles to indicate focus state */
         margin-bottom: 10%;
     }
     .boxedup{
-        height: 65vh;
+        height: 95vh;
     }
     .box-container{
         height: auto;
@@ -543,7 +547,8 @@ you should provide alternative styles to indicate focus state */
     }
     .info-section-forBusiness  h1 {
         font-size:1.9rem;
-        width: 85vw;
+        width: 90vw;
+        font-weight: inherit;
         margin-bottom: 5%;
     }
     .boxedup{

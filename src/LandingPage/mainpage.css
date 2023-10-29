@@ -22,30 +22,34 @@
     font-weight: 600;
     color: #ffffff;
 }
+
 .marquee {
     position: fixed;
-    bottom: 15px; /* Stick to the bottom */
-    left: 0; /* Align to the left side */
-    right: 0; /* Align to the right side */
-    width: 100%; /* Full width */
-    height: 14vh;
-    overflow: hidden; /* Prevent overflow */
-    white-space: nowrap; /* Keep inline content on the same line */
-    box-sizing: border-box; /* Better border handling */
-    z-index: 1000; /* High z-index to keep it above other elements */
-    padding: 0% 0% 3% 3%;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 0;
+    height:15vh;
+    /* Adjust padding for smaller screens if necessary */
+    padding: 0 0 3% 3%;
 }
 
 .marquee-content {
-    left: 0; /* Align to the right side */
-    margin-left: -3%;
-    display: flex; /* Changed to inline-flex */
-    animation: marquee 5s;
-    width: 100vw; /* Ensures the container's width is as wide as it needs to be */
-
+    display: flex;
+    animation: marquee 30s linear 1;
+    /* No width set here; content dictates width */
 }
 
-.marquee-logo{
+/* Duplicate your marquee items to create a continuous stream */
+.marquee-content::after {
+    content: attr(data-content);
+    display: inline-block;
+    padding-left: 100%; /* Space between iterations */
+}
+
+.marquee-logo {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
@@ -63,20 +67,18 @@
     width: auto; /* Ensuring the logo images stay within the bounds */
     max-height: 5%; /* Maintaining aspect ratio */
 }
-
 /* On hover, the image will transition to full color */
 .marquee-logo img:hover {
     filter: grayscale(0%);
 }
 @keyframes marquee {
     0% {
-        transform: translateX(0%);
+        transform: translateX(0);
     }
     100% {
         transform: translateX(-20%);
     }
 }
-
 .isDesktop{
     display: block;
 }
@@ -267,6 +269,25 @@
 
 /* Styles for screen width of 534px and below */
 @media (max-width: 658px) {
+
+
+    .marquee-content {
+        display: flex;
+        flex-direction: row; /* Keep the direction as row */
+        flex-wrap: wrap; /* Allow the items to wrap to the next line */
+        justify-content: space-around; /* Adjust how items are spaced along the line */
+        align-content: space-around; /* Space between the lines of items */
+        /* Remove or adjust the animation as it might not work well with multi-row layout */
+    }
+    .marquee-logo {
+        /* These settings are for the children of the flex container */
+        flex: 0 0 50%; /* Represents: flex-grow, flex-shrink, flex-basis */
+        max-width: 50%; /* Maximum width of the content; can be adjusted to fit more items on a row */
+        box-sizing: border-box;
+        /* Adjust margin or padding as necessary to create space between items */
+    }
+    
+
     /* Modify or add classes as needed for smaller screens */
     .SearchIcon {
         z-index: 7;
@@ -278,7 +299,7 @@
         border-right: 2px solid #000; /* this is your cursor */
         white-space: nowrap;
         overflow: hidden;
-        font-weight: bold;
+        font-weight: 400;
         font-family: Poppins;
         text-align: left;
         font-size: 1.8rem;
