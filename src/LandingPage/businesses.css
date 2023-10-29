@@ -51,7 +51,7 @@
 }
 .text-underline-titleTwo-forbusiness{
     border-bottom: 2px solid #000000cf;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 .circle1 {
     background: rgba(237, 255, 137, 0.23); /* Adjust color and opacity */
@@ -115,7 +115,7 @@
     color: #000000;
     font-family: Poppins;
     font-size:3rem;
-    width: 48vw;
+    width: 40vw;
     font-weight: 700;
     margin-bottom: 2%; /* Space between title and line */
 }
@@ -155,19 +155,19 @@
 }
 
 .toggle-forbusiness {
-     width: 100vw;
-     text-align: left;
-     padding: 1%;
-     font-weight: 600;
-     font-size: 1.5rem;
-     font-family: Poppins, sans-serif; /* It's good practice to have a fallback */
-     border: none; /* Remove the border */
-     background-color: rgb(255, 255, 255); /* Light grey background, you can change this */
-     color: black;
+    width: 100vw;
+    text-align: left;
+    padding: 1%;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: Poppins, sans-serif; /* It's good practice to have a fallback */
+    border: none; /* Remove the border */
+    background-color: rgb(255, 255, 255); /* Light grey background, you can change this */
+    color: black;
     box-shadow: none !important; /* 'none' for no shadow, and '!important' to ensure override */
 
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
- }
+}
 
 .toggle-forbusiness:hover {
     cursor: pointer; /* Optional: show a hand cursor when hovering */
@@ -194,7 +194,7 @@ you should provide alternative styles to indicate focus state */
 
 .line-vert-separator-forbusiness {
     border-left: 1px solid #000; /* This creates the line */
-    height: 100%; 
+    height: 100%;
     margin: 0;
     width: 0;
     /* Your existing styles for the vertical line */
@@ -272,7 +272,7 @@ you should provide alternative styles to indicate focus state */
     width: 70%;
     height: auto;
     /* align-self: flex-end; */
-     /* This aligns itself vertically at the end, if needed */
+    /* This aligns itself vertically at the end, if needed */
 
 }
 
@@ -329,10 +329,10 @@ you should provide alternative styles to indicate focus state */
 }
 
 
-@media (min-width: 500px) and (max-width: 658px) {
+@media (max-width: 658px) {
     .info-section-forBusiness  h1 {
-        font-size:1.9rem !important;;
-        width: 85vw !important;;
+        font-size:2rem;
+        width: 85vw;
         margin-bottom: 5%;
     }
     .info-section-forBusiness p {
@@ -355,7 +355,7 @@ you should provide alternative styles to indicate focus state */
         margin: 0% 5% 5% 5%; /* Center the line and add space below */
     }
     .line-vert-separator-forbusiness {
-       display: none;
+        display: none;
     }
     .titlehead-forbusiness {
         font-family: Poppins;
@@ -386,8 +386,8 @@ you should provide alternative styles to indicate focus state */
         width: 95%;
         height: auto;
         /* align-self: flex-end; */
-         /* This aligns itself vertically at the end, if needed */
-    
+        /* This aligns itself vertically at the end, if needed */
+
     }
     .paratext {
         font-family: Poppins;
@@ -414,10 +414,10 @@ you should provide alternative styles to indicate focus state */
     .section-forbusiness{
         justify-content: center;
     }
-    
+
     .info-section-forBusiness  h1 {
-        font-size:2.5rem !important;
-        width: 65vw !important;
+        font-size:2rem;
+        width: 60vw;
     }
 
     .info-section-forBusiness p {
@@ -465,7 +465,7 @@ you should provide alternative styles to indicate focus state */
 @media (min-width: 768px) and (max-width: 1034px) {
     .info-section-forBusiness  h1 {
         font-size:2.5rem;
-        width: 65vw !important;
+        width: 55vw;
     }
     .line-separator {
         border: 0;
@@ -481,7 +481,7 @@ you should provide alternative styles to indicate focus state */
         margin: 7% 0% 3% 0%;
     }
     .line-vert-separator-forbusiness {
-        height: 100%; 
+        height: 100%;
     }
     .titleTwo-forbusiness {
         color: #000000;
@@ -494,39 +494,23 @@ you should provide alternative styles to indicate focus state */
     }
 }
 
-@media (min-width: 400px) and (max-width: 500px){
+@media (max-width: 400px) {
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 0%;
-        width: 95%;
+        width: 100%;
         text-align: center;
         font-weight: 550;
-        margin-bottom: 4%;
-    }
-    .line-separator{
-        width: 45%;
-        margin-bottom: 2%;
+        margin-bottom: 7%;
     }
     .info-section-forBusiness  h1 {
-        font-size:1.5rem !important;
-        width: 55vw !important;
+        font-size:1.5rem;
+        width: 85vw;
         margin-bottom: 5%;
     }
     .boxedup{
         height: 65vh;
     }
-}
-
-@media (max-width: 1050px) and (min-width: 1034px) {
-    
-}
-.info-section-forBusiness  h1 {
-    color: #000000;
-    font-family: Poppins;
-    font-size:3rem;
-    width: 55vw;
-    font-weight: 700;
-    margin-bottom: 2%; /* Space between title and line */
 }
