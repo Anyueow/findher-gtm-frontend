@@ -24,7 +24,7 @@
 }
 .marquee {
     position: fixed;
-    bottom: 0; /* Stick to the bottom */
+    bottom: 15px; /* Stick to the bottom */
     left: 0; /* Align to the left side */
     right: 0; /* Align to the right side */
     width: 100%; /* Full width */
@@ -284,7 +284,7 @@
         font-size: 1.8rem;
         margin:1% 0% 0% -5%;
         /* Adjust the animation duration to make it faster, and set iteration to infinite */
-        animation: typing 2s infinite forwards, blink-caret 0.75s step-end infinite;
+        animation: typing 5s infinite forwards, blink-caret 0.75s step-end infinite;
         animation-delay: 0s, 15s;
         z-index: 1;
     }
@@ -321,7 +321,7 @@
             width: 0;
         }
         50%, 100% { /* Adding a pause by keeping the state the same from 50% to 100% */
-            width: 90%;
+            width: 78%;
         }
     }
 

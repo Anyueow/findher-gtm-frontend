@@ -8,6 +8,7 @@ import FaqSectionBusiness from "./FaqsSection/FaqSectionBusiness";
 import PopupForm from "./Forms/businessforms";
 import "./background.css";
 import { ToastContainer } from "react-toastify";
+import {Link} from "react-router-dom";
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -48,15 +49,19 @@ const Box = () => {
             <Col className="boxedup content-inside-box">
                 <Row className="info-section-forBusiness">
                     <h1 className="title">
-                        Attract, Hire & Retain Top Female Talent</h1>
+                        Attract, Hire & Retain
+                        <br className="mobile-show"/>
+                        Top Female Talent</h1>
                 </Row><Row className="info-section-forBusiness">
                     <hr className="line-separator" />
             </Row> <Row className="info-section-forBusiness">
                     <p>
                         Diversity isn’t just beneficial - it’s vital.
-                        <br />
+                        <br className="mobile-hide"/>
+
                         FindHer’s AI-driven platform helps you unlock access to India's top
-                        <br /> female professionals and build a better future for your organization.
+                        <br className="mobile-hide"/>
+                        female professionals and build a better future for your organization.
                     </p>
                     <Button
                         onClick={() => {
@@ -187,8 +192,12 @@ const Box = () => {
             </Col>
         </Container>
             <Container className="withFAQS">
-                <h2 className="titleTwo-forbusiness"> Change the face of work in your organization. {" "}
-                <span className='text-underline-titleTwo-forbusiness'>Speak with us today.</span> </h2>
+                <h2 className="titleTwo-forbusiness"> Change the face of work in your organization.
+                    <br/> <br/>
+                <Link className='text-underline-titleTwo-forbusiness no-underline-link'
+                        onClick={() => {
+                            console.log("Button clicked!");
+                            setPopupVisible(true);}} > Speak with us today.</Link> </h2>
                 <FaqSectionBusiness/>
             </Container>
 

@@ -253,12 +253,23 @@ you should provide alternative styles to indicate focus state */
     margin: 7% 0% 3% 0%;
 }
 
+/* with for the lasttitle in the womens page */
+.widthDilemma {
+    width: 100% !important;
+}
+
+@media (min-width: 1038px) and (max-width: 1151px) {
+    /* with for the lasttitle in the womens page */
+    .widthDilemma {
+        width: 110% !important;
+    }
+}
 .learnmore-forbusiness{
 
     z-index: 2000;
     background-color: rgba(226, 11, 60, 0.83);
     border: rgba(226, 11, 60, 0.83) 1px solid;
-    margin-top: 2%;
+    margin-top: 10%;
     font-family: Poppins;
     width: auto;
     font-weight: 600;
@@ -271,16 +282,21 @@ you should provide alternative styles to indicate focus state */
 .proto {
     width: 70%;
     height: auto;
-    /* align-self: flex-end; */
-    /* This aligns itself vertically at the end, if needed */
+    transition: transform 0.3s ease-in-out; /* This enables a smooth transformation effect */
 
+}
+
+.proto:hover {
+    transform: scale(1.1); /* This specifies the image to grow to 1.1 times its original size */
+    cursor: pointer; /* Changes the cursor to a hand pointer, optional */
 }
 
 .paratext {
     font-family: Poppins;
     /* align-self: flex-end; */
-    width: 70%;
+    width: 69%;
     margin-top: 5%;
+
 
 
 }
@@ -299,7 +315,7 @@ you should provide alternative styles to indicate focus state */
     color: #000000;
     font-family: Poppins;
     font-size:2rem;
-    width: 40vw;
+    width: 45vw;
     line-height: 3rem;
     font-weight: 700;
     margin-bottom: 2%; /* Space between title and line */
@@ -330,6 +346,12 @@ you should provide alternative styles to indicate focus state */
 
 
 @media (max-width: 658px) {
+    .mobile-hide {
+        display: none;
+    }
+    .mobile-show {
+        display: block;
+    }
     .info-section-forBusiness  h1 {
         font-size:2rem;
         width: 85vw;
@@ -402,7 +424,8 @@ you should provide alternative styles to indicate focus state */
     .section-forbusiness{
         justify-content: center;
         border-bottom: 1px solid gainsboro; /* Add a top border line */
-        padding-bottom: 15px; /* Adjust the padding as needed */
+        padding-bottom: 5%; /* Adjust the padding as needed */
+        margin-bottom: 10%;
     }
     .boxedup{
         height: 65vh;
@@ -414,6 +437,9 @@ you should provide alternative styles to indicate focus state */
 
 @media (min-width: 659px) and (max-width: 767px) {
 
+    .mobile-hide {
+        display: none;
+    }
     .phonewidth {
         width: 65%;
     }
@@ -501,12 +527,13 @@ you should provide alternative styles to indicate focus state */
 }
 
 @media (max-width: 400px) {
+
     .info-section-forBusiness p {
         color: #595959;
         font-family: Poppins;
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 0%;
-        width: 100%;
+        width: 95%;
         text-align: center;
         font-weight: 550;
         margin-bottom: 7%;
@@ -515,12 +542,16 @@ you should provide alternative styles to indicate focus state */
         width: 85%;
     }
     .info-section-forBusiness  h1 {
-        font-size:1.5rem;
+        font-size:1.9rem;
         width: 85vw;
         margin-bottom: 5%;
     }
     .boxedup{
-        height: 65vh;
+        height: 90vh;
+    }
+
+    .learnmore-forbusiness{
+        margin-bottom: 20%;
     }
 }
 
@@ -528,4 +559,16 @@ you should provide alternative styles to indicate focus state */
 
 .phonewidth {
     width: 45%;
+}
+
+.no-underline-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Makes text color the same as its parent, or you can set a specific color */
+    cursor: pointer; /* To show that this is clickable */
+}
+
+/* Optional: You might want to add hover effects */
+.no-underline-link:hover {
+    text-decoration: none; /* Removes underline */
+    color: #bb2d3b; /* Change #yourHoverColor to whatever color you prefer on hover */
 }

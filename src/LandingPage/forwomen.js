@@ -48,15 +48,15 @@ const Box = () => {
             <Col className="boxedup content-inside-box">
                 <Row className="info-section-forBusiness">
                     <h1 className="title">
-                    Find Work <br/> That Works For You</h1>
+                    Find Work That <br className="mobile-show"/> Works For You</h1>
                 </Row><Row className="info-section-forBusiness">
                     <hr className="line-separator" />
             </Row> <Row className="info-section-forBusiness">
                     <p>
                     Progress isn't just about moving up - it's about fitting right.
-                        <br />
+                        <br  class="mobile-hide" />
                         FindHer’s lets you find relevant information and discover roles at
-                        <br /> India's best companies for women. A search tailored just for you.
+                        <br  class="mobile-hide" /> India's best companies for women. A search tailored just for you.
                     </p>
                     <Button
                         onClick={() => {
@@ -150,8 +150,8 @@ const Box = () => {
                             <div className="circle circle2"></div>
             <div className="circle circle3"></div>
             <div className="circle circle4"></div>
-                                <h2 className="titlehead-forbusiness"
-                                    style={{width:"95%"}}>Discover Latest Career Information Easily</h2>
+                                <h2 className="titlehead-forbusiness widthDilemma"
+                                    >Discover Latest Career Info Easily</h2>
                                 <Button onClick={() => {
                                     console.log("Button clicked!");
                                     setPopupVisible(true);
@@ -178,13 +178,11 @@ const Box = () => {
             </Col>
         </Container>
             <Container className="withFAQS">
-                <h2 className="titleTwo-forbusiness phonewidth">
+                <h2 className="titleTwo-forbusiness">
                     We’re not just rooting for your success,
                     we’re making it happen.
                     <br/>  <br/>
-                    If you want to start receiving job matches, take 5 minutes to fill out <br/>
-
-                    <a className="linkeda" style={{color:"rgba(226,11,60,0.83)"}}
+                    If you want to start receiving job matches, take 5 minutes to fill out <a className="linkeda" style={{color:"rgba(226,11,60,0.83)"}}
 
                        href={"https://airtable.com/appbWBtB4y2MRltIZ/shrHIGlMWk2nDbrO6"}>
                 this form.</a> </h2>

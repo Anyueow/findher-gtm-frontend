@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 // Assuming you have a CSRF provider, import the hook to use the CSRF token.
 // Make sure the path is correct based on your project's structure.
 import { useCsrfToken } from '../../CsrfTokenProvider';
-
+import "./floatpopup.css";
 const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for controlling visibility
     const csrfToken = useCsrfToken(); // Retrieving the CSRF token from the provider
     const [guestProfile, setGuestProfile] = useState({
@@ -78,82 +78,95 @@ const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for contr
             </Modal.Header>
             <Modal.Body>
                 <Form onSubmit={handleSubmit}>
-                    <Row className="form-grp-name" style={{width:"100%"}}>
+                    <Row className="form-grp-name" style={{ width: '100%' }}>
                         <Col xs="6" className="pe-0">
-                            <Form.Group>
+                            <Form.Group className="float-label">
                                 <Form.Control
                                     name="firstName"
                                     type="text"
-                                    placeholder="First Name"
+                                    placeholder=""
                                     value={guestProfile.firstName}
                                     onChange={handleInputChange}
                                     required
                                 />
+                                <Form.Label>First Name
+                                    <sup style={{color:"darkred"}}>*</sup></Form.Label>
                             </Form.Group>
                         </Col>
                         <Col xs="6" className="pe-0">
-                            <Form.Group>
+                            <Form.Group className="float-label">
+
                                 <Form.Control
                                     name="lastName"
-                                    placeholder="Last Name"
                                     type="text"
+                                    placeholder=""
                                     value={guestProfile.lastName}
                                     onChange={handleInputChange}
                                     required
                                 />
+                                <Form.Label>Last Name
+                                    <sup style={{color:"darkred"}}>*</sup></Form.Label>
                             </Form.Group>
                         </Col>
                     </Row>
-                    <Row className="form-grp-name" style={{width:"100%"}}>
+
+                    <Row className="form-grp-name" style={{ width: '100%' }}>
                         <Col xs="6" className="pe-0">
-                            <Form.Group>
+                            <Form.Group className="float-label">
                                 <Form.Control
                                     name="email"
                                     type="email"
-                                    placeholder="Email"
+                                    placeholder=""
                                     value={guestProfile.email}
                                     onChange={handleInputChange}
                                     required
                                 />
+                                <Form.Label>Email
+                                    <sup style={{color:"darkred"}}>*</sup></Form.Label>
                             </Form.Group>
                         </Col>
                         <Col xs="6" className="pe-0">
-                            <Form.Group>
+                            <Form.Group className="float-label">
                                 <Form.Control
                                     name="phoneNumber"
-                                    placeholder="Phone"
                                     type="text"
+                                    placeholder=""
                                     value={guestProfile.phoneNumber}
                                     onChange={handleInputChange}
                                     required
                                 />
+                                <Form.Label>Phone
+                                    <sup style={{color:"darkred"}}>*</sup></Form.Label>
                             </Form.Group>
                         </Col>
                     </Row>
-                    <Row className="form-grp-name" style={{width:"100%"}}>
+
+                    <Row className="form-grp-name" style={{ width: '100%' }}>
                         <Col xs="12" className="pe-0">
-                    <Form.Group>
-                        <Form.Control
-                            name="linkedinProfile"
-                            placeholder="LinkedIn Profile (optional)"
-                            type="text"
-                            value={guestProfile.linkedinProfile}
-                            onChange={handleInputChange}
-                        />
-                    </Form.Group>
+                            <Form.Group className="float-label">
+                                <Form.Control
+                                    name="linkedinProfile"
+                                    type="text"
+                                    placeholder=""
+                                    value={guestProfile.linkedinProfile}
+                                    onChange={handleInputChange}
+                                />
+                                <Form.Label>LinkedIn Profile</Form.Label>
+                            </Form.Group>
                         </Col>
                     </Row>
-                    <Row className="form-grp-name" style={{width:"100%"}}>
+
+                    <Row className="form-grp-name" style={{ width: '100%' }}>
                         <Col xs="12" className="pe-0">
-                    <Form.Group className="submitGuest" style={{width:"100%"}}>
-                        <Button
-                            className=""
-                            style={{ marginBottom: "3%" }}
-                            type="submit"
-                        >
-                            Submit
-                        </Button>
-                    </Form.Group>
+                            <Form.Group className="submitGuest" style={{ width: '100%' }}>
+                                <Button
+                                    className=""
+                                    style={{ marginBottom: '3%' }}
+                                    type="submit"
+                                >
+                                    Submit
+                                </Button>
+                            </Form.Group>
                         </Col>
                     </Row>
                 </Form>
