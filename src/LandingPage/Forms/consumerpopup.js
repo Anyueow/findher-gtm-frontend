@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { toast } from 'react-toastify';
-// Assuming you have a CSRF provider, import the hook to use the CSRF token.
-// Make sure the path is correct based on your project's structure.
+import { FaCheckCircle } from 'react-icons/fa';
 import { useCsrfToken } from '../../CsrfTokenProvider';
 import "./floatpopup.css";
 const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for controlling visibility
@@ -14,6 +13,8 @@ const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for contr
                                                          phoneNumber: "",
                                                          linkedinProfile: "",
                                                      });
+
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -53,6 +54,14 @@ const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for contr
             if (response.ok) {
                 const data = await response.json();
                 console.log(data); // Print the response data to the console for debugging purp
+                    setIsSubmitted(true);
+                    setGuestProfile({
+                        firstName: "",
+                        lastName: "",
+                        email: "",
+                        phoneNumber: "",
+                        linkedinProfile: "",
+                    })
             } else {
                 console.log("dammit these errors");
                 // Handle the error response
@@ -71,7 +80,7 @@ const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for contr
         }
     };
 
-    return (
+    return (<>{!isSubmitted ?(
         <Modal show={isVisible} onHide={onClose} centered>
             <Modal.Header closeButton>
                 <Modal.Title>Enter Your Details</Modal.Title>
@@ -171,8 +180,28 @@ const ConsumerPopup = ({ isVisible, onClose }) => { // Accepting props for contr
                     </Row>
                 </Form>
             </Modal.Body>
-        </Modal>
-
+        </Modal>) :
+         (<Modal show={isVisible} onHide={onClose} centered className="success-business-form">
+         <Modal.Header >
+             {/* <Modal.Title><FaCheckCircle color='green' size={80}/></Modal.Title> */}
+         </Modal.Header>
+         <Modal.Body>
+         <FaCheckCircle color='green' size={80}/>
+         <br/>
+         <p>You’re all set! Check your inbox for more details from us</p>
+                         <Button
+                             variant="secondary"
+                             className="buttclass"
+                             onClick={()=>{onClose()
+                                 setIsSubmitted(false)
+                             }}
+                         >
+                             Done
+                         </Button>
+                       
+         </Modal.Body>
+     </Modal>)
+    }</>
     );
 };
 

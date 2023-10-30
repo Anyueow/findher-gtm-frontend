@@ -197,6 +197,7 @@
 @media (min-width:641px) and (max-width:940px) {
     .company-details-info{
         margin-left: 6%;
+        margin-top: 15%;
     }
     .company-logo{
         display: flex;
@@ -206,7 +207,7 @@
         width: 150px;
         aspect-ratio: 1/1; 
         justify-content: center;
-        margin-top: 4%;
+        margin-top: 40%;
     }
     
     .company-details-title{
@@ -237,11 +238,14 @@
         line-height: normal;
     }
     .company-detaisl-swiper-container {
-        height: 140px !important;
+        height: 150px !important;
+    }
+    .company-page-photo{
+        margin-top: 3% !important;
     }
     .company-page-photo img{
         border-radius: 10px;
-        width: 150px;
+        width: 160px;
     }
     .icon{
         height: 16px;

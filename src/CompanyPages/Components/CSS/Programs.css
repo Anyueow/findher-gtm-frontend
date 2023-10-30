@@ -94,6 +94,7 @@
 
 .colbubble {
     margin: -2%;
+    margin-bottom: 10px;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
@@ -208,6 +209,20 @@
      }
      .infoCard-for-women img{
         width: 30px;
+    }
+    .seemorebox{
+        min-width: 220px;
+        margin-right: 20px;
+    }
+    .ApplyHereBox {
+        border-radius: 15px;
+        border: 0.1px solid rgba(151, 151, 151, 0.2);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        justify-content: flex-start;
+        padding: 2% 2%;
+        margin: 1% 1% 2% 1%;
+    
     }
 }
 
