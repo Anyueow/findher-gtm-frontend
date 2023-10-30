@@ -182,7 +182,7 @@ function TestimonialSec(props) {
                     </div>
     <Row className="my-5 px-0" style={{width:"95%"}} >
 
-    <Row className='d-flex justify-content-around'>
+    <Row className='d-flex justify-content-start'>
     <h2 className="some-title mt-3 ms-5 text-left ">
         How their female employees feel about working here:</h2>
 
