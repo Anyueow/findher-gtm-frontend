@@ -286,6 +286,22 @@
         box-sizing: border-box;
         /* Adjust margin or padding as necessary to create space between items */
     }
+    .marquee-content-row{
+        height: 10vh;
+    }
+
+    .marquee {
+        position: fixed;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        z-index: 0;
+        height: 20vh;
+        /* Adjust padding for smaller screens if necessary */
+        padding: 0 0 3% 3%;
+    }
     
 
     /* Modify or add classes as needed for smaller screens */
