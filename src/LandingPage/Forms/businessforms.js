@@ -13,8 +13,7 @@ const PopupForm = ({ isVisible, onClose }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e, action) => {
-        e.preventDefault();
+    const handleSubmit = async ( action) => {
 
         const { email, companyName, name } = formData;
 
