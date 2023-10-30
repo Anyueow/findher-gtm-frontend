@@ -19,7 +19,7 @@
 .modal-title {
     font-family: Poppins;
     font-weight: 600;
-    font-size: 1.5em; /* Larger font size for the title */
+    font-size: 90%; /* Larger font size for the title */
     color: #333; /* Dark text color for contrast */
 }
 
@@ -79,6 +79,18 @@
 .modal-backdrop.show {
     opacity: 0.75 !important; /* This controls the opacity of the background */
     background-color: #000; /* This sets the background color to black (you can choose any color) */
+}
+
+.businessform-p{
+    font-size: 80%;
+    text-align: center;
+    color: #333;
+}
+
+.success-business-form .modal-body{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
 @media (max-width:550px) {

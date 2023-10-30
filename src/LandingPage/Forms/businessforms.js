@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Col, Row } from 'react-bootstrap';
+import { FaCheckCircle } from 'react-icons/fa';
 import './popup.css'; // Make sure this path is correct
 import { useCsrfToken } from '../../CsrfTokenProvider'; // Make sure this path is correct
 import { toast } from "react-toastify";
@@ -7,6 +8,7 @@ import { toast } from "react-toastify";
 const PopupForm = ({ isVisible, onClose }) => {
     const csrfToken = useCsrfToken();
     const [formData, setFormData] = useState({ name: '', companyName: '', email: '' });
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -40,12 +42,16 @@ const PopupForm = ({ isVisible, onClose }) => {
             });
 
             if (response.ok) {
-                const message = action === 'info'
-                                ? "We just sent you an email, check your inbox for details :)"
-                                : "Redirecting you to schedule a call...";
-                toast.success(message, {
-                    position: toast.POSITION.TOP_RIGHT,
-                });
+                // const message = action === 'info'
+                //                 ? "We just sent you an email, check your inbox for details :)"
+                //                 : "Redirecting you to schedule a call...";
+                                if(action === 'info'){
+                                    setIsSubmitted(true);
+                                    setFormData({ name: '', companyName: '', email: '' })
+                                }
+                // toast.success(message, {
+                //     position: toast.POSITION.TOP_RIGHT,
+                // });
 
                 if (action === 'schedule') {
                     window.open('https://calendly.com/asurana/chat-with-anjali?month=2023-10',
@@ -67,15 +73,16 @@ const PopupForm = ({ isVisible, onClose }) => {
     }
 
 
-    onClose(); // Close the modal
+    // onClose(); // Close the modal
     };
 
 
 
     return (
-        <Modal show={isVisible} onHide={onClose} centered>
+        <>
+        { !isSubmitted ? (<Modal show={isVisible} onHide={onClose} centered>
             <Modal.Header closeButton>
-                <Modal.Title>Want to hire <strong style={{fontWeight:"800"}}>better & faster?</strong></Modal.Title>
+                <Modal.Title>Ready to explore how FindHer can make a difference for your company?</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form>
@@ -89,6 +96,7 @@ const PopupForm = ({ isVisible, onClose }) => {
                             required
                         />
                     </Form.Group>
+                   
                     <Form.Group controlId="formCompanyName">
                         <Form.Control
                             type="text"
@@ -110,6 +118,7 @@ const PopupForm = ({ isVisible, onClose }) => {
                         />
                     </Form.Group>
                     <Row>
+                    <p className='businessform-p'>Book a call with us to learn more or request more details via email.</p>
                         <Col>
                             <Button
                                 variant="primary"
@@ -127,11 +136,34 @@ const PopupForm = ({ isVisible, onClose }) => {
                             >
                                 Schedule a Call
                             </Button>
+                            {/* <FaCheckCircle color='green' size={80}/> */}
                         </Col>
                     </Row>
                 </Form>
             </Modal.Body>
-        </Modal>
+        </Modal>) :
+         (<Modal show={isVisible} onHide={onClose} centered className="success-business-form">
+            <Modal.Header >
+                {/* <Modal.Title><FaCheckCircle color='green' size={80}/></Modal.Title> */}
+            </Modal.Header>
+            <Modal.Body>
+            <FaCheckCircle color='green' size={80}/>
+            <br/>
+            <p>You’re all set! Check your inbox for more details from us</p>
+                            <Button
+                                variant="secondary"
+                                className="buttclass"
+                                onClick={()=>{onClose()
+                                    setIsSubmitted(false)
+                                }}
+                            >
+                                Done
+                            </Button>
+                          
+            </Modal.Body>
+        </Modal>)
+        }
+        </>
     );
 };
 
