@@ -222,7 +222,7 @@
         color: #000;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: poppins;
-        font-size: 20px;
+        font-size: 100%;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -345,9 +345,14 @@ justify-content: center}
 .navigation ul {
     margin-bottom: 10px;
 }
+.navigation {
+    display: flex;
+    justify-content: center;
+}
 .navigation li {
-    margin-right: 0px;
-    margin-left: 36px;
+    margin-right: 20px;
+    margin-left: 20px;
+   
 }
 .isMobile{
     display: block !important;
@@ -423,6 +428,10 @@ justify-content: center}
     .isDesktop{
         display: none !important;
     }
+    .navigation li {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
 }
 
 @media  (max-width:380px) {
@@ -430,6 +439,10 @@ justify-content: center}
     text-align: left;
     margin-left: 2%;
     margin-top: 2%;
+}
+.navigation li {
+    margin-right: 0px;
+    margin-left: 25px;
 }
 }
 
