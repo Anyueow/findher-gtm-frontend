@@ -78,7 +78,7 @@ const testimonials = [
       rating: 5,
   },
   {
-      type: "TechCorp",
+      type: "Growth",
       comment: "Working at TechCorp has been a fantastic experience. The team is supportive, and there are numerous opportunities for professional development.",
       rating: 5,
   },
@@ -199,8 +199,8 @@ function TestimonialSec(props) {
      </Col>
         <Col    className="GraphCard" xs={10} md={5} lg={3}>
             <Col className='my-3'>
-                <p className="company-details-para mb-4" style={{fontStyle:"italic"}}> <i> “My co-workers were friendly and I feel included and welcome
-                    in my team”
+                <p className="company-details-para mb-4" style={{fontStyle:"italic"}}> <i>
+                    “My managers and are supportive and create healthy work environments”
                 </i></p></Col>
 
             <Col className='d-flex justify-content-center mt-3 mb-5'>
@@ -212,8 +212,7 @@ function TestimonialSec(props) {
         <Col    className="GraphCard" xs={10} md={5} lg={3} >
             <Col className='my-3'>
                 <p className="company-details-para mb-4 my-3"
-                   style={{fontStyle:"italic"}}> <i> “My co-workers were friendly and I feel included and welcome
-                    in my team”
+                   style={{fontStyle:"italic"}}> <i> “I am surrounded by several female co-workers and managers”
                 </i></p></Col>
 
             <Col className='d-flex justify-content-center mt-3 mb-5'>
