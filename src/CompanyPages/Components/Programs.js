@@ -155,12 +155,12 @@ function Programs(props) {
   // Helper function to render job cards
   const renderJobCards = (jobsToRender) => {
     return jobsToRender.map((job, index) => (
-        <Col md={4} xs={12} key={index} className="seemorebox">
+        <Col md={5} xs={12} key={index} className="seemorebox">
           <h2 className="company-details-sub-title">{job.title}</h2>
           <p className="SubJobtitle">{job.type} • {job.location}</p>
           <Row className="bubblerow">
             {job.categories.slice(0, 2).map((category, catIndex) => (
-                <Col key={catIndex} md={6} xs={12} className="colbubble">
+                <Col key={catIndex} md={12} xs={5} lg={6} className="colbubble">
                   <p className="bubbleHighlight">{category}</p>
                 </Col>
             ))}
@@ -197,7 +197,7 @@ function Programs(props) {
   ]
   const renderAppResources = (resourcesToRender) => {
     return resourcesToRender.map((resource, index) => (
-        <Col key={index} className="seemorebox" style={{ width: "37.5%" }}>
+        <Col key={index} md={5} xs={12}  className="seemorebox" >
           <h2 className="company-details-sub-title">{resource.title}</h2>
           <Row className="bubblerow">
             {resource.categories.slice(0, 3).map((category, catIndex) => (
@@ -326,10 +326,10 @@ function Programs(props) {
       <Row className="ApplyHereBox"
            style={{width:"95.5%", padding:"2%", flexDirection:"row", marginTop:"5%"}}>
         <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
-          <Col>
+          <Col xs={8}>
             <h2 className="company-details-sub-title">What They Look For</h2>
           </Col>
-          <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
+          <Col xs={4} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
             height: '100%' /* or any specific height as per your layout */ }}>
             <Button
                 variant="danger"
@@ -342,21 +342,21 @@ function Programs(props) {
             </Button>
           </Col>
         </Row>
-        <Col className="seemorebox" style={{width:"37.5%"}}>
+        <Col md={5} className="seemorebox" >
           <h2 className="company-details-sub-title">Passion for Technology</h2>
           <p className="company-details-para">
             {displayText}
           </p>
         </Col>
 
-        <Col className="seemorebox" style={{width:"37.5%"}}>
+        <Col md={5} className="seemorebox" >
           <h2 className="company-details-sub-title"> Problem  -Solving
             Skills  </h2>
           <p className="company-details-para">
             {displayText}
           </p>
         </Col>
-        <Col className="seemorebox" style={{width:"37.5%"}}>
+        <Col md={5} className="seemorebox">
           <h2 className="company-details-sub-title">First-Principles Thinker</h2>
           <p className="company-details-para">
             {displayText}
@@ -392,10 +392,10 @@ function Programs(props) {
 
     <Row className="ApplyHereBox" style={{ width: "95.5%", padding: "2%" }}>
       <Row style={{ padding: "1%", width: "100%", paddingBottom: '2%' }}>
-        <Col>
+        <Col xs={8}>
           <h2 className="company-details-sub-title">Application Resources</h2>
         </Col>
-        <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', height: '100%' }}>
+        <Col xs={4} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', height: '100%' }}>
           {resources.length > 3 && ( // Only render the button if there are more than 3 resources
               <Button
                   variant="danger"

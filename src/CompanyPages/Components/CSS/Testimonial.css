@@ -117,7 +117,7 @@
     border: 0.1px solid rgba(151, 151, 151, 0.2);
     border-radius: 15px;
 }
-@media (min-width:641px) and (max-width:940px) {
+@media (min-width:768px) and (max-width:940px) {
     .guest-profile-login-toast{
         width: 75% !important;
         top: 20%;
@@ -135,7 +135,7 @@
     }
 }
 
-@media  (max-width:640px) {
+@media  (max-width:767px) {
     .guest-profile-login-toast{
         width: 85% !important;
         top: 15%;
@@ -146,5 +146,16 @@
     }
     .testimonial-content {
         margin: 2%;
+    }
+    .infoBox-rating-sec{
+        justify-content: center !important;
+    }
+    .testimonialSec-container{
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .some-title{
+        text-align: center !important;
+        margin-left: 0 !important;
     }
 }

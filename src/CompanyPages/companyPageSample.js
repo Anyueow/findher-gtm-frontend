@@ -99,14 +99,6 @@ export const CompanyProfileHeader = () => {
       linkedinProfile: "",
     });
 
-  //   const [showMore, setShowMore] = useState({
-  //     why: false,
-  //     look: false,
-  //     like: false,
-  //     only: false,
-  //   });
-
- 
 
     const handleInputChange = (e) => {
       const name = e.target.name;
@@ -183,7 +175,7 @@ export const CompanyProfileHeader = () => {
             />
           </Col>
     <Row className="">
-      <Col md="3" className="profileBox">
+      <Col xs={12} className="profileBox">
         <Row className="company-page-left-row">
           <Col
             xs="5"
