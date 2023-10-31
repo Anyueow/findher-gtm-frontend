@@ -34,7 +34,7 @@ function Overview() {
       <Container style={{paddingLeft:"3%"}}>
     <Row className="ms-0 me-1 px-2">
 
-        
+
           <Row style={{ marginTop:"5%"}} className="OverviewRow">
             <Col md={6} xs={11} className="smollbox"
                  style={{marginBottom:"3%"}}>
@@ -151,21 +151,21 @@ function Overview() {
               </Button>
             </Col>
           </Row>
-          <Col className="infomorebox" >
+          <Col xs={12} lg={3}  className="infomorebox" >
             <h2 className="company-details-sub-title">Approachable Leadership</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
 
-          <Col className="infomorebox">
+          <Col xs={12} lg={3}  className="infomorebox">
             <h2 className="company-details-sub-title">Innovative & Growth
               Mindset</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
-          <Col className="infomorebox">
+          <Col xs={12} lg={3} className="infomorebox">
             <h2 className="company-details-sub-title">Inclusive
               Environment</h2>
             <p className="company-details-para">
@@ -180,10 +180,10 @@ function Overview() {
         <Row md={12} xs={11} className="smollbox"
              style={{width:"97.5%", padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
-            <Col>
+            <Col xs={8}>
               <h2 className="company-details-sub-title">Programs for Women</h2>
             </Col>
-            <Col style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
+            <Col xs={4} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end',
               height: '100%' /* or any specific height as per your layout */ }}>
               <Button
                   variant="danger"
@@ -195,20 +195,20 @@ function Overview() {
               </Button>
             </Col>
           </Row>
-          <Col className="infomorebox" style={{width:"37.5%"}}>
+          <Col xs={12} lg={3}  className="infomorebox" >
             <h2 className="company-details-sub-title">Period Leaves</h2>
             <p className="company-details-para">
               {displayTextProgram}
             </p>
           </Col>
 
-          <Col className="infomorebox" style={{width:"37.5%"}}>
+          <Col xs={12} lg={3}  className="infomorebox">
             <h2 className="company-details-sub-title">Maternity Benefits</h2>
             <p className="company-details-para">
             {displayTextProgram}
             </p>
           </Col>
-          <Col className="infomorebox" style={{width:"37.5%"}}>
+          <Col xs={12} lg={3}  className="infomorebox">
             <h2 className="company-details-sub-title">Caregiver Facility</h2>
             <p className="company-details-para">
             {displayTextProgram}
