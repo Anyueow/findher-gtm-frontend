@@ -194,7 +194,7 @@
     opacity: 1;
 }
 
-@media (min-width:641px) and (max-width:940px) {
+@media (min-width:768px) and (max-width:940px) {
     .company-details-info{
         margin-left: 6%;
         margin-top: 15%;
@@ -222,7 +222,7 @@
         color: #000;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: poppins;
-        font-size: 20px;
+        font-size: 100%;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -261,8 +261,28 @@
     }
 }
 
-@media  (max-width:640px) {
+@media  (max-width:767px) {
 
+    .profileBox {
+        position: static; /* Fixed positioning */
+        width: 100%; /* Specify a width */
+        height: 70vh; /* Full height */
+        z-index: 0; /* High z-index so it's on top of other content */
+        background-color: white; /* Or any other background color */
+        padding-top: 7%;
+        margin-left: -2%;
+        margin-bottom: 0px; /* Equal to or greater than footer's height */
+    
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    }
+    .company-page-photo{
+        margin-top: 10% !important;
+    }
+    .company-page-right-row {
+        border-left: 1px solid rgba(217, 217, 217, 0.37);
+        margin-left: 0%;
+    }
     .company-details-title{
         color: #000;
         font-family: poppins;
@@ -279,6 +299,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        margin-bottom: 0;
     }
     
     .company-details-para{
@@ -324,9 +345,14 @@ justify-content: center}
 .navigation ul {
     margin-bottom: 10px;
 }
+.navigation {
+    display: flex;
+    justify-content: center;
+}
 .navigation li {
-    margin-right: 0px;
-    margin-left: 36px;
+    margin-right: 20px;
+    margin-left: 20px;
+   
 }
 .isMobile{
     display: block !important;
@@ -402,6 +428,10 @@ justify-content: center}
     .isDesktop{
         display: none !important;
     }
+    .navigation li {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
 }
 
 @media  (max-width:380px) {
@@ -409,6 +439,10 @@ justify-content: center}
     text-align: left;
     margin-left: 2%;
     margin-top: 2%;
+}
+.navigation li {
+    margin-right: 0px;
+    margin-left: 25px;
 }
 }
 

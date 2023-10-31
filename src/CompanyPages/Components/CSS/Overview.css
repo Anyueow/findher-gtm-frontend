@@ -29,7 +29,7 @@
     text-align: left;
     justify-content: center;
     padding: 3% 3%;
-    width: 47.5%;
+    width: 30.5%;
     min-height: 90%;
     margin: 1% 1% 2% 1%;
 
@@ -43,13 +43,13 @@
 
 .OverviewRow{
 
-    margin: 0% 1% 0% 0%;
+    margin: 0% 0% 0% 0%;
 
     align-content: center;
     justify-content: flex-start;
     align-items: center;
     display: flex;
-    width: 110%; /* Adjusted to be within the container */
+    width: 100%; /* Adjusted to be within the container */
 }
 
 .smallerRow{
@@ -227,7 +227,7 @@ button:focus {
     min-height: 30px;
 }
 
-@media (min-width:641px) and (max-width:940px) {
+@media (min-width:768px) and (max-width:940px) {
   
     .company-page-flexibility-header{
         padding:20px !important;
@@ -244,11 +244,36 @@ button:focus {
         min-height: 330px;
     }
     .columnpens{
-        display: flex;
+        display: block !important;
+        min-height: 100px;
     }
+    .infomorebox {
+        border-radius: 15px;
+        border: 1px solid rgba(59, 59, 59, 0.56);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        padding: 3% 3%;
+        width: 90% !important;
+        min-height: 90%;
+        margin: 1% 1% 2% 1%;
+    
+    }
+    .smollbox {
+        border-radius: 15px;
+        border: 0.1px solid rgba(151, 151, 151, 0.2);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        justify-content: center;
+        padding: 4% 4%;
+        width: 100% !important;
+        min-height: fit-content;
+        margin: 1% 1% 2% 1%;
+    
+    }
+    
 }
 
-@media  (max-width:640px) {
+@media  (max-width:767px) {
     .company-page-flexibility {
         width: 90%;
         margin-top: 15px;
@@ -289,8 +314,37 @@ button:focus {
     .columnpens{
         display: flex;
     }
+    .smollbox {
+        border-radius: 15px;
+        border: 0.1px solid rgba(151, 151, 151, 0.2);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        justify-content: center;
+        padding: 4% 4%;
+        width: 100% !important;
+        min-height: fit-content;
+        margin: 1% 1% 2% 1%;
+    
+    }
+    .infomorebox {
+        border-radius: 15px;
+        border: 1px solid rgba(59, 59, 59, 0.56);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        padding: 3% 3%;
+        width: 90% !important;
+        min-height: 90%;
+        margin: 1% 1% 2% 1%;
+    
+    }
 }
 
 .company-details-sub-title {
     font-weight: 600;
+}
+
+@media (max-width:1300px) {
+    .columnpens{
+        display: flex;
+    }
 }

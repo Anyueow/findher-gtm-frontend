@@ -180,9 +180,9 @@ function TestimonialSec(props) {
       </div>
                     </div>}
                     </div>
-    <Row className="my-5 px-0" style={{width:"95%"}} >
+    <Row className="my-5 px-0 testimonialSec-container" style={{width:"95%"}} >
 
-    <Row className='d-flex justify-content-start'>
+    <Row className='d-flex'>
     <h2 className="some-title mt-3 ms-5 text-left ">
         How their female employees feel about working here:</h2>
 
