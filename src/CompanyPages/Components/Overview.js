@@ -36,7 +36,7 @@ function Overview() {
 
 
           <Row style={{ marginTop:"5%"}} className="OverviewRow">
-            <Col md={6} xs={11} className="smollbox"
+            <Col md={6} xs={12} className="smollbox"
                  style={{marginBottom:"3%"}}>
             <h2 className="company-details-sub-title">Mission</h2>
             <p className="company-details-para">
@@ -45,7 +45,7 @@ function Overview() {
               to guide organizations through the evolving digital landscape, ensuring they leverage the most effective and innovative tech solutions to meet their unique challenges and goals.
             </p>
             </Col>
-            <Col md={6} xs={11} className="smollbox"
+            <Col md={6} xs={12} className="smollbox"
                  style={{marginBottom:"3%"}}>
               <h2 className="company-details-sub-title">What They Do</h2>
               <p className="company-details-para">
@@ -55,7 +55,7 @@ function Overview() {
           </Row>
 
       <Row style={{marginTop:"0%"}} className="OverviewRow">
-        <Col md={6} xs={11} className="smollbox">
+        <Col md={6} xs={12} className="smollbox">
           <Row className="smallerRow" style={{marginBottom:"2%"}}>
             <h2 className="company-details-sub-title">Quick Facts</h2>
           </Row>
@@ -93,7 +93,7 @@ function Overview() {
           </Row>
         </Col>
 
-        <Col md={6} xs={11} className="smollbox">
+        <Col md={6} xs={12} className="smollbox">
           <Row className="smallerRow" style={{marginBottom:"2%"}}>
             <h2 className="company-details-sub-title">
               Top Reasons To Work Here</h2>
@@ -133,8 +133,8 @@ function Overview() {
 
       <Row style={{marginTop:"0%"}} className="OverviewRow">
 
-        <Row md={12} xs={11} className="smollbox"
-        style={{width:"97.5%", padding:"3%", flexDirection:"row"}}>
+        <Row md={12} xs={12} className="smollbox"
+        style={{ padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
             <Col>
           <h2 className="company-details-sub-title">Why work here</h2>
@@ -177,8 +177,8 @@ function Overview() {
 
       <Row style={{marginTop:"0%"}} className="OverviewRow">
 
-        <Row md={12} xs={11} className="smollbox"
-             style={{width:"97.5%", padding:"3%", flexDirection:"row"}}>
+        <Row md={12} xs={12} className="smollbox"
+             style={{ padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
             <Col xs={8}>
               <h2 className="company-details-sub-title">Programs for Women</h2>

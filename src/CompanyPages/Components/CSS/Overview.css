@@ -43,13 +43,13 @@
 
 .OverviewRow{
 
-    margin: 0% 1% 0% 0%;
+    margin: 0% 0% 0% 0%;
 
     align-content: center;
     justify-content: flex-start;
     align-items: center;
     display: flex;
-    width: 110%; /* Adjusted to be within the container */
+    width: 100%; /* Adjusted to be within the container */
 }
 
 .smallerRow{
@@ -244,7 +244,8 @@ button:focus {
         min-height: 330px;
     }
     .columnpens{
-        display: flex;
+        display: block !important;
+        min-height: 100px;
     }
     .infomorebox {
         border-radius: 15px;
@@ -254,6 +255,18 @@ button:focus {
         padding: 3% 3%;
         width: 90% !important;
         min-height: 90%;
+        margin: 1% 1% 2% 1%;
+    
+    }
+    .smollbox {
+        border-radius: 15px;
+        border: 0.1px solid rgba(151, 151, 151, 0.2);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        justify-content: center;
+        padding: 4% 4%;
+        width: 100%;
+        min-height: fit-content;
         margin: 1% 1% 2% 1%;
     
     }
@@ -308,7 +321,7 @@ button:focus {
         text-align: left;
         justify-content: center;
         padding: 4% 4%;
-        width: 95%;
+        width: 100%;
         min-height: fit-content;
         margin: 1% 1% 2% 1%;
     
