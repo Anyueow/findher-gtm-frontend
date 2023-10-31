@@ -44,7 +44,7 @@
     transition-duration: 500ms;
 }
 .uprNavbtn a{
-  color: var(--white-100, #FFF);
+  color: #FFFFFF;
   text-align: center;
   font-family: Poppins;
   font-size: 17px;
@@ -124,13 +124,8 @@
 }
 
 .profile-navbar-guest{
-  height: 65px;
-  opacity: 0.8 !important;
+  height: 55px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: repeating-linear-gradient(
-          to right, rgb(255, 142, 165),
-          rgba(141, 198, 255, 0.96), rgb(212, 170, 255), rgb(237, 255, 137));
-  background-size: 500% 400% ;
-  animation: animate-background 10s infinite ease-in-out;
+  background-color: #FFFFFF;
 
 }

@@ -123,7 +123,19 @@ function Overview() {
                     <span>
                       <img src={greentick} alt="tick" />
                     </span>{" "}
-                <h6 className="bubble mx-3">Parental Leaves</h6>
+                <h6 className="bubble mx-3">Stock Options</h6>
+              </Col>
+              <Col className="d-flex  align-items-baseline groupbox">
+                    <span>
+                      <img src={greentick} alt="tick" />
+                    </span>{" "}
+                <h6 className="bubble mx-3">Mental Health Days</h6>
+              </Col>
+              <Col className="d-flex  align-items-baseline groupbox">
+                    <span>
+                      <img src={greentick} alt="tick" />
+                    </span>{" "}
+                <h6 className="bubble mx-3">Free Lunch on MWT</h6>
               </Col>
             </Col>
 
