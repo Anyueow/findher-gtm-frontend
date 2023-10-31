@@ -34,7 +34,7 @@ function Overview() {
       <Container style={{paddingLeft:"3%"}}>
     <Row className="ms-0 me-1 px-2">
 
-
+        
           <Row style={{ marginTop:"5%"}} className="OverviewRow">
             <Col md={6} xs={11} className="smollbox"
                  style={{marginBottom:"3%"}}>
@@ -151,21 +151,21 @@ function Overview() {
               </Button>
             </Col>
           </Row>
-          <Col className="infomorebox" style={{width:"37.5%"}}>
+          <Col className="infomorebox" >
             <h2 className="company-details-sub-title">Approachable Leadership</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
 
-          <Col className="infomorebox" style={{width:"37.5%"}}>
+          <Col className="infomorebox">
             <h2 className="company-details-sub-title">Innovative & Growth
               Mindset</h2>
             <p className="company-details-para">
               {displayText}
             </p>
           </Col>
-          <Col className="infomorebox" style={{width:"37.5%"}}>
+          <Col className="infomorebox">
             <h2 className="company-details-sub-title">Inclusive
               Environment</h2>
             <p className="company-details-para">

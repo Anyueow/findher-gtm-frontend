@@ -175,7 +175,7 @@ export const CompanyProfileHeader = () => {
             />
           </Col>
     <Row className="">
-      <Col md={3} x className="profileBox">
+      <Col xs={12} className="profileBox">
         <Row className="company-page-left-row">
           <Col
             xs="5"

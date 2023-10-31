@@ -184,7 +184,7 @@
     margin-top: 2%;
 }
 
-@media (min-width:641px) and (max-width:940px) {
+@media (min-width:768px) and (max-width:940px) {
     .guest-profile-login-toast-program{
         top: 27%;
     }
@@ -227,7 +227,7 @@
 }
 
 
-@media  (max-width:640px) {
+@media  (max-width:767px) {
     .infoBoxProgram {
         padding: 10%;
     }
@@ -247,4 +247,16 @@
         margin-left: 10px;
         font-weight: 700;
      }
+     .seemorebox {
+        border-radius: 15px;
+        border: 1px solid rgba(59, 59, 59, 0.56);
+        background: var(--white-100, #FFF);
+        text-align: left;
+        justify-content: center;
+        padding: 3% 3%;
+    
+        max-width: 90%;
+        margin: 1% 1% 2% 1%;
+    
+    }
 }
