@@ -1,172 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindHer Email</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            font-weight: normal; /* Avoids bold, adjust as needed */
+        }
 
-        }
-        .email-container, .footer {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
         .email-container {
+            max-width: 600px;
+            margin: 20px auto;
             background-color: #ffffff;
             padding: 20px;
-            box-sizing: border-box;
+            border-radius: 5px;
         }
+
         .email-header {
             text-align: center;
             margin-bottom: 20px;
         }
-        .email-header img {
-            max-width: 150px; /* Adjust based on your logo's dimensions */
+
+        .email-content {
+            margin-bottom: 20px;
         }
-        .footer {
-            background-color: rgba(226, 11, 60, 0.83);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-        .footer .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 21px;
-            font-weight: 500;
-            padding: 10px;
-        }
-        .footer .icons a {
-            display: inline-block;
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-        .footer .icons i {
-            font-size: 36px;
-        }
-        .button {
+
+        .btn {
             display: inline-block;
             padding: 10px 20px;
-            color: white;
-            background-color: rgba(226, 11, 60, 0.83); /* Your brand color */
-            border: none;
-            border-radius: 15px;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #ffffff;
             text-decoration: none;
         }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+        .reasons {
+            margin: 20px 0;
+        }
+
+        .reason {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+
+
+        imagemid {
+            width : 50px;
+        }
+
+        grey {
+            color: #757575;
+        }
+
+        .btn-container {
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 60px;
+        }
+
+        .btn {
+            display: block;
+            background: rgba(217, 217, 217, 0.08);
+            height: 50%;
+            width: 50%;
+            box-shadow: 0px 0px 40px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 70px;
+            border: 1px rgba(103.06, 103.06, 103.06, 0.18) solid;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+
+        }
+
+        .btn-text {
+            text-align: center;
+            color: black;
+            font-size: 1rem;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+
+
+    </style>
 </head>
+
 <body>
 
 <div class="email-container">
-    <!-- Logo section -->
+
     <div class="email-header">
-        <img src="https://i.ibb.co/6rMmDTM/Findher-Logo-Horizontal-Long.png" alt="FindHer Logo"> <!-- Replace with your actual logo URL -->
+        <img src="https://i.ibb.co/7VC5h66/mailicon.png" alt="FindHer Logo" class="imagemid"/>
     </div>
 
-    <!-- Email body -->
-    <h3>Hi there,</h3>
-    <!-- Include the rest of your email content -->
-    <h4>Thank you for your interest in FindHer.<br/>
-        <br/>
-        If you’re ready to onboard your business, book a time with us
-        <a href={"https://calendly.com/asurana/chat-with-anjali"}>
-            here </a> and we’ll get you started.
-        <br/>
-        <br/>
+    <div class="email-content">
+        <h1> Thank you for your interest in FindHer!</h1>
+        <h3 class="grey"> Ready to explore how FindHer can make a difference for your company? </h3>
 
-        If you need more convincing,
-        find the  <a href={"https://drive.google.com/file/d/13TwQlWPYEDptNsCsRrVIhlpFH_wienIp/view?usp=sharing"}>
-            info packet linked here </a>  or continue reading below ~
-        <br/>
-        <br/>
-        At FindHer, we are guided by the simple belief that a job is more than its description,
-        and candidates are more than resumes.
-        To create the best matches, both sides need information that
-        goes overlooked in traditional job platforms – <strong> things like workplace culture,
-            company values, team dynamics, and so on.</strong>
+        <div class="btn-container">
+            <a href="#" class="btn">
+                <span class="btn-text">Schedule a call with us</span>
+            </a>
+        </div>
+        <p>Thank you for your interest in FindHer.</p>
 
-        This is a problem that disproportionately impacts women.
-        Why? Because women have unique workplace experiences,
-        face distinct challenges, and prioritize differently
-        in job searches compared to men.
+        <p>Ready to onboard your business?
+            <a href="#" class="btn">Book a time with us here</a>.</p>
 
-        <br/>
-        <br/>
-        Our solution? We've created a platform that makes this essential information available -
-        front and center - enabling businesses and female
-        candidates to connect more effectively.
-        Now, for businesses like yours, this means a
-        more streamlined hiring process, better quality applicants,
-        better cultural fits, and ultimately, a more diverse workforce
-        (and don’t even get us started on the benefits of that).
+        <p>Still considering? Dive into the attached info packet or read on.</p>
 
-        <br/> <br/>
-        Here’s how we do this for you:
-        <br/> <br/>
+        <img src="path_to_product_prototype.jpg" alt="Product Prototype" />
 
-        <strong>1) Standout Company Profile:</strong><br/>
-        We'll create a unique company profile for you on FindHer and populate it with valuable information for female applicants not available elsewhere. This will help your business attract top female talent that are aligned with you.
-        <br/> <br/>
+        <p>At FindHer, we believe that job matches should go beyond resumes and
+            job descriptions. We understand that women often prioritize different factors
+            in their job search, which is why we focus on showcasing the workplace culture,
+            values, and dynamics.</p>
 
-        <strong>2) Effective Job Matching:</strong><br/>
-        We'll delve deep into compatibility and carefully curate a list of the best candidates for your open roles using our AI. This means you'll spend less time sifting through resumes and more time connecting with candidates who are a great fit for your organization.
-        <br/> <br/>
+        <h3>Why Choose FindHer?</h3>
 
-        <strong>3) Effortless Insights:</strong> <br/>
-        We'll send a survey to your female employees and provide you with confidential insights to easily enhance the female employee experience. We'll also showcase the best of this on your company profile to inspire more applicants. The result? Higher employee satisfaction, retention, and growth.
-        <br/><br/>
+        <div class="reasons">
+            <div class="reason">
+                <strong>Unique Company Profiles:</strong>
+                Attract top female talent with a standout profile that highlights what they really want to know.
+            </div>
+            <div class="reason">
+                <strong>AI-Powered Job Matching:</strong>
+                Less time screening, more time connecting with ideal candidates.
+            </div>
+            <div class="reason">
+                <strong>Enhance Female Employee Experience:</strong>
+                Get insights from your own female employees and boost satisfaction and retention.
+            </div>
+        </div>
 
-        Ready to explore how FindHer can make a difference for your company?
-        Let’s get you started - schedule a call with us <a href={"https://calendly.com/asurana/chat-with-anjali"}>
-            here. </a>
-
-        <br/><br/>
-        Best,<br/>
-        Anjali & Ananya<br/>
-        <i>Two 21 year olds trying to change the face of work in India</i>
-
-    </h4>
-
-    <!-- Call to action -->
-    <div style="text-align: center; margin: 20px 0;">
-        <a href="#" class="button">Book a Time</a> <!-- Replace '#' with your actual booking link -->
+        <p>Interested in elevating your hiring process and diversifying your workforce?
+            <a href="#" class="btn">Let’s chat</a>.</p>
     </div>
+
+    <div class="email-footer">
+        <p>Warm regards,</p>
+        <p>Team FindHer</p>
+    </div>
+
 </div>
 
-<!-- Footer -->
-<div class="footer">
-    <p>Stay in touch with us :) </p>
-    <div class="icons">
-        <!-- Email icon -->
-        <a href="mailto:info@findher.work" style="color: white; margin: 0 10px; text-decoration: none;">
-            <i class="fas fa-envelope" style="font-size: 36px;"></i>
-        </a>
-
-        <!-- LinkedIn icon -->
-        <a href="https://www.linkedin.com/company/find-her/" target="_blank" rel="noopener noreferrer" style="color: white; margin: 0 10px; text-decoration: none;">
-            <i class="fab fa-linkedin" style="font-size: 36px;"></i>
-        </a>
-
-        <!-- Instagram icon -->
-        <a href="https://www.instagram.com/findher.work/" target="_blank" rel="noopener noreferrer" style="color: white; margin: 0 10px; text-decoration: none;">
-            <i class="fab fa-instagram" style="font-size: 36px;"></i>
-        </a>
-
-    </div>
-
-    <div class="address">
-        <p>With love - from Bangalore, India</p>
-        <p>© 2023 FindHer. All rights reserved.</p>
-    </div>
-</div>
 </body>
+
 </html>
