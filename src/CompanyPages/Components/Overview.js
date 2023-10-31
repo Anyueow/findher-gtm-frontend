@@ -134,7 +134,7 @@ function Overview() {
       <Row style={{marginTop:"0%"}} className="OverviewRow">
 
         <Row md={12} xs={12} className="smollbox"
-        style={{ padding:"3%", flexDirection:"row"}}>
+        style={{ width:"97.5%", padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
             <Col>
           <h2 className="company-details-sub-title">Why work here</h2>
@@ -177,8 +177,8 @@ function Overview() {
 
       <Row style={{marginTop:"0%"}} className="OverviewRow">
 
-        <Row md={12} xs={12} className="smollbox"
-             style={{ padding:"3%", flexDirection:"row"}}>
+        <Row md={6} xs={12} className="smollbox"
+             style={{width:"97.5%", padding:"3%", flexDirection:"row"}}>
           <Row style={{padding:"1%", width:"100%", paddingBottom:'2%'}}>
             <Col xs={8}>
               <h2 className="company-details-sub-title">Programs for Women</h2>
