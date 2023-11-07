@@ -58,7 +58,7 @@ export const MainPage = () => {
                      </Row>
 
 
-                     <Container fluid className="marquee">
+                     <Container fluid className="marquee mobileshow">
                          <Col>
                              <Row>
                                  <h3 className="trusted"> Trusted by</h3>
@@ -81,24 +81,7 @@ export const MainPage = () => {
 
                              </div>
                          </Row>
-                         <Row className="marquee-content-row">
-                             <div className="marquee-content">
-                                 {/* Render the first set of logos */}
-                                 {logos.map((logo, index) => (
-                                     <Col className="marquee-logo" key={index}>
-                                         <img src={logo} alt={`logo-${index + 1}`} />
-                                     </Col>
-                                 ))}
-                                 {/* Duplicate: Render the second set of logos immediately after the first */}
-                                 {logos.map((logo, index) => (
-                                     <Col className="marquee-logo" key={`duplicate-${index}`}>
-                                         <img src={logo} alt={`logo-duplicate-${index + 1}`} />
-                                     </Col>
-                                 ))}
 
-
-                             </div>
-                         </Row>
                          </Col>
                      </Container>
 
